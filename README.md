@@ -1,11 +1,11 @@
-## Internal Chat (LAN chat)<br>
+## Internal Chat<br>
 
 **INTRODUCTION:**  topic “Internal Chat”.<br>
 
 ### `Reason for this study :`
-With many technological breakthroughs, LAN Chat meets the need of human about transferring and connecting swiftly. Many versions 
+With many technological breakthroughs, Internal Chat meets the need of human about transferring and connecting swiftly. Many versions 
 of communication software have been used such as Messenger, WhatsApp, Zalo, Garena+, Yahoo!Messenger,... Because such apps do not
-support offline messaging, our team builds a software for real-time message exchange over a local network (LAN) with the fundamental functions including sending and receiving messages between the users, transferring attachments basically and effectively.<br>
+support offline messaging, our team builds a software for real-time message exchange over a social network (INTERNET) with the fundamental functions including sending and receiving messages between the users, transferring attachments basically and effectively.<br>
 
 ## `Advantages:`
  * You do not need to install a dedicated server. All participants can connect at any time and see each other automatically.
