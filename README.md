@@ -5,7 +5,7 @@
 ### `Reason for this study :`
 With many technological breakthroughs, Internal Chat meets the need of human about transferring and connecting swiftly. Our team builds a software for real-time message exchange over a social network (INTERNET) with the fundamental functions including sending and receiving messages between the users, transferring attachments basically and effectively.<br>
 
-**`Especially`**:  In the context that many social networks have too many users and accesses, they cannot control the data safely. Therefore, our team represents a small chat model with low number of users but our top priority is security.
+**`Especially`**:  In the context that many social networks have too many users and access, they cannot control the data safely. Therefore, our team represents a small chat model with low number of users but our top priority is security.
 
 ## *"Your absolute satisfaction and glory smile are our team's elation and pride."*
 
