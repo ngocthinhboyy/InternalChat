@@ -1,4 +1,4 @@
-## Internal Chat<br>
+## Internal Chat
 
 **INTRODUCTION:**  topic “Internal Chat”.<br>
 
@@ -52,7 +52,7 @@ With many technological breakthroughs, Internal Chat meets the need of human abo
    * Programming language: C#, PHP, MySQL.
    * MySQL Server.
    
- ## `Roadmap:`
+ ## `Roadmap:`<br/><br/>
   ### *Stage 1: Complete user database and basic chat functions.*
    * 5/10: Finish UI of **Login**, **Alert**, **Profile Form** and handle authentication.
    * 8/10: Test completed functions.
@@ -60,20 +60,20 @@ With many technological breakthroughs, Internal Chat meets the need of human abo
    * 19/10: Build **Chat function** and continue to build back end by PHP and database storing conservation (MySQL).
    * 22/10: Modify and test completed functions.
    * 26/10: Finish version 1.
-   ### -- Version 1: Software including controlling, storing user information and basic chat function--
+   ### -- Version 1: Software including controlling, storing user information and basic chat function--<br/><br/><br/>
   ### *Stage 2: Complete chat function and develop other functions ( Calendar, Settings, Cart, Dashboard).*
    * 2/11: Build **Chat function** and UI, back end of **Cart**.
    * 9/11: Build **Chat function** and UI, back end of **Calendar**.
    * 12/11: Modify and test **Cart**, **Calendar** and **Chat function**.
    * 16/11: Build UI and back end of **Settings**.
    * 23/11: Build UI and back end of **Dashboard**.
-   ### --Version 2:  Completed Chat function. Software including extra functions: Calendar, Settings, Cart, Dashboard --
+   ### --Version 2:  Completed Chat function. Software including extra functions: Calendar, Settings, Cart, Dashboard --<br/><br/><br/>
   ### *Stage 3: Complete all functions and add Games.*
    * 30/11: Build **Game 1**.
    * 3/12: Modify and test **Game 1**.
    * 7/12:  Build **Game 2**.
    * 10/12: Modify and test all functions. Deploy product.
-   ### --Version 3: Deploy completed product--
+   ### --Version 3: Deploy completed product--<br/><br/>
   ## `Contributors:`
    * Pham Ngoc Thinh - ID: 18520368 - email: 18520368@gm.uit.edu.vn
    * Dinh Ngoc Uyen Phuong - ID: 18520335 - email: 18520335@gm.uit.edu.vn
