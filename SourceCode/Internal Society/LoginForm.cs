@@ -113,11 +113,13 @@ namespace Internal_Society
 
                     HomePage f1 = new HomePage();
                     this.Hide();
-                    f1.Show();
+                    f1.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect");
+                    IncorrectAlert incorrect = new IncorrectAlert();
+                    incorrect.ShowDialog();
                 }
 
             }
@@ -169,6 +171,14 @@ namespace Internal_Society
 
 
             }
+        }
+
+        private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            CreateAccount crForm = new CreateAccount();
+            crForm.ShowDialog();
+            this.Show();
         }
     }
 }
