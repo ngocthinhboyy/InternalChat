@@ -1,0 +1,103 @@
+{"ID":"1","Message_Data":"tin nhan 1","Time_Data":"25-09-2019 10:37:20 AM","urlPic":""}
+{"ID":"1","Message_Data":"Hello Toan","Time_Data":"25-09-2019 10:37:38 AM","urlPic":"heohong_001.png"}
+{"ID":"2","Message_Data":"e m oi","Time_Data":"25-09-2019 10:58:49 AM","urlPic":""}
+{"ID":"1","Message_Data":"abc","Time_Data":"25-09-2019 10:59:52 AM","urlPic":""}
+{"ID":"2","Message_Data":"chan ge","Time_Data":"25-09-2019 11:00:23 AM","urlPic":""}
+{"ID":"1","Message_Data":"vl","Time_Data":"25-09-2019 11:00:40 AM","urlPic":""}
+{"ID":"1","Message_Data":"helllo","Time_Data":"25-09-2019 11:10:10 AM","urlPic":""}
+{"ID":"2","Message_Data":"gi m","Time_Data":"25-09-2019 11:12:17 AM","urlPic":"heohong_002.png"}
+{"ID":"1","Message_Data":"p","Time_Data":"25-09-2019 11:20:19 AM","urlPic":""}
+{"ID":"1","Message_Data":"^^","Time_Data":"25-09-2019 11:27:15 AM","urlPic":""}
+{"ID":"1","Message_Data":"vc","Time_Data":"25-09-2019 12:14:34 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"hello","Time_Data":"26-09-2019 4:56:56 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ksdfskm","Time_Data":"01-10-2019 4:14:46 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"kkslvmkslvmksldv","Time_Data":"01-10-2019 4:14:50 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"{"ID":"1","Name":"toantan","Addresssckankcasc":"KTX khu A"}","Time_Data":"01-10-2019 4:14:52 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"{"ID":"1","Name":"toantan","Address":"KTX khu A"}asakck","Time_Data":"01-10-2019 4:14:56 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ascac","Time_Data":"01-10-2019 4:14:59 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"{"ID":"1","Name":"toantan","Address":"KTX khu A"}ascscaca","Time_Data":"01-10-2019 4:15:03 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"accascca","Time_Data":"01-10-2019 4:15:47 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"kmkmalkcmaklacklac","Time_Data":"01-10-2019 4:15:52 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ackmacklalkcmlkamckmalkcmakclkaaklcnklacnklac","Time_Data":"01-10-2019 4:15:54 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"kacnklancnaknklancaklcnklacklnacklnaklcnalkcnklac","Time_Data":"01-10-2019 4:15:57 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"aclkacklacaklcaklscnklackaclkacnkacnlkacnlkacklancklacklacknakcnklanclasclaclacnklasclkaclknacklnackl","Time_Data":"01-10-2019 4:16:04 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"sdccascklasncl","Time_Data":"01-10-2019 4:43:42 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acacacacasc","Time_Data":"01-10-2019 5:06:40 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"mkkljkjljkjj","Time_Data":"02-10-2019 3:36:57 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"nvlknlksdsklvnklsvnklsvksnvklsdvnslvkv","Time_Data":"02-10-2019 3:37:15 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"cczxcccxc","Time_Data":"05-10-2019 9:29:15 AM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"hwllo","Time_Data":"05-10-2019 5:06:09 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"toantinh yeu","Time_Data":"05-10-2019 5:06:15 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"cascnaslncnalcknasc","Time_Data":"10-10-2019 6:18:41 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"anckancnlkacnaklcnaclk","Time_Data":"10-10-2019 6:18:43 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"lksancklnacklnkcnklakclnaknce12e12e","Time_Data":"10-10-2019 6:18:44 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"asncklnsacklnklackacn","Time_Data":"10-10-2019 6:18:45 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acklnaklckancklnaklcnkac","Time_Data":"10-10-2019 6:18:46 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"asclkasncklnasklcnkalnc","Time_Data":"10-10-2019 6:18:47 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acklancklnakcnklasncac","Time_Data":"10-10-2019 6:18:48 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"mc;kna;kcacklaskcnklsac","Time_Data":"10-10-2019 6:18:49 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"asklcnaklcnklancklnac","Time_Data":"10-10-2019 6:18:50 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"klancklnaklcnaklcnasc","Time_Data":"10-10-2019 6:18:51 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"knaklcnkanclknaklcnasc","Time_Data":"10-10-2019 6:18:52 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"klancklancklnacknaklcnaklcn","Time_Data":"10-10-2019 6:18:53 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"alkcnklanckancklancknaklcnasc","Time_Data":"10-10-2019 6:18:54 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ackacklnaklcnackancklan123123123","Time_Data":"10-10-2019 6:18:56 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"131212312lknasklcnncklasnkcnaknkankanscksncknsckasncklncklncknakcnakcnaklcnkalncklasncnklcasc","Time_Data":"10-10-2019 6:19:00 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"lkscnklackacnacnkanckancknac","Time_Data":"10-10-2019 6:19:02 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acklancknaklcnkancnac","Time_Data":"10-10-2019 6:19:03 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ndkncklasncklnsc","Time_Data":"14-10-2019 10:10:11 AM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"2019/10/14","Time_Data":"14-10-2019 11:56:32 AM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"nnnnnscnsanc","Time_Data":"14-10-2019 3:53:43 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"cklnascnaklcnakcn","Time_Data":"14-10-2019 3:53:44 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"cklackanslkcnsaklc","Time_Data":"14-10-2019 3:53:45 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"aclknascklascnasncknasc","Time_Data":"14-10-2019 3:53:46 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"clknaklcnaklscnlac","Time_Data":"14-10-2019 3:53:46 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"qqqqq","Time_Data":"14-10-2019 3:53:55 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"mackaskcalcnklac","Time_Data":"14-10-2019 3:53:56 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acacklancklnlkcnac","Time_Data":"14-10-2019 3:53:57 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acklnaklcnaklcnlk","Time_Data":"14-10-2019 3:53:58 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ckamsckasklcna","Time_Data":"14-10-2019 3:55:10 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acljkancanklcac","Time_Data":"14-10-2019 3:55:11 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"aslkcnasncklacnakc","Time_Data":"14-10-2019 3:55:12 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"lkscncnklasc","Time_Data":"14-10-2019 3:55:13 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ckasklckncklac","Time_Data":"14-10-2019 3:56:14 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"lkancacklzcklzxnc","Time_Data":"14-10-2019 3:56:16 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"qwejqkdmklnkn","Time_Data":"14-10-2019 3:56:18 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"alkcnaklcnlkacn","Time_Data":"14-10-2019 3:56:18 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"jvvsdklvnvnklsvnnkslvnsdnkvlsnvklsnvnsv","Time_Data":"14-10-2019 3:56:31 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"klvnsklvnkslvnklsdnvklnsklvnsv","Time_Data":"14-10-2019 3:56:32 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"saklvnsklvnsklvnklsnvlksnklvnsdvnskdnvs","Time_Data":"14-10-2019 3:56:34 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"svlksnvklsnklvnslkvnklsnvklsnvksnv","Time_Data":"14-10-2019 3:56:35 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"mb","Time_Data":"14-10-2019 3:58:32 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"gj","Time_Data":"14-10-2019 3:58:32 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"h","Time_Data":"14-10-2019 3:58:32 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"bm","Time_Data":"14-10-2019 3:58:33 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"bn","Time_Data":"14-10-2019 3:58:33 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"g","Time_Data":"14-10-2019 3:58:33 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"qzxc","Time_Data":"14-10-2019 3:59:11 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"csklasknvlkcvkals","Time_Data":"14-10-2019 4:06:28 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"990808908908","Time_Data":"14-10-2019 4:06:29 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"vnxvjnvxc","Time_Data":"14-10-2019 4:06:30 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"qqqqqqqqqqq","Time_Data":"14-10-2019 4:06:40 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"l","Time_Data":"14-10-2019 4:06:43 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"czxczczxc","Time_Data":"14-10-2019 4:09:20 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"casklncsacscan","Time_Data":"14-10-2019 4:11:18 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ncklasncnasklcnascn","Time_Data":"14-10-2019 4:11:19 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acnacklnakcnkalcnasc","Time_Data":"14-10-2019 4:11:20 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"alcnklancklnakcnasnca","Time_Data":"14-10-2019 4:11:22 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ll;mmml","Time_Data":"14-10-2019 4:12:22 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":" kkmkmlmm;lml;mlml;ml;","Time_Data":"14-10-2019 4:12:24 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"aslnsknklcnlksac","Time_Data":"14-10-2019 4:13:02 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"sklacnkaslcnklasnc","Time_Data":"14-10-2019 4:13:03 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acklnaklcklac","Time_Data":"14-10-2019 4:13:04 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acklancklnaklcnac","Time_Data":"14-10-2019 4:13:04 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"aklcnaklcnklacnklancklnaca","Time_Data":"14-10-2019 4:13:05 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"acjknacjknaklcklanc","Time_Data":"14-10-2019 4:13:06 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"sadasasnkcasc","Time_Data":"14-10-2019 4:13:28 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ascnlkascklansklc","Time_Data":"14-10-2019 4:13:29 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"alcnklanlkcanc","Time_Data":"14-10-2019 4:13:30 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"lkkklnlkn","Time_Data":"14-10-2019 4:16:44 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"13123231","Time_Data":"14-10-2019 4:17:46 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"ksadnnlksanda","Time_Data":"14-10-2019 4:18:45 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":"sklcvnkalnklanvanc","Time_Data":"14-10-2019 4:22:13 PM","urlPic":"heohong_001.png"}
+{"ID":"1","Message_Data":" cklzxckclxznc","Time_Data":"14-10-2019 4:22:15 PM","urlPic":"heohong_001.png"}
