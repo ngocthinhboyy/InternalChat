@@ -94,6 +94,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="IgnoringSecurityQuestionAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IgnoringSecurityQuestionAlert.Designer.cs">
+      <DependentUpon>IgnoringSecurityQuestionAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="IncorrectAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IgnoringSecurityQuestionAlert.resx">
+      <DependentUpon>IgnoringSecurityQuestionAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IncorrectAlert.resx">
       <DependentUpon>IncorrectAlert.cs</DependentUpon>

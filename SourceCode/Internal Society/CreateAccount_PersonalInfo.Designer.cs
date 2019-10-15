@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount_PersonalInfo));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dropdownQuestion2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.dropdownQuestion1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtAnswer2 = new System.Windows.Forms.TextBox();
             this.txtAnswer1 = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dropdownQuestion2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(570, 349);
             this.panel1.TabIndex = 0;
+            // 
+            // dropdownQuestion2
+            // 
+            this.dropdownQuestion2.BackColor = System.Drawing.Color.Transparent;
+            this.dropdownQuestion2.BorderRadius = 3;
+            this.dropdownQuestion2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dropdownQuestion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dropdownQuestion2.ForeColor = System.Drawing.Color.Black;
+            this.dropdownQuestion2.Items = new string[] {
+        "ABCD",
+        "DEFD",
+        "DDDDD"};
+            this.dropdownQuestion2.Location = new System.Drawing.Point(251, 195);
+            this.dropdownQuestion2.Margin = new System.Windows.Forms.Padding(6);
+            this.dropdownQuestion2.Name = "dropdownQuestion2";
+            this.dropdownQuestion2.NomalColor = System.Drawing.SystemColors.Window;
+            this.dropdownQuestion2.onHoverColor = System.Drawing.SystemColors.Window;
+            this.dropdownQuestion2.selectedIndex = 0;
+            this.dropdownQuestion2.Size = new System.Drawing.Size(280, 32);
+            this.dropdownQuestion2.TabIndex = 12;
             // 
             // dropdownQuestion1
             // 
@@ -182,6 +202,7 @@
             this.btnSkip.Size = new System.Drawing.Size(85, 49);
             this.btnSkip.TabIndex = 6;
             this.btnSkip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSkip.Click += new System.EventHandler(this.BtnSkip_Click);
             // 
             // label6
             // 
@@ -243,26 +264,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome [username] to Internal Chat";
             // 
-            // dropdownQuestion2
-            // 
-            this.dropdownQuestion2.BackColor = System.Drawing.Color.Transparent;
-            this.dropdownQuestion2.BorderRadius = 3;
-            this.dropdownQuestion2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dropdownQuestion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropdownQuestion2.ForeColor = System.Drawing.Color.Black;
-            this.dropdownQuestion2.Items = new string[] {
-        "ABCD",
-        "DEFD",
-        "DDDDD"};
-            this.dropdownQuestion2.Location = new System.Drawing.Point(251, 195);
-            this.dropdownQuestion2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.dropdownQuestion2.Name = "dropdownQuestion2";
-            this.dropdownQuestion2.NomalColor = System.Drawing.SystemColors.Window;
-            this.dropdownQuestion2.onHoverColor = System.Drawing.SystemColors.Window;
-            this.dropdownQuestion2.selectedIndex = 0;
-            this.dropdownQuestion2.Size = new System.Drawing.Size(280, 32);
-            this.dropdownQuestion2.TabIndex = 12;
-            // 
             // CreateAccount_PersonalInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +272,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount_PersonalInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount_PersonalInfo";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
