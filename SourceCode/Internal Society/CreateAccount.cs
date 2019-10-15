@@ -16,6 +16,7 @@ namespace Internal_Society
         {
             InitializeComponent();
         }
+        public int checkCreateAccountFormActive = 0;
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -25,18 +26,29 @@ namespace Internal_Society
         private void BtnNext_Click(object sender, EventArgs e)
         {
             // kiem tra username da ton tai
-            if (txtPasswordCreate.Text != txtRepassword.Text)
+            if(false)
+            {
+                lblExistedAlert.Visible = true;
+            }
+            else if (txtPasswordCreate.Text != txtRepassword.Text)
             {
                 lblUnmatchedAlert.Visible = true;
             }
             else
             {
-                // mo form tiep theo (thu 3).
+                CreateAccount_PersonalInfo personalInfoForm = new CreateAccount_PersonalInfo();
+                this.Hide();
+                personalInfoForm.ShowDialog();
+                HomePage homePageAfterCreating = new HomePage();
+                homePageAfterCreating.ShowDialog();
+                checkCreateAccountFormActive = 0;
+                this.Close();
             }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
+            checkCreateAccountFormActive = 1;
             this.Close();
         }
     }

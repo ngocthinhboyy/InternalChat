@@ -76,6 +76,12 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateAccount_PersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount_PersonalInfo.Designer.cs">
+      <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games_LuckyWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount_PersonalInfo.resx">
+      <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games_LuckyWheel.resx">
       <DependentUpon>Games_LuckyWheel.cs</DependentUpon>

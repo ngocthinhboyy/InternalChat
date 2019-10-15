@@ -178,7 +178,10 @@ namespace Internal_Society
             this.Hide();
             CreateAccount crForm = new CreateAccount();
             crForm.ShowDialog();
-            this.Show();
+            if (crForm.checkCreateAccountFormActive == 0)
+                this.Close();
+            else
+                this.Show();
         }
     }
 }
