@@ -17,7 +17,13 @@ namespace Internal_Society
     {
 
         
-
+        public void Update_App_Status()
+        {
+            App_Status.HomePage_Left = this.Left;
+            App_Status.HomePage_Top = this.Top;
+            App_Status.HomePage_Width = this.Width;
+            App_Status.HomePage_Height = this.Height;
+        }
         
 
         void TurnOffPanel()
@@ -36,12 +42,10 @@ namespace Internal_Society
         {
             InitializeComponent();
 
+            
 
+            label_Fullname.Text = User_Info.k_Fullname;
 
-            //
-            // Profile
-
-           
 
         }
 
@@ -98,6 +102,17 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Settings.Visible = true;
+        }
+
+        private void HomePage_Resize(object sender, EventArgs e)
+        {
+            Update_App_Status();
+        }
+
+        private void HomePage_Move(object sender, EventArgs e)
+        {
+            Update_App_Status();
+
         }
 
 

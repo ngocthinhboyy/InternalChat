@@ -43,7 +43,7 @@ namespace Internal_Society
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_create_new = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pn_header = new System.Windows.Forms.Panel();
-            this.label_username = new System.Windows.Forms.Label();
+            this.label_Fullname = new System.Windows.Forms.Label();
             this.picture_user_image = new System.Windows.Forms.PictureBox();
             this.textbox_Search = new Bunifu.Framework.UI.BunifuTextbox();
             this.panel_Settings = new Internal_Society.Panel_Settings();
@@ -389,7 +389,7 @@ namespace Internal_Society
             // pn_header
             // 
             this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.pn_header.Controls.Add(this.label_username);
+            this.pn_header.Controls.Add(this.label_Fullname);
             this.pn_header.Controls.Add(this.picture_user_image);
             this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -399,18 +399,18 @@ namespace Internal_Society
             this.pn_header.Size = new System.Drawing.Size(723, 65);
             this.pn_header.TabIndex = 1;
             // 
-            // label_username
+            // label_Fullname
             // 
-            this.label_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_username.AutoSize = true;
-            this.label_username.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_username.ForeColor = System.Drawing.Color.White;
-            this.label_username.Location = new System.Drawing.Point(509, 23);
-            this.label_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(148, 20);
-            this.label_username.TabIndex = 2;
-            this.label_username.Text = "Tang Khanh Chuong";
+            this.label_Fullname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Fullname.ForeColor = System.Drawing.Color.White;
+            this.label_Fullname.Location = new System.Drawing.Point(429, 22);
+            this.label_Fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_Fullname.Name = "label_Fullname";
+            this.label_Fullname.Size = new System.Drawing.Size(223, 20);
+            this.label_Fullname.TabIndex = 2;
+            this.label_Fullname.Text = "Tang Khanh Chuong";
+            this.label_Fullname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // picture_user_image
             // 
@@ -520,15 +520,15 @@ namespace Internal_Society
             this.Controls.Add(this.panel_Profile);
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
             this.Text = "Form1";
+            this.Move += new System.EventHandler(this.HomePage_Move);
+            this.Resize += new System.EventHandler(this.HomePage_Resize);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).EndInit();
             this.panel2.ResumeLayout(false);
             this.pn_header.ResumeLayout(false);
-            this.pn_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_user_image)).EndInit();
             this.ResumeLayout(false);
 
@@ -549,7 +549,7 @@ namespace Internal_Society
         private System.Windows.Forms.Panel pn_header;
         private Bunifu.Framework.UI.BunifuTextbox textbox_Search;
         private System.Windows.Forms.PictureBox picture_user_image;
-        private System.Windows.Forms.Label label_username;
+        private System.Windows.Forms.Label label_Fullname;
         private Panel_Profile panel_Profile;
         private Panel_Chat panel_Chat;
         private Panel_Calendar panel_Calendar;

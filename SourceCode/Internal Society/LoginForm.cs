@@ -40,7 +40,7 @@ namespace Internal_Society
             LoginStatus = new WebClient().DownloadString(urlLogin);
         }
 
-
+        
         public void StatusButtonLogin_NonProcess()
         {
             btnLogin.LabelText = "LOGIN";
@@ -50,7 +50,7 @@ namespace Internal_Society
             btnRepresentLogin.Enabled = true;
         }
 
-
+        // Tao hieu ung trong qua trinh cho doi trong luc dang nhap
         public void StatusButtonLogin_Process()
         {
             btnLogin.LabelText = "Please wait ...";
@@ -60,6 +60,7 @@ namespace Internal_Society
             btnRepresentLogin.Enabled = false;
         }
 
+        // ham dang nhap tao mot luong moi de xu ly dang nhap
         public void ClickLogin()
         {
 
@@ -72,12 +73,8 @@ namespace Internal_Society
             thrd_1.Start();
 
             TimeLogin.Start();
+
             
-            
-
-
-
-            /**/
 
         }
         private void BtnLogin_Click(object sender, EventArgs e)
@@ -99,7 +96,7 @@ namespace Internal_Society
 
                 if (LoginStatus != "-1")
                 {
-
+                    // dang nhap thanh cong.
                     File.WriteAllText("user_info.txt", String.Empty);
 
                     StreamWriter kWrite = new StreamWriter("user_info.txt", true);
@@ -109,15 +106,35 @@ namespace Internal_Society
 
                     kWrite.WriteLine(inputFile);
                     kWrite.Close();
+                    // define
+
+                    User_Info.k_ID = data_user.ID;
+                    User_Info.k_Username = data_user.Username;
+                    User_Info.k_Fullname = data_user.Fullname;
+                    User_Info.k_Diamond = data_user.Diamond;
+                    User_Info.k_Gold = data_user.Gold;
+                    User_Info.k_Gender = data_user.Gender;
+                    User_Info.k_Phone = data_user.Phone;
+                    User_Info.k_Email = data_user.Email;
+                    User_Info.k_Birthday = data_user.Birthday;
+                    User_Info.k_Status = data_user.Status;
+                    User_Info.k_Address = data_user.Address;
+
+
+
+                    // cho nguoi dung tien vao Homepage
 
 
                     HomePage f1 = new HomePage();
                     this.Hide();
-                    f1.Show();
+                    f1.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect");
+                    // dang nhap that bai - hien thi alert
+                    IncorrectAlert incorrect = new IncorrectAlert();
+                    incorrect.ShowDialog();
                 }
 
             }
@@ -169,6 +186,24 @@ namespace Internal_Society
 
 
             }
+        }
+
+        // mo Form CreateAccount cho nguoi dung tao tai khoan.
+        private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            CreateAccount crForm = new CreateAccount();
+            crForm.ShowDialog();
+            // check dieu kien de dong tat LoginForm hop ly.
+            /*
+             *  bien checkCreate  de kiem tra:
+             *      +   Neu An nut cancel o CreateAccount Form thi HIEN THI lai LoginForm ( checkCreate = 1 )
+             *      +   Neu dang ky thanh cong va dang nhap vao HomepageForm thi Close luon chuong trinh ( checkCreate = 0 )
+             */
+            if (crForm.checkCreateAccountFormActive == 0)
+                this.Close();
+            else
+                this.Show();
         }
     }
 }

@@ -32,42 +32,42 @@
             this.pn_profile = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txt_Profile_Status = new System.Windows.Forms.TextBox();
+            this.edit_status = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txt_Profile_Email = new System.Windows.Forms.TextBox();
+            this.edit_email = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txt_Profile_Phone = new System.Windows.Forms.TextBox();
+            this.edit_phone = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txt_Profile_Gender = new System.Windows.Forms.TextBox();
+            this.edit_gender = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txt_Profile_Birthday = new System.Windows.Forms.TextBox();
+            this.edit_birthday = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_Profile_Name = new System.Windows.Forms.TextBox();
+            this.edit_name = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.edit_status = new System.Windows.Forms.PictureBox();
-            this.edit_email = new System.Windows.Forms.PictureBox();
-            this.edit_phone = new System.Windows.Forms.PictureBox();
-            this.edit_gender = new System.Windows.Forms.PictureBox();
-            this.edit_birthday = new System.Windows.Forms.PictureBox();
-            this.edit_name = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pn_profile.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit_status)).BeginInit();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit_email)).BeginInit();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit_phone)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit_gender)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit_birthday)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edit_name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +120,18 @@
             this.txt_Profile_Status.TabIndex = 3;
             this.txt_Profile_Status.Text = "Single";
             // 
+            // edit_status
+            // 
+            this.edit_status.BackColor = System.Drawing.Color.White;
+            this.edit_status.ImageLocation = "../../Resources/edit.png";
+            this.edit_status.Location = new System.Drawing.Point(270, 3);
+            this.edit_status.Name = "edit_status";
+            this.edit_status.Size = new System.Drawing.Size(36, 30);
+            this.edit_status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.edit_status.TabIndex = 4;
+            this.edit_status.TabStop = false;
+            this.edit_status.Click += new System.EventHandler(this.Edit_status_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -153,6 +165,18 @@
             this.txt_Profile_Email.Size = new System.Drawing.Size(245, 38);
             this.txt_Profile_Email.TabIndex = 3;
             this.txt_Profile_Email.Text = "john@example.com";
+            // 
+            // edit_email
+            // 
+            this.edit_email.BackColor = System.Drawing.Color.White;
+            this.edit_email.ImageLocation = "../../Resources/edit.png";
+            this.edit_email.Location = new System.Drawing.Point(270, 3);
+            this.edit_email.Name = "edit_email";
+            this.edit_email.Size = new System.Drawing.Size(36, 30);
+            this.edit_email.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.edit_email.TabIndex = 4;
+            this.edit_email.TabStop = false;
+            this.edit_email.Click += new System.EventHandler(this.Edit_email_Click);
             // 
             // label7
             // 
@@ -188,6 +212,18 @@
             this.txt_Profile_Phone.TabIndex = 3;
             this.txt_Profile_Phone.Text = "123-345-567";
             // 
+            // edit_phone
+            // 
+            this.edit_phone.BackColor = System.Drawing.Color.White;
+            this.edit_phone.ImageLocation = "../../Resources/edit.png";
+            this.edit_phone.Location = new System.Drawing.Point(270, 3);
+            this.edit_phone.Name = "edit_phone";
+            this.edit_phone.Size = new System.Drawing.Size(36, 30);
+            this.edit_phone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.edit_phone.TabIndex = 4;
+            this.edit_phone.TabStop = false;
+            this.edit_phone.Click += new System.EventHandler(this.Edit_phone_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -221,6 +257,18 @@
             this.txt_Profile_Gender.Size = new System.Drawing.Size(245, 38);
             this.txt_Profile_Gender.TabIndex = 3;
             this.txt_Profile_Gender.Text = "Male";
+            // 
+            // edit_gender
+            // 
+            this.edit_gender.BackColor = System.Drawing.Color.White;
+            this.edit_gender.ImageLocation = "../../Resources/edit.png";
+            this.edit_gender.Location = new System.Drawing.Point(270, 3);
+            this.edit_gender.Name = "edit_gender";
+            this.edit_gender.Size = new System.Drawing.Size(36, 30);
+            this.edit_gender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.edit_gender.TabIndex = 4;
+            this.edit_gender.TabStop = false;
+            this.edit_gender.Click += new System.EventHandler(this.Edit_gender_Click);
             // 
             // label5
             // 
@@ -256,6 +304,18 @@
             this.txt_Profile_Birthday.TabIndex = 3;
             this.txt_Profile_Birthday.Text = "1/1/2000";
             // 
+            // edit_birthday
+            // 
+            this.edit_birthday.BackColor = System.Drawing.Color.White;
+            this.edit_birthday.ImageLocation = "../../Resources/edit.png";
+            this.edit_birthday.Location = new System.Drawing.Point(270, 3);
+            this.edit_birthday.Name = "edit_birthday";
+            this.edit_birthday.Size = new System.Drawing.Size(36, 30);
+            this.edit_birthday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.edit_birthday.TabIndex = 4;
+            this.edit_birthday.TabStop = false;
+            this.edit_birthday.Click += new System.EventHandler(this.Edit_birthday_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -290,6 +350,18 @@
             this.txt_Profile_Name.TabIndex = 3;
             this.txt_Profile_Name.Text = "John";
             // 
+            // edit_name
+            // 
+            this.edit_name.BackColor = System.Drawing.Color.White;
+            this.edit_name.ImageLocation = "../../Resources/edit.png";
+            this.edit_name.Location = new System.Drawing.Point(270, 3);
+            this.edit_name.Name = "edit_name";
+            this.edit_name.Size = new System.Drawing.Size(36, 30);
+            this.edit_name.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.edit_name.TabIndex = 4;
+            this.edit_name.TabStop = false;
+            this.edit_name.Click += new System.EventHandler(this.Edit_name_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -309,78 +381,6 @@
             this.label2.Size = new System.Drawing.Size(99, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Edit Avatar";
-            // 
-            // edit_status
-            // 
-            this.edit_status.BackColor = System.Drawing.Color.White;
-            this.edit_status.ImageLocation = "../../Resources/edit.png";
-            this.edit_status.Location = new System.Drawing.Point(270, 3);
-            this.edit_status.Name = "edit_status";
-            this.edit_status.Size = new System.Drawing.Size(36, 30);
-            this.edit_status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit_status.TabIndex = 4;
-            this.edit_status.TabStop = false;
-            this.edit_status.Click += new System.EventHandler(this.Edit_status_Click);
-            // 
-            // edit_email
-            // 
-            this.edit_email.BackColor = System.Drawing.Color.White;
-            this.edit_email.ImageLocation = "../../Resources/edit.png";
-            this.edit_email.Location = new System.Drawing.Point(270, 3);
-            this.edit_email.Name = "edit_email";
-            this.edit_email.Size = new System.Drawing.Size(36, 30);
-            this.edit_email.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit_email.TabIndex = 4;
-            this.edit_email.TabStop = false;
-            this.edit_email.Click += new System.EventHandler(this.Edit_email_Click);
-            // 
-            // edit_phone
-            // 
-            this.edit_phone.BackColor = System.Drawing.Color.White;
-            this.edit_phone.ImageLocation = "../../Resources/edit.png";
-            this.edit_phone.Location = new System.Drawing.Point(270, 3);
-            this.edit_phone.Name = "edit_phone";
-            this.edit_phone.Size = new System.Drawing.Size(36, 30);
-            this.edit_phone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit_phone.TabIndex = 4;
-            this.edit_phone.TabStop = false;
-            this.edit_phone.Click += new System.EventHandler(this.Edit_phone_Click);
-            // 
-            // edit_gender
-            // 
-            this.edit_gender.BackColor = System.Drawing.Color.White;
-            this.edit_gender.ImageLocation = "../../Resources/edit.png";
-            this.edit_gender.Location = new System.Drawing.Point(270, 3);
-            this.edit_gender.Name = "edit_gender";
-            this.edit_gender.Size = new System.Drawing.Size(36, 30);
-            this.edit_gender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit_gender.TabIndex = 4;
-            this.edit_gender.TabStop = false;
-            this.edit_gender.Click += new System.EventHandler(this.Edit_gender_Click);
-            // 
-            // edit_birthday
-            // 
-            this.edit_birthday.BackColor = System.Drawing.Color.White;
-            this.edit_birthday.ImageLocation = "../../Resources/edit.png";
-            this.edit_birthday.Location = new System.Drawing.Point(270, 3);
-            this.edit_birthday.Name = "edit_birthday";
-            this.edit_birthday.Size = new System.Drawing.Size(36, 30);
-            this.edit_birthday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit_birthday.TabIndex = 4;
-            this.edit_birthday.TabStop = false;
-            this.edit_birthday.Click += new System.EventHandler(this.Edit_birthday_Click);
-            // 
-            // edit_name
-            // 
-            this.edit_name.BackColor = System.Drawing.Color.White;
-            this.edit_name.ImageLocation = "../../Resources/edit.png";
-            this.edit_name.Location = new System.Drawing.Point(270, 3);
-            this.edit_name.Name = "edit_name";
-            this.edit_name.Size = new System.Drawing.Size(36, 30);
-            this.edit_name.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.edit_name.TabIndex = 4;
-            this.edit_name.TabStop = false;
-            this.edit_name.Click += new System.EventHandler(this.Edit_name_Click);
             // 
             // pictureBox2
             // 
@@ -403,21 +403,21 @@
             this.pn_profile.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edit_status)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edit_email)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edit_phone)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edit_gender)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.edit_birthday)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.edit_status)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit_email)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit_phone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit_gender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.edit_birthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edit_name)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

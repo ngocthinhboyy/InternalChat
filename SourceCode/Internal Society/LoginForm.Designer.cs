@@ -33,13 +33,7 @@ namespace Internal_Society
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.elipseEmail = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pnlEmail = new System.Windows.Forms.Panel();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.picEmail = new System.Windows.Forms.PictureBox();
             this.elipsePass = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pnlPass = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.TimeLogin = new System.Windows.Forms.Timer(this.components);
             this.btnRepresentLogin = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -48,15 +42,21 @@ namespace Internal_Society
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Bunifu.Framework.UI.BunifuTileButton();
+            this.pnlPass = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.pnlEmail = new System.Windows.Forms.Panel();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.picEmail = new System.Windows.Forms.PictureBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlEmail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
-            this.pnlPass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_process)).BeginInit();
+            this.pnlPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
+            this.pnlEmail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,85 +65,10 @@ namespace Internal_Society
             this.elipseEmail.ElipseRadius = 60;
             this.elipseEmail.TargetControl = this.pnlEmail;
             // 
-            // pnlEmail
-            // 
-            this.pnlEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.pnlEmail.Controls.Add(this.txtUsername);
-            this.pnlEmail.Controls.Add(this.picEmail);
-            this.pnlEmail.Location = new System.Drawing.Point(462, 177);
-            this.pnlEmail.Name = "pnlEmail";
-            this.pnlEmail.Size = new System.Drawing.Size(428, 80);
-            this.pnlEmail.TabIndex = 3;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtUsername.Location = new System.Drawing.Point(84, 28);
-            this.txtUsername.Multiline = true;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(273, 45);
-            this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "Username";
-            this.txtUsername.Enter += new System.EventHandler(this.TxtUsername_Enter);
-            this.txtUsername.Leave += new System.EventHandler(this.TxtUsername_Leave);
-            // 
-            // picEmail
-            // 
-            this.picEmail.Image = ((System.Drawing.Image)(resources.GetObject("picEmail.Image")));
-            this.picEmail.Location = new System.Drawing.Point(24, 20);
-            this.picEmail.Name = "picEmail";
-            this.picEmail.Size = new System.Drawing.Size(24, 24);
-            this.picEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picEmail.TabIndex = 3;
-            this.picEmail.TabStop = false;
-            // 
             // elipsePass
             // 
             this.elipsePass.ElipseRadius = 60;
             this.elipsePass.TargetControl = this.pnlPass;
-            // 
-            // pnlPass
-            // 
-            this.pnlPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.pnlPass.Controls.Add(this.txtPassword);
-            this.pnlPass.Controls.Add(this.picUser);
-            this.pnlPass.Location = new System.Drawing.Point(462, 294);
-            this.pnlPass.Name = "pnlPass";
-            this.pnlPass.Size = new System.Drawing.Size(428, 80);
-            this.pnlPass.TabIndex = 4;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtPassword.Location = new System.Drawing.Point(84, 28);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(273, 45);
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.Text = "Password";
-            this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
-            this.txtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
-            this.txtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
-            // 
-            // picUser
-            // 
-            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
-            this.picUser.Location = new System.Drawing.Point(24, 20);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(24, 24);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picUser.TabIndex = 3;
-            this.picUser.TabStop = false;
             // 
             // TimeLogin
             // 
@@ -153,8 +78,7 @@ namespace Internal_Society
             // btnRepresentLogin
             // 
             this.btnRepresentLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnRepresentLogin.Location = new System.Drawing.Point(1167, 798);
-            this.btnRepresentLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRepresentLogin.Location = new System.Drawing.Point(778, 519);
             this.btnRepresentLogin.Name = "btnRepresentLogin";
             this.btnRepresentLogin.Size = new System.Drawing.Size(0, 0);
             this.btnRepresentLogin.TabIndex = 11;
@@ -174,10 +98,9 @@ namespace Internal_Society
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1344, 912);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(896, 593);
             this.bunifuGradientPanel1.TabIndex = 1;
             // 
             // panel1
@@ -193,21 +116,19 @@ namespace Internal_Society
             this.panel1.Controls.Add(this.pnlEmail);
             this.panel1.Controls.Add(this.lblLogin);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(213, 118);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.MinimumSize = new System.Drawing.Size(0, 646);
+            this.panel1.Location = new System.Drawing.Point(142, 77);
+            this.panel1.MinimumSize = new System.Drawing.Size(0, 420);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 669);
+            this.panel1.Size = new System.Drawing.Size(626, 435);
             this.panel1.TabIndex = 0;
             // 
             // picture_process
             // 
             this.picture_process.BackColor = System.Drawing.Color.Gray;
             this.picture_process.Image = global::Internal_Society.Properties.Resources.process;
-            this.picture_process.Location = new System.Drawing.Point(822, 442);
-            this.picture_process.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picture_process.Location = new System.Drawing.Point(548, 287);
             this.picture_process.Name = "picture_process";
-            this.picture_process.Size = new System.Drawing.Size(52, 54);
+            this.picture_process.Size = new System.Drawing.Size(35, 35);
             this.picture_process.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture_process.TabIndex = 11;
             this.picture_process.TabStop = false;
@@ -220,12 +141,14 @@ namespace Internal_Society
             this.linkLabel2.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.linkLabel2.Location = new System.Drawing.Point(592, 568);
+            this.linkLabel2.Location = new System.Drawing.Point(395, 369);
+            this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(152, 20);
+            this.linkLabel2.Size = new System.Drawing.Size(103, 13);
             this.linkLabel2.TabIndex = 10;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Create your account";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -234,9 +157,10 @@ namespace Internal_Society
             this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(133)))), ((int)(((byte)(133)))));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.linkLabel1.Location = new System.Drawing.Point(584, 537);
+            this.linkLabel1.Location = new System.Drawing.Point(389, 349);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(171, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(114, 13);
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot your password?";
@@ -256,53 +180,135 @@ namespace Internal_Society
             this.btnLogin.ImageZoom = 50;
             this.btnLogin.LabelPosition = 41;
             this.btnLogin.LabelText = "LOGIN";
-            this.btnLogin.Location = new System.Drawing.Point(462, 429);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnLogin.Location = new System.Drawing.Point(308, 279);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(428, 80);
+            this.btnLogin.Size = new System.Drawing.Size(285, 52);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            // 
+            // pnlPass
+            // 
+            this.pnlPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlPass.Controls.Add(this.txtPassword);
+            this.pnlPass.Controls.Add(this.picUser);
+            this.pnlPass.Location = new System.Drawing.Point(308, 191);
+            this.pnlPass.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPass.Name = "pnlPass";
+            this.pnlPass.Size = new System.Drawing.Size(285, 52);
+            this.pnlPass.TabIndex = 4;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtPassword.Location = new System.Drawing.Point(56, 18);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(182, 29);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "Password";
+            this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+            this.txtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
+            // 
+            // picUser
+            // 
+            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
+            this.picUser.Location = new System.Drawing.Point(16, 13);
+            this.picUser.Margin = new System.Windows.Forms.Padding(2);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(24, 24);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picUser.TabIndex = 3;
+            this.picUser.TabStop = false;
+            // 
+            // pnlEmail
+            // 
+            this.pnlEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnlEmail.Controls.Add(this.txtUsername);
+            this.pnlEmail.Controls.Add(this.picEmail);
+            this.pnlEmail.Location = new System.Drawing.Point(308, 115);
+            this.pnlEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlEmail.Name = "pnlEmail";
+            this.pnlEmail.Size = new System.Drawing.Size(285, 52);
+            this.pnlEmail.TabIndex = 3;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtUsername.Location = new System.Drawing.Point(56, 18);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(182, 29);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "Username";
+            this.txtUsername.Enter += new System.EventHandler(this.TxtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.TxtUsername_Leave);
+            // 
+            // picEmail
+            // 
+            this.picEmail.Image = ((System.Drawing.Image)(resources.GetObject("picEmail.Image")));
+            this.picEmail.Location = new System.Drawing.Point(16, 13);
+            this.picEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.picEmail.Name = "picEmail";
+            this.picEmail.Size = new System.Drawing.Size(24, 24);
+            this.picEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picEmail.TabIndex = 3;
+            this.picEmail.TabStop = false;
             // 
             // lblLogin
             // 
             this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLogin.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(558, 77);
+            this.lblLogin.Location = new System.Drawing.Point(372, 50);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(248, 46);
+            this.lblLogin.Size = new System.Drawing.Size(165, 30);
             this.lblLogin.TabIndex = 2;
             this.lblLogin.Text = "Member Login";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 137);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 89);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 231);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // loginForm
+            // LoginForm
             // 
             this.AcceptButton = this.btnRepresentLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 912);
+            this.ClientSize = new System.Drawing.Size(896, 593);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Name = "loginForm";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "LoginForm";
             this.Text = "loginForm";
-            this.pnlEmail.ResumeLayout(false);
-            this.pnlEmail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).EndInit();
-            this.pnlPass.ResumeLayout(false);
-            this.pnlPass.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_process)).EndInit();
+            this.pnlPass.ResumeLayout(false);
+            this.pnlPass.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
+            this.pnlEmail.ResumeLayout(false);
+            this.pnlEmail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

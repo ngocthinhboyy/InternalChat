@@ -34,6 +34,14 @@ namespace Internal_Society
             txt_Profile_Email.Text = data_user.Email;
             txt_Profile_Status.Text = data_user.Status;*/
 
+            k_user_id = User_Info.k_ID;
+            txt_Profile_Name.Text = User_Info.k_Fullname;
+            txt_Profile_Birthday.Text = User_Info.k_Birthday;
+            txt_Profile_Gender.Text = User_Info.k_Gender;
+            txt_Profile_Phone.Text = User_Info.k_Phone;
+            txt_Profile_Email.Text = User_Info.k_Email;
+            txt_Profile_Status.Text = User_Info.k_Status;
+
         }
 
 

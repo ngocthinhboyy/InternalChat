@@ -12,28 +12,48 @@ using System.IO;
 using System.Dynamic;
 using Newtonsoft.Json;
 using System.Threading;
+using System.Web.Script.Serialization;
 
 namespace Internal_Society
 {
-    
+
 
     public partial class chatbox : UserControl
     {
         const string urlKun = "../../Resources\\";
-        
-        
-        string id_user = "1";
-        string id_counterpart = "2";
+
+        string id_conversation = "1";
+
+        bubble bbl_old = new bubble();
+
         string json;
+        string pMessage = "";
+        string pSticker = "";
+
+        string dataMessage = "0";
+        int messIndex = 0;
         public chatbox()
         {
             if (!this.DesignMode)
             {
                 InitializeComponent();
-                panel2.Controls.RemoveAt(0);
-                panel2.Controls.RemoveAt(0);
+                //panel2.Controls.RemoveAt(0);
+                //panel2.Controls.RemoveAt(0);
+
+                Time_Request.Interval = App_Status.time_delay;
+
+                ThreadStart ts_1 = new ThreadStart(threadGetData);
+                Thread thrd_1 = new Thread(ts_1);
+                thrd_1.Start();
+
+                Time_Request.Start();
+                Time_Get_Message_Data.Start();
+
+                Queue_Sticker.data = new Queue<string>();
+                
+
             }
-            
+
             bbl_old.Top = 0 - bbl_old.Height + 10;
 
             /*StreamReader read = new StreamReader("conversation_5.txt");
@@ -60,93 +80,104 @@ namespace Internal_Society
             read.Close();*/
         }
 
+        public void threadGetData()
+        {           
+            var urlGetData = "https://kunbr0.com/it008/get_conversation_detail.php?c_id=" + id_conversation + "&index=" + messIndex;
+            dataMessage = new WebClient().DownloadString(urlGetData);
+        }
 
-        bubble bbl_old = new bubble();
 
-        
-        
-
-        public void addInMessage(string kkMessage, string kkTime, string urlPic)
+        public void addInMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
-            
 
-            bubble bbl = new Internal_Society.bubble(kkMessage,kkTime,msgType.In,urlPic);
-            bbl.Location = bubble1.Location;
-            bbl.Size = bubble1.Size;
-            bbl.Font = bubble1.Font;
-            bbl.Anchor = bubble1.Anchor;
+            
+            bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker,message_type, kkTime, msgType.In);
+            
+            bbl.Location = new Point(this.Width-bbl.Width -50 ,50);
+            
             bbl.Top = bbl_old.Bottom + 20;
+            //bbl.Size = bubble1.Size;
+            //bbl.Font = bubble1.Font;
+            //bbl.Anchor = bubble1.Anchor;
 
 
-            
+
+
             panel2.Controls.Add(bbl);
-            
-            
+
+
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
 
 
-            /*StreamWriter kWrite = new StreamWriter("conversation_5.txt",true);
-            string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-            string inputFile = "{\"ID\":\"" + id_user +"\",\"Message_Data\":\""+ txt_input.Text+ "\",\"Time_Data\":\"" + inputTime+"\"}";
-            kWrite.WriteLine(inputFile);
-            kWrite.Close();*/
-
 
         }
 
-        public void addOutMessage(string kkMessage, string kkTime, string urlPic)
+        public void addOutMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
-            
-            bubble bbl = new Internal_Society.bubble(kkMessage, kkTime, msgType.Out,urlPic);
-            bbl.Location = bubble2.Location; 
-            bbl.Size = bubble1.Size;
-            
-            bbl.Anchor = bubble1.Anchor;
+
+            bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker, message_type, kkTime, msgType.Out);
+
+            bbl.Location = new Point(30, 50);
             bbl.Top = bbl_old.Bottom + 20;
 
-            
-            
+            /*bbl.Location = bubble2.Location;
+            bbl.Size = bubble1.Size;
+
+            bbl.Anchor = bubble1.Anchor;
+            bbl.Top = bbl_old.Bottom + 20;*/
+
+
+
             panel2.Controls.Add(bbl);
+            panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
 
 
         }
 
         
-        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        
+
+        private void button_Send_Click(object sender, EventArgs e)
         {
-            json = "";
-            string urlPic = "";
-            string kInput = txt_input.Text.ToString();
 
-            ThreadStart ts_1 = new ThreadStart(GetData);
-            Thread thrd_1 = new Thread(ts_1);
-            thrd_1.Start();
+            if(txt_input.Text != "")
+            {
+                string urlPic = "";
+                string kInput = txt_input.Text.ToString();
+
+                pMessage = txt_input.Text;
+
+
+
+
+                string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
+
+
+                addInMessage(kInput,0,"","",inputTime);
+
+                ThreadStart ts_1 = new ThreadStart(PushMessage);
+                Thread thrd_1 = new Thread(ts_1);
+                thrd_1.Start();
+
+                txt_input.Text = "";
+                
+            }
             
-
-            StreamWriter kWrite = new StreamWriter("conversation_5.txt", true);
-            string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-            string urlPicture = "heohong_001.png";
-            string inputFile = "{\"ID\":\"" + id_user + "\",\"Message_Data\":\"" + txt_input.Text + "\",\"Time_Data\":\"" + inputTime + "\",\"urlPic\":\"" + urlPicture + "\"}";
-            kWrite.WriteLine(inputFile);
-            kWrite.Close();
-
-            addInMessage(kInput, inputTime, urlPic);
-
-            panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
-
-            
-
-            txt_input.Text = json;
         }
 
-        void GetData()
+        void PushMessage()
         {
+            messIndex++;
             using (WebClient wc = new WebClient())
             {
-                json = wc.DownloadString("https://kunbr0.com/it008/login.php?us=toantan&ps=789789");
+                json = wc.DownloadString(@"https://kunbr0.com/it008/add_conversation_message.php?c_id=" + id_conversation + @"&u_id=" + User_Info.k_ID + "&u_message=" + pMessage +"&u_sticker=" + pSticker);
             }
+
+            pMessage = "";
+            pSticker = "";
+            
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -154,24 +185,142 @@ namespace Internal_Society
             if (e.KeyCode == Keys.Enter)
             {
                 e.SuppressKeyPress = true;
-                BunifuImageButton1_Click(this, new EventArgs());
+                button_Send_Click(this, new EventArgs());
             }
 
             if (e.KeyCode == Keys.Q)
             {
-                
+
                 int heightInsert = 50;
 
                 foreach (Control kMessage in panel2.Controls)
                 {
-                    kMessage.Top += heightInsert; 
+                    kMessage.Top += heightInsert;
 
                 }
                 MessageBox.Show(panel2.Controls.Count.ToString());
             }
 
+
+
+        }
+
+        public void ProccessData()
+        {
+            Time_Request.Stop();
+            /*List<Data_Message> list = JsonConvert.DeserializeObject<List<Data_Message>>(dataMessage);
+            MessageBox.Show(list.ToString());*/
+
+            //string kkdata = @"{""data"":[{""k_userID"":""518523721"",""name"":""ftyft""}, {""k_userID"":""527032438"",""name"":""ftyftyf""}, {""k_userID"":""527572047"",""name"":""ftgft""}, {""id"":""531141884"",""name"":""ftftft""}]}";
+
+            Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
+
+
+            /*for(int i = 0; i < dMess.data.Count; i++)
+            {
+                dMess.data.
+            }*/
+
             
+
+            for(int i = dMess.data.Count-1; i >= 0; i--)
+            {
+                
+
+                if (Convert.ToInt32(dMess.data[i].Message_id) > messIndex) messIndex = Convert.ToInt32(dMess.data[i].Message_id);
+
+                if (dMess.data[i].User_id == User_Info.k_ID)
+                {
+                    addInMessage(dMess.data[i].Message.ToString(),Convert.ToInt32(dMess.data[i].Message_type.ToString()),
+                        dMess.data[i].Image.ToString(), dMess.data[i].Sticker.ToString(),
+                        dMess.data[i].Time.ToString());
+
+                }
+                else
+                {
+
+                    addOutMessage(dMess.data[i].Message.ToString(), Convert.ToInt32(dMess.data[i].Message_type.ToString()),
+                        dMess.data[i].Image.ToString(), dMess.data[i].Sticker.ToString(),
+                        dMess.data[i].Time.ToString());
+                }
+
+                
+
+            }
+
+            Time_Request.Start();
+            dataMessage = "0";
+        }
+
+        private void Time_Get_Message_Data_Tick(object sender, EventArgs e)
+        {
+            if(dataMessage != "0")
+            {
+                ProccessData();
+            }
+        }
+
+        
+
+        private void Time_Request_Tick(object sender, EventArgs e)
+        {
+            if (dataMessage != "0") ProccessData();
+            ThreadStart ts_1 = new ThreadStart(threadGetData);
+            Thread thrd_1 = new Thread(ts_1);
+            thrd_1.Start();
+
             
+        }
+
+        private void Button_Attach_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show(dialog.FileName);
+                MessageBox.Show(Path.GetFileName(dialog.FileName));
+            }
+        }
+
+        Panel_Sticker pn_Sticker = new Panel_Sticker();
+        private void Button_Sticker_Click(object sender, EventArgs e)
+        {
+            Time_Sticker.Start();
+            pn_Sticker.Show();
+        }
+
+        private void Panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            Time_Sticker.Stop();
+            pn_Sticker.Hide();
+
+            //pn_Sticker.Show();
+        }
+
+        public void AddStickerFromQueue()
+        {
+            while(Queue_Sticker.data.Count() != 0)
+            {
+                string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
+                pSticker = Queue_Sticker.data.Dequeue();
+                addInMessage("", 2, "", pSticker, inputTime);
+
+
+                ThreadStart ts_1 = new ThreadStart(PushMessage);
+                Thread thrd_1 = new Thread(ts_1);
+                thrd_1.Start();
+
+                
+                
+                
+
+
+            }
+        }
+
+        private void Time_Sticker_Tick(object sender, EventArgs e)
+        {
+            AddStickerFromQueue();
         }
     }
 }
