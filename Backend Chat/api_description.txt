@@ -1,0 +1,39 @@
+login.php?us=...&ps=...
+
+{"ID":"1",
+"Username":"toantan",
+"Fullname":"Tan Huu Toan",
+"Diamond":"99897878978",
+"Gold":"45559",
+"Gender":"1",
+"Phone":"0912312312",
+"Email":"nhinhinhi@gmail.com",
+"Birthday":"1999-07-01",
+"Status":"000","Address":"KTX khu A"}
+
+
+
+https://kunbr0.com/it008/get_conversation.php
+1
+
+
+
+https://kunbr0.com/it008/add_conversation_message.php?c_id=...&u_id=...&u_message=...
+1
+
+
+
+https://kunbr0.com/it008/get_conversation_detail.php?c_id=...&index=...
+{"data":[
+{"User_id":"1","Message_id":"410","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:53:10","Message":"sao"},
+{"User_id":"2","Message_id":"409","Message_type":"0","Image":"","Sticker":"heohong_006.png","Time":"2019-10-19 08:47:00","Message":""},
+{"User_id":"2","Message_id":"408","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:39:04","Message":"nnn"},
+{"User_id":"2","Message_id":"407","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:39:02","Message":"mmmm"},
+{"User_id":"2","Message_id":"406","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:38:54","Message":"999"},
+{"User_id":"2","Message_id":"405","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:37:40","Message":"ppp"},
+{"User_id":"2","Message_id":"404","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:37:37","Message":"kkk"},
+{"User_id":"2","Message_id":"403","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:37:34","Message":"ppp"},
+{"User_id":"2","Message_id":"402","Message_type":"0","Image":"","Sticker":"","Time":"2019-10-19 08:37:26","Message":"ppp"}]}
+
+
+

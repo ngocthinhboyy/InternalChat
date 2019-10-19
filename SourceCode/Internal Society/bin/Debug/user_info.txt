@@ -1,1 +1,0 @@
-{"ID":"1","Fullname":"TKCC","Diamond":"99897878978","Gold":"45559","Gender":"1","Phone":"0912312312","Email":"nhinhinhi@gmail.com","Birthday":"1999-07-01","Status":"000","Address":"KTX khu A"}
