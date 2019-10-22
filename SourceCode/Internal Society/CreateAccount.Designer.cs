@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNullPassword = new System.Windows.Forms.Label();
+            this.lblNullUsername = new System.Windows.Forms.Label();
             this.lblExistedAlert = new System.Windows.Forms.Label();
             this.txtRepassword = new System.Windows.Forms.TextBox();
             this.txtPasswordCreate = new System.Windows.Forms.TextBox();
@@ -65,6 +67,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lblNullPassword);
+            this.panel1.Controls.Add(this.lblNullUsername);
             this.panel1.Controls.Add(this.lblExistedAlert);
             this.panel1.Controls.Add(this.txtRepassword);
             this.panel1.Controls.Add(this.txtPasswordCreate);
@@ -81,6 +85,28 @@
             this.panel1.Size = new System.Drawing.Size(570, 349);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // lblNullPassword
+            // 
+            this.lblNullPassword.AutoSize = true;
+            this.lblNullPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblNullPassword.Location = new System.Drawing.Point(248, 184);
+            this.lblNullPassword.Name = "lblNullPassword";
+            this.lblNullPassword.Size = new System.Drawing.Size(156, 13);
+            this.lblNullPassword.TabIndex = 25;
+            this.lblNullPassword.Text = "That password is null. Try again";
+            this.lblNullPassword.Visible = false;
+            // 
+            // lblNullUsername
+            // 
+            this.lblNullUsername.AutoSize = true;
+            this.lblNullUsername.ForeColor = System.Drawing.Color.Red;
+            this.lblNullUsername.Location = new System.Drawing.Point(248, 120);
+            this.lblNullUsername.Name = "lblNullUsername";
+            this.lblNullUsername.Size = new System.Drawing.Size(157, 13);
+            this.lblNullUsername.TabIndex = 24;
+            this.lblNullUsername.Text = "That username is null. Try again";
+            this.lblNullUsername.Visible = false;
             // 
             // lblExistedAlert
             // 
@@ -100,7 +126,7 @@
             this.txtRepassword.Name = "txtRepassword";
             this.txtRepassword.PasswordChar = '*';
             this.txtRepassword.Size = new System.Drawing.Size(210, 32);
-            this.txtRepassword.TabIndex = 22;
+            this.txtRepassword.TabIndex = 3;
             // 
             // txtPasswordCreate
             // 
@@ -109,7 +135,8 @@
             this.txtPasswordCreate.Name = "txtPasswordCreate";
             this.txtPasswordCreate.PasswordChar = '*';
             this.txtPasswordCreate.Size = new System.Drawing.Size(210, 32);
-            this.txtPasswordCreate.TabIndex = 21;
+            this.txtPasswordCreate.TabIndex = 2;
+            this.txtPasswordCreate.Leave += new System.EventHandler(this.TxtPasswordCreate_Leave);
             // 
             // txtUsernameCreate
             // 
@@ -118,7 +145,8 @@
             this.txtUsernameCreate.Multiline = true;
             this.txtUsernameCreate.Name = "txtUsernameCreate";
             this.txtUsernameCreate.Size = new System.Drawing.Size(210, 32);
-            this.txtUsernameCreate.TabIndex = 15;
+            this.txtUsernameCreate.TabIndex = 1;
+            this.txtUsernameCreate.Leave += new System.EventHandler(this.TxtUsernameCreate_Leave);
             // 
             // lblUnmatchedAlert
             // 
@@ -255,5 +283,7 @@
         private System.Windows.Forms.TextBox txtPasswordCreate;
         private System.Windows.Forms.TextBox txtUsernameCreate;
         private System.Windows.Forms.Label lblExistedAlert;
+        private System.Windows.Forms.Label lblNullUsername;
+        private System.Windows.Forms.Label lblNullPassword;
     }
 }

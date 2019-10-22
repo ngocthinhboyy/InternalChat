@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount_PersonalInfo));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dropdownQuestion2 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.dropdownQuestion1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.question2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.question1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtAnswer2 = new System.Windows.Forms.TextBox();
             this.txtAnswer1 = new System.Windows.Forms.TextBox();
             this.txtNickname = new System.Windows.Forms.TextBox();
@@ -66,8 +66,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dropdownQuestion2);
-            this.panel1.Controls.Add(this.dropdownQuestion1);
+            this.panel1.Controls.Add(this.question2);
+            this.panel1.Controls.Add(this.question1);
             this.panel1.Controls.Add(this.txtAnswer2);
             this.panel1.Controls.Add(this.txtAnswer1);
             this.panel1.Controls.Add(this.txtNickname);
@@ -85,45 +85,45 @@
             this.panel1.Size = new System.Drawing.Size(570, 349);
             this.panel1.TabIndex = 0;
             // 
-            // dropdownQuestion2
+            // question2
             // 
-            this.dropdownQuestion2.BackColor = System.Drawing.Color.Transparent;
-            this.dropdownQuestion2.BorderRadius = 3;
-            this.dropdownQuestion2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dropdownQuestion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropdownQuestion2.ForeColor = System.Drawing.Color.Black;
-            this.dropdownQuestion2.Items = new string[] {
+            this.question2.BackColor = System.Drawing.Color.Transparent;
+            this.question2.BorderRadius = 3;
+            this.question2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.question2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question2.ForeColor = System.Drawing.Color.Black;
+            this.question2.Items = new string[] {
         "ABCD",
         "DEFD",
         "DDDDD"};
-            this.dropdownQuestion2.Location = new System.Drawing.Point(251, 195);
-            this.dropdownQuestion2.Margin = new System.Windows.Forms.Padding(6);
-            this.dropdownQuestion2.Name = "dropdownQuestion2";
-            this.dropdownQuestion2.NomalColor = System.Drawing.SystemColors.Window;
-            this.dropdownQuestion2.onHoverColor = System.Drawing.SystemColors.Window;
-            this.dropdownQuestion2.selectedIndex = 0;
-            this.dropdownQuestion2.Size = new System.Drawing.Size(280, 32);
-            this.dropdownQuestion2.TabIndex = 12;
+            this.question2.Location = new System.Drawing.Point(251, 195);
+            this.question2.Margin = new System.Windows.Forms.Padding(6);
+            this.question2.Name = "question2";
+            this.question2.NomalColor = System.Drawing.SystemColors.Window;
+            this.question2.onHoverColor = System.Drawing.SystemColors.Window;
+            this.question2.selectedIndex = 0;
+            this.question2.Size = new System.Drawing.Size(280, 32);
+            this.question2.TabIndex = 12;
             // 
-            // dropdownQuestion1
+            // question1
             // 
-            this.dropdownQuestion1.BackColor = System.Drawing.Color.Transparent;
-            this.dropdownQuestion1.BorderRadius = 3;
-            this.dropdownQuestion1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dropdownQuestion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropdownQuestion1.ForeColor = System.Drawing.Color.Black;
-            this.dropdownQuestion1.Items = new string[] {
+            this.question1.BackColor = System.Drawing.Color.Transparent;
+            this.question1.BorderRadius = 3;
+            this.question1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.question1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question1.ForeColor = System.Drawing.Color.Black;
+            this.question1.Items = new string[] {
         "ABCD",
         "DEFD",
         "DDDDD"};
-            this.dropdownQuestion1.Location = new System.Drawing.Point(251, 116);
-            this.dropdownQuestion1.Margin = new System.Windows.Forms.Padding(4);
-            this.dropdownQuestion1.Name = "dropdownQuestion1";
-            this.dropdownQuestion1.NomalColor = System.Drawing.SystemColors.Window;
-            this.dropdownQuestion1.onHoverColor = System.Drawing.SystemColors.Window;
-            this.dropdownQuestion1.selectedIndex = 0;
-            this.dropdownQuestion1.Size = new System.Drawing.Size(280, 32);
-            this.dropdownQuestion1.TabIndex = 11;
+            this.question1.Location = new System.Drawing.Point(251, 116);
+            this.question1.Margin = new System.Windows.Forms.Padding(4);
+            this.question1.Name = "question1";
+            this.question1.NomalColor = System.Drawing.SystemColors.Window;
+            this.question1.onHoverColor = System.Drawing.SystemColors.Window;
+            this.question1.selectedIndex = 0;
+            this.question1.Size = new System.Drawing.Size(280, 32);
+            this.question1.TabIndex = 11;
             // 
             // txtAnswer2
             // 
@@ -294,9 +294,9 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnSkip;
         private Bunifu.Framework.UI.BunifuThinButton2 btnFinish;
         private System.Windows.Forms.TextBox txtNickname;
-        private Bunifu.Framework.UI.BunifuDropdown dropdownQuestion1;
+        private Bunifu.Framework.UI.BunifuDropdown question1;
         private System.Windows.Forms.TextBox txtAnswer2;
         private System.Windows.Forms.TextBox txtAnswer1;
-        private Bunifu.Framework.UI.BunifuDropdown dropdownQuestion2;
+        private Bunifu.Framework.UI.BunifuDropdown question2;
     }
 }

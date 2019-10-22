@@ -283,3 +283,32 @@ C:\Users\Kun\Desktop\GITHUB_KUN\kunbr0_chat\InternalChat-LoginAndChat\SourceCode
 C:\Users\Kun\Desktop\GITHUB_KUN\kunbr0_chat\InternalChat-LoginAndChat\SourceCode\Internal Society\obj\Debug\Internal Society.exe
 C:\Users\Kun\Desktop\GITHUB_KUN\kunbr0_chat\InternalChat-LoginAndChat\SourceCode\Internal Society\obj\Debug\Internal Society.pdb
 C:\Users\Kun\Desktop\GITHUB_KUN\kunbr0_chat\InternalChat-LoginAndChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Sticker.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\bin\Debug\Internal Society.exe.config
+D:\InternalChat\InternalChat\SourceCode\Internal Society\bin\Debug\Internal Society.exe
+D:\InternalChat\InternalChat\SourceCode\Internal Society\bin\Debug\Internal Society.pdb
+D:\InternalChat\InternalChat\SourceCode\Internal Society\bin\Debug\Newtonsoft.Json.dll
+D:\InternalChat\InternalChat\SourceCode\Internal Society\bin\Debug\Newtonsoft.Json.xml
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal Society.csprojAssemblyReference.cache
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.bubble.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.chatbox.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.CreateAccount.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.CreateAccount_PersonalInfo.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Games_LuckyWheel.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.HomePage.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.IgnoringSecurityQuestionAlert.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.IncorrectAlert.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.LoginForm.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Calendar.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Cart.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Chat.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Dashboard.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Games.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Profile.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Settings.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Panel_Sticker.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal_Society.Properties.Resources.resources
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal Society.csproj.GenerateResource.cache
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal Society.csproj.CoreCompileInputs.cache
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal Society.csproj.CopyComplete
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal Society.exe
+D:\InternalChat\InternalChat\SourceCode\Internal Society\obj\Debug\Internal Society.pdb

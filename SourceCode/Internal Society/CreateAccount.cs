@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +15,8 @@ namespace Internal_Society
     public partial class CreateAccount : Form
     {
 
-        string k_username;
-        string k_ID;
+
+        string usernameInDBStatus = "0";
         public CreateAccount()
         {
             InitializeComponent();
@@ -28,19 +30,23 @@ namespace Internal_Society
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
+            CheckCorrect();
             // call api de kiem tra username da ton tai hay chua
-            if(false)
+            if(txtRepassword.Text != txtPasswordCreate.Text)
             {
-                // kiem tra username da ton tai
-                lblExistedAlert.Visible = true;
-            }
-            else if (txtPasswordCreate.Text != txtRepassword.Text)
-            {
-                // kiem tra password khong giong nhau
                 lblUnmatchedAlert.Visible = true;
             }
             else
             {
+                lblUnmatchedAlert.Visible = false;
+            }
+            if (txtPasswordCreate.Text != "" && txtUsernameCreate.Text != "" && usernameInDBStatus != "1" && txtRepassword.Text == txtPasswordCreate.Text)
+            {
+
+                Reg_Info.reg_Username = txtUsernameCreate.Text;
+                Reg_Info.reg_Password = txtPasswordCreate.Text;
+
+
                 // create Thanh cong - mo trang add Information.
                 CreateAccount_PersonalInfo personalInfoForm = new CreateAccount_PersonalInfo();
                 this.Hide();
@@ -50,6 +56,7 @@ namespace Internal_Society
                 homePageAfterCreating.ShowDialog();
                 // chuyen checkCreate = 0 de khi close KHONG mo lai Login Form
                 checkCreateAccountFormActive = 0;
+
                 this.Close();
             }
         }
@@ -60,6 +67,49 @@ namespace Internal_Society
             // chuyen checkCreate = 1 de khi cancel MO lai Login Form
             checkCreateAccountFormActive = 1;
             this.Close();
+        }
+        private void CheckCorrect()
+        {
+            var urlCheckUsername = "https://kunbr0.com/it008/check_exist.php?us=" + txtUsernameCreate.Text;
+            usernameInDBStatus = new WebClient().DownloadString(urlCheckUsername);
+
+
+            if (txtUsernameCreate.Text == "")
+            {
+                // kiem tra username da ton tai
+                lblExistedAlert.Visible = false;
+                lblNullUsername.Visible = true;
+            }
+            else if (usernameInDBStatus == "1")
+            {
+
+                lblExistedAlert.Visible = true;
+                lblNullUsername.Visible = false;
+            }
+            else
+            {
+                lblNullUsername.Visible = false;
+                lblExistedAlert.Visible = false;
+            }
+        }
+        private void TxtUsernameCreate_Leave(object sender, EventArgs e)
+        {
+
+
+
+            CheckCorrect();
+        }
+
+        private void TxtPasswordCreate_Leave(object sender, EventArgs e)
+        {
+            if(txtPasswordCreate.Text == "")
+            {
+                lblNullPassword.Visible = true;
+            }
+            else
+            {
+                lblNullPassword.Visible = false;
+            }
         }
     }
 }
