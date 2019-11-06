@@ -15,7 +15,7 @@ namespace Internal_Society
     public partial class CreateAccount : Form
     {
 
-
+        // check username inDB status
         string usernameInDBStatus = "0";
         public CreateAccount()
         {
