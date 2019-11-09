@@ -163,7 +163,7 @@ namespace Internal_Society
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.UseSystemPasswordChar = false; 
         }
 
         private void TxtPassword_Enter(object sender, EventArgs e)
