@@ -1,1 +1,0 @@
-{"ID":"11","Fullname":"duy","Diamond":"0","Gold":"0","Gender":"1","Phone":"+84 777 789 123","Email":"user@internal_chat.com","Birthday":"2011-11-22","Status":"1","Address":"1234 Nha tho Duc Ba"}
