@@ -214,7 +214,7 @@
             // 
             // Time_Sticker
             // 
-            this.Time_Sticker.Interval = 10;
+            this.Time_Sticker.Interval = 50;
             this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
             // 
             // chatbox

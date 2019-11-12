@@ -35,7 +35,7 @@ namespace Internal_Society
             panel_Calendar.Visible = false;
             panel_Games.Visible = false;
             panel_Settings.Visible = false;
-
+            panel_Search1.Visible = false;
         }
 
         public HomePage()
@@ -60,6 +60,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Dashboard.Visible = true;
+            App_Status.time_delay = 10000;
         }
 
         private void Tab_Profile_Click(object sender, EventArgs e)
@@ -67,6 +68,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Profile.Visible = true;
+            App_Status.time_delay = 10000;
         }
 
         private void Tab_Chat_Click(object sender, EventArgs e)
@@ -74,6 +76,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Chat.Visible = true;
+            App_Status.time_delay = 1500;
         }
 
         private void Tab_Cart_Click(object sender, EventArgs e)
@@ -81,6 +84,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Cart.Visible = true;
+            App_Status.time_delay = 10000;
         }
 
         private void Tab_Calendar_Click(object sender, EventArgs e)
@@ -88,6 +92,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Calendar.Visible = true;
+            App_Status.time_delay = 10000;
         }
 
         private void Tab_Games_Click(object sender, EventArgs e)
@@ -95,6 +100,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Games.Visible = true;
+            App_Status.time_delay = 10000;
         }
 
         private void Tab_Settings_Click(object sender, EventArgs e)
@@ -102,6 +108,7 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Settings.Visible = true;
+            App_Status.time_delay = 10000;
         }
 
         private void HomePage_Resize(object sender, EventArgs e)
@@ -114,6 +121,52 @@ namespace Internal_Society
             Update_App_Status();
 
         }
+
+        private void Textbox_Search_Enter(object sender, EventArgs e)
+        {
+            textbox_Search.text = "";
+            
+            //panel_Search1.Visible = true;
+        }
+
+        private void Textbox_Search_Leave(object sender, EventArgs e)
+        {
+            textbox_Search.text = "Search...";
+        }
+        public static string searchInfo = "";
+        string searchInfoLast = "";
+        private void Textbox_Search_KeyUp(object sender, EventArgs e)
+        {
+            panel_Search1.Visible = true;
+            searchInfo = textbox_Search.text;
+            // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
+            if (searchInfo == "")
+                panel_Search1.Controls.Clear();
+            else
+            // Mỗi khi sự kiện keyup xảy ra phải kiểm tra xem  username nhập vô khác với username trước đó không
+            // Nếu khác phải clear kết quả cũ, hiển thị một list các kết quả mới.
+            if (searchInfo != searchInfoLast)
+            {
+                //panel_Search1.Controls.Clear();
+                panel_Search1.AddFriendInfo();
+                searchInfoLast = searchInfo;
+            }
+        }
+
+        private void Picture_user_image_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Textbox_Search_Click(object sender, EventArgs e)
+        {
+            /*textbox_Search.text = "";
+            MoveIndicator((Control)sender);
+            TurnOffPanel();
+            panel_Search1.Visible = true;*/
+        }
+
+        
 
 
 

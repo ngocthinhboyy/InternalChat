@@ -46,6 +46,7 @@ namespace Internal_Society
             this.label_Fullname = new System.Windows.Forms.Label();
             this.picture_user_image = new System.Windows.Forms.PictureBox();
             this.textbox_Search = new Bunifu.Framework.UI.BunifuTextbox();
+            this.panel_Search1 = new Internal_Society.Panel_Search();
             this.panel_Settings = new Internal_Society.Panel_Settings();
             this.panel_Games = new Internal_Society.Panel_Games();
             this.panel_Dashboard = new Internal_Society.Panel_Dashboard();
@@ -74,7 +75,7 @@ namespace Internal_Society
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 633);
             this.panel1.TabIndex = 0;
@@ -83,7 +84,7 @@ namespace Internal_Society
             // 
             this.indicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(254)))));
             this.indicator.Location = new System.Drawing.Point(0, 134);
-            this.indicator.Margin = new System.Windows.Forms.Padding(2);
+            this.indicator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.indicator.Name = "indicator";
             this.indicator.Size = new System.Drawing.Size(7, 48);
             this.indicator.TabIndex = 11;
@@ -112,6 +113,7 @@ namespace Internal_Society
             this.Tab_Settings.IconZoom = 40D;
             this.Tab_Settings.IsTab = false;
             this.Tab_Settings.Location = new System.Drawing.Point(0, 422);
+            this.Tab_Settings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Settings.Name = "Tab_Settings";
             this.Tab_Settings.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_Settings.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -148,6 +150,7 @@ namespace Internal_Society
             this.Tab_Games.IconZoom = 40D;
             this.Tab_Games.IsTab = false;
             this.Tab_Games.Location = new System.Drawing.Point(0, 374);
+            this.Tab_Games.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Games.Name = "Tab_Games";
             this.Tab_Games.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_Games.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -184,6 +187,7 @@ namespace Internal_Society
             this.Tab_Calendar.IconZoom = 40D;
             this.Tab_Calendar.IsTab = false;
             this.Tab_Calendar.Location = new System.Drawing.Point(0, 326);
+            this.Tab_Calendar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Calendar.Name = "Tab_Calendar";
             this.Tab_Calendar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_Calendar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -220,6 +224,7 @@ namespace Internal_Society
             this.Tab_Cart.IconZoom = 40D;
             this.Tab_Cart.IsTab = false;
             this.Tab_Cart.Location = new System.Drawing.Point(0, 278);
+            this.Tab_Cart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Cart.Name = "Tab_Cart";
             this.Tab_Cart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_Cart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -256,6 +261,7 @@ namespace Internal_Society
             this.Tab_Chat.IconZoom = 40D;
             this.Tab_Chat.IsTab = false;
             this.Tab_Chat.Location = new System.Drawing.Point(0, 230);
+            this.Tab_Chat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Chat.Name = "Tab_Chat";
             this.Tab_Chat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_Chat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -292,6 +298,7 @@ namespace Internal_Society
             this.Tab_Profile.IconZoom = 40D;
             this.Tab_Profile.IsTab = false;
             this.Tab_Profile.Location = new System.Drawing.Point(0, 182);
+            this.Tab_Profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Profile.Name = "Tab_Profile";
             this.Tab_Profile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_Profile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -329,6 +336,7 @@ namespace Internal_Society
             this.Tab_DashBoard.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Tab_DashBoard.IsTab = false;
             this.Tab_DashBoard.Location = new System.Drawing.Point(0, 134);
+            this.Tab_DashBoard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_DashBoard.Name = "Tab_DashBoard";
             this.Tab_DashBoard.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.Tab_DashBoard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
@@ -347,7 +355,7 @@ namespace Internal_Society
             this.panel2.Controls.Add(this.btn_create_new);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(314, 134);
             this.panel2.TabIndex = 0;
@@ -374,6 +382,7 @@ namespace Internal_Society
             this.btn_create_new.IconZoom = 90D;
             this.btn_create_new.IsTab = false;
             this.btn_create_new.Location = new System.Drawing.Point(33, 42);
+            this.btn_create_new.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_create_new.Name = "btn_create_new";
             this.btn_create_new.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_create_new.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -394,7 +403,7 @@ namespace Internal_Society
             this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_header.Location = new System.Drawing.Point(314, 0);
-            this.pn_header.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_header.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_header.Name = "pn_header";
             this.pn_header.Size = new System.Drawing.Size(723, 65);
             this.pn_header.TabIndex = 1;
@@ -404,7 +413,7 @@ namespace Internal_Society
             this.label_Fullname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fullname.ForeColor = System.Drawing.Color.White;
-            this.label_Fullname.Location = new System.Drawing.Point(429, 22);
+            this.label_Fullname.Location = new System.Drawing.Point(430, 22);
             this.label_Fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Fullname.Name = "label_Fullname";
             this.label_Fullname.Size = new System.Drawing.Size(223, 20);
@@ -415,14 +424,16 @@ namespace Internal_Society
             // picture_user_image
             // 
             this.picture_user_image.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.picture_user_image.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_user_image.Image = ((System.Drawing.Image)(resources.GetObject("picture_user_image.Image")));
-            this.picture_user_image.Location = new System.Drawing.Point(656, 0);
-            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2);
+            this.picture_user_image.Location = new System.Drawing.Point(657, 0);
+            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picture_user_image.Name = "picture_user_image";
             this.picture_user_image.Size = new System.Drawing.Size(67, 65);
             this.picture_user_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_user_image.TabIndex = 1;
             this.picture_user_image.TabStop = false;
+            this.picture_user_image.Click += new System.EventHandler(this.Picture_user_image_Click);
             // 
             // textbox_Search
             // 
@@ -432,16 +443,34 @@ namespace Internal_Society
             this.textbox_Search.ForeColor = System.Drawing.Color.Azure;
             this.textbox_Search.Icon = ((System.Drawing.Image)(resources.GetObject("textbox_Search.Icon")));
             this.textbox_Search.Location = new System.Drawing.Point(27, 15);
+            this.textbox_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textbox_Search.Name = "textbox_Search";
             this.textbox_Search.Size = new System.Drawing.Size(397, 36);
             this.textbox_Search.TabIndex = 0;
             this.textbox_Search.text = "Search ...";
+            
+            this.textbox_Search.KeyUp += new System.EventHandler(this.Textbox_Search_KeyUp);
+            this.textbox_Search.Click += new System.EventHandler(this.Textbox_Search_Click);
+            this.textbox_Search.Enter += new System.EventHandler(this.Textbox_Search_Enter);
+            this.textbox_Search.Leave += new System.EventHandler(this.Textbox_Search_Leave);
+            // 
+            // panel_Search1
+            // 
+            this.panel_Search1.AutoScroll = true;
+            this.panel_Search1.BackColor = System.Drawing.Color.PeachPuff;
+            this.panel_Search1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Search1.Location = new System.Drawing.Point(314, 65);
+            this.panel_Search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel_Search1.Name = "panel_Search1";
+            this.panel_Search1.Size = new System.Drawing.Size(723, 568);
+            this.panel_Search1.TabIndex = 11;
             // 
             // panel_Settings
             // 
             this.panel_Settings.BackColor = System.Drawing.Color.Plum;
             this.panel_Settings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Settings.Location = new System.Drawing.Point(314, 65);
+            this.panel_Settings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Settings.Name = "panel_Settings";
             this.panel_Settings.Size = new System.Drawing.Size(723, 568);
             this.panel_Settings.TabIndex = 10;
@@ -452,6 +481,7 @@ namespace Internal_Society
             this.panel_Games.BackColor = System.Drawing.SystemColors.Info;
             this.panel_Games.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Games.Location = new System.Drawing.Point(314, 65);
+            this.panel_Games.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Games.Name = "panel_Games";
             this.panel_Games.Size = new System.Drawing.Size(723, 568);
             this.panel_Games.TabIndex = 9;
@@ -462,16 +492,17 @@ namespace Internal_Society
             this.panel_Dashboard.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel_Dashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Dashboard.Location = new System.Drawing.Point(314, 65);
+            this.panel_Dashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Dashboard.Name = "panel_Dashboard";
             this.panel_Dashboard.Size = new System.Drawing.Size(723, 568);
             this.panel_Dashboard.TabIndex = 8;
-            this.panel_Dashboard.Visible = false;
             // 
             // panel_Cart
             // 
             this.panel_Cart.BackColor = System.Drawing.Color.PaleGreen;
             this.panel_Cart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Cart.Location = new System.Drawing.Point(314, 65);
+            this.panel_Cart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Cart.Name = "panel_Cart";
             this.panel_Cart.Size = new System.Drawing.Size(723, 568);
             this.panel_Cart.TabIndex = 7;
@@ -482,6 +513,7 @@ namespace Internal_Society
             this.panel_Calendar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel_Calendar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Calendar.Location = new System.Drawing.Point(314, 65);
+            this.panel_Calendar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Calendar.Name = "panel_Calendar";
             this.panel_Calendar.Size = new System.Drawing.Size(723, 568);
             this.panel_Calendar.TabIndex = 6;
@@ -491,6 +523,7 @@ namespace Internal_Society
             // 
             this.panel_Chat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Chat.Location = new System.Drawing.Point(314, 65);
+            this.panel_Chat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Chat.Name = "panel_Chat";
             this.panel_Chat.Size = new System.Drawing.Size(723, 568);
             this.panel_Chat.TabIndex = 5;
@@ -500,6 +533,7 @@ namespace Internal_Society
             // 
             this.panel_Profile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Profile.Location = new System.Drawing.Point(314, 65);
+            this.panel_Profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Profile.Name = "panel_Profile";
             this.panel_Profile.Size = new System.Drawing.Size(723, 568);
             this.panel_Profile.TabIndex = 4;
@@ -511,6 +545,7 @@ namespace Internal_Society
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1037, 633);
+            this.Controls.Add(this.panel_Search1);
             this.Controls.Add(this.panel_Settings);
             this.Controls.Add(this.panel_Games);
             this.Controls.Add(this.panel_Dashboard);
@@ -520,7 +555,7 @@ namespace Internal_Society
             this.Controls.Add(this.panel_Profile);
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.Move += new System.EventHandler(this.HomePage_Move);
@@ -558,8 +593,7 @@ namespace Internal_Society
         private Panel_Games panel_Games;
         private Panel_Settings panel_Settings;
         private BunifuFlatButton Tab_Settings;
-
-        
+        private Panel_Search panel_Search1;
     }
 }
 
