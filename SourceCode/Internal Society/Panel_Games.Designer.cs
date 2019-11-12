@@ -33,7 +33,7 @@
             // 
             // games_LuckyWheel1
             // 
-            this.games_LuckyWheel1.Location = new System.Drawing.Point(21, 26);
+            this.games_LuckyWheel1.Location = new System.Drawing.Point(112, 41);
             this.games_LuckyWheel1.Name = "games_LuckyWheel1";
             this.games_LuckyWheel1.Size = new System.Drawing.Size(498, 498);
             this.games_LuckyWheel1.TabIndex = 0;

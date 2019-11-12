@@ -42,9 +42,9 @@ namespace Internal_Society
 
                 Time_Request.Interval = App_Status.time_delay;
 
-                ThreadStart ts_1 = new ThreadStart(threadGetData);
+                /*ThreadStart ts_1 = new ThreadStart(threadGetData);
                 Thread thrd_1 = new Thread(ts_1);
-                thrd_1.Start();
+                thrd_1.Start();*/
 
                 Time_Request.Start();
                 Time_Get_Message_Data.Start();
@@ -84,6 +84,7 @@ namespace Internal_Society
         {           
             var urlGetData = "https://kunbr0.com/it008/get_conversation_detail.php?c_id=" + id_conversation + "&index=" + messIndex;
             dataMessage = new WebClient().DownloadString(urlGetData);
+            
         }
 
 
@@ -269,7 +270,13 @@ namespace Internal_Society
             Thread thrd_1 = new Thread(ts_1);
             thrd_1.Start();
 
-            
+            if (Time_Request.Interval != App_Status.time_delay)
+            {
+                Time_Request.Interval = App_Status.time_delay;
+                Time_Request.Stop();
+                Time_Request.Start();
+            }
+
         }
 
         private void Button_Attach_Click(object sender, EventArgs e)

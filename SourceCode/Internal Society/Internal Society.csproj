@@ -86,6 +86,13 @@
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Data_Message.cs" />
+    <Compile Include="friendInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="friendInfo.Designer.cs">
+      <DependentUpon>friendInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Friend_Info.cs" />
     <Compile Include="Games_LuckyWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +159,12 @@
     <Compile Include="Panel_Profile.Designer.cs">
       <DependentUpon>Panel_Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel_Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel_Search.Designer.cs">
+      <DependentUpon>Panel_Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel_Settings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +180,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reg_Info.cs" />
+    <Compile Include="sticker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sticker.Designer.cs">
+      <DependentUpon>sticker.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Info.cs" />
     <EmbeddedResource Include="bubble.resx">
       <DependentUpon>bubble.cs</DependentUpon>
@@ -179,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount_PersonalInfo.resx">
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="friendInfo.resx">
+      <DependentUpon>friendInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games_LuckyWheel.resx">
       <DependentUpon>Games_LuckyWheel.cs</DependentUpon>
@@ -213,6 +235,9 @@
     <EmbeddedResource Include="Panel_Profile.resx">
       <DependentUpon>Panel_Profile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Search.resx">
+      <DependentUpon>Panel_Search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panel_Settings.resx">
       <DependentUpon>Panel_Settings.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +254,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="sticker.resx">
+      <DependentUpon>sticker.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -350,6 +378,486 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heohong_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heohong_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luci_&amp;_Daisy_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foxie_019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_answer_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toto_dog_020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pikalong_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonton_friends_020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rong_vang_019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tien_len_vn_010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev_000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev_003.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

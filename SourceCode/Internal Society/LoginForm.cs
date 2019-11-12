@@ -37,7 +37,9 @@ namespace Internal_Society
             var usernameLogin = txtUsername.Text;
             var passwordLogin = txtPassword.Text;
             var urlLogin = "https://kunbr0.com/it008/login.php?us=" + usernameLogin + "&ps=" + passwordLogin;
+
             LoginStatus = new WebClient().DownloadString(urlLogin);
+            
         }
 
         
