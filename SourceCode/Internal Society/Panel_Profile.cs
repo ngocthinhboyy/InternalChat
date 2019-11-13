@@ -37,7 +37,14 @@ namespace Internal_Society
             k_user_id = User_Info.k_ID;
             txt_Profile_Name.Text = User_Info.k_Fullname;
             txt_Profile_Birthday.Text = User_Info.k_Birthday;
-            txt_Profile_Gender.Text = User_Info.k_Gender;
+            if(User_Info.k_Gender == "1")
+            {
+                txt_Profile_Gender.Text = "Male";
+            }
+            else
+            {
+                txt_Profile_Gender.Text = "Female";
+            }
             txt_Profile_Phone.Text = User_Info.k_Phone;
             txt_Profile_Email.Text = User_Info.k_Email;
             txt_Profile_Status.Text = User_Info.k_Status;
@@ -128,7 +135,14 @@ namespace Internal_Society
             else
             {
                 var edit_data = "";
-                edit_data = txt_Profile_Gender.Text;
+                if(txt_Profile_Gender.Text == "Male")
+                {
+                    edit_data = "1";
+                }
+                else
+                {
+                    edit_data = "0";
+                }
                 change_user_info(3, edit_data);
                 txt_Profile_Gender.Enabled = false;
                 edit_gender.ImageLocation = @"../../Resources/edit.png";

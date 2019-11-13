@@ -88,7 +88,13 @@ namespace Internal_Society
         {
             ClickLogin();
         }
+        string kUTF8(string a)
+        {
+            string kq;
+            byte[] bytes = Encoding.Default.GetBytes(a.ToString());
+            return Encoding.UTF8.GetString(bytes);
 
+        }
         private void TimeLogin_Tick(object sender, EventArgs e)
         {
             if(LoginStatus != "-99")
@@ -101,26 +107,22 @@ namespace Internal_Society
                     // dang nhap thanh cong.
                     File.WriteAllText("user_info.txt", String.Empty);
 
-                    StreamWriter kWrite = new StreamWriter("user_info.txt", true);
                     dynamic data_user = JsonConvert.DeserializeObject(LoginStatus);
 
-                    string inputFile = "{\"ID\":\"" + data_user.ID + "\",\"Fullname\":\"" + data_user.Fullname + "\",\"Diamond\":\"" + data_user.Diamond + "\",\"Gold\":\"" + data_user.Gold + "\",\"Gender\":\"" + data_user.Gender + "\",\"Phone\":\"" + data_user.Phone + "\",\"Email\":\"" + data_user.Email + "\",\"Birthday\":\"" + data_user.Birthday + "\",\"Status\":\"" + data_user.Status + "\",\"Address\":\"" + data_user.Address + "\"}";
-
-                    kWrite.WriteLine(inputFile);
-                    kWrite.Close();
+                    
                     // define
-
                     User_Info.k_ID = data_user.ID;
-                    User_Info.k_Username = data_user.Username;
-                    User_Info.k_Fullname = data_user.Fullname;
-                    User_Info.k_Diamond = data_user.Diamond;
-                    User_Info.k_Gold = data_user.Gold;
-                    User_Info.k_Gender = data_user.Gender;
-                    User_Info.k_Phone = data_user.Phone;
-                    User_Info.k_Email = data_user.Email;
-                    User_Info.k_Birthday = data_user.Birthday;
-                    User_Info.k_Status = data_user.Status;
-                    User_Info.k_Address = data_user.Address;
+                    User_Info.k_Username = kUTF8(data_user.Username.ToString());
+                    User_Info.k_Fullname = kUTF8(data_user.Fullname.ToString());
+                    User_Info.k_Diamond = kUTF8(data_user.Diamond.ToString());
+                    User_Info.k_Gold = kUTF8(data_user.Gold.ToString());
+                    User_Info.k_Gender = kUTF8(data_user.Gender.ToString());
+                    User_Info.k_Phone = kUTF8(data_user.Phone.ToString());
+                    User_Info.k_Email = kUTF8(data_user.Email.ToString());
+                    User_Info.k_Birthday = kUTF8(data_user.Birthday.ToString());
+                    User_Info.k_Status = kUTF8(data_user.Status.ToString());
+                    User_Info.k_Address = kUTF8(data_user.Address.ToString());
+                    
 
 
 

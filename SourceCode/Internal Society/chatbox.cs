@@ -226,8 +226,9 @@ namespace Internal_Society
 
             for(int i = dMess.data.Count-1; i >= 0; i--)
             {
-                
 
+                byte[] bytes = Encoding.Default.GetBytes(dMess.data[i].Message.ToString());
+                dMess.data[i].Message = Encoding.UTF8.GetString(bytes);
                 if (Convert.ToInt32(dMess.data[i].Message_id) > messIndex) messIndex = Convert.ToInt32(dMess.data[i].Message_id);
 
                 if (dMess.data[i].User_id == User_Info.k_ID)
