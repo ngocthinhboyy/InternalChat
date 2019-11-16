@@ -54,6 +54,7 @@ namespace Internal_Society
             this.panel_Calendar = new Internal_Society.Panel_Calendar();
             this.panel_Chat = new Internal_Society.Panel_Chat();
             this.panel_Profile = new Internal_Society.Panel_Profile();
+            this.onlineList1 = new Internal_Society.onlineList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +65,7 @@ namespace Internal_Society
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.panel1.Controls.Add(this.onlineList1);
             this.panel1.Controls.Add(this.indicator);
             this.panel1.Controls.Add(this.Tab_Settings);
             this.panel1.Controls.Add(this.Tab_Games);
@@ -75,7 +77,7 @@ namespace Internal_Society
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 633);
             this.panel1.TabIndex = 0;
@@ -84,7 +86,7 @@ namespace Internal_Society
             // 
             this.indicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(254)))));
             this.indicator.Location = new System.Drawing.Point(0, 134);
-            this.indicator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.indicator.Margin = new System.Windows.Forms.Padding(2);
             this.indicator.Name = "indicator";
             this.indicator.Size = new System.Drawing.Size(7, 48);
             this.indicator.TabIndex = 11;
@@ -355,7 +357,7 @@ namespace Internal_Society
             this.panel2.Controls.Add(this.btn_create_new);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(314, 134);
             this.panel2.TabIndex = 0;
@@ -394,6 +396,7 @@ namespace Internal_Society
             this.btn_create_new.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_create_new.Textcolor = System.Drawing.Color.White;
             this.btn_create_new.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_create_new.Click += new System.EventHandler(this.Btn_create_new_Click);
             // 
             // pn_header
             // 
@@ -403,7 +406,7 @@ namespace Internal_Society
             this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_header.Location = new System.Drawing.Point(314, 0);
-            this.pn_header.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_header.Margin = new System.Windows.Forms.Padding(2);
             this.pn_header.Name = "pn_header";
             this.pn_header.Size = new System.Drawing.Size(723, 65);
             this.pn_header.TabIndex = 1;
@@ -427,7 +430,7 @@ namespace Internal_Society
             this.picture_user_image.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_user_image.Image = ((System.Drawing.Image)(resources.GetObject("picture_user_image.Image")));
             this.picture_user_image.Location = new System.Drawing.Point(657, 0);
-            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2);
             this.picture_user_image.Name = "picture_user_image";
             this.picture_user_image.Size = new System.Drawing.Size(67, 65);
             this.picture_user_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -448,7 +451,6 @@ namespace Internal_Society
             this.textbox_Search.Size = new System.Drawing.Size(397, 36);
             this.textbox_Search.TabIndex = 0;
             this.textbox_Search.text = "Search ...";
-            
             this.textbox_Search.KeyUp += new System.EventHandler(this.Textbox_Search_KeyUp);
             this.textbox_Search.Click += new System.EventHandler(this.Textbox_Search_Click);
             this.textbox_Search.Enter += new System.EventHandler(this.Textbox_Search_Enter);
@@ -539,6 +541,15 @@ namespace Internal_Society
             this.panel_Profile.TabIndex = 4;
             this.panel_Profile.Visible = false;
             // 
+            // onlineList1
+            // 
+            this.onlineList1.AutoScroll = true;
+            this.onlineList1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.onlineList1.Location = new System.Drawing.Point(12, 478);
+            this.onlineList1.Name = "onlineList1";
+            this.onlineList1.Size = new System.Drawing.Size(262, 94);
+            this.onlineList1.TabIndex = 1;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,7 +566,7 @@ namespace Internal_Society
             this.Controls.Add(this.panel_Profile);
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.Move += new System.EventHandler(this.HomePage_Move);
@@ -594,6 +605,7 @@ namespace Internal_Society
         private Panel_Settings panel_Settings;
         private BunifuFlatButton Tab_Settings;
         private Panel_Search panel_Search1;
+        private onlineList onlineList1;
     }
 }
 

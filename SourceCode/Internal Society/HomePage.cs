@@ -41,7 +41,7 @@ namespace Internal_Society
         public HomePage()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             
 
             label_Fullname.Text = User_Info.k_Fullname;
@@ -77,6 +77,21 @@ namespace Internal_Society
             TurnOffPanel();
             panel_Chat.Visible = true;
             App_Status.time_delay = 1500;
+            Tab_Calendar.Visible = false;
+            Tab_Cart.Visible = false;
+            Tab_Chat.Visible = false;
+            Tab_DashBoard.Visible = false;
+            Tab_Games.Visible = false;
+            Tab_Profile.Visible = false;
+            Tab_Settings.Visible = false;
+            indicator.Visible = false;
+            onlineList1.Visible = true;
+            onlineList1.Dock = DockStyle.Left;
+            btn_create_new.Text = "Back to menu";
+
+            onlineList1.ShowOnlineUser();
+
+
         }
 
         private void Tab_Cart_Click(object sender, EventArgs e)
@@ -147,7 +162,6 @@ namespace Internal_Society
             // Nếu khác phải clear kết quả cũ, hiển thị một list các kết quả mới.
             if (searchInfo != searchInfoLast)
             {
-                //panel_Search1.Controls.Clear();
                 panel_Search1.AddFriendInfo();
                 searchInfoLast = searchInfo;
             }
@@ -166,7 +180,22 @@ namespace Internal_Society
             panel_Search1.Visible = true;*/
         }
 
-        
+        private void Btn_create_new_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)Tab_DashBoard);
+            TurnOffPanel();
+            panel_Dashboard.Visible = true;
+            Tab_Calendar.Visible = true;
+            Tab_Cart.Visible = true;
+            Tab_Chat.Visible = true;
+            Tab_DashBoard.Visible = true;
+            Tab_Games.Visible = true;
+            Tab_Profile.Visible = true;
+            Tab_Settings.Visible = true;
+            indicator.Visible = true;
+        }
+
+
 
 
 

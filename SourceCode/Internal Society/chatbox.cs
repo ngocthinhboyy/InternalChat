@@ -25,7 +25,7 @@ namespace Internal_Society
         string id_conversation = "1";
 
         bubble bbl_old = new bubble();
-
+        
         string json;
         string pMessage = "";
         string pSticker = "";
@@ -55,7 +55,7 @@ namespace Internal_Society
             }
 
             bbl_old.Top = 0 - bbl_old.Height + 10;
-
+            //pic_old.Top = 0 - pic_old.Height + 10;
             /*StreamReader read = new StreamReader("conversation_5.txt");
             string a1 = null;
             a1 = read.ReadLine();
@@ -93,23 +93,16 @@ namespace Internal_Society
 
             
             bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker,message_type, kkTime, msgType.In);
-            
-            bbl.Location = new Point(this.Width-bbl.Width -50 ,50);
-            
+            bbl.Location = new Point(this.Width-bbl.Width - 50 ,50);
             bbl.Top = bbl_old.Bottom + 20;
             //bbl.Size = bubble1.Size;
             //bbl.Font = bubble1.Font;
             //bbl.Anchor = bubble1.Anchor;
-
-
-
-
             panel2.Controls.Add(bbl);
-
+           
 
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-
 
 
         }
@@ -118,18 +111,14 @@ namespace Internal_Society
         {
 
             bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker, message_type, kkTime, msgType.Out);
-
-            bbl.Location = new Point(30, 50);
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(40, 40);
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            bbl.Location = new Point(90, 50);
             bbl.Top = bbl_old.Bottom + 20;
-
-            /*bbl.Location = bubble2.Location;
-            bbl.Size = bubble1.Size;
-
-            bbl.Anchor = bubble1.Anchor;
-            bbl.Top = bbl_old.Bottom + 20;*/
-
-
-
+            pic.Location = new Point(20, bbl.Top);
+            pic.Image = Image.FromFile(@"../../Resources/user_001.png");
+            panel2.Controls.Add(pic);
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;

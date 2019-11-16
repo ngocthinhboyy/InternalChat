@@ -23,7 +23,7 @@ namespace Internal_Society
 
         string listUsers = "99";
         public void AddFriendInfo()
-        {   // list dùng để lưu kết quả ứng với username mà người dùng search
+        {   
             label_Error.Visible = false;
             string urlSearchUser = "https://kunbr0.com/it008/search.php?data_search=" + HomePage.searchInfo;
 
@@ -38,7 +38,7 @@ namespace Internal_Society
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            
+            // list dùng để lưu kết quả ứng với username mà người dùng search
             //listUser không rỗng, nghĩa là tồn tại những user có username trùng với tên người dùng nhập
             //thì sẽ chuyển chuỗi đó thành các đối tượng thuộc list
             if (listUsers != "99")

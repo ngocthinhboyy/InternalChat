@@ -193,6 +193,16 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_circle_15_0_58de40_none {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_circle_15_0_58de40_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap font_awesome_4_7_0_user_24_0_666666_none {
             get {
                 object obj = ResourceManager.GetObject("font-awesome_4-7-0_user_24_0_666666_none", resourceCulture);
@@ -936,6 +946,16 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap more_001 {
             get {
                 object obj = ResourceManager.GetObject("more_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap offline {
+            get {
+                object obj = ResourceManager.GetObject("offline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
