@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lb_message = new System.Windows.Forms.Label();
             this.lb_time = new System.Windows.Forms.Label();
             this.picture_sticker = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picture_sticker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +76,11 @@
             this.picture_sticker.TabStop = false;
             this.picture_sticker.Visible = false;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // bubble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,5 +106,6 @@
         private System.Windows.Forms.Label lb_message;
         private System.Windows.Forms.Label lb_time;
         private System.Windows.Forms.PictureBox picture_sticker;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

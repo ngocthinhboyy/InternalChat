@@ -408,7 +408,7 @@ namespace Internal_Society
             this.pn_header.Location = new System.Drawing.Point(314, 0);
             this.pn_header.Margin = new System.Windows.Forms.Padding(2);
             this.pn_header.Name = "pn_header";
-            this.pn_header.Size = new System.Drawing.Size(723, 65);
+            this.pn_header.Size = new System.Drawing.Size(754, 65);
             this.pn_header.TabIndex = 1;
             // 
             // label_Fullname
@@ -416,7 +416,7 @@ namespace Internal_Society
             this.label_Fullname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fullname.ForeColor = System.Drawing.Color.White;
-            this.label_Fullname.Location = new System.Drawing.Point(430, 22);
+            this.label_Fullname.Location = new System.Drawing.Point(461, 22);
             this.label_Fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Fullname.Name = "label_Fullname";
             this.label_Fullname.Size = new System.Drawing.Size(223, 20);
@@ -429,7 +429,7 @@ namespace Internal_Society
             this.picture_user_image.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.picture_user_image.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_user_image.Image = ((System.Drawing.Image)(resources.GetObject("picture_user_image.Image")));
-            this.picture_user_image.Location = new System.Drawing.Point(657, 0);
+            this.picture_user_image.Location = new System.Drawing.Point(688, 0);
             this.picture_user_image.Margin = new System.Windows.Forms.Padding(2);
             this.picture_user_image.Name = "picture_user_image";
             this.picture_user_image.Size = new System.Drawing.Size(67, 65);
@@ -463,8 +463,9 @@ namespace Internal_Society
             this.panel_Search1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Search1.Location = new System.Drawing.Point(314, 65);
             this.panel_Search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel_Search1.MinimumSize = new System.Drawing.Size(500, 0);
             this.panel_Search1.Name = "panel_Search1";
-            this.panel_Search1.Size = new System.Drawing.Size(723, 568);
+            this.panel_Search1.Size = new System.Drawing.Size(754, 568);
             this.panel_Search1.TabIndex = 11;
             // 
             // panel_Settings
@@ -474,7 +475,7 @@ namespace Internal_Society
             this.panel_Settings.Location = new System.Drawing.Point(314, 65);
             this.panel_Settings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Settings.Name = "panel_Settings";
-            this.panel_Settings.Size = new System.Drawing.Size(723, 568);
+            this.panel_Settings.Size = new System.Drawing.Size(754, 568);
             this.panel_Settings.TabIndex = 10;
             this.panel_Settings.Visible = false;
             // 
@@ -485,7 +486,7 @@ namespace Internal_Society
             this.panel_Games.Location = new System.Drawing.Point(314, 65);
             this.panel_Games.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Games.Name = "panel_Games";
-            this.panel_Games.Size = new System.Drawing.Size(723, 568);
+            this.panel_Games.Size = new System.Drawing.Size(754, 568);
             this.panel_Games.TabIndex = 9;
             this.panel_Games.Visible = false;
             // 
@@ -496,7 +497,7 @@ namespace Internal_Society
             this.panel_Dashboard.Location = new System.Drawing.Point(314, 65);
             this.panel_Dashboard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Dashboard.Name = "panel_Dashboard";
-            this.panel_Dashboard.Size = new System.Drawing.Size(723, 568);
+            this.panel_Dashboard.Size = new System.Drawing.Size(754, 568);
             this.panel_Dashboard.TabIndex = 8;
             // 
             // panel_Cart
@@ -506,7 +507,7 @@ namespace Internal_Society
             this.panel_Cart.Location = new System.Drawing.Point(314, 65);
             this.panel_Cart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Cart.Name = "panel_Cart";
-            this.panel_Cart.Size = new System.Drawing.Size(723, 568);
+            this.panel_Cart.Size = new System.Drawing.Size(754, 568);
             this.panel_Cart.TabIndex = 7;
             this.panel_Cart.Visible = false;
             // 
@@ -517,7 +518,7 @@ namespace Internal_Society
             this.panel_Calendar.Location = new System.Drawing.Point(314, 65);
             this.panel_Calendar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Calendar.Name = "panel_Calendar";
-            this.panel_Calendar.Size = new System.Drawing.Size(723, 568);
+            this.panel_Calendar.Size = new System.Drawing.Size(754, 568);
             this.panel_Calendar.TabIndex = 6;
             this.panel_Calendar.Visible = false;
             // 
@@ -527,7 +528,7 @@ namespace Internal_Society
             this.panel_Chat.Location = new System.Drawing.Point(314, 65);
             this.panel_Chat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Chat.Name = "panel_Chat";
-            this.panel_Chat.Size = new System.Drawing.Size(723, 568);
+            this.panel_Chat.Size = new System.Drawing.Size(754, 568);
             this.panel_Chat.TabIndex = 5;
             this.panel_Chat.Visible = false;
             // 
@@ -537,7 +538,7 @@ namespace Internal_Society
             this.panel_Profile.Location = new System.Drawing.Point(314, 65);
             this.panel_Profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel_Profile.Name = "panel_Profile";
-            this.panel_Profile.Size = new System.Drawing.Size(723, 568);
+            this.panel_Profile.Size = new System.Drawing.Size(754, 568);
             this.panel_Profile.TabIndex = 4;
             this.panel_Profile.Visible = false;
             // 
@@ -555,7 +556,7 @@ namespace Internal_Society
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1037, 633);
+            this.ClientSize = new System.Drawing.Size(1068, 633);
             this.Controls.Add(this.panel_Search1);
             this.Controls.Add(this.panel_Settings);
             this.Controls.Add(this.panel_Games);
@@ -567,6 +568,7 @@ namespace Internal_Society
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1056, 0);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.Move += new System.EventHandler(this.HomePage_Move);

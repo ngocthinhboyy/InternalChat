@@ -98,6 +98,8 @@ namespace Internal_Society
             //bbl.Size = bubble1.Size;
             //bbl.Font = bubble1.Font;
             //bbl.Anchor = bubble1.Anchor;
+
+            bbl.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
             panel2.Controls.Add(bbl);
            
 
@@ -117,12 +119,11 @@ namespace Internal_Society
             bbl.Location = new Point(90, 50);
             bbl.Top = bbl_old.Bottom + 20;
             pic.Location = new Point(20, bbl.Top);
-            pic.Image = Image.FromFile(@"../../Resources/user_001.png");
+            pic.ImageLocation = "../../Resources/user_001.png";
             panel2.Controls.Add(pic);
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-
 
         }
 

@@ -40,11 +40,11 @@
             this.button_Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.button_Send = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bubble2 = new Internal_Society.bubble();
-            this.bubble1 = new Internal_Society.bubble();
             this.Time_Get_Message_Data = new System.Windows.Forms.Timer(this.components);
             this.Time_Request = new System.Windows.Forms.Timer(this.components);
             this.Time_Sticker = new System.Windows.Forms.Timer(this.components);
+            this.bubble2 = new Internal_Society.bubble();
+            this.bubble1 = new Internal_Society.bubble();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_More)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_Sticker)).BeginInit();
@@ -85,7 +85,7 @@
             // 
             // button_More
             // 
-            this.button_More.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_More.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_More.BackColor = System.Drawing.Color.Transparent;
             this.button_More.Image = global::Internal_Society.Properties.Resources.more_001;
             this.button_More.ImageActive = null;
@@ -100,7 +100,7 @@
             // 
             // button_Sticker
             // 
-            this.button_Sticker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Sticker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_Sticker.BackColor = System.Drawing.Color.Transparent;
             this.button_Sticker.Image = global::Internal_Society.Properties.Resources.image_002;
             this.button_Sticker.ImageActive = null;
@@ -116,7 +116,7 @@
             // 
             // button_Picture
             // 
-            this.button_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Picture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_Picture.BackColor = System.Drawing.Color.Transparent;
             this.button_Picture.Image = global::Internal_Society.Properties.Resources.image_001;
             this.button_Picture.ImageActive = null;
@@ -131,7 +131,7 @@
             // 
             // button_Attach
             // 
-            this.button_Attach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Attach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_Attach.BackColor = System.Drawing.Color.Transparent;
             this.button_Attach.Image = global::Internal_Society.Properties.Resources.attach_002;
             this.button_Attach.ImageActive = null;
@@ -163,44 +163,18 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.bubble2);
             this.panel2.Controls.Add(this.bubble1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(715, 499);
             this.panel2.TabIndex = 4;
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseClick);
-            // 
-            // bubble2
-            // 
-            this.bubble2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bubble2.AutoSize = true;
-            this.bubble2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(147)))));
-            this.bubble2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.bubble2.Location = new System.Drawing.Point(9, 11);
-            this.bubble2.Margin = new System.Windows.Forms.Padding(1);
-            this.bubble2.MaximumSize = new System.Drawing.Size(400, 0);
-            this.bubble2.Name = "bubble2";
-            this.bubble2.Size = new System.Drawing.Size(346, 80);
-            this.bubble2.TabIndex = 3;
-            this.bubble2.Visible = false;
-            // 
-            // bubble1
-            // 
-            this.bubble1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bubble1.AutoSize = true;
-            this.bubble1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(147)))));
-            this.bubble1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.bubble1.Location = new System.Drawing.Point(367, 11);
-            this.bubble1.Margin = new System.Windows.Forms.Padding(1);
-            this.bubble1.MaximumSize = new System.Drawing.Size(400, 0);
-            this.bubble1.Name = "bubble1";
-            this.bubble1.Size = new System.Drawing.Size(331, 80);
-            this.bubble1.TabIndex = 2;
-            this.bubble1.Visible = false;
             // 
             // Time_Get_Message_Data
             // 
@@ -216,6 +190,34 @@
             // 
             this.Time_Sticker.Interval = 50;
             this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
+            // 
+            // bubble2
+            // 
+            this.bubble2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bubble2.AutoSize = true;
+            this.bubble2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(147)))));
+            this.bubble2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.bubble2.Location = new System.Drawing.Point(9, 11);
+            this.bubble2.Margin = new System.Windows.Forms.Padding(1);
+            this.bubble2.MaximumSize = new System.Drawing.Size(400, 0);
+            this.bubble2.Name = "bubble2";
+            this.bubble2.Size = new System.Drawing.Size(346, 60);
+            this.bubble2.TabIndex = 3;
+            this.bubble2.Visible = false;
+            // 
+            // bubble1
+            // 
+            this.bubble1.AutoSize = true;
+            this.bubble1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(147)))));
+            this.bubble1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.bubble1.Location = new System.Drawing.Point(367, 11);
+            this.bubble1.Margin = new System.Windows.Forms.Padding(1);
+            this.bubble1.MaximumSize = new System.Drawing.Size(400, 0);
+            this.bubble1.Name = "bubble1";
+            this.bubble1.Size = new System.Drawing.Size(331, 60);
+            this.bubble1.TabIndex = 2;
+            this.bubble1.Visible = false;
             // 
             // chatbox
             // 
