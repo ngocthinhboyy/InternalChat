@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblShortPassword = new System.Windows.Forms.Label();
             this.lblNullPassword = new System.Windows.Forms.Label();
             this.lblNullUsername = new System.Windows.Forms.Label();
             this.lblExistedAlert = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lblShortPassword);
             this.panel1.Controls.Add(this.lblNullPassword);
             this.panel1.Controls.Add(this.lblNullUsername);
             this.panel1.Controls.Add(this.lblExistedAlert);
@@ -85,6 +87,17 @@
             this.panel1.Size = new System.Drawing.Size(570, 349);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // lblShortPassword
+            // 
+            this.lblShortPassword.AutoSize = true;
+            this.lblShortPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblShortPassword.Location = new System.Drawing.Point(249, 184);
+            this.lblShortPassword.Name = "lblShortPassword";
+            this.lblShortPassword.Size = new System.Drawing.Size(262, 13);
+            this.lblShortPassword.TabIndex = 26;
+            this.lblShortPassword.Text = "Your password must be between 6 and 30 characters.";
+            this.lblShortPassword.Visible = false;
             // 
             // lblNullPassword
             // 
@@ -285,5 +298,6 @@
         private System.Windows.Forms.Label lblExistedAlert;
         private System.Windows.Forms.Label lblNullUsername;
         private System.Windows.Forms.Label lblNullPassword;
+        private System.Windows.Forms.Label lblShortPassword;
     }
 }
