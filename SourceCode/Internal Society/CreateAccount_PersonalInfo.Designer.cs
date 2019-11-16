@@ -93,7 +93,7 @@
             this.question2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question2.ForeColor = System.Drawing.Color.Black;
             this.question2.Items = new string[] {
-        "ABCD",
+        "Bạn thích nuôi con vật nào nhất?",
         "DEFD",
         "DDDDD"};
             this.question2.Location = new System.Drawing.Point(251, 195);
@@ -113,7 +113,7 @@
             this.question1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question1.ForeColor = System.Drawing.Color.Black;
             this.question1.Items = new string[] {
-        "ABCD",
+        "Bạn thích ăn món gì nhất?",
         "DEFD",
         "DDDDD"};
             this.question1.Location = new System.Drawing.Point(251, 116);
