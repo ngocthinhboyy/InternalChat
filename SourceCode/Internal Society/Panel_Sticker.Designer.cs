@@ -103,7 +103,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Panel_Sticker";
             this.Opacity = 0.9D;
-            this.Text = "Panel_Sticker1";
+            this.Text = "Sticker";
             this.Load += new System.EventHandler(this.Panel_Sticker_Load);
             this.Shown += new System.EventHandler(this.Panel_Sticker_Shown);
             this.panel2.ResumeLayout(false);

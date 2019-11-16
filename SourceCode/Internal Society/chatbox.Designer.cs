@@ -40,11 +40,11 @@
             this.button_Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.button_Send = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bubble2 = new Internal_Society.bubble();
+            this.bubble1 = new Internal_Society.bubble();
             this.Time_Get_Message_Data = new System.Windows.Forms.Timer(this.components);
             this.Time_Request = new System.Windows.Forms.Timer(this.components);
             this.Time_Sticker = new System.Windows.Forms.Timer(this.components);
-            this.bubble2 = new Internal_Society.bubble();
-            this.bubble1 = new Internal_Society.bubble();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_More)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_Sticker)).BeginInit();
@@ -176,21 +176,6 @@
             this.panel2.TabIndex = 4;
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseClick);
             // 
-            // Time_Get_Message_Data
-            // 
-            this.Time_Get_Message_Data.Interval = 500;
-            this.Time_Get_Message_Data.Tick += new System.EventHandler(this.Time_Get_Message_Data_Tick);
-            // 
-            // Time_Request
-            // 
-            this.Time_Request.Interval = 1500;
-            this.Time_Request.Tick += new System.EventHandler(this.Time_Request_Tick);
-            // 
-            // Time_Sticker
-            // 
-            this.Time_Sticker.Interval = 50;
-            this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
-            // 
             // bubble2
             // 
             this.bubble2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -218,6 +203,21 @@
             this.bubble1.Size = new System.Drawing.Size(331, 60);
             this.bubble1.TabIndex = 2;
             this.bubble1.Visible = false;
+            // 
+            // Time_Get_Message_Data
+            // 
+            this.Time_Get_Message_Data.Interval = 500;
+            this.Time_Get_Message_Data.Tick += new System.EventHandler(this.Time_Get_Message_Data_Tick);
+            // 
+            // Time_Request
+            // 
+            this.Time_Request.Interval = 1500;
+            this.Time_Request.Tick += new System.EventHandler(this.Time_Request_Tick);
+            // 
+            // Time_Sticker
+            // 
+            this.Time_Sticker.Interval = 50;
+            this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
             // 
             // chatbox
             // 

@@ -152,6 +152,7 @@ namespace Internal_Society
         string searchInfoLast = "";
         private void Textbox_Search_KeyUp(object sender, EventArgs e)
         {
+            onlineList1.ShowOnlineUser();
             panel_Search1.Visible = true;
             searchInfo = textbox_Search.text;
             // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
@@ -184,6 +185,7 @@ namespace Internal_Society
         {
             MoveIndicator((Control)Tab_DashBoard);
             TurnOffPanel();
+            onlineList1.Visible = false;
             panel_Dashboard.Visible = true;
             Tab_Calendar.Visible = true;
             Tab_Cart.Visible = true;

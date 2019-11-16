@@ -21,17 +21,14 @@ namespace Internal_Society
     public partial class chatbox : UserControl
     {
         const string urlKun = "../../Resources\\";
-
         string id_conversation = "1";
-
         bubble bbl_old = new bubble();
-        
         string json;
         string pMessage = "";
         string pSticker = "";
-
         string dataMessage = "0";
         int messIndex = 0;
+       
         public chatbox()
         {
             if (!this.DesignMode)
@@ -39,23 +36,15 @@ namespace Internal_Society
                 InitializeComponent();
                 //panel2.Controls.RemoveAt(0);
                 //panel2.Controls.RemoveAt(0);
-
                 Time_Request.Interval = App_Status.time_delay;
-
                 /*ThreadStart ts_1 = new ThreadStart(threadGetData);
                 Thread thrd_1 = new Thread(ts_1);
                 thrd_1.Start();*/
-
                 Time_Request.Start();
                 Time_Get_Message_Data.Start();
-
                 Queue_Sticker.data = new Queue<string>();
-                
-
             }
-
             bbl_old.Top = 0 - bbl_old.Height + 10;
-            //pic_old.Top = 0 - pic_old.Height + 10;
             /*StreamReader read = new StreamReader("conversation_5.txt");
             string a1 = null;
             a1 = read.ReadLine();
@@ -87,26 +76,19 @@ namespace Internal_Society
             
         }
 
-
         public void addInMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
-
-            
             bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker,message_type, kkTime, msgType.In);
-            bbl.Location = new Point(this.Width-bbl.Width - 50 ,50);
+            //Xét xem scroll bar tồn tại hay chưa
+            if (panel2.VerticalScroll.Visible == false)
+                bbl.Location = new Point(this.Width - bbl.Width - 40, 50);
+            else
+                bbl.Location = new Point(this.Width - bbl.Width - 55, 50);
             bbl.Top = bbl_old.Bottom + 20;
-            //bbl.Size = bubble1.Size;
-            //bbl.Font = bubble1.Font;
-            //bbl.Anchor = bubble1.Anchor;
-
             bbl.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
             panel2.Controls.Add(bbl);
-           
-
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-
-
         }
 
         public void addOutMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
@@ -116,6 +98,8 @@ namespace Internal_Society
             PictureBox pic = new PictureBox();
             pic.Size = new Size(40, 40);
             pic.SizeMode = PictureBoxSizeMode.Zoom;
+            bbl.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            pic.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
             bbl.Location = new Point(90, 50);
             bbl.Top = bbl_old.Bottom + 20;
             pic.Location = new Point(20, bbl.Top);
@@ -126,10 +110,6 @@ namespace Internal_Society
             bbl_old = bbl;
 
         }
-
-        
-        
-
         private void button_Send_Click(object sender, EventArgs e)
         {
 
@@ -137,21 +117,12 @@ namespace Internal_Society
             {
                 string urlPic = "";
                 string kInput = txt_input.Text.ToString();
-
                 pMessage = txt_input.Text;
-
-
-
-
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-
-
                 addInMessage(kInput,0,"","",inputTime);
-
                 ThreadStart ts_1 = new ThreadStart(PushMessage);
                 Thread thrd_1 = new Thread(ts_1);
                 thrd_1.Start();
-
                 txt_input.Text = "";
                 
             }

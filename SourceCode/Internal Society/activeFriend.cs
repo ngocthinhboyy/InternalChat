@@ -16,7 +16,12 @@ namespace Internal_Society
         {
             InitializeComponent();
         }
-
+        public activeFriend(string userName, string userStatus)
+        {
+            InitializeComponent();
+            username.Text = userName;
+            activeStatus.Text = userStatus;
+        }
         private void ActiveStatus_Click(object sender, EventArgs e)
         {
 

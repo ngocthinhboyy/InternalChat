@@ -546,10 +546,11 @@ namespace Internal_Society
             // 
             this.onlineList1.AutoScroll = true;
             this.onlineList1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.onlineList1.Location = new System.Drawing.Point(12, 478);
+            this.onlineList1.Location = new System.Drawing.Point(0, 478);
             this.onlineList1.Name = "onlineList1";
-            this.onlineList1.Size = new System.Drawing.Size(262, 94);
+            this.onlineList1.Size = new System.Drawing.Size(314, 94);
             this.onlineList1.TabIndex = 1;
+            this.onlineList1.Visible = false;
             // 
             // HomePage
             // 
@@ -568,7 +569,7 @@ namespace Internal_Society
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1056, 0);
+            this.MinimumSize = new System.Drawing.Size(1056, 39);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.Move += new System.EventHandler(this.HomePage_Move);
