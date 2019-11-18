@@ -73,24 +73,25 @@ namespace Internal_Society
         {           
             var urlGetData = "https://kunbr0.com/it008/get_conversation_detail.php?c_id=" + id_conversation + "&index=" + messIndex;
             dataMessage = new WebClient().DownloadString(urlGetData);
-            
         }
 
         public void addInMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
             bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker,message_type, kkTime, msgType.In);
             //Xét xem scroll bar tồn tại hay chưa
+            
             if (panel2.VerticalScroll.Visible == false)
                 bbl.Location = new Point(this.Width - bbl.Width - 40, 50);
             else
                 bbl.Location = new Point(this.Width - bbl.Width - 55, 50);
+           
             bbl.Top = bbl_old.Bottom + 20;
             bbl.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
         }
-
+        
         public void addOutMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
 
@@ -108,7 +109,7 @@ namespace Internal_Society
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-
+            
         }
         private void button_Send_Click(object sender, EventArgs e)
         {
@@ -257,13 +258,11 @@ namespace Internal_Society
             Time_Sticker.Start();
             pn_Sticker.Show();
         }
-
         private void Panel2_MouseClick(object sender, MouseEventArgs e)
         {
             Time_Sticker.Stop();
             pn_Sticker.Hide();
-
-            //pn_Sticker.Show();
+            pn_Color_Bubble.Hide();
         }
 
         public void AddStickerFromQueue()
@@ -290,6 +289,11 @@ namespace Internal_Society
         private void Time_Sticker_Tick(object sender, EventArgs e)
         {
             AddStickerFromQueue();
+        }
+        Panel_Color_Bubble pn_Color_Bubble = new Panel_Color_Bubble();
+        private void Button_More_Click(object sender, EventArgs e)
+        {
+            pn_Color_Bubble.Show();
         }
     }
 }

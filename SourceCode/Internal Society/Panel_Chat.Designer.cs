@@ -33,7 +33,7 @@
             // 
             // chatbox2
             // 
-            this.chatbox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.chatbox2.BackColor = System.Drawing.Color.White;
             this.chatbox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chatbox2.Location = new System.Drawing.Point(0, 0);
             this.chatbox2.Margin = new System.Windows.Forms.Padding(1);

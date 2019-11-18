@@ -13,6 +13,7 @@ namespace Internal_Society
 {
     public partial class bubble : UserControl
     {
+        
         public bubble()
         {
             InitializeComponent();
@@ -43,20 +44,26 @@ namespace Internal_Society
             if (messageType.ToString() == "In")
             {
                 // Incoming message
-                this.BackColor = Color.FromArgb(0, 164, 147);
+                //this.BackColor = Color.FromArgb(0, 164, 147);
+                gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft = Panel_Color_Bubble.LeftColor;
+                gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Panel_Color_Bubble.RightColor;
                 lb_message.TextAlign = ContentAlignment.MiddleRight;
             }
             else
             {
                 // Message from me
-                this.BackColor = Color.Gray;
+                //this.BackColor = Color.Gray;
+                gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft = 
+                gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Color.FromArgb(241, 240, 240);
                 lb_message.TextAlign = ContentAlignment.MiddleLeft;
+                lb_message.ForeColor = Color.Black;
             }
             /*int isPicture = 0;*/
             if (urlSticker != "")
             {
                 isPicture = 1;
-
+                gradientPanel.Visible = false;
+                this.BackColor = Color.White;
                 picture_sticker.ImageLocation = "../../Resources\\" + urlSticker;
                 picture_sticker.Visible = true;
             }

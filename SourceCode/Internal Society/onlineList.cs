@@ -42,7 +42,8 @@ namespace Internal_Society
                         friend.Top = friend_last.Bottom + 20;
                         friend.Width = this.Width - 35;
                         this.Controls.Add(friend);
-                        this.VerticalScroll.Value = this.VerticalScroll.Maximum;
+                        //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
+                        //this.VerticalScroll.Visible = false;
                         friend_last = friend;
                     }
                 }

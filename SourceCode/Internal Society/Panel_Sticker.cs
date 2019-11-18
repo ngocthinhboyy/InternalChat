@@ -45,7 +45,8 @@ namespace Internal_Society
             klp.ListPakage.Add(kp9);
             kPakage kp10 = new kPakage("dev", "png", 1, 3);
             klp.ListPakage.Add(kp10);
-
+            kPakage kp11 = new kPakage("tiger", "png", 1, 15);
+            klp.ListPakage.Add(kp11);
 
             for (int i = 0; i < klp.ListPakage.Count; i++)
             {
