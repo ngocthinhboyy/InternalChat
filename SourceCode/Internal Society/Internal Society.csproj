@@ -940,5 +940,11 @@
   <ItemGroup>
     <None Include="Resources\x_001.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_circle_35_0_ff0000_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_square_35_0_ff0000_none.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

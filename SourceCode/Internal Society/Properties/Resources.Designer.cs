@@ -233,6 +233,26 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_circle_35_0_ff0000_none {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_circle_35_0_ff0000_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_square_35_0_ff0000_none {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_square_35_0_ff0000_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap font_awesome_4_7_0_user_24_0_666666_none {
             get {
                 object obj = ResourceManager.GetObject("font-awesome_4-7-0_user_24_0_666666_none", resourceCulture);

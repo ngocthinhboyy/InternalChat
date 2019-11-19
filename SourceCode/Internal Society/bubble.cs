@@ -13,7 +13,14 @@ namespace Internal_Society
 {
     public partial class bubble : UserControl
     {
-        
+        private string kMessage;
+        private string urlPic;
+        private string urlSticker;
+        private int Mess_Type;
+        private string kTime;
+        private msgType messageType;
+
+
         public bubble()
         {
             InitializeComponent();
@@ -25,6 +32,14 @@ namespace Internal_Society
         {
 
             InitializeComponent();
+            // Define
+            this.kMessage = kMessage;
+            this.urlPic = urlPic;
+            this.urlSticker = urlSticker;
+            this.Mess_Type = Mess_Type;
+            this.kTime = kTime;
+            this.messageType = messageType;
+
 
 
             lb_message.Text = kMessage;
@@ -67,7 +82,6 @@ namespace Internal_Society
                 picture_sticker.ImageLocation = "../../Resources\\" + urlSticker;
                 picture_sticker.Visible = true;
             }
-
 
 
 
@@ -119,6 +133,33 @@ namespace Internal_Society
             {
                 SetHeight();
             }
+
+        }
+
+        public void ChangeColorBubble()
+        {
+            if (this.messageType.ToString() == "In")
+            {
+                // Incoming message
+                //this.BackColor = Color.FromArgb(0, 164, 147);
+                gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft = Panel_Color_Bubble.LeftColor;
+                gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Panel_Color_Bubble.RightColor;
+
+                lb_message.TextAlign = ContentAlignment.MiddleRight;
+            }
+            else
+            {
+                // Message from me
+                //this.BackColor = Color.Gray;
+                gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft =
+                gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Color.FromArgb(241, 240, 240);
+                lb_message.TextAlign = ContentAlignment.MiddleLeft;
+                lb_message.ForeColor = Color.Black;
+            }
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

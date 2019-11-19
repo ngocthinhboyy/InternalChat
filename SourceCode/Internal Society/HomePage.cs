@@ -88,7 +88,6 @@ namespace Internal_Society
             onlineList1.Visible = true;
             onlineList1.Dock = DockStyle.Left;
             btn_create_new.Text = "Back to menu";
-
             onlineList1.ShowOnlineUser();
 
 
@@ -195,6 +194,8 @@ namespace Internal_Society
             Tab_Profile.Visible = true;
             Tab_Settings.Visible = true;
             indicator.Visible = true;
+
+            onlineList1.BackColor = panel2.BackColor = Color.FromArgb(54,56,69);
         }
 
 

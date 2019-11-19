@@ -16,10 +16,10 @@ using System.Web.Script.Serialization;
 
 namespace Internal_Society
 {
-
-
+    
     public partial class chatbox : UserControl
     {
+        
         const string urlKun = "../../Resources\\";
         string id_conversation = "1";
         bubble bbl_old = new bubble();
@@ -31,6 +31,7 @@ namespace Internal_Society
        
         public chatbox()
         {
+            Panel_Color_Bubble.NotifyChangeColor = new Notify(this.notifyChangeColor);
             if (!this.DesignMode)
             {
                 InitializeComponent();
@@ -68,18 +69,24 @@ namespace Internal_Society
             }
             read.Close();*/
         }
-
+        public void notifyChangeColor()
+        {
+            Label lbl = new Label();
+            lbl.Text = "You changed the chat colors.";
+            lbl.Location = new Point(this.Width / 3 + 40, bbl_old.Bottom);
+            lbl.Width = 300;
+            lbl.ForeColor = Color.FromArgb(144, 148, 156);
+            panel2.Controls.Add(lbl);
+        }
         public void threadGetData()
         {           
             var urlGetData = "https://kunbr0.com/it008/get_conversation_detail.php?c_id=" + id_conversation + "&index=" + messIndex;
             dataMessage = new WebClient().DownloadString(urlGetData);
         }
-
         public void addInMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
             bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker,message_type, kkTime, msgType.In);
             //Xét xem scroll bar tồn tại hay chưa
-            
             if (panel2.VerticalScroll.Visible == false)
                 bbl.Location = new Point(this.Width - bbl.Width - 40, 50);
             else
@@ -90,6 +97,17 @@ namespace Internal_Society
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
+            if (Panel_Color_Bubble.isChangedColor == true)
+            {
+                foreach (Control x in panel2.Controls)
+                {
+                    if (x is bubble)
+                    {
+                        ((bubble)x).ChangeColorBubble();
+                        Panel_Color_Bubble.isChangedColor = false;
+                    }
+                }
+            }
         }
         
         public void addOutMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
@@ -125,9 +143,7 @@ namespace Internal_Society
                 Thread thrd_1 = new Thread(ts_1);
                 thrd_1.Start();
                 txt_input.Text = "";
-                
             }
-            
         }
 
         void PushMessage()
@@ -137,10 +153,8 @@ namespace Internal_Society
             {
                 json = wc.DownloadString(@"https://kunbr0.com/it008/add_conversation_message.php?c_id=" + id_conversation + @"&u_id=" + User_Info.k_ID + "&u_message=" + pMessage +"&u_sticker=" + pSticker);
             }
-
             pMessage = "";
             pSticker = "";
-            
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -150,21 +164,6 @@ namespace Internal_Society
                 e.SuppressKeyPress = true;
                 button_Send_Click(this, new EventArgs());
             }
-
-            if (e.KeyCode == Keys.Q)
-            {
-
-                int heightInsert = 50;
-
-                foreach (Control kMessage in panel2.Controls)
-                {
-                    kMessage.Top += heightInsert;
-
-                }
-                MessageBox.Show(panel2.Controls.Count.ToString());
-            }
-
-
 
         }
 
@@ -184,9 +183,7 @@ namespace Internal_Society
                 dMess.data.
             }*/
 
-            
-
-            for(int i = dMess.data.Count-1; i >= 0; i--)
+            for (int i = dMess.data.Count-1; i >= 0; i--)
             {
 
                 byte[] bytes = Encoding.Default.GetBytes(dMess.data[i].Message.ToString());
