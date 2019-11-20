@@ -15,7 +15,7 @@ namespace Internal_Society
     public partial class CreateAccount : Form
     {
 
-
+        bool isPasswordInvalid = false;
         string usernameInDBStatus = "0";
         public CreateAccount()
         {
@@ -32,7 +32,12 @@ namespace Internal_Society
         {
             CheckCorrect();
             // call api de kiem tra username da ton tai hay chua
-            if(txtRepassword.Text != txtPasswordCreate.Text)
+            if (txtPasswordCreate.Text.Length >= 6 && txtPasswordCreate.Text.Length <= 30)
+            {
+                lblShortPassword.Visible = false;
+                isPasswordInvalid = true;
+            }
+            if (txtRepassword.Text != txtPasswordCreate.Text)
             {
                 lblUnmatchedAlert.Visible = true;
             }
@@ -40,7 +45,15 @@ namespace Internal_Society
             {
                 lblUnmatchedAlert.Visible = false;
             }
-            if (txtPasswordCreate.Text != "" && txtUsernameCreate.Text != "" && usernameInDBStatus != "1" && txtRepassword.Text == txtPasswordCreate.Text)
+            if (txtPasswordCreate.Text == "")
+            {
+                lblNullPassword.Visible = true;
+            }
+            else
+            {
+                lblNullPassword.Visible = false;
+            }
+            if (txtPasswordCreate.Text != "" && txtUsernameCreate.Text != "" && usernameInDBStatus != "1" && isPasswordInvalid == true && txtRepassword.Text == txtPasswordCreate.Text)
             {
 
                 Reg_Info.reg_Username = txtUsernameCreate.Text;
@@ -102,13 +115,28 @@ namespace Internal_Society
 
         private void TxtPasswordCreate_Leave(object sender, EventArgs e)
         {
-            if(txtPasswordCreate.Text == "")
+            if (txtPasswordCreate.Text.Length < 6 || txtPasswordCreate.Text.Length > 30)
             {
-                lblNullPassword.Visible = true;
+                lblShortPassword.Visible = true;
+                isPasswordInvalid = false;
             }
             else
             {
-                lblNullPassword.Visible = false;
+                lblShortPassword.Visible = false;
+            }
+            if (txtPasswordCreate.Text == "")
+            {
+                lblShortPassword.Visible = false;
+                lblNullPassword.Visible = true;
+                isPasswordInvalid = false;
+            }
+            else
+            {
+                if (txtPasswordCreate.Text != "" && txtPasswordCreate.Text.Length >= 6 && txtPasswordCreate.Text.Length <= 30)
+                {
+                    lblNullPassword.Visible = false;
+                    isPasswordInvalid = true;
+                }
             }
         }
     }
