@@ -129,6 +129,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel_Color_Bubble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel_Color_Bubble.Designer.cs">
+      <DependentUpon>Panel_Color_Bubble.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel_Calendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_Chat.resx">
       <DependentUpon>Panel_Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Color_Bubble.resx">
+      <DependentUpon>Panel_Color_Bubble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_Dashboard.resx">
       <DependentUpon>Panel_Dashboard.cs</DependentUpon>
@@ -867,6 +876,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-clock-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluesky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x_001.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

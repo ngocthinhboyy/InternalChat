@@ -17,45 +17,35 @@ using System.Web.Script.Serialization;
 namespace Internal_Society
 {
 
-
     public partial class chatbox : UserControl
     {
+
         const string urlKun = "../../Resources\\";
-
         string id_conversation = "1";
-
         bubble bbl_old = new bubble();
-
         string json;
         string pMessage = "";
         string pSticker = "";
-
         string dataMessage = "0";
         int messIndex = 0;
+
         public chatbox()
         {
+            Panel_Color_Bubble.NotifyChangeColor = new Notify(this.notifyChangeColor);
             if (!this.DesignMode)
             {
                 InitializeComponent();
                 //panel2.Controls.RemoveAt(0);
                 //panel2.Controls.RemoveAt(0);
-
                 Time_Request.Interval = App_Status.time_delay;
-
                 /*ThreadStart ts_1 = new ThreadStart(threadGetData);
                 Thread thrd_1 = new Thread(ts_1);
                 thrd_1.Start();*/
-
                 Time_Request.Start();
                 Time_Get_Message_Data.Start();
-
                 Queue_Sticker.data = new Queue<string>();
-                
-
             }
-
             bbl_old.Top = 0 - bbl_old.Height + 10;
-
             /*StreamReader read = new StreamReader("conversation_5.txt");
             string a1 = null;
             a1 = read.ReadLine();
@@ -79,93 +69,84 @@ namespace Internal_Society
             }
             read.Close();*/
         }
-
+        public void notifyChangeColor()
+        {
+            Label lbl = new Label();
+            lbl.Text = "You changed the chat colors.";
+            lbl.Location = new Point(this.Width / 3 + 40, bbl_old.Bottom);
+            lbl.Width = 150;
+            lbl.BackColor = Color.Transparent;
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
+            lbl.ForeColor = Color.FromArgb(144, 148, 156);
+            lbl.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top);
+            panel2.Controls.Add(lbl);
+        }
         public void threadGetData()
-        {           
+        {
             var urlGetData = "https://kunbr0.com/it008/get_conversation_detail.php?c_id=" + id_conversation + "&index=" + messIndex;
             dataMessage = new WebClient().DownloadString(urlGetData);
-            
         }
-
-
         public void addInMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
+            bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker, message_type, kkTime, msgType.In);
+            //Xét xem scroll bar tồn tại hay chưa
+            if (panel2.VerticalScroll.Visible == false)
+                bbl.Location = new Point(this.Width - bbl.Width - 40, 50);
+            else
+                bbl.Location = new Point(this.Width - bbl.Width - 55, 50);
 
-            
-            bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker,message_type, kkTime, msgType.In);
-            
-            bbl.Location = new Point(this.Width-bbl.Width -50 ,50);
-            
-            bbl.Top = bbl_old.Bottom + 20;
-            //bbl.Size = bubble1.Size;
-            //bbl.Font = bubble1.Font;
-            //bbl.Anchor = bubble1.Anchor;
-
-
-
-
+            bbl.Top = bbl_old.Bottom + 25;
+            bbl.Anchor = (AnchorStyles.Top | AnchorStyles.Right);
             panel2.Controls.Add(bbl);
-
-
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-
-
-
+            if (Panel_Color_Bubble.isChangedColor == true)
+            {
+                foreach (Control x in panel2.Controls)
+                {
+                    if (x is bubble)
+                    {
+                        ((bubble)x).ChangeColorBubble();
+                        Panel_Color_Bubble.isChangedColor = false;
+                    }
+                }
+            }
         }
 
         public void addOutMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
         {
 
             bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker, message_type, kkTime, msgType.Out);
-
-            bbl.Location = new Point(30, 50);
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(40, 40);
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+            bbl.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            pic.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            bbl.Location = new Point(90, 50);
             bbl.Top = bbl_old.Bottom + 20;
-
-            /*bbl.Location = bubble2.Location;
-            bbl.Size = bubble1.Size;
-
-            bbl.Anchor = bubble1.Anchor;
-            bbl.Top = bbl_old.Bottom + 20;*/
-
-
-
+            pic.Location = new Point(20, bbl.Top);
+            pic.ImageLocation = "../../Resources/user_001.png";
+            panel2.Controls.Add(pic);
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
 
-
         }
-
-        
-        
-
         private void button_Send_Click(object sender, EventArgs e)
         {
 
-            if(txt_input.Text != "")
+            if (txt_input.Text != "")
             {
                 string urlPic = "";
                 string kInput = txt_input.Text.ToString();
-
                 pMessage = txt_input.Text;
-
-
-
-
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-
-
-                addInMessage(kInput,0,"","",inputTime);
-
+                addInMessage(kInput, 0, "", "", inputTime);
                 ThreadStart ts_1 = new ThreadStart(PushMessage);
                 Thread thrd_1 = new Thread(ts_1);
                 thrd_1.Start();
-
                 txt_input.Text = "";
-                
             }
-            
         }
 
         void PushMessage()
@@ -173,12 +154,10 @@ namespace Internal_Society
             messIndex++;
             using (WebClient wc = new WebClient())
             {
-                json = wc.DownloadString(@"https://kunbr0.com/it008/add_conversation_message.php?c_id=" + id_conversation + @"&u_id=" + User_Info.k_ID + "&u_message=" + pMessage +"&u_sticker=" + pSticker);
+                json = wc.DownloadString(@"https://kunbr0.com/it008/add_conversation_message.php?c_id=" + id_conversation + @"&u_id=" + User_Info.k_ID + "&u_message=" + pMessage + "&u_sticker=" + pSticker);
             }
-
             pMessage = "";
             pSticker = "";
-            
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -188,21 +167,6 @@ namespace Internal_Society
                 e.SuppressKeyPress = true;
                 button_Send_Click(this, new EventArgs());
             }
-
-            if (e.KeyCode == Keys.Q)
-            {
-
-                int heightInsert = 50;
-
-                foreach (Control kMessage in panel2.Controls)
-                {
-                    kMessage.Top += heightInsert;
-
-                }
-                MessageBox.Show(panel2.Controls.Count.ToString());
-            }
-
-
 
         }
 
@@ -215,16 +179,12 @@ namespace Internal_Society
             //string kkdata = @"{""data"":[{""k_userID"":""518523721"",""name"":""ftyft""}, {""k_userID"":""527032438"",""name"":""ftyftyf""}, {""k_userID"":""527572047"",""name"":""ftgft""}, {""id"":""531141884"",""name"":""ftftft""}]}";
 
             Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
-
-
             /*for(int i = 0; i < dMess.data.Count; i++)
             {
                 dMess.data.
             }*/
 
-            
-
-            for(int i = dMess.data.Count-1; i >= 0; i--)
+            for (int i = dMess.data.Count - 1; i >= 0; i--)
             {
 
                 byte[] bytes = Encoding.Default.GetBytes(dMess.data[i].Message.ToString());
@@ -233,7 +193,7 @@ namespace Internal_Society
 
                 if (dMess.data[i].User_id == User_Info.k_ID)
                 {
-                    addInMessage(dMess.data[i].Message.ToString(),Convert.ToInt32(dMess.data[i].Message_type.ToString()),
+                    addInMessage(dMess.data[i].Message.ToString(), Convert.ToInt32(dMess.data[i].Message_type.ToString()),
                         dMess.data[i].Image.ToString(), dMess.data[i].Sticker.ToString(),
                         dMess.data[i].Time.ToString());
 
@@ -246,7 +206,7 @@ namespace Internal_Society
                         dMess.data[i].Time.ToString());
                 }
 
-                
+
 
             }
 
@@ -256,13 +216,13 @@ namespace Internal_Society
 
         private void Time_Get_Message_Data_Tick(object sender, EventArgs e)
         {
-            if(dataMessage != "0")
+            if (dataMessage != "0")
             {
                 ProccessData();
             }
         }
 
-        
+
 
         private void Time_Request_Tick(object sender, EventArgs e)
         {
@@ -283,7 +243,7 @@ namespace Internal_Society
         private void Button_Attach_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            if(dialog.ShowDialog() == DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show(dialog.FileName);
                 MessageBox.Show(Path.GetFileName(dialog.FileName));
@@ -296,39 +256,35 @@ namespace Internal_Society
             Time_Sticker.Start();
             pn_Sticker.Show();
         }
-
         private void Panel2_MouseClick(object sender, MouseEventArgs e)
         {
             Time_Sticker.Stop();
             pn_Sticker.Hide();
-
-            //pn_Sticker.Show();
+            pn_Color_Bubble.Hide();
         }
 
         public void AddStickerFromQueue()
         {
-            while(Queue_Sticker.data.Count() != 0)
+            while (Queue_Sticker.data.Count() != 0)
             {
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
                 pSticker = Queue_Sticker.data.Dequeue();
                 addInMessage("", 2, "", pSticker, inputTime);
-
-
                 ThreadStart ts_1 = new ThreadStart(PushMessage);
                 Thread thrd_1 = new Thread(ts_1);
                 thrd_1.Start();
-
-                
-                
-                
-
-
             }
         }
 
         private void Time_Sticker_Tick(object sender, EventArgs e)
         {
             AddStickerFromQueue();
+        }
+        Panel_Color_Bubble pn_Color_Bubble = new Panel_Color_Bubble();
+
+        private void Button_More_Click(object sender, EventArgs e)
+        {
+            pn_Color_Bubble.Show();
         }
     }
 }
