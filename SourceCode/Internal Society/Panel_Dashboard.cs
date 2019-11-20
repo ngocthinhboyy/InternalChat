@@ -46,7 +46,42 @@ namespace Internal_Society
             }
             buDataViz.Render(canvas);
         }
-
+        // Column Chart
+        private void CreateColumnChart(BunifuDataViz buDataViz, int numberLine, int numberPoint, int[] arrNameEachPoint, int[] arrData)
+        {
+            buDataViz.colorSet.Clear();
+            DataPoint[] datapointArr = new DataPoint[100];
+            for (int i = 0; i < numberLine; i++)
+            {
+                datapointArr[i] = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            }
+            for (int i = 0; i <= numberPoint; i++)
+            {
+                for (int j = 0; j < numberLine; j++)
+                {
+                    datapointArr[j].addLabely(arrNameEachPoint[i].ToString(), arrData[i]);
+                }
+            }
+            Canvas canvas = new Canvas();
+            for (int i = 0; i < numberLine; i++)
+            {
+                canvas.addData(datapointArr[i]);
+            }
+            buDataViz.Render(canvas);
+        }
+        // Pie Chart
+        private void CreatePieChart(BunifuDataViz buDataViz, int numberPie, int[] arrNameEachPoint, int[] arrData)
+        {
+            buDataViz.colorSet.Clear();
+            DataPoint datapoint = new DataPoint(BunifuDataViz._type.Bunifu_pie);
+            for(int i = 0; i < numberPie; i++)
+            {
+                datapoint.addLabely(arrNameEachPoint[i].ToString(), arrData[i].ToString());
+            }
+            Canvas canvas = new Canvas();
+            canvas.addData(datapoint);
+            buDataViz.Render(canvas);
+        }
         private void RendersCharts_Tick(object sender, EventArgs e)
         {
             RendersCharts.Stop();
