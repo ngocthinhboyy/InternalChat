@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="activeFriend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="activeFriend.Designer.cs">
+      <DependentUpon>activeFriend.cs</DependentUpon>
+    </Compile>
     <Compile Include="App_Status.cs" />
     <Compile Include="bubble.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +134,12 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="onlineList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="onlineList.Designer.cs">
+      <DependentUpon>onlineList.cs</DependentUpon>
     </Compile>
     <Compile Include="Panel_Color_Bubble.cs">
       <SubType>Form</SubType>
@@ -199,6 +211,9 @@
       <DependentUpon>sticker.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Info.cs" />
+    <EmbeddedResource Include="activeFriend.resx">
+      <DependentUpon>activeFriend.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bubble.resx">
       <DependentUpon>bubble.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="onlineList.resx">
+      <DependentUpon>onlineList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_Calendar.resx">
       <DependentUpon>Panel_Calendar.cs</DependentUpon>
@@ -918,6 +936,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_circle_15_0_58de40_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_square_90_0_ff0000_none.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

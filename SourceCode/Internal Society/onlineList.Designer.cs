@@ -1,6 +1,6 @@
 ﻿namespace Internal_Society
 {
-    partial class Panel_Chat
+    partial class onlineList
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chatbox2 = new Internal_Society.chatbox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // chatbox2
+            // label1
             // 
-            this.chatbox2.BackColor = System.Drawing.Color.White;
-            this.chatbox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chatbox2.Location = new System.Drawing.Point(0, 0);
-            this.chatbox2.Margin = new System.Windows.Forms.Padding(1);
-            this.chatbox2.Name = "chatbox2";
-            this.chatbox2.Size = new System.Drawing.Size(775, 619);
-            this.chatbox2.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(36, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 33);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "No active people";
             // 
-            // Panel_Chat
+            // onlineList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chatbox2);
-            this.Name = "Panel_Chat";
-            this.Size = new System.Drawing.Size(775, 619);
+            this.AutoScroll = true;
+            this.Controls.Add(this.label1);
+            this.Name = "onlineList";
+            this.Size = new System.Drawing.Size(314, 417);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private chatbox chatbox2;
+        private System.Windows.Forms.Label label1;
     }
 }
