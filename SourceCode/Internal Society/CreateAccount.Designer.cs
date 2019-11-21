@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblShortPassword = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lblShortPassword);
             this.panel1.Controls.Add(this.lblNullPassword);
             this.panel1.Controls.Add(this.lblNullUsername);
             this.panel1.Controls.Add(this.lblExistedAlert);
@@ -251,6 +253,17 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Create your account";
             // 
+            // lblShortPassword
+            // 
+            this.lblShortPassword.AutoSize = true;
+            this.lblShortPassword.ForeColor = System.Drawing.Color.Red;
+            this.lblShortPassword.Location = new System.Drawing.Point(249, 184);
+            this.lblShortPassword.Name = "lblShortPassword";
+            this.lblShortPassword.Size = new System.Drawing.Size(262, 13);
+            this.lblShortPassword.TabIndex = 26;
+            this.lblShortPassword.Text = "Your password must be between 6 and 30 characters.";
+            this.lblShortPassword.Visible = false;
+            // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,5 +298,6 @@
         private System.Windows.Forms.Label lblExistedAlert;
         private System.Windows.Forms.Label lblNullUsername;
         private System.Windows.Forms.Label lblNullPassword;
+        private System.Windows.Forms.Label lblShortPassword;
     }
 }

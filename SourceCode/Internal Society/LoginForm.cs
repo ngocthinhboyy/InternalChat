@@ -29,6 +29,7 @@ namespace Internal_Society
         public LoginForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public void threadLogin()
