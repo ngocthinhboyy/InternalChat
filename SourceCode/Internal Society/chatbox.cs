@@ -19,15 +19,15 @@ namespace Internal_Society
 
     public partial class chatbox : UserControl
     {
-
+        #region Define Variable
         const string urlKun = "../../Resources\\";
         string id_conversation = "1";
         bubble bbl_old = new bubble();
         string json;
         string pMessage = "";
         string pSticker = "";
-        string dataMessage = "0";
         int messIndex = 0;
+        #endregion
 
         public chatbox()
         {
@@ -35,39 +35,10 @@ namespace Internal_Society
             if (!this.DesignMode)
             {
                 InitializeComponent();
-                //panel2.Controls.RemoveAt(0);
-                //panel2.Controls.RemoveAt(0);
-                Time_Request.Interval = App_Status.time_delay;
-                /*ThreadStart ts_1 = new ThreadStart(threadGetData);
-                Thread thrd_1 = new Thread(ts_1);
-                thrd_1.Start();*/
-                Time_Request.Start();
-                Time_Get_Message_Data.Start();
                 Queue_Sticker.data = new Queue<string>();
             }
             bbl_old.Top = 0 - bbl_old.Height + 10;
-            /*StreamReader read = new StreamReader("conversation_5.txt");
-            string a1 = null;
-            a1 = read.ReadLine();
-            
-            while(a1 != null)
-            {
-                dynamic data_mess = JsonConvert.DeserializeObject(a1);
-                string d_mess = data_mess.Message_Data;
-                string d_time = data_mess.Time_Data;
-                string d_urlPic = data_mess.urlPic;
-                if (d_urlPic != "") d_urlPic = urlKun + d_urlPic;
 
-                
-                
-                string d_id = data_mess.ID;
-                if(d_id == id_user) { addInMessage(d_mess, d_time,d_urlPic); }
-                if (d_id == id_counterpart) { addOutMessage(d_mess, d_time,d_urlPic); }
-                
-                a1 = read.ReadLine();
-                
-            }
-            read.Close();*/
         }
         public void notifyChangeColor()
         {
@@ -81,14 +52,12 @@ namespace Internal_Society
             lbl.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top);
             panel2.Controls.Add(lbl);
         }
-        public void threadGetData()
+
+        public void addInMessage(string user_ID, string message_ID, string message_Type,
+            string message_Detail, string message_Time)
         {
-            var urlGetData = "https://kunbr0.com/it008/get_conversation_detail.php?c_id=" + id_conversation + "&index=" + messIndex;
-            dataMessage = new WebClient().DownloadString(urlGetData);
-        }
-        public void addInMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
-        {
-            bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker, message_type, kkTime, msgType.In);
+            bubble bbl = new Internal_Society.bubble(user_ID, message_ID, message_Type,
+             message_Detail, message_Time, msgType.In);
             //Xét xem scroll bar tồn tại hay chưa
             if (panel2.VerticalScroll.Visible == false)
                 bbl.Location = new Point(this.Width - bbl.Width - 40, 50);
@@ -113,10 +82,12 @@ namespace Internal_Society
             }
         }
 
-        public void addOutMessage(string kkMessage, int message_type = 0, string urlPic = "", string urlSticker = "", string kkTime = "")
+        public void addOutMessage(string user_ID, string message_ID, string message_Type,
+            string message_Detail, string message_Time)
         {
 
-            bubble bbl = new Internal_Society.bubble(kkMessage, urlPic, urlSticker, message_type, kkTime, msgType.Out);
+            bubble bbl = new Internal_Society.bubble(user_ID, message_ID, message_Type,
+             message_Detail, message_Time, msgType.Out);
             PictureBox pic = new PictureBox();
             pic.Size = new Size(40, 40);
             pic.SizeMode = PictureBoxSizeMode.Zoom;
@@ -141,23 +112,23 @@ namespace Internal_Society
                 string kInput = txt_input.Text.ToString();
                 pMessage = txt_input.Text;
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-                addInMessage(kInput, 0, "", "", inputTime);
-                ThreadStart ts_1 = new ThreadStart(PushMessage);
-                Thread thrd_1 = new Thread(ts_1);
-                thrd_1.Start();
+                addInMessage(User_Info.k_ID, "-1", "0", pMessage, "now");
+                PushMessageAsync("0", pMessage);
                 txt_input.Text = "";
             }
         }
 
-        void PushMessage()
+
+        public async void PushMessageAsync(string message_Type, string message_Detail)
         {
             messIndex++;
-            using (WebClient wc = new WebClient())
-            {
-                json = wc.DownloadString(@"https://kunbr0.com/it008/add_conversation_message.php?c_id=" + id_conversation + @"&u_id=" + User_Info.k_ID + "&u_message=" + pMessage + "&u_sticker=" + pSticker);
-            }
-            pMessage = "";
-            pSticker = "";
+            var urlPushData = App_Status.urlAPI + "c_Message/Add_Conversation_Message/" + id_conversation + "/" + User_Info.k_ID +
+                "/" + message_Type + "/" + message_Detail;
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlPushData); });
+            // await
+            string result = await getStringTask;
+
+            // Khi send xog thi lam function tiep theo...
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -170,75 +141,48 @@ namespace Internal_Society
 
         }
 
-        public void ProccessData()
+        public void ProccessData(string dataMessage)
         {
-            Time_Request.Stop();
-            /*List<Data_Message> list = JsonConvert.DeserializeObject<List<Data_Message>>(dataMessage);
-            MessageBox.Show(list.ToString());*/
-
-            //string kkdata = @"{""data"":[{""k_userID"":""518523721"",""name"":""ftyft""}, {""k_userID"":""527032438"",""name"":""ftyftyf""}, {""k_userID"":""527572047"",""name"":""ftgft""}, {""id"":""531141884"",""name"":""ftftft""}]}";
-
+            TimeRequest.Stop();
+            TimeRequest.Start();
             Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
-            /*for(int i = 0; i < dMess.data.Count; i++)
-            {
-                dMess.data.
-            }*/
-
+            if (!dMess.success) return;
             for (int i = dMess.data.Count - 1; i >= 0; i--)
             {
+                if (Convert.ToInt32(dMess.data[i].message_ID) > messIndex) messIndex = Convert.ToInt32(dMess.data[i].message_ID);
 
-                byte[] bytes = Encoding.Default.GetBytes(dMess.data[i].Message.ToString());
-                dMess.data[i].Message = Encoding.UTF8.GetString(bytes);
-                if (Convert.ToInt32(dMess.data[i].Message_id) > messIndex) messIndex = Convert.ToInt32(dMess.data[i].Message_id);
-
-                if (dMess.data[i].User_id == User_Info.k_ID)
+                if (dMess.data[i].user_ID == User_Info.k_ID)
                 {
-                    addInMessage(dMess.data[i].Message.ToString(), Convert.ToInt32(dMess.data[i].Message_type.ToString()),
-                        dMess.data[i].Image.ToString(), dMess.data[i].Sticker.ToString(),
-                        dMess.data[i].Time.ToString());
+                    addInMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
+                        dMess.data[i].message_Detail.ToString(), dMess.data[i].message_Time.ToString());
 
                 }
                 else
                 {
 
-                    addOutMessage(dMess.data[i].Message.ToString(), Convert.ToInt32(dMess.data[i].Message_type.ToString()),
-                        dMess.data[i].Image.ToString(), dMess.data[i].Sticker.ToString(),
-                        dMess.data[i].Time.ToString());
+                    addOutMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
+                        dMess.data[i].message_Detail.ToString(), dMess.data[i].message_Time.ToString());
                 }
 
 
 
             }
-
-            Time_Request.Start();
-            dataMessage = "0";
+            //TimeRequest.Start();
         }
 
-        private void Time_Get_Message_Data_Tick(object sender, EventArgs e)
+
+        public async void GetMessageAsync()
         {
-            if (dataMessage != "0")
-            {
-                ProccessData();
-            }
+            var urlGetData = App_Status.urlAPI + "c_Message/Get_Conversation_Message/" + id_conversation + "/" + messIndex;
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetData); });
+            // await
+            string result = await getStringTask;
+
+            ProccessData(result);
         }
 
 
 
-        private void Time_Request_Tick(object sender, EventArgs e)
-        {
-            if (dataMessage != "0") ProccessData();
-            ThreadStart ts_1 = new ThreadStart(threadGetData);
-            Thread thrd_1 = new Thread(ts_1);
-            thrd_1.Start();
-
-            if (Time_Request.Interval != App_Status.time_delay)
-            {
-                Time_Request.Interval = App_Status.time_delay;
-                Time_Request.Stop();
-                Time_Request.Start();
-            }
-
-        }
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
@@ -269,10 +213,8 @@ namespace Internal_Society
             {
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
                 pSticker = Queue_Sticker.data.Dequeue();
-                addInMessage("", 2, "", pSticker, inputTime);
-                ThreadStart ts_1 = new ThreadStart(PushMessage);
-                Thread thrd_1 = new Thread(ts_1);
-                thrd_1.Start();
+                addInMessage(User_Info.k_ID, "-1", "1", pSticker, inputTime);
+                PushMessageAsync("1", pSticker);
             }
         }
 
@@ -285,6 +227,12 @@ namespace Internal_Society
         private void Button_More_Click(object sender, EventArgs e)
         {
             pn_Color_Bubble.Show();
+        }
+
+        private void TimeRequest_Tick(object sender, EventArgs e)
+        {
+            TimeRequest.Stop();
+            GetMessageAsync();
         }
     }
 }

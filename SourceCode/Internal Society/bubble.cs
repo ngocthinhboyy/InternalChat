@@ -13,12 +13,12 @@ namespace Internal_Society
 {
     public partial class bubble : UserControl
     {
-        private string kMessage;
-        private string urlPic;
-        private string urlSticker;
-        private int Mess_Type;
-        private string kTime;
-        private msgType messageType;
+        private string user_ID;
+        private string message_ID;
+        private string message_Type;
+        private string message_Detail;
+        private string message_Time;
+        private msgType InOrOut;
 
 
         public bubble()
@@ -28,22 +28,23 @@ namespace Internal_Society
 
         int isPicture = 0;
 
-        public bubble(string kMessage, string urlPic, string urlSticker, int Mess_Type, string kTime, msgType messageType)
+        public bubble(string user_ID, string message_ID, string message_Type,
+            string message_Detail, string message_Time, msgType InOrOut)
         {
 
             InitializeComponent();
-            // Define
-            this.kMessage = kMessage;
-            this.urlPic = urlPic;
-            this.urlSticker = urlSticker;
-            this.Mess_Type = Mess_Type;
-            this.kTime = kTime;
-            this.messageType = messageType;
+            #region Define
+            this.user_ID = user_ID;
+            this.message_ID = message_ID;
+            this.message_Type = message_Type;
+            this.message_Detail = message_Detail;
+            this.message_Time = message_Time;
+            this.InOrOut = InOrOut;
+            #endregion
 
 
-
-            lb_message.Text = kMessage;
-            if (urlSticker == "")
+            lb_message.Text = message_Detail;
+            if (message_Type == "0")
             {
                 this.Width = lb_message.Width + 20;
             }
@@ -54,15 +55,15 @@ namespace Internal_Society
 
             lb_message.Top = 10;
             lb_message.Left = 10;
-            lb_time.Text = kTime;
+            lb_time.Text = message_Time;
             SetHeight();
             ChangeColorBubble();
-            if (urlSticker != "")
+            if (message_Type != "0")
             {
                 isPicture = 1;
                 gradientPanel.Visible = false;
                 this.BackColor = Color.Transparent;
-                picture_sticker.ImageLocation = "../../Resources\\" + urlSticker;
+                picture_sticker.ImageLocation = "../../Resources\\" + message_Detail;
                 picture_sticker.Visible = true;
             }
             /*SetHeight(isPicture);*/
@@ -116,7 +117,7 @@ namespace Internal_Society
 
         public void ChangeColorBubble()
         {
-            if (this.messageType.ToString() == "In")
+            if (this.InOrOut.ToString() == "In")
             {
                 // Incoming message
                 //this.BackColor = Color.FromArgb(0, 164, 147);

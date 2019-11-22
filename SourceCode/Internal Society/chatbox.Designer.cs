@@ -41,12 +41,11 @@
             this.button_Attach = new Bunifu.Framework.UI.BunifuImageButton();
             this.button_Send = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bubble2 = new Internal_Society.bubble();
-            this.bubble1 = new Internal_Society.bubble();
-            this.Time_Get_Message_Data = new System.Windows.Forms.Timer(this.components);
-            this.Time_Request = new System.Windows.Forms.Timer(this.components);
             this.Time_Sticker = new System.Windows.Forms.Timer(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.TimeRequest = new System.Windows.Forms.Timer(this.components);
+            this.bubble2 = new Internal_Society.bubble();
+            this.bubble1 = new Internal_Society.bubble();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_More)).BeginInit();
@@ -192,6 +191,22 @@
             this.panel2.TabIndex = 4;
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseClick);
             // 
+            // Time_Sticker
+            // 
+            this.Time_Sticker.Interval = 50;
+            this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this.panel3;
+            // 
+            // TimeRequest
+            // 
+            this.TimeRequest.Enabled = true;
+            this.TimeRequest.Interval = 1500;
+            this.TimeRequest.Tick += new System.EventHandler(this.TimeRequest_Tick);
+            // 
             // bubble2
             // 
             this.bubble2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -220,26 +235,6 @@
             this.bubble1.Size = new System.Drawing.Size(331, 60);
             this.bubble1.TabIndex = 2;
             this.bubble1.Visible = false;
-            // 
-            // Time_Get_Message_Data
-            // 
-            this.Time_Get_Message_Data.Interval = 500;
-            this.Time_Get_Message_Data.Tick += new System.EventHandler(this.Time_Get_Message_Data_Tick);
-            // 
-            // Time_Request
-            // 
-            this.Time_Request.Interval = 1500;
-            this.Time_Request.Tick += new System.EventHandler(this.Time_Request_Tick);
-            // 
-            // Time_Sticker
-            // 
-            this.Time_Sticker.Interval = 50;
-            this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this.panel3;
             // 
             // chatbox
             // 
@@ -271,8 +266,6 @@
         private bubble bubble2;
         private bubble bubble1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Timer Time_Get_Message_Data;
-        private System.Windows.Forms.Timer Time_Request;
         private Bunifu.Framework.UI.BunifuImageButton button_More;
         private Bunifu.Framework.UI.BunifuImageButton button_Sticker;
         private Bunifu.Framework.UI.BunifuImageButton button_Picture;
@@ -280,5 +273,6 @@
         private System.Windows.Forms.Timer Time_Sticker;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Timer TimeRequest;
     }
 }

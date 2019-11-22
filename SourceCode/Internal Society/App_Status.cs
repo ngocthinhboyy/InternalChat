@@ -15,5 +15,7 @@ namespace Internal_Society
         public static int HomePage_Left;
 
         public static int time_delay = 1500;
+
+        public static string urlAPI = "https://kunbr0.com/it008b/";
     }
 }

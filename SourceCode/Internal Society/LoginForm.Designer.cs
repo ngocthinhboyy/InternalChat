@@ -40,7 +40,6 @@ namespace Internal_Society
             this.pnlPass = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.picUser = new System.Windows.Forms.PictureBox();
-            this.TimeLogin = new System.Windows.Forms.Timer(this.components);
             this.btnRepresentLogin = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -152,11 +151,6 @@ namespace Internal_Society
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picUser.TabIndex = 3;
             this.picUser.TabStop = false;
-            // 
-            // TimeLogin
-            // 
-            this.TimeLogin.Enabled = true;
-            this.TimeLogin.Tick += new System.EventHandler(this.TimeLogin_Tick);
             // 
             // btnRepresentLogin
             // 
@@ -334,7 +328,6 @@ namespace Internal_Society
         private Bunifu.Framework.UI.BunifuElipse elipseEmail;
         private Bunifu.Framework.UI.BunifuElipse elipsePass;
         private Button btnRepresentLogin;
-        private Timer TimeLogin;
         private PictureBox picture_process;
     }
 }

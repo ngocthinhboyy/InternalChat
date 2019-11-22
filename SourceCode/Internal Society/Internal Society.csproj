@@ -210,6 +210,12 @@
     <Compile Include="sticker.Designer.cs">
       <DependentUpon>sticker.cs</DependentUpon>
     </Compile>
+    <Compile Include="stickerCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="stickerCart.Designer.cs">
+      <DependentUpon>stickerCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Info.cs" />
     <EmbeddedResource Include="activeFriend.resx">
       <DependentUpon>activeFriend.cs</DependentUpon>
@@ -289,6 +295,9 @@
     </Compile>
     <EmbeddedResource Include="sticker.resx">
       <DependentUpon>sticker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stickerCart.resx">
+      <DependentUpon>stickerCart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -1,16 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
 
 namespace Internal_Society
@@ -18,13 +12,6 @@ namespace Internal_Society
 
     public partial class LoginForm : Form
     {
-        
-
-        string LoginStatus = "-99";
-
-
-        
-
 
         public LoginForm()
         {
@@ -32,18 +19,6 @@ namespace Internal_Society
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        public void threadLogin()
-        {
-            
-            var usernameLogin = txtUsername.Text;
-            var passwordLogin = txtPassword.Text;
-            var urlLogin = "https://kunbr0.com/it008/login.php?us=" + usernameLogin + "&ps=" + passwordLogin;
-
-            LoginStatus = new WebClient().DownloadString(urlLogin);
-            
-        }
-
-        
         public void StatusButtonLogin_NonProcess()
         {
             btnLogin.LabelText = "LOGIN";
@@ -63,31 +38,30 @@ namespace Internal_Society
             btnRepresentLogin.Enabled = false;
         }
 
-        // ham dang nhap tao mot luong moi de xu ly dang nhap
-        public void ClickLogin()
+        public async void LoginProcess()
         {
-
-            LoginStatus = "-99";
-
+            var usernameLogin = txtUsername.Text;
+            var passwordLogin = txtPassword.Text;
+            string urlRequest = App_Status.urlAPI + "c_user/Login/" + usernameLogin + "/" + passwordLogin;
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             StatusButtonLogin_Process();
 
-            ThreadStart ts_1 = new ThreadStart(threadLogin);
-            Thread thrd_1 = new Thread(ts_1);
-            thrd_1.Start();
-
-            TimeLogin.Start();
-
-            
-
+            // await
+            string result = await getStringTask;
+            dynamic data = JsonConvert.DeserializeObject(result);
+            FinishThread(data);
         }
+        // ham dang nhap tao mot luong moi de xu ly dang nhap
+
+
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            ClickLogin();
+            LoginProcess();
         }
 
         private void BtnRepresentLogin_Click(object sender, EventArgs e)
         {
-            ClickLogin();
+            LoginProcess();
         }
         string kUTF8(string a)
         {
@@ -96,54 +70,42 @@ namespace Internal_Society
             return Encoding.UTF8.GetString(bytes);
 
         }
-        private void TimeLogin_Tick(object sender, EventArgs e)
+        public void FinishThread(dynamic LoginStatus)
         {
-            if(LoginStatus != "-99")
+            StatusButtonLogin_NonProcess();
+            if (LoginStatus.Success == "1")
             {
-                TimeLogin.Stop();
-                StatusButtonLogin_NonProcess();
+                // dang nhap thanh cong.
+                // define
+                User_Info.k_ID = LoginStatus.ID;
+                User_Info.k_Username = LoginStatus.Username.ToString();
+                User_Info.k_Fullname = LoginStatus.Fullname.ToString();
+                User_Info.k_Diamond = LoginStatus.Diamond.ToString();
+                User_Info.k_Gold = LoginStatus.Gold.ToString();
+                User_Info.k_Gender = LoginStatus.Gender.ToString();
+                User_Info.k_Phone = LoginStatus.Phone.ToString();
+                User_Info.k_Email = LoginStatus.Email.ToString();
+                User_Info.k_Birthday = LoginStatus.Birthday.ToString();
+                User_Info.k_Status = LoginStatus.Status.ToString();
+                User_Info.k_Address = LoginStatus.Address.ToString();
 
-                if (LoginStatus != "-1")
-                {
-                    // dang nhap thanh cong.
-                    File.WriteAllText("user_info.txt", String.Empty);
-
-                    dynamic data_user = JsonConvert.DeserializeObject(LoginStatus);
-
-                    
-                    // define
-                    User_Info.k_ID = data_user.ID;
-                    User_Info.k_Username = kUTF8(data_user.Username.ToString());
-                    User_Info.k_Fullname = kUTF8(data_user.Fullname.ToString());
-                    User_Info.k_Diamond = kUTF8(data_user.Diamond.ToString());
-                    User_Info.k_Gold = kUTF8(data_user.Gold.ToString());
-                    User_Info.k_Gender = kUTF8(data_user.Gender.ToString());
-                    User_Info.k_Phone = kUTF8(data_user.Phone.ToString());
-                    User_Info.k_Email = kUTF8(data_user.Email.ToString());
-                    User_Info.k_Birthday = kUTF8(data_user.Birthday.ToString());
-                    User_Info.k_Status = kUTF8(data_user.Status.ToString());
-                    User_Info.k_Address = kUTF8(data_user.Address.ToString());
-                    
-
-
-
-                    // cho nguoi dung tien vao Homepage
-
-
-                    HomePage f1 = new HomePage();
-                    this.Hide();
-                    f1.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    // dang nhap that bai - hien thi alert
-                    IncorrectAlert incorrect = new IncorrectAlert();
-                    incorrect.ShowDialog();
-                }
-
+                // cho nguoi dung tien vao Homepage
+                HomePage f1 = new HomePage();
+                this.Hide();
+                f1.ShowDialog();
+                this.Close();
             }
+            else
+            {
+                // dang nhap that bai - hien thi alert
+                IncorrectAlert incorrect = new IncorrectAlert();
+                incorrect.ShowDialog();
+            }
+
+
         }
+
+        #region Event Handler
 
         private void TxtUsername_Enter(object sender, EventArgs e)
         {
@@ -168,7 +130,7 @@ namespace Internal_Society
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = false; 
+            txtPassword.UseSystemPasswordChar = false;
         }
 
         private void TxtPassword_Enter(object sender, EventArgs e)
@@ -210,5 +172,7 @@ namespace Internal_Society
             else
                 this.Show();
         }
+        #endregion  
+
     }
 }

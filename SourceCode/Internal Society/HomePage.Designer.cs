@@ -32,6 +32,7 @@ namespace Internal_Society
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.onlineList1 = new Internal_Society.onlineList();
             this.indicator = new System.Windows.Forms.PictureBox();
             this.Tab_Settings = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Games = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,7 +55,6 @@ namespace Internal_Society
             this.panel_Calendar = new Internal_Society.Panel_Calendar();
             this.panel_Chat = new Internal_Society.Panel_Chat();
             this.panel_Profile = new Internal_Society.Panel_Profile();
-            this.onlineList1 = new Internal_Society.onlineList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,6 +81,15 @@ namespace Internal_Society
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 661);
             this.panel1.TabIndex = 0;
+            // 
+            // onlineList1
+            // 
+            this.onlineList1.AutoScroll = true;
+            this.onlineList1.Location = new System.Drawing.Point(3, 478);
+            this.onlineList1.Name = "onlineList1";
+            this.onlineList1.Size = new System.Drawing.Size(314, 94);
+            this.onlineList1.TabIndex = 13;
+            this.onlineList1.Visible = false;
             // 
             // indicator
             // 
@@ -503,7 +512,8 @@ namespace Internal_Society
             // 
             // panel_Cart
             // 
-            this.panel_Cart.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel_Cart.AutoScroll = true;
+            this.panel_Cart.BackColor = System.Drawing.Color.White;
             this.panel_Cart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Cart.Location = new System.Drawing.Point(314, 65);
             this.panel_Cart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -542,15 +552,6 @@ namespace Internal_Society
             this.panel_Profile.Size = new System.Drawing.Size(836, 596);
             this.panel_Profile.TabIndex = 4;
             this.panel_Profile.Visible = false;
-            // 
-            // onlineList1
-            // 
-            this.onlineList1.AutoScroll = true;
-            this.onlineList1.Location = new System.Drawing.Point(3, 478);
-            this.onlineList1.Name = "onlineList1";
-            this.onlineList1.Size = new System.Drawing.Size(314, 94);
-            this.onlineList1.TabIndex = 13;
-            this.onlineList1.Visible = false;
             // 
             // HomePage
             // 
