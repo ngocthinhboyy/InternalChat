@@ -39,6 +39,7 @@
             // 
             // label_Error
             // 
+            this.label_Error.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_Error.AutoSize = true;
             this.label_Error.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Error.ForeColor = System.Drawing.Color.Red;

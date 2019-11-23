@@ -59,6 +59,7 @@
             // btn_addFriend
             // 
             this.btn_addFriend.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(38)))), ((int)(((byte)(54)))));
+            this.btn_addFriend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_addFriend.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_addFriend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_addFriend.BorderRadius = 0;

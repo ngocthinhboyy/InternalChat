@@ -58,11 +58,9 @@ namespace Internal_Society
                     for (int i = 0; i < userArr.Count(); i++)
                     {
                         friendInfo friend = new friendInfo(userArr[i].friend_Username, userArr[i].friend_Fullname);
-                        friend.Location = new Point(this.Width - friend.Width - 70, 0);
-
+                        friend.Location = new Point(100, 0);
                         friend.Top = friend_last.Bottom + 20;
                         this.Controls.Add(friend);
-
                         this.VerticalScroll.Value = this.VerticalScroll.Maximum;
                         friend_last = friend;
                     }

@@ -46,15 +46,15 @@ namespace Internal_Society
                 string url = "../../Resources/" + klp.ListPakage[i].PakageName + "_000.png";
                 if( i % 2 == 0)
                 {
-                    stick = new stickerCart(url, 50, 50 + 80 * i);
+                    stick = new stickerCart(url, 30, 50 + 80 * i);
                     listSticker.Add(stick);
                 }
                 else
                 {
-                    stick = new stickerCart(url, 450, 50 + 80 * (i - 1));
+                    stick = new stickerCart(url, 390, 50 + 80 * (i - 1));
                     listSticker.Add(stick);
                 }
-                this.Controls.Add(stick);
+                panel2.Controls.Add(stick);
             }
             listSticker[0].SetDetailSticker("Pink Pig", "");
             listSticker[1].SetDetailSticker("Lucy and Daisy", "");

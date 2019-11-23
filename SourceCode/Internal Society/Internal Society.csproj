@@ -955,5 +955,8 @@
   <ItemGroup>
     <None Include="Resources\font-awesome_4-7-0_square_90_0_ff0000_none.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L7Oxo-5clOa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
