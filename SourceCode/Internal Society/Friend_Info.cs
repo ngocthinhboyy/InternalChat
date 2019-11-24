@@ -9,14 +9,20 @@ namespace Internal_Society
 {   // dữ liệu của other users
     public class Friend_Info
     {
-        [JsonProperty("user_ID")]
+        [JsonProperty("friend_ID")]
         public string friend_ID { get; set; }
 
-        [JsonProperty("user_Name")]
+        [JsonProperty("friend_Username")]
         public string friend_Username { get; set; }
 
-        [JsonProperty("user_Fullname")]
+        [JsonProperty("friend_Fullname")]
         public string friend_Fullname { get; set; }
+
+        [JsonProperty("lastLogin")]
+        public int friend_lastLogin { get; set; }
+
+        [JsonProperty("friend_Conversation_ID")]
+        public int friend_Conversation_ID { get; set; }
 
     }
 }

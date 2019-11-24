@@ -12,9 +12,12 @@ namespace Internal_Society
 {
     public partial class Panel_Chat : UserControl
     {
-        public Panel_Chat()
+        public Panel_Chat(int conversation_id)
         {
             InitializeComponent();
+            Internal_Society.chatbox cb = new Internal_Society.chatbox(conversation_id);
+            cb.Dock = DockStyle.Fill;
+            this.Controls.Add(cb);
         }
     }
 }

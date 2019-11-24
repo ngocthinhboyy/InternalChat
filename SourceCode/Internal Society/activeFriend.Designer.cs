@@ -33,12 +33,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.onlineIcon = new System.Windows.Forms.PictureBox();
             this.offlineIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.user_Avatar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offlineIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.user_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // activeStatus
@@ -77,7 +77,7 @@
             // 
             this.onlineIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.onlineIcon.Image = global::Internal_Society.Properties.Resources.font_awesome_4_7_0_circle_15_0_58de40_none;
-            this.onlineIcon.Location = new System.Drawing.Point(234, 18);
+            this.onlineIcon.Location = new System.Drawing.Point(257, 18);
             this.onlineIcon.Name = "onlineIcon";
             this.onlineIcon.Size = new System.Drawing.Size(15, 15);
             this.onlineIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -88,7 +88,7 @@
             // 
             this.offlineIcon.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.offlineIcon.Image = global::Internal_Society.Properties.Resources.offline;
-            this.offlineIcon.Location = new System.Drawing.Point(234, 18);
+            this.offlineIcon.Location = new System.Drawing.Point(257, 18);
             this.offlineIcon.Name = "offlineIcon";
             this.offlineIcon.Size = new System.Drawing.Size(15, 15);
             this.offlineIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -96,15 +96,16 @@
             this.offlineIcon.TabStop = false;
             this.offlineIcon.Visible = false;
             // 
-            // pictureBox1
+            // user_Avatar
             // 
-            this.pictureBox1.Image = global::Internal_Society.Properties.Resources.user_001;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.user_Avatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.user_Avatar.Image = global::Internal_Society.Properties.Resources.user_001;
+            this.user_Avatar.Location = new System.Drawing.Point(16, 14);
+            this.user_Avatar.Name = "user_Avatar";
+            this.user_Avatar.Size = new System.Drawing.Size(70, 70);
+            this.user_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.user_Avatar.TabIndex = 1;
+            this.user_Avatar.TabStop = false;
             // 
             // label1
             // 
@@ -129,14 +130,15 @@
             this.Controls.Add(this.onlineIcon);
             this.Controls.Add(this.offlineIcon);
             this.Controls.Add(this.username);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.user_Avatar);
             this.Controls.Add(this.activeStatus);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "activeFriend";
-            this.Size = new System.Drawing.Size(259, 100);
+            this.Size = new System.Drawing.Size(282, 100);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offlineIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.user_Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,7 +147,7 @@
         #endregion
 
         private System.Windows.Forms.Label activeStatus;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox user_Avatar;
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.PictureBox offlineIcon;
         private System.Windows.Forms.PictureBox onlineIcon;

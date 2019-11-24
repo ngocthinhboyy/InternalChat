@@ -31,6 +31,11 @@ namespace Internal_Society
 
         public chatbox()
         {
+
+        }
+        public chatbox(int conversation_id)
+        {
+            id_conversation = conversation_id.ToString();
             Panel_Color_Bubble.NotifyChangeColor = new Notify(this.notifyChangeColor);
             if (!this.DesignMode)
             {

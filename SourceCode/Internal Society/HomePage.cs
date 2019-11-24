@@ -15,28 +15,20 @@ namespace Internal_Society
 {
     public partial class HomePage : Form
     {
-
+        public static List<UserControl> ListPanel = new List<UserControl>();
+        public static List<UserControl> ListChat = new List<UserControl>();
         
-        public void Update_App_Status()
-        {
-            App_Status.HomePage_Left = this.Left;
-            App_Status.HomePage_Top = this.Top;
-            App_Status.HomePage_Width = this.Width;
-            App_Status.HomePage_Height = this.Height;
-        }
-        
+        Color activeTabChat = Color.FromArgb(123, 123, 123);
+        Color inactiveTabChat = Color.Transparent;
 
-        void TurnOffPanel()
-        {
-            panel_Dashboard.Visible = false;
-            panel_Chat.Visible = false;
-            panel_Profile.Visible = false;
-            panel_Cart.Visible = false;
-            panel_Calendar.Visible = false;
-            panel_Games.Visible = false;
-            panel_Settings.Visible = false;
-            panel_Search1.Visible = false;
-        }
+        Internal_Society.Panel_Dashboard panel_Dashboard = new Internal_Society.Panel_Dashboard();
+        //Internal_Society.Panel_Chat panel_Chat = new Internal_Society.Panel_Chat(1);
+        Internal_Society.Panel_Profile panel_Profile = new Internal_Society.Panel_Profile();
+        Internal_Society.Panel_Cart panel_Cart = new Internal_Society.Panel_Cart();
+        Internal_Society.Panel_Calendar panel_Calendar = new Internal_Society.Panel_Calendar();
+        Internal_Society.Panel_Games panel_Games = new Internal_Society.Panel_Games();
+        Internal_Society.Panel_Settings panel_Settings = new Internal_Society.Panel_Settings();
+        Internal_Society.Panel_Search panel_Search1 = new Internal_Society.Panel_Search();
 
         public HomePage()
         {
@@ -44,7 +36,103 @@ namespace Internal_Society
             this.StartPosition = FormStartPosition.CenterScreen;
             label_Fullname.Text = User_Info.k_Fullname;
 
+            panel_Dashboard.Dock = DockStyle.Fill;
+            //panel_Chat.Dock = DockStyle.Fill;
+            panel_Profile.Dock = DockStyle.Fill;
+            panel_Cart.Dock = DockStyle.Fill;
+            panel_Calendar.Dock = DockStyle.Fill;
+            panel_Games.Dock = DockStyle.Fill;
+            panel_Settings.Dock = DockStyle.Fill;
+            panel_Search1.Dock = DockStyle.Fill;
 
+            
+
+            this.panel_Main.Controls.Add(panel_Dashboard);
+            ListPanel.Add(panel_Dashboard);
+            //this.panel_Main.Controls.Add(panel_Chat);
+            //ListPanel.Add(panel_Chat);
+            this.panel_Main.Controls.Add(panel_Profile);
+            ListPanel.Add(panel_Profile);
+            this.panel_Main.Controls.Add(panel_Cart);
+            ListPanel.Add(panel_Cart);
+            this.panel_Main.Controls.Add(panel_Calendar);
+            ListPanel.Add(panel_Calendar);
+            this.panel_Main.Controls.Add(panel_Games);
+            ListPanel.Add(panel_Games);
+            this.panel_Main.Controls.Add(panel_Settings);
+            ListPanel.Add(panel_Settings);
+            this.panel_Main.Controls.Add(panel_Search1);
+            ListPanel.Add(panel_Search1);
+        }
+
+        
+
+        private void FriendClicked(object sender, EventArgs e)
+        {
+            
+            TurnOffPanel();
+            TurnOffTabChat();
+            bool isExist = false;
+            
+            Internal_Society.activeFriend atf = sender as Internal_Society.activeFriend;
+            atf.BackColor = activeTabChat;
+            for (int i = 0; i < ListChat.Count; i++)
+            {
+                if(ListChat[i].Tag.ToString() == atf.Tag.ToString())
+                {
+                    ListChat[i].Visible = true;
+                    isExist = true;
+                }
+            }
+
+            if (!isExist)
+            {
+                Internal_Society.Panel_Chat panel_Chat = new Internal_Society.Panel_Chat(Convert.ToInt32(atf.Tag));
+
+
+                panel_Chat.Dock = DockStyle.Fill;
+                panel_Chat.Visible = true;
+                panel_Chat.Tag = atf.Tag;
+
+                ListChat.Add(panel_Chat);
+                panel_Main.Controls.Add(panel_Chat);
+                
+            }
+
+            
+        }
+
+        public void Update_App_Status()
+        {
+            App_Status.HomePage_Left = this.Left;
+            App_Status.HomePage_Top = this.Top;
+            App_Status.HomePage_Width = this.Width;
+            App_Status.HomePage_Height = this.Height;
+        }
+
+
+        void TurnOffPanel()
+        {
+            foreach(var pnl in ListPanel)
+            {
+                pnl.Visible = false;
+            }
+
+            foreach (var pnl in ListChat)
+            {
+                pnl.Visible = false;
+                
+            }
+        }
+
+        
+        void TurnOffTabChat()
+        {
+            foreach(var tabchat in onlineList1.Controls)
+            {
+                Internal_Society.activeFriend atf = tabchat as Internal_Society.activeFriend;
+                atf.BackColor = inactiveTabChat;
+            }
         }
 
         void MoveIndicator(Control control)
@@ -73,7 +161,7 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            panel_Chat.Visible = true;
+            
             App_Status.time_delay = 1500;
             Tab_Calendar.Visible = false;
             Tab_Cart.Visible = false;
@@ -135,7 +223,7 @@ namespace Internal_Society
         private void Textbox_Search_Enter(object sender, EventArgs e)
         {
             textbox_Search.text = "";
-            
+
             //panel_Search1.Visible = true;
         }
 
@@ -165,7 +253,7 @@ namespace Internal_Society
 
         private void Picture_user_image_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Textbox_Search_Click(object sender, EventArgs e)
