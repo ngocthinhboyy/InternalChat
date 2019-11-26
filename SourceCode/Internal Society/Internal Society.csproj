@@ -66,221 +66,250 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="activeFriend.cs">
+    <Compile Include="loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="activeFriend.Designer.cs">
+    <Compile Include="loading.Designer.cs">
+      <DependentUpon>loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\Notification_AddFriend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notification\Notification_AddFriend.Designer.cs">
+      <DependentUpon>Notification_AddFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\Notification_Info.cs" />
+    <Compile Include="Notification\Notification_AcceptFriend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notification\Notification_AcceptFriend.Designer.cs">
+      <DependentUpon>Notification_AcceptFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online List\activeFriend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online List\activeFriend.Designer.cs">
       <DependentUpon>activeFriend.cs</DependentUpon>
     </Compile>
-    <Compile Include="App_Status.cs" />
-    <Compile Include="bubble.cs">
+    <Compile Include="Classes\App_Status.cs" />
+    <Compile Include="Chat\Bubble\bubble.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="bubble.Designer.cs">
+    <Compile Include="Chat\Bubble\bubble.Designer.cs">
       <DependentUpon>bubble.cs</DependentUpon>
     </Compile>
-    <Compile Include="chatbox.cs">
+    <Compile Include="Chat\Chatbox\chatbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="chatbox.Designer.cs">
+    <Compile Include="Chat\Chatbox\chatbox.Designer.cs">
       <DependentUpon>chatbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccount.cs">
+    <Compile Include="Form\CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAccount.Designer.cs">
+    <Compile Include="Form\CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateAccount_PersonalInfo.cs">
+    <Compile Include="Form\CreateAccount_PersonalInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateAccount_PersonalInfo.Designer.cs">
+    <Compile Include="Form\CreateAccount_PersonalInfo.Designer.cs">
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data_Message.cs" />
-    <Compile Include="friendInfo.cs">
+    <Compile Include="Chat\Data_Message.cs" />
+    <Compile Include="Search\friendInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="friendInfo.Designer.cs">
+    <Compile Include="Search\friendInfo.Designer.cs">
       <DependentUpon>friendInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Friend_Info.cs" />
-    <Compile Include="Games_LuckyWheel.cs">
+    <Compile Include="Online List\Friend_Info.cs" />
+    <Compile Include="Panel_Controls\Games_LuckyWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Games_LuckyWheel.Designer.cs">
+    <Compile Include="Panel_Controls\Games_LuckyWheel.Designer.cs">
       <DependentUpon>Games_LuckyWheel.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="Form\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
+    <Compile Include="Form\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="IgnoringSecurityQuestionAlert.cs">
+    <Compile Include="Form\IgnoringSecurityQuestionAlert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IgnoringSecurityQuestionAlert.Designer.cs">
+    <Compile Include="Form\IgnoringSecurityQuestionAlert.Designer.cs">
       <DependentUpon>IgnoringSecurityQuestionAlert.cs</DependentUpon>
     </Compile>
-    <Compile Include="IncorrectAlert.cs">
+    <Compile Include="Form\IncorrectAlert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IncorrectAlert.Designer.cs">
+    <Compile Include="Form\IncorrectAlert.Designer.cs">
       <DependentUpon>IncorrectAlert.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Form\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Form\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="onlineList.cs">
+    <Compile Include="Online List\onlineList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="onlineList.Designer.cs">
+    <Compile Include="Online List\onlineList.Designer.cs">
       <DependentUpon>onlineList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Color_Bubble.cs">
+    <Compile Include="Chat\Panel_Color_Bubble.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Panel_Color_Bubble.Designer.cs">
+    <Compile Include="Chat\Panel_Color_Bubble.Designer.cs">
       <DependentUpon>Panel_Color_Bubble.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Calendar.cs">
+    <Compile Include="Notification\Panel_Notification.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Calendar.Designer.cs">
-      <DependentUpon>Panel_Calendar.cs</DependentUpon>
+    <Compile Include="Notification\Panel_Notification.Designer.cs">
+      <DependentUpon>Panel_Notification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Cart.cs">
+    <Compile Include="Panel_Controls\Panel_Cart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Cart.Designer.cs">
+    <Compile Include="Panel_Controls\Panel_Cart.Designer.cs">
       <DependentUpon>Panel_Cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Chat.cs">
+    <Compile Include="Panel_Controls\Panel_Chat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Chat.Designer.cs">
+    <Compile Include="Panel_Controls\Panel_Chat.Designer.cs">
       <DependentUpon>Panel_Chat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Dashboard.cs">
+    <Compile Include="Panel_Controls\Panel_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Dashboard.Designer.cs">
+    <Compile Include="Panel_Controls\Panel_Dashboard.Designer.cs">
       <DependentUpon>Panel_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Games.cs">
+    <Compile Include="Panel_Controls\Panel_Games.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Games.Designer.cs">
+    <Compile Include="Panel_Controls\Panel_Games.Designer.cs">
       <DependentUpon>Panel_Games.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Profile.cs">
+    <Compile Include="Panel_Controls\Panel_Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Profile.Designer.cs">
+    <Compile Include="Panel_Controls\Panel_Profile.Designer.cs">
       <DependentUpon>Panel_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Search.cs">
+    <Compile Include="Search\Panel_Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Search.Designer.cs">
+    <Compile Include="Search\Panel_Search.Designer.cs">
       <DependentUpon>Panel_Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Settings.cs">
+    <Compile Include="Panel_Controls\Panel_Settings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Settings.Designer.cs">
+    <Compile Include="Panel_Controls\Panel_Settings.Designer.cs">
       <DependentUpon>Panel_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel_Sticker.cs">
+    <Compile Include="Form\Panel_Sticker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Panel_Sticker.Designer.cs">
+    <Compile Include="Form\Panel_Sticker.Designer.cs">
       <DependentUpon>Panel_Sticker.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reg_Info.cs" />
-    <Compile Include="sticker.cs">
+    <Compile Include="Classes\Reg_Info.cs" />
+    <Compile Include="Chat\sticker.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sticker.Designer.cs">
+    <Compile Include="Chat\sticker.Designer.cs">
       <DependentUpon>sticker.cs</DependentUpon>
     </Compile>
-    <Compile Include="stickerCart.cs">
+    <Compile Include="Panel_Controls\stickerCart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="stickerCart.Designer.cs">
+    <Compile Include="Panel_Controls\stickerCart.Designer.cs">
       <DependentUpon>stickerCart.cs</DependentUpon>
     </Compile>
-    <Compile Include="User_Info.cs" />
-    <EmbeddedResource Include="activeFriend.resx">
+    <Compile Include="Search\userSearchInfo.cs" />
+    <Compile Include="Classes\User_Info.cs" />
+    <EmbeddedResource Include="loading.resx">
+      <DependentUpon>loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\Notification_AddFriend.resx">
+      <DependentUpon>Notification_AddFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\Notification_AcceptFriend.resx">
+      <DependentUpon>Notification_AcceptFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online List\activeFriend.resx">
       <DependentUpon>activeFriend.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bubble.resx">
+    <EmbeddedResource Include="Chat\Bubble\bubble.resx">
       <DependentUpon>bubble.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="chatbox.resx">
+    <EmbeddedResource Include="Chat\Chatbox\chatbox.resx">
       <DependentUpon>chatbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAccount.resx">
+    <EmbeddedResource Include="Form\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateAccount_PersonalInfo.resx">
+    <EmbeddedResource Include="Form\CreateAccount_PersonalInfo.resx">
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="friendInfo.resx">
+    <EmbeddedResource Include="Search\friendInfo.resx">
       <DependentUpon>friendInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Games_LuckyWheel.resx">
+    <EmbeddedResource Include="Panel_Controls\Games_LuckyWheel.resx">
       <DependentUpon>Games_LuckyWheel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
+    <EmbeddedResource Include="Form\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IgnoringSecurityQuestionAlert.resx">
+    <EmbeddedResource Include="Form\IgnoringSecurityQuestionAlert.resx">
       <DependentUpon>IgnoringSecurityQuestionAlert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IncorrectAlert.resx">
+    <EmbeddedResource Include="Form\IncorrectAlert.resx">
       <DependentUpon>IncorrectAlert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Form\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="onlineList.resx">
+    <EmbeddedResource Include="Online List\onlineList.resx">
       <DependentUpon>onlineList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Calendar.resx">
-      <DependentUpon>Panel_Calendar.cs</DependentUpon>
+    <EmbeddedResource Include="Notification\Panel_Notification.resx">
+      <DependentUpon>Panel_Notification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Cart.resx">
+    <EmbeddedResource Include="Panel_Controls\Panel_Cart.resx">
       <DependentUpon>Panel_Cart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Chat.resx">
+    <EmbeddedResource Include="Panel_Controls\Panel_Chat.resx">
       <DependentUpon>Panel_Chat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Color_Bubble.resx">
+    <EmbeddedResource Include="Chat\Panel_Color_Bubble.resx">
       <DependentUpon>Panel_Color_Bubble.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Dashboard.resx">
+    <EmbeddedResource Include="Panel_Controls\Panel_Dashboard.resx">
       <DependentUpon>Panel_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Games.resx">
+    <EmbeddedResource Include="Panel_Controls\Panel_Games.resx">
       <DependentUpon>Panel_Games.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Profile.resx">
+    <EmbeddedResource Include="Panel_Controls\Panel_Profile.resx">
       <DependentUpon>Panel_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Search.resx">
+    <EmbeddedResource Include="Search\Panel_Search.resx">
       <DependentUpon>Panel_Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Settings.resx">
+    <EmbeddedResource Include="Panel_Controls\Panel_Settings.resx">
       <DependentUpon>Panel_Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Sticker.resx">
+    <EmbeddedResource Include="Form\Panel_Sticker.resx">
       <DependentUpon>Panel_Sticker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -293,10 +322,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="sticker.resx">
+    <EmbeddedResource Include="Chat\sticker.resx">
       <DependentUpon>sticker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="stickerCart.resx">
+    <EmbeddedResource Include="Panel_Controls\stickerCart.resx">
       <DependentUpon>stickerCart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -957,6 +986,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\L7Oxo-5clOa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noti_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfriend_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfriend_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfriend_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\done_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detete_006.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

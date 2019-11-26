@@ -55,6 +55,7 @@ namespace Internal_Society
 
             lb_message.Top = 10;
             lb_message.Left = 10;
+            ChangeColorBubble();
             lb_time.Text = message_Time;
             SetHeight();
             ChangeColorBubble();

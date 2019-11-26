@@ -23,6 +23,7 @@ namespace Internal_Society
 
         [JsonProperty("friend_Conversation_ID")]
         public int friend_Conversation_ID { get; set; }
+        
 
     }
 }

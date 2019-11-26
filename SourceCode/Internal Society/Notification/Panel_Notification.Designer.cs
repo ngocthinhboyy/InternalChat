@@ -1,6 +1,6 @@
 ﻿namespace Internal_Society
 {
-    partial class Panel_Calendar
+    partial class Panel_Notification
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.TimeRequest = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // Panel_Calendar
+            // TimeRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.TimeRequest.Enabled = true;
+            this.TimeRequest.Interval = 1000;
+            this.TimeRequest.Tick += new System.EventHandler(this.TimeRequest_Tick);
+            // 
+            // Panel_Notification
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Name = "Panel_Calendar";
-            this.Size = new System.Drawing.Size(754, 601);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Name = "Panel_Notification";
+            this.Size = new System.Drawing.Size(1257, 925);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer TimeRequest;
     }
 }

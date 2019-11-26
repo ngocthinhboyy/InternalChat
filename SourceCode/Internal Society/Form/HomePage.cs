@@ -18,14 +18,14 @@ namespace Internal_Society
         public static List<UserControl> ListPanel = new List<UserControl>();
         public static List<UserControl> ListChat = new List<UserControl>();
         
-        Color activeTabChat = Color.FromArgb(123, 123, 123);
+        Color activeTabChat = Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat);
         Color inactiveTabChat = Color.Transparent;
 
         Internal_Society.Panel_Dashboard panel_Dashboard = new Internal_Society.Panel_Dashboard();
         //Internal_Society.Panel_Chat panel_Chat = new Internal_Society.Panel_Chat(1);
         Internal_Society.Panel_Profile panel_Profile = new Internal_Society.Panel_Profile();
         Internal_Society.Panel_Cart panel_Cart = new Internal_Society.Panel_Cart();
-        Internal_Society.Panel_Calendar panel_Calendar = new Internal_Society.Panel_Calendar();
+        Internal_Society.Panel_Notification panel_Calendar = new Internal_Society.Panel_Notification();
         Internal_Society.Panel_Games panel_Games = new Internal_Society.Panel_Games();
         Internal_Society.Panel_Settings panel_Settings = new Internal_Society.Panel_Settings();
         Internal_Society.Panel_Search panel_Search1 = new Internal_Society.Panel_Search();
@@ -163,7 +163,7 @@ namespace Internal_Society
             TurnOffPanel();
             
             App_Status.time_delay = 1500;
-            Tab_Calendar.Visible = false;
+            Tab_Notification.Visible = false;
             Tab_Cart.Visible = false;
             Tab_Chat.Visible = false;
             Tab_DashBoard.Visible = false;
@@ -185,7 +185,7 @@ namespace Internal_Society
             App_Status.time_delay = 10000;
         }
 
-        private void Tab_Calendar_Click(object sender, EventArgs e)
+        private void Tab_Notification_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
@@ -235,6 +235,7 @@ namespace Internal_Society
         string searchInfoLast = "";
         private void Textbox_Search_KeyUp(object sender, EventArgs e)
         {
+            TurnOffPanel();
             panel_Search1.Visible = true;
             searchInfo = textbox_Search.text;
             // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
@@ -270,7 +271,7 @@ namespace Internal_Society
             TurnOffPanel();
             onlineList1.Visible = false;
             panel_Dashboard.Visible = true;
-            Tab_Calendar.Visible = true;
+            Tab_Notification.Visible = true;
             Tab_Cart.Visible = true;
             Tab_Chat.Visible = true;
             Tab_DashBoard.Visible = true;

@@ -27,6 +27,8 @@ namespace Internal_Society
         string pMessage = "";
         string pSticker = "";
         int messIndex = 0;
+        bool isReceiveFromMe = true;
+        Internal_Society.loading loading = new Internal_Society.loading();
         #endregion
 
         public chatbox()
@@ -36,7 +38,7 @@ namespace Internal_Society
         public chatbox(int conversation_id)
         {
             id_conversation = conversation_id.ToString();
-            Panel_Color_Bubble.NotifyChangeColor = new Notify(this.notifyChangeColor);
+            
             if (!this.DesignMode)
             {
                 InitializeComponent();
@@ -44,6 +46,9 @@ namespace Internal_Society
             }
             bbl_old.Top = 0 - bbl_old.Height + 10;
 
+            //loading.Dock = DockStyle.Fill;
+            loading.Location = new Point(this.Width/2 - 50, 100);
+            panel2.Controls.Add(loading);
         }
         public void notifyChangeColor()
         {
@@ -56,6 +61,16 @@ namespace Internal_Society
             lbl.ForeColor = Color.FromArgb(144, 148, 156);
             lbl.Anchor = (AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top);
             panel2.Controls.Add(lbl);
+
+
+            foreach (Control x in panel2.Controls)
+            {
+                if (x is bubble)
+                {
+                    ((bubble)x).ChangeColorBubble();
+                    
+                }
+            }
         }
 
         public void addInMessage(string user_ID, string message_ID, string message_Type,
@@ -74,7 +89,7 @@ namespace Internal_Society
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-            if (Panel_Color_Bubble.isChangedColor == true)
+            /*if (Panel_Color_Bubble.isChangedColor == true)
             {
                 foreach (Control x in panel2.Controls)
                 {
@@ -84,7 +99,7 @@ namespace Internal_Society
                         Panel_Color_Bubble.isChangedColor = false;
                     }
                 }
-            }
+            }*/
         }
 
         public void addOutMessage(string user_ID, string message_ID, string message_Type,
@@ -148,6 +163,8 @@ namespace Internal_Society
 
         public void ProccessData(string dataMessage)
         {
+            loading.Visible = false;
+            if (!isReceiveFromMe) return;
             TimeRequest.Stop();
             TimeRequest.Start();
             Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
@@ -173,6 +190,7 @@ namespace Internal_Society
 
             }
             //TimeRequest.Start();
+            isReceiveFromMe = false;
         }
 
 
@@ -231,6 +249,7 @@ namespace Internal_Society
 
         private void Button_More_Click(object sender, EventArgs e)
         {
+            Panel_Color_Bubble.NotifyChangeColor = new Notify(this.notifyChangeColor);
             pn_Color_Bubble.Show();
         }
 

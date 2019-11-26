@@ -36,7 +36,7 @@ namespace Internal_Society
             this.indicator = new System.Windows.Forms.PictureBox();
             this.Tab_Settings = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Games = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Tab_Calendar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Tab_Notification = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Cart = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Chat = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Profile = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -62,7 +62,7 @@ namespace Internal_Society
             this.panel1.Controls.Add(this.indicator);
             this.panel1.Controls.Add(this.Tab_Settings);
             this.panel1.Controls.Add(this.Tab_Games);
-            this.panel1.Controls.Add(this.Tab_Calendar);
+            this.panel1.Controls.Add(this.Tab_Notification);
             this.panel1.Controls.Add(this.Tab_Cart);
             this.panel1.Controls.Add(this.Tab_Chat);
             this.panel1.Controls.Add(this.Tab_Profile);
@@ -169,42 +169,42 @@ namespace Internal_Society
             this.Tab_Games.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab_Games.Click += new System.EventHandler(this.Tab_Games_Click);
             // 
-            // Tab_Calendar
+            // Tab_Notification
             // 
-            this.Tab_Calendar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Calendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Calendar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Tab_Calendar.BorderRadius = 0;
-            this.Tab_Calendar.ButtonText = "  Calendar";
-            this.Tab_Calendar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Tab_Calendar.DisabledColor = System.Drawing.Color.Gray;
-            this.Tab_Calendar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Tab_Calendar.Iconcolor = System.Drawing.Color.Transparent;
-            this.Tab_Calendar.Iconimage = ((System.Drawing.Image)(resources.GetObject("Tab_Calendar.Iconimage")));
-            this.Tab_Calendar.Iconimage_right = null;
-            this.Tab_Calendar.Iconimage_right_Selected = null;
-            this.Tab_Calendar.Iconimage_Selected = null;
-            this.Tab_Calendar.IconMarginLeft = 0;
-            this.Tab_Calendar.IconMarginRight = 0;
-            this.Tab_Calendar.IconRightVisible = true;
-            this.Tab_Calendar.IconRightZoom = 0D;
-            this.Tab_Calendar.IconVisible = true;
-            this.Tab_Calendar.IconZoom = 40D;
-            this.Tab_Calendar.IsTab = false;
-            this.Tab_Calendar.Location = new System.Drawing.Point(0, 326);
-            this.Tab_Calendar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Tab_Calendar.Name = "Tab_Calendar";
-            this.Tab_Calendar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Calendar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Calendar.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.Tab_Calendar.selected = false;
-            this.Tab_Calendar.Size = new System.Drawing.Size(314, 48);
-            this.Tab_Calendar.TabIndex = 5;
-            this.Tab_Calendar.Text = "  Calendar";
-            this.Tab_Calendar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tab_Calendar.Textcolor = System.Drawing.Color.White;
-            this.Tab_Calendar.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab_Calendar.Click += new System.EventHandler(this.Tab_Calendar_Click);
+            this.Tab_Notification.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Notification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Tab_Notification.BorderRadius = 0;
+            this.Tab_Notification.ButtonText = "  Notification";
+            this.Tab_Notification.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Tab_Notification.DisabledColor = System.Drawing.Color.Gray;
+            this.Tab_Notification.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Tab_Notification.Iconcolor = System.Drawing.Color.Transparent;
+            this.Tab_Notification.Iconimage = global::Internal_Society.Properties.Resources.noti_002;
+            this.Tab_Notification.Iconimage_right = null;
+            this.Tab_Notification.Iconimage_right_Selected = null;
+            this.Tab_Notification.Iconimage_Selected = null;
+            this.Tab_Notification.IconMarginLeft = 0;
+            this.Tab_Notification.IconMarginRight = 0;
+            this.Tab_Notification.IconRightVisible = true;
+            this.Tab_Notification.IconRightZoom = 0D;
+            this.Tab_Notification.IconVisible = true;
+            this.Tab_Notification.IconZoom = 40D;
+            this.Tab_Notification.IsTab = false;
+            this.Tab_Notification.Location = new System.Drawing.Point(0, 326);
+            this.Tab_Notification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Tab_Notification.Name = "Tab_Notification";
+            this.Tab_Notification.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Notification.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Notification.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.Tab_Notification.selected = false;
+            this.Tab_Notification.Size = new System.Drawing.Size(314, 48);
+            this.Tab_Notification.TabIndex = 5;
+            this.Tab_Notification.Text = "  Notification";
+            this.Tab_Notification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Tab_Notification.Textcolor = System.Drawing.Color.White;
+            this.Tab_Notification.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab_Notification.Click += new System.EventHandler(this.Tab_Notification_Click);
             // 
             // Tab_Cart
             // 
@@ -481,7 +481,7 @@ namespace Internal_Society
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(1098, 594);
+            this.MinimumSize = new System.Drawing.Size(1096, 588);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.Move += new System.EventHandler(this.HomePage_Move);
@@ -494,7 +494,7 @@ namespace Internal_Society
             this.ResumeLayout(false);
 
 
-            // KuN
+
             this.onlineList1.FriendClicked += FriendClicked;
         }
 
@@ -506,7 +506,7 @@ namespace Internal_Society
         private Bunifu.Framework.UI.BunifuFlatButton Tab_DashBoard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox indicator;
-        private Bunifu.Framework.UI.BunifuFlatButton Tab_Calendar;
+        private Bunifu.Framework.UI.BunifuFlatButton Tab_Notification;
         private Bunifu.Framework.UI.BunifuFlatButton Tab_Cart;
         private Bunifu.Framework.UI.BunifuFlatButton Tab_Chat;
         private Bunifu.Framework.UI.BunifuFlatButton Tab_Profile;

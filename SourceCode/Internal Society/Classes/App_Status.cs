@@ -17,5 +17,10 @@ namespace Internal_Society
         public static int time_delay = 1500;
 
         public static string urlAPI = "https://kunbr0.com/it008b/";
+
+
+        public static int RedTabChat = 123;
+        public static int GreenTabChat = 123;
+        public static int BlueTabChat = 123;
     }
 }

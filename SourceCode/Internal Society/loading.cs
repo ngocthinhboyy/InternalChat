@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Internal_Society
 {
-    public partial class Panel_Calendar : UserControl
+    public partial class loading : UserControl
     {
-        public Panel_Calendar()
+        public loading()
         {
             InitializeComponent();
         }

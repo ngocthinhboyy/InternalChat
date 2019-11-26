@@ -18,6 +18,7 @@ namespace Internal_Society
         public onlineList()
         {
             InitializeComponent();
+            
         }
         string listUsers = "";
 
@@ -45,6 +46,7 @@ namespace Internal_Society
                 this.Controls.Clear();
                 label1.Visible = false;
                 List<Friend_Info> userArr = new List<Friend_Info>();
+                
                 userArr = JsonConvert.DeserializeObject<List<Friend_Info>>(listUsers);
                 if (userArr.Count() > 0)
                 {
@@ -60,7 +62,8 @@ namespace Internal_Society
                         
                         friend.Width = this.Width - 20;
                         friend.Tag = userArr[i].friend_Conversation_ID.ToString();
-                        
+
+                        friend.MouseEnter += Friend_Enter;
                         friend.Click += Friend_Click;
 
 
@@ -68,8 +71,6 @@ namespace Internal_Society
                         //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
                         //this.VerticalScroll.Visible = false;
                         friend_last = friend;
-
-                        
                     }
                 }
 
@@ -84,6 +85,7 @@ namespace Internal_Society
         private void TimeRequest_Tick(object sender, EventArgs e)
         {
             TimeRequest.Stop();
+            TimeRequest.Interval = 5000;
             GetDataAsync();
         }
 
@@ -95,10 +97,28 @@ namespace Internal_Society
             if (handler != null)
                 handler(sender,e);
         }
+
+        private void Friend_Enter(object sender, EventArgs e)
+        {
+            Internal_Society.activeFriend atf = sender as Internal_Society.activeFriend;
+            if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat))
+                atf.BackColor = Color.FromArgb(App_Status.RedTabChat+10, App_Status.GreenTabChat+10, App_Status.BlueTabChat+10);
+        }
+
         private void Friend_Click(object sender, EventArgs e)
         {
             //While you can call `this.ParentForm.Close()` it's better to raise an event
             OnFriendClicked(sender,e);
+        }
+
+        private void OnlineList_MouseEnter(object sender, EventArgs e)
+        {
+            //MessageBox.Show(this.Controls.Count.ToString());
+            foreach (var item in this.Controls)
+            {
+                Internal_Society.activeFriend atf = item as Internal_Society.activeFriend;
+                if(atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat)) atf.BackColor = Color.Transparent;
+            }
         }
     }
 }
