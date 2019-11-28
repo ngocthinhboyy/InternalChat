@@ -33,6 +33,7 @@
             this.btn_Accept = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lb_Fullname = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lb_Noti_Detail = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lb_Message = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             // 
             this.pb_Avatar.Image = global::Internal_Society.Properties.Resources.user_001;
             this.pb_Avatar.Location = new System.Drawing.Point(48, 81);
-            this.pb_Avatar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pb_Avatar.Margin = new System.Windows.Forms.Padding(5);
             this.pb_Avatar.Name = "pb_Avatar";
             this.pb_Avatar.Size = new System.Drawing.Size(117, 108);
             this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +70,7 @@
             this.btn_Remove.IconZoom = 50D;
             this.btn_Remove.IsTab = false;
             this.btn_Remove.Location = new System.Drawing.Point(744, 115);
-            this.btn_Remove.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btn_Remove.Margin = new System.Windows.Forms.Padding(8);
             this.btn_Remove.Name = "btn_Remove";
             this.btn_Remove.Normalcolor = System.Drawing.Color.MediumPurple;
             this.btn_Remove.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -105,7 +106,7 @@
             this.btn_Accept.IconZoom = 50D;
             this.btn_Accept.IsTab = false;
             this.btn_Accept.Location = new System.Drawing.Point(507, 115);
-            this.btn_Accept.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btn_Accept.Margin = new System.Windows.Forms.Padding(8);
             this.btn_Accept.Name = "btn_Accept";
             this.btn_Accept.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_Accept.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -141,17 +142,31 @@
             this.lb_Noti_Detail.TabIndex = 7;
             this.lb_Noti_Detail.Text = "Lời mời kết bạn";
             // 
+            // lb_Message
+            // 
+            this.lb_Message.AutoSize = true;
+            this.lb_Message.Font = new System.Drawing.Font("Segoe UI Semibold", 9.818182F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Message.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lb_Message.Location = new System.Drawing.Point(195, 127);
+            this.lb_Message.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lb_Message.Name = "lb_Message";
+            this.lb_Message.Size = new System.Drawing.Size(96, 30);
+            this.lb_Message.TabIndex = 12;
+            this.lb_Message.Text = "Message";
+            this.lb_Message.Visible = false;
+            // 
             // Notification_AddFriend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.lb_Message);
             this.Controls.Add(this.pb_Avatar);
             this.Controls.Add(this.btn_Remove);
             this.Controls.Add(this.btn_Accept);
             this.Controls.Add(this.lb_Fullname);
             this.Controls.Add(this.lb_Noti_Detail);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Notification_AddFriend";
             this.Size = new System.Drawing.Size(1000, 220);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
@@ -167,5 +182,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_Accept;
         private Bunifu.Framework.UI.BunifuCustomLabel lb_Fullname;
         private Bunifu.Framework.UI.BunifuCustomLabel lb_Noti_Detail;
+        private Bunifu.Framework.UI.BunifuCustomLabel lb_Message;
     }
 }

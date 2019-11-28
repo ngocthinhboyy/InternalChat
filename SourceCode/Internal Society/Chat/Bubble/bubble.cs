@@ -64,7 +64,15 @@ namespace Internal_Society
                 isPicture = 1;
                 gradientPanel.Visible = false;
                 this.BackColor = Color.Transparent;
-                picture_sticker.ImageLocation = "../../Resources\\" + message_Detail;
+                if(message_Type == "1")
+                {
+                    picture_sticker.ImageLocation = "../../Resources\\" + message_Detail;
+                }
+                else if(message_Type == "2")
+                {
+                    picture_sticker.ImageLocation = App_Status.urlImage + message_Detail;
+                }
+                
                 picture_sticker.Visible = true;
             }
             /*SetHeight(isPicture);*/
@@ -92,7 +100,7 @@ namespace Internal_Society
             }
             if (isPicture == 1)
             {
-
+                picture_sticker.Top = -10;
                 lb_time.Top = picture_sticker.Bottom + 10;
                 this.Height = picture_sticker.Bottom + 10;
                 //this.Width = picture_sticker.Width + 20;

@@ -17,7 +17,7 @@ namespace Internal_Society
         public static int time_delay = 1500;
 
         public static string urlAPI = "https://kunbr0.com/it008b/";
-
+        public static string urlImage = "https://kunbr0.com/it008b/c_View/image/";
 
         public static int RedTabChat = 123;
         public static int GreenTabChat = 123;

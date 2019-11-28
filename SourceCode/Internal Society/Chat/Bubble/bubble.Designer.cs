@@ -42,10 +42,9 @@
             // picture_sticker
             // 
             this.picture_sticker.BackColor = System.Drawing.Color.Transparent;
-            this.picture_sticker.Location = new System.Drawing.Point(13, 14);
-            this.picture_sticker.Margin = new System.Windows.Forms.Padding(2);
+            this.picture_sticker.Location = new System.Drawing.Point(22, 22);
             this.picture_sticker.Name = "picture_sticker";
-            this.picture_sticker.Size = new System.Drawing.Size(133, 130);
+            this.picture_sticker.Size = new System.Drawing.Size(222, 200);
             this.picture_sticker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_sticker.TabIndex = 2;
             this.picture_sticker.TabStop = false;
@@ -63,19 +62,19 @@
             this.gradientPanel.GradientTopLeft = System.Drawing.Color.White;
             this.gradientPanel.GradientTopRight = System.Drawing.Color.White;
             this.gradientPanel.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.gradientPanel.Name = "gradientPanel";
             this.gradientPanel.Quality = 10;
-            this.gradientPanel.Size = new System.Drawing.Size(400, 158);
+            this.gradientPanel.Size = new System.Drawing.Size(667, 225);
             this.gradientPanel.TabIndex = 3;
             // 
             // lb_time
             // 
             this.lb_time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_time.ForeColor = System.Drawing.Color.White;
-            this.lb_time.Location = new System.Drawing.Point(249, 98);
-            this.lb_time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_time.Location = new System.Drawing.Point(415, 133);
             this.lb_time.Name = "lb_time";
-            this.lb_time.Size = new System.Drawing.Size(115, 22);
+            this.lb_time.Size = new System.Drawing.Size(192, 34);
             this.lb_time.TabIndex = 3;
             this.lb_time.Text = "2019-10-17 05:26:35";
             this.lb_time.Visible = false;
@@ -87,11 +86,10 @@
             this.lb_message.BackColor = System.Drawing.Color.Transparent;
             this.lb_message.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_message.ForeColor = System.Drawing.Color.White;
-            this.lb_message.Location = new System.Drawing.Point(64, 14);
-            this.lb_message.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_message.MaximumSize = new System.Drawing.Size(300, 0);
+            this.lb_message.Location = new System.Drawing.Point(107, 13);
+            this.lb_message.MaximumSize = new System.Drawing.Size(500, 0);
             this.lb_message.Name = "lb_message";
-            this.lb_message.Size = new System.Drawing.Size(300, 40);
+            this.lb_message.Size = new System.Drawing.Size(495, 70);
             this.lb_message.TabIndex = 2;
             this.lb_message.Text = "cnkknknkn238213913890338908383182038912389183180380238912831";
             this.lb_message.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -103,16 +101,15 @@
             // 
             // bubble
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gradientPanel);
             this.Controls.Add(this.picture_sticker);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(400, 0);
+            this.MaximumSize = new System.Drawing.Size(667, 0);
             this.Name = "bubble";
-            this.Size = new System.Drawing.Size(400, 158);
+            this.Size = new System.Drawing.Size(667, 225);
             this.Resize += new System.EventHandler(this.Bubble_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.picture_sticker)).EndInit();
             this.gradientPanel.ResumeLayout(false);

@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
-using System.Dynamic;
 using Newtonsoft.Json;
-using System.Threading;
 using System.Web.Script.Serialization;
+using xNet;
 
 namespace Internal_Society
 {
@@ -163,10 +159,9 @@ namespace Internal_Society
 
         public void ProccessData(string dataMessage)
         {
-            loading.Visible = false;
-            if (!isReceiveFromMe) return;
             TimeRequest.Stop();
             TimeRequest.Start();
+            
             Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
             if (!dMess.success) return;
             for (int i = dMess.data.Count - 1; i >= 0; i--)
@@ -175,13 +170,14 @@ namespace Internal_Society
 
                 if (dMess.data[i].user_ID == User_Info.k_ID)
                 {
-                    addInMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
+                    if (isReceiveFromMe)
+                        addInMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
                         dMess.data[i].message_Detail.ToString(), dMess.data[i].message_Time.ToString());
 
                 }
                 else
                 {
-
+                   
                     addOutMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
                         dMess.data[i].message_Detail.ToString(), dMess.data[i].message_Time.ToString());
                 }
@@ -190,6 +186,7 @@ namespace Internal_Society
 
             }
             //TimeRequest.Start();
+            loading.Visible = false;
             isReceiveFromMe = false;
         }
 
@@ -204,16 +201,61 @@ namespace Internal_Society
             ProccessData(result);
         }
 
+        void AddCookie(HttpRequest http, string cookie)
+        {
+            var temp = cookie.Split(';');
+            foreach (var item in temp)
+            {
+                var temp2 = item.Split('=');
+                if (temp2.Count() > 1)
+                {
+                    http.Cookies.Add(temp2[0], temp2[1]);
+                }
+            }
+        }
 
+        string UploadData(HttpRequest http, string url, MultipartContent data = null, string contentType = null, string userArgent = "", string cookie = null)
+        {
+            if (http == null)
+            {
+                http = new HttpRequest();
+                http.Cookies = new CookieDictionary();
+            }
 
+            if (!string.IsNullOrEmpty(cookie))
+            {
+                AddCookie(http, cookie);
+            }
+
+            if (!string.IsNullOrEmpty(userArgent))
+            {
+                http.UserAgent = userArgent;
+            }
+
+            string html = http.Post(url, data).ToString();
+            return html;
+        }
+
+        void UploadFile(string path)
+        {
+            MultipartContent data = new MultipartContent() {
+
+                { new FileContent(path), "HinhAvatar", Path.GetFileName(path)}
+            };
+
+            var html = UploadData(null, "https://kunbr0.com/it008b/c_Upload/upload_file/" + id_conversation +
+                "/" + User_Info.k_ID, data);
+
+            
+        }
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show(dialog.FileName);
-                MessageBox.Show(Path.GetFileName(dialog.FileName));
+                UploadFile(dialog.FileName);
+                //MessageBox.Show(Path.GetFileName(dialog.FileName));
             }
         }
 
@@ -257,6 +299,7 @@ namespace Internal_Society
         {
             TimeRequest.Stop();
             GetMessageAsync();
+            
         }
     }
 }

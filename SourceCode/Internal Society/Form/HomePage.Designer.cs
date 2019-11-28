@@ -419,7 +419,7 @@ namespace Internal_Society
             this.label_Fullname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fullname.ForeColor = System.Drawing.Color.White;
-            this.label_Fullname.Location = new System.Drawing.Point(543, 22);
+            this.label_Fullname.Location = new System.Drawing.Point(544, 22);
             this.label_Fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Fullname.Name = "label_Fullname";
             this.label_Fullname.Size = new System.Drawing.Size(223, 20);
@@ -454,7 +454,7 @@ namespace Internal_Society
             this.textbox_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textbox_Search.MaximumSize = new System.Drawing.Size(700, 40);
             this.textbox_Search.Name = "textbox_Search";
-            this.textbox_Search.Size = new System.Drawing.Size(397, 36);
+            this.textbox_Search.Size = new System.Drawing.Size(398, 36);
             this.textbox_Search.TabIndex = 0;
             this.textbox_Search.text = "Search ...";
             this.textbox_Search.KeyUp += new System.EventHandler(this.Textbox_Search_KeyUp);
@@ -481,7 +481,7 @@ namespace Internal_Society
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(1096, 588);
+            this.MinimumSize = new System.Drawing.Size(1094, 581);
             this.Name = "HomePage";
             this.Text = "Form1";
             this.Move += new System.EventHandler(this.HomePage_Move);
@@ -492,7 +492,6 @@ namespace Internal_Society
             this.pn_header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_user_image)).EndInit();
             this.ResumeLayout(false);
-
 
 
             this.onlineList1.FriendClicked += FriendClicked;

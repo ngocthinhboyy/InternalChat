@@ -43,8 +43,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Panel_Notification";
             this.Size = new System.Drawing.Size(1257, 925);
             this.ResumeLayout(false);
