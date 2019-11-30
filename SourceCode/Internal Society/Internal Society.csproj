@@ -36,6 +36,21 @@
     <Reference Include="Bunifu.Core">
       <HintPath>Resources\Bunifu.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
+      <HintPath>Resources\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
     <Reference Include="BunifuDataViz">
       <HintPath>Resources\BunifuDataViz.dll</HintPath>
     </Reference>
@@ -120,6 +135,18 @@
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Chat\Data_Message.cs" />
+    <Compile Include="Panel_Controls\tabPrivacySettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel_Controls\tabPrivacySettings.Designer.cs">
+      <DependentUpon>tabPrivacySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_Controls\tabProfileInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel_Controls\tabProfileInfo.Designer.cs">
+      <DependentUpon>tabProfileInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\friendInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\CreateAccount_PersonalInfo.resx">
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Controls\tabPrivacySettings.resx">
+      <DependentUpon>tabPrivacySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Controls\tabProfileInfo.resx">
+      <DependentUpon>tabProfileInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search\friendInfo.resx">
       <DependentUpon>friendInfo.cs</DependentUpon>
