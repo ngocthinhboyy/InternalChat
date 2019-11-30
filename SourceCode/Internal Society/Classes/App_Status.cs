@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +23,14 @@ namespace Internal_Society
         public static int RedTabChat = 123;
         public static int GreenTabChat = 123;
         public static int BlueTabChat = 123;
+        public static Color backFormColor = Color.FromArgb(42,42,49);
+        public static Color backPanelColor;
+        public static Color textColor;
+        public static string iconDashboard;
+        public static string iconProfile;
+        public static string iconChat;
+        public static string iconCart;
+        public static string iconNoti;
+        public static string iconGames;
     }
 }

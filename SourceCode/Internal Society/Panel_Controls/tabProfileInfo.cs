@@ -19,6 +19,8 @@ namespace Internal_Society.Panel_Controls
         public tabProfileInfo()
         {
             InitializeComponent();
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeProfileInfo = new Panel_Controls.DarkMode(this.ChangeDarkMode);
+
             k_user_id = User_Info.k_ID;
             txt_Profile_Name.Text = User_Info.k_Fullname;
             txt_Profile_Birthday.Text = birthday.Year.ToString() + "-" + birthday.Month.ToString() + "-" + birthday.Day.ToString();
@@ -33,6 +35,15 @@ namespace Internal_Society.Panel_Controls
             txt_Profile_Phone.Text = User_Info.k_Phone;
             txt_Profile_Email.Text = User_Info.k_Email;
             txt_Profile_Status.Text = User_Info.k_Status;
+        }
+        public void ChangeDarkMode()
+        {
+            txt_Profile_Status.FillColor = txt_Profile_Birthday.FillColor = txt_Profile_Email.FillColor =
+            txt_Profile_Gender.FillColor = txt_Profile_Name.FillColor = txt_Profile_Phone.FillColor
+            = Color.FromArgb(255, App_Status.backFormColor.R, App_Status.backFormColor.G, App_Status.backFormColor.B);
+
+            label1.ForeColor = label2.ForeColor = label3.ForeColor = label4.ForeColor =
+            label5.ForeColor = label6.ForeColor = App_Status.textColor;
         }
         public void change_user_info(string edit_data_Name, string edit_data_Birthday, string edit_data_Gender, string edit_data_Phone, string edit_data_Email, string edit_data_Status)
         {

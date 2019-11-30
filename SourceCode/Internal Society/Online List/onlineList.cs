@@ -18,8 +18,9 @@ namespace Internal_Society
         public onlineList()
         {
             InitializeComponent();
-            
+
         }
+        
         string listUsers = "";
 
         public async void GetDataAsync()
@@ -102,7 +103,7 @@ namespace Internal_Society
         {
             Internal_Society.activeFriend atf = sender as Internal_Society.activeFriend;
             if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat))
-                atf.BackColor = Color.FromArgb(App_Status.RedTabChat+10, App_Status.GreenTabChat+10, App_Status.BlueTabChat+10);
+                atf.BackColor = Color.FromArgb(App_Status.backFormColor.R - 10, App_Status.backFormColor.G - 10, App_Status.backFormColor.B - 10);
         }
 
         private void Friend_Click(object sender, EventArgs e)

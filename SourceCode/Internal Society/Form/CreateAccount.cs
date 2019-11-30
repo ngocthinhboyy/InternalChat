@@ -83,6 +83,7 @@ namespace Internal_Society
         }
         private void CheckCorrect()
         {
+
             var urlCheckUsername = "https://kunbr0.com/it008/check_exist.php?us=" + txtUsernameCreate.Text;
             usernameInDBStatus = new WebClient().DownloadString(urlCheckUsername);
 

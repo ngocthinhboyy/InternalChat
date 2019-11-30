@@ -15,7 +15,9 @@ namespace Internal_Society
         public activeFriend()
         {
             InitializeComponent();
+
         }
+        
         public void offlineStatus()
         {
             this.onlineIcon.Visible = false;

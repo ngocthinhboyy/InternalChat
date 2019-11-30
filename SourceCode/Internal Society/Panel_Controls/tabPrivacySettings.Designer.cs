@@ -47,12 +47,12 @@
             this.ActiveStatusSwitch = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.ProfileSwitch = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuRadioButton1 = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton2 = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuRadioButton3 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuRadioButton2 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuRadioButton1 = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuRadioButton4 = new Bunifu.UI.WinForms.BunifuRadioButton();
@@ -158,6 +158,7 @@
             toggleState3.BorderThicknessInner = 1;
             this.DarkModeSwitch.ToggleStateOn = toggleState3;
             this.DarkModeSwitch.Value = true;
+            this.DarkModeSwitch.OnValuechange += new System.EventHandler(this.DarkModeSwitch_OnValuechange);
             // 
             // ActiveStatusSwitch
             // 
@@ -252,27 +253,27 @@
             this.panel1.Size = new System.Drawing.Size(450, 49);
             this.panel1.TabIndex = 8;
             // 
-            // bunifuRadioButton1
+            // label8
             // 
-            this.bunifuRadioButton1.Checked = false;
-            this.bunifuRadioButton1.Location = new System.Drawing.Point(35, 13);
-            this.bunifuRadioButton1.Name = "bunifuRadioButton1";
-            this.bunifuRadioButton1.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton1.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton1.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton1.TabIndex = 0;
-            this.bunifuRadioButton1.Text = null;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(374, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 20);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Only me";
             // 
-            // label6
+            // bunifuRadioButton3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(66, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Public";
+            this.bunifuRadioButton3.Checked = false;
+            this.bunifuRadioButton3.Location = new System.Drawing.Point(343, 13);
+            this.bunifuRadioButton3.Name = "bunifuRadioButton3";
+            this.bunifuRadioButton3.OutlineColor = System.Drawing.Color.DeepPink;
+            this.bunifuRadioButton3.RadioColor = System.Drawing.Color.DeepPink;
+            this.bunifuRadioButton3.Size = new System.Drawing.Size(25, 25);
+            this.bunifuRadioButton3.TabIndex = 4;
+            this.bunifuRadioButton3.Text = null;
             // 
             // label7
             // 
@@ -296,27 +297,27 @@
             this.bunifuRadioButton2.TabIndex = 2;
             this.bunifuRadioButton2.Text = null;
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(374, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 20);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Only me";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(66, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Public";
             // 
-            // bunifuRadioButton3
+            // bunifuRadioButton1
             // 
-            this.bunifuRadioButton3.Checked = true;
-            this.bunifuRadioButton3.Location = new System.Drawing.Point(343, 13);
-            this.bunifuRadioButton3.Name = "bunifuRadioButton3";
-            this.bunifuRadioButton3.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton3.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton3.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton3.TabIndex = 4;
-            this.bunifuRadioButton3.Text = null;
+            this.bunifuRadioButton1.Checked = true;
+            this.bunifuRadioButton1.Location = new System.Drawing.Point(35, 13);
+            this.bunifuRadioButton1.Name = "bunifuRadioButton1";
+            this.bunifuRadioButton1.OutlineColor = System.Drawing.Color.DeepPink;
+            this.bunifuRadioButton1.RadioColor = System.Drawing.Color.DeepPink;
+            this.bunifuRadioButton1.Size = new System.Drawing.Size(25, 25);
+            this.bunifuRadioButton1.TabIndex = 0;
+            this.bunifuRadioButton1.Text = null;
             // 
             // panel2
             // 

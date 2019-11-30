@@ -45,7 +45,7 @@
             // 
             this.activeStatus.AutoSize = true;
             this.activeStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeStatus.ForeColor = System.Drawing.Color.White;
+            this.activeStatus.ForeColor = System.Drawing.Color.DeepPink;
             this.activeStatus.Location = new System.Drawing.Point(106, 54);
             this.activeStatus.Name = "activeStatus";
             this.activeStatus.Size = new System.Drawing.Size(71, 16);
@@ -56,7 +56,7 @@
             // 
             this.username.AutoEllipsis = true;
             this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.ForeColor = System.Drawing.Color.White;
+            this.username.ForeColor = System.Drawing.Color.DeepPink;
             this.username.Location = new System.Drawing.Point(105, 16);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(91, 20);

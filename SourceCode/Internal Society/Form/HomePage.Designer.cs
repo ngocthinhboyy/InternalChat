@@ -32,7 +32,6 @@ namespace Internal_Society
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.onlineList1 = new Internal_Society.onlineList();
             this.indicator = new System.Windows.Forms.PictureBox();
             this.Tab_Games = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Notification = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,10 +42,11 @@ namespace Internal_Society
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_create_new = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pn_header = new System.Windows.Forms.Panel();
+            this.textbox_Search = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.label_Fullname = new System.Windows.Forms.Label();
             this.picture_user_image = new System.Windows.Forms.PictureBox();
-            this.textbox_Search = new Bunifu.Framework.UI.BunifuTextbox();
             this.panel_Main = new System.Windows.Forms.Panel();
+            this.onlineList1 = new Internal_Society.onlineList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,16 +72,6 @@ namespace Internal_Society
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 661);
             this.panel1.TabIndex = 0;
-            // 
-            // onlineList1
-            // 
-            this.onlineList1.AutoScroll = true;
-            this.onlineList1.Location = new System.Drawing.Point(3, 478);
-            this.onlineList1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.onlineList1.Name = "onlineList1";
-            this.onlineList1.Size = new System.Drawing.Size(314, 94);
-            this.onlineList1.TabIndex = 13;
-            this.onlineList1.Visible = false;
             // 
             // indicator
             // 
@@ -365,22 +355,71 @@ namespace Internal_Society
             // pn_header
             // 
             this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Controls.Add(this.label_Fullname);
             this.pn_header.Controls.Add(this.picture_user_image);
-            this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_header.Location = new System.Drawing.Point(314, 0);
             this.pn_header.Margin = new System.Windows.Forms.Padding(2);
             this.pn_header.Name = "pn_header";
-            this.pn_header.Size = new System.Drawing.Size(836, 65);
+            this.pn_header.Size = new System.Drawing.Size(773, 65);
             this.pn_header.TabIndex = 1;
+            // 
+            // textbox_Search
+            // 
+            this.textbox_Search.AcceptsReturn = false;
+            this.textbox_Search.AcceptsTab = false;
+            this.textbox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textbox_Search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.textbox_Search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.textbox_Search.BackColor = System.Drawing.Color.Transparent;
+            this.textbox_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("textbox_Search.BackgroundImage")));
+            this.textbox_Search.BorderColorActive = System.Drawing.Color.White;
+            this.textbox_Search.BorderColorDisabled = System.Drawing.Color.White;
+            this.textbox_Search.BorderColorHover = System.Drawing.Color.White;
+            this.textbox_Search.BorderColorIdle = System.Drawing.Color.White;
+            this.textbox_Search.BorderRadius = 30;
+            this.textbox_Search.BorderThickness = 2;
+            this.textbox_Search.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.textbox_Search.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Search.DefaultText = "";
+            this.textbox_Search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.textbox_Search.ForeColor = System.Drawing.Color.White;
+            this.textbox_Search.HideSelection = true;
+            this.textbox_Search.IconLeft = null;
+            this.textbox_Search.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.textbox_Search.IconPadding = 10;
+            this.textbox_Search.IconRight = null;
+            this.textbox_Search.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.textbox_Search.Location = new System.Drawing.Point(20, 12);
+            this.textbox_Search.MaxLength = 32767;
+            this.textbox_Search.MinimumSize = new System.Drawing.Size(100, 35);
+            this.textbox_Search.Modified = false;
+            this.textbox_Search.Name = "textbox_Search";
+            this.textbox_Search.PasswordChar = '\0';
+            this.textbox_Search.ReadOnly = false;
+            this.textbox_Search.SelectedText = "";
+            this.textbox_Search.SelectionLength = 0;
+            this.textbox_Search.SelectionStart = 0;
+            this.textbox_Search.ShortcutsEnabled = true;
+            this.textbox_Search.Size = new System.Drawing.Size(331, 40);
+            this.textbox_Search.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.textbox_Search.TabIndex = 3;
+            this.textbox_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textbox_Search.TextMarginLeft = 5;
+            this.textbox_Search.TextPlaceholder = "Search...";
+            this.textbox_Search.UseSystemPasswordChar = false;
+            this.textbox_Search.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Textbox_Search_KeyUp);
+            this.textbox_Search.Enter += new System.EventHandler(this.Textbox_Search_Enter_1);
+            this.textbox_Search.Leave += new System.EventHandler(this.Textbox_Search_Leave_1);
             // 
             // label_Fullname
             // 
             this.label_Fullname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Fullname.ForeColor = System.Drawing.Color.White;
-            this.label_Fullname.Location = new System.Drawing.Point(544, 22);
+            this.label_Fullname.Location = new System.Drawing.Point(481, 22);
             this.label_Fullname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Fullname.Name = "label_Fullname";
             this.label_Fullname.Size = new System.Drawing.Size(223, 20);
@@ -393,7 +432,7 @@ namespace Internal_Society
             this.picture_user_image.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.picture_user_image.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_user_image.Image = ((System.Drawing.Image)(resources.GetObject("picture_user_image.Image")));
-            this.picture_user_image.Location = new System.Drawing.Point(770, 0);
+            this.picture_user_image.Location = new System.Drawing.Point(707, 0);
             this.picture_user_image.Margin = new System.Windows.Forms.Padding(2);
             this.picture_user_image.Name = "picture_user_image";
             this.picture_user_image.Size = new System.Drawing.Size(67, 65);
@@ -402,42 +441,31 @@ namespace Internal_Society
             this.picture_user_image.TabStop = false;
             this.picture_user_image.Click += new System.EventHandler(this.Picture_user_image_Click);
             // 
-            // textbox_Search
-            // 
-            this.textbox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textbox_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.textbox_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("textbox_Search.BackgroundImage")));
-            this.textbox_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.textbox_Search.ForeColor = System.Drawing.Color.Azure;
-            this.textbox_Search.Icon = ((System.Drawing.Image)(resources.GetObject("textbox_Search.Icon")));
-            this.textbox_Search.Location = new System.Drawing.Point(27, 15);
-            this.textbox_Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textbox_Search.MaximumSize = new System.Drawing.Size(700, 40);
-            this.textbox_Search.Name = "textbox_Search";
-            this.textbox_Search.Size = new System.Drawing.Size(398, 36);
-            this.textbox_Search.TabIndex = 0;
-            this.textbox_Search.text = "Search ...";
-            this.textbox_Search.KeyUp += new System.EventHandler(this.Textbox_Search_KeyUp);
-            this.textbox_Search.Click += new System.EventHandler(this.Textbox_Search_Click);
-            this.textbox_Search.Enter += new System.EventHandler(this.Textbox_Search_Enter);
-            this.textbox_Search.Leave += new System.EventHandler(this.Textbox_Search_Leave);
-            // 
             // panel_Main
             // 
             this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main.Location = new System.Drawing.Point(314, 65);
             this.panel_Main.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main.Name = "panel_Main";
-            this.panel_Main.Size = new System.Drawing.Size(836, 596);
+            this.panel_Main.Size = new System.Drawing.Size(773, 596);
             this.panel_Main.TabIndex = 2;
+            // 
+            // onlineList1
+            // 
+            this.onlineList1.AutoScroll = true;
+            this.onlineList1.Location = new System.Drawing.Point(3, 478);
+            this.onlineList1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.onlineList1.Name = "onlineList1";
+            this.onlineList1.Size = new System.Drawing.Size(314, 94);
+            this.onlineList1.TabIndex = 13;
+            this.onlineList1.Visible = false;
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1150, 661);
+            this.ClientSize = new System.Drawing.Size(1087, 661);
             this.Controls.Add(this.panel_Main);
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
@@ -453,9 +481,6 @@ namespace Internal_Society
             this.pn_header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_user_image)).EndInit();
             this.ResumeLayout(false);
-
-
-            // xử lý event giữa 2 form, từ onlineList gửi qua cho HomePage rằng nnguowif dùng đã chọn user
             this.onlineList1.FriendClicked += FriendClicked;
         }
 
@@ -474,11 +499,11 @@ namespace Internal_Society
         private Bunifu.Framework.UI.BunifuFlatButton Tab_Games;
         private Bunifu.Framework.UI.BunifuFlatButton btn_create_new;
         private System.Windows.Forms.Panel pn_header;
-        private Bunifu.Framework.UI.BunifuTextbox textbox_Search;
         private System.Windows.Forms.PictureBox picture_user_image;
         private System.Windows.Forms.Label label_Fullname;
         private onlineList onlineList1;
         private System.Windows.Forms.Panel panel_Main;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox textbox_Search;
     }
 }
 

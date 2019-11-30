@@ -58,9 +58,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Resources\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework">
-      <HintPath>..\..\20190921_test005\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -1064,6 +1061,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\detete_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bored_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_wheel_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach_96px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -25,7 +25,7 @@ namespace Internal_Society
 
         public async void SearchUserAsync()
         {
-            string urlSearchUser = App_Status.urlAPI + "/c_user/Search/" + HomePage.searchInfo + "/" + page;
+            string urlSearchUser = App_Status.urlAPI + "/c_User/Search/" + HomePage.searchInfo + "/" + page;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
             // await
             string result = await getStringTask;
@@ -37,7 +37,7 @@ namespace Internal_Society
         public void AddFriendInfo()
         {   // list dùng để lưu kết quả ứng với username mà người dùng search
             label_Error.Visible = false;
-            string urlSearchUser = App_Status.urlAPI + "/c_user/Search/" + HomePage.searchInfo + "/" + page;
+            string urlSearchUser = App_Status.urlAPI + "/c_User/Search/" + HomePage.searchInfo + "/" + page;
 
             SearchUserAsync();
         }

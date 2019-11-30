@@ -17,6 +17,7 @@ namespace Internal_Society
         public Panel_Cart()
         {
             InitializeComponent();
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeCart = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             kPakage kp1 = new kPakage("heohong");
             klp.ListPakage.Add(kp1);
             kPakage kp2 = new kPakage("Luci_&_Daisy");
@@ -67,6 +68,10 @@ namespace Internal_Society
             listSticker[8].SetDetailSticker("Rồng vàng", "");
             listSticker[9].SetDetailSticker("Dev", "");
             listSticker[10].SetDetailSticker("Kingdom of Tigers", "");
+        }
+        public void ChangeDarkMode()
+        {
+            panel1.BackColor = panel2.BackColor = App_Status.backPanelColor;
         }
     }
 }

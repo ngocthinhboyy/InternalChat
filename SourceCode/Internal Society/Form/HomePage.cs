@@ -33,6 +33,7 @@ namespace Internal_Society
         public HomePage()
         {
             InitializeComponent();
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeHomePage = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             this.StartPosition = FormStartPosition.CenterScreen;
             label_Fullname.Text = User_Info.k_Fullname;
 
@@ -64,8 +65,37 @@ namespace Internal_Society
             this.panel_Main.Controls.Add(panel_Search1);
             ListPanel.Add(panel_Search1);
         }
+        public void ChangeDarkMode()
+        {
+            // Change background color of panels and tabs
+            panel1.BackColor = panel2.BackColor = pn_header.BackColor = textbox_Search.FillColor =
+           Tab_Cart.BackColor = Tab_Chat.BackColor = Tab_DashBoard.BackColor = Tab_Games.BackColor
+           = Tab_Notification.BackColor = Tab_Profile.BackColor = onlineList1.BackColor = App_Status.backFormColor;
 
-        
+            Tab_Cart.Activecolor = Tab_Chat.Activecolor = Tab_DashBoard.Activecolor = Tab_Games.Activecolor
+            = Tab_Notification.Activecolor = Tab_Profile.Activecolor = App_Status.backFormColor;
+
+            Tab_Cart.OnHovercolor = Tab_Chat.OnHovercolor = Tab_DashBoard.OnHovercolor = Tab_Games.OnHovercolor
+            = Tab_Notification.OnHovercolor = Tab_Profile.OnHovercolor = App_Status.backFormColor;
+
+            Tab_Cart.Normalcolor = Tab_Chat.Normalcolor = Tab_DashBoard.Normalcolor = Tab_Games.Normalcolor
+            = Tab_Notification.Normalcolor = Tab_Profile.Normalcolor = App_Status.backFormColor;
+            //Change font color
+            Tab_Cart.Textcolor = Tab_Chat.Textcolor = Tab_DashBoard.Textcolor = Tab_Games.Textcolor
+            = Tab_Notification.Textcolor = Tab_Profile.Textcolor = textbox_Search.ForeColor =
+            textbox_Search.BorderColorIdle = textbox_Search.BorderColorHover = textbox_Search.BorderColorActive =
+            textbox_Search.BorderColorDisabled = App_Status.textColor;
+            //Change color of icon
+            Tab_DashBoard.Iconimage = Image.FromFile(App_Status.iconDashboard);
+            Tab_Cart.Iconimage = Image.FromFile(App_Status.iconCart);
+            Tab_Profile.Iconimage = Image.FromFile(App_Status.iconProfile);
+            Tab_Games.Iconimage = Image.FromFile(App_Status.iconGames);
+            Tab_Notification.Iconimage = Image.FromFile(App_Status.iconNoti);
+            Tab_Chat.Iconimage = Image.FromFile(App_Status.iconChat);
+            //Change panel background
+            panel_Main.BackColor = App_Status.backPanelColor;
+        }
+
 
         private void FriendClicked(object sender, EventArgs e)
         {
@@ -201,14 +231,6 @@ namespace Internal_Society
             App_Status.time_delay = 10000;
         }
 
-       /* private void Tab_Settings_Click(object sender, EventArgs e)
-        {
-            MoveIndicator((Control)sender);
-            TurnOffPanel();
-            panel_Settings.Visible = true;
-            App_Status.time_delay = 10000;
-        }*/
-
         private void HomePage_Resize(object sender, EventArgs e)
         {
             Update_App_Status();
@@ -220,50 +242,15 @@ namespace Internal_Society
 
         }
 
-        private void Textbox_Search_Enter(object sender, EventArgs e)
-        {
-            textbox_Search.text = "";
-
-            //panel_Search1.Visible = true;
-        }
-
-        private void Textbox_Search_Leave(object sender, EventArgs e)
-        {
-            textbox_Search.text = "Search...";
-        }
+        
         public static string searchInfo = "";
         string searchInfoLast = "";
-        private void Textbox_Search_KeyUp(object sender, EventArgs e)
-        {
-            TurnOffPanel();
-            panel_Search1.Visible = true;
-            searchInfo = textbox_Search.text;
-            // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
-            if (searchInfo == "")
-                panel_Search1.Controls.Clear();
-            else
-            // Mỗi khi sự kiện keyup xảy ra phải kiểm tra xem  username nhập vô khác với username trước đó không
-            // Nếu khác phải clear kết quả cũ, hiển thị một list các kết quả mới.
-            if (searchInfo != searchInfoLast)
-            {
-                //panel_Search1.Controls.Clear();
-                panel_Search1.AddFriendInfo();
-                searchInfoLast = searchInfo;
-            }
-        }
-
+       
         private void Picture_user_image_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Textbox_Search_Click(object sender, EventArgs e)
-        {
-            /*textbox_Search.text = "";
-            MoveIndicator((Control)sender);
-            TurnOffPanel();
-            panel_Search1.Visible = true;*/
-        }
 
         private void Btn_create_new_Click(object sender, EventArgs e)
         {
@@ -279,6 +266,35 @@ namespace Internal_Society
             Tab_Profile.Visible = true;
            // Tab_Settings.Visible = true;
             indicator.Visible = true;
+        }
+
+        private void Textbox_Search_Leave_1(object sender, EventArgs e)
+        {
+            textbox_Search.Text = "Search...";
+        }
+
+        private void Textbox_Search_KeyUp(object sender, KeyEventArgs e)
+        {
+            TurnOffPanel();
+            panel_Search1.Visible = true;
+            searchInfo = textbox_Search.Text;
+            // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
+            if (searchInfo == "")
+                panel_Search1.Controls.Clear();
+            else
+            // Mỗi khi sự kiện keyup xảy ra phải kiểm tra xem  username nhập vô khác với username trước đó không
+            // Nếu khác phải clear kết quả cũ, hiển thị một list các kết quả mới.
+            if (searchInfo != searchInfoLast)
+            {
+                //panel_Search1.Controls.Clear();
+                panel_Search1.AddFriendInfo();
+                searchInfoLast = searchInfo;
+            }
+        }
+
+        private void Textbox_Search_Enter_1(object sender, EventArgs e)
+        {
+            textbox_Search.Text = "";
         }
 
 

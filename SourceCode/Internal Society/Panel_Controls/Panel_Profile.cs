@@ -18,8 +18,13 @@ namespace Internal_Society
         public Panel_Profile()
         {
             InitializeComponent();
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeProfile = new Panel_Controls.DarkMode(this.ChangeDarkMode);
         }
-
+        public void ChangeDarkMode()
+        {
+            lblPrivacySettings.ForeColor = lblProfile.ForeColor = App_Status.textColor;
+            this.BackColor = App_Status.backPanelColor;
+        }
         private void LblProfile_Click(object sender, EventArgs e)
         {
             bunifuSeparator1.Visible = false;

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabProfileInfo));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.btnEditPhoto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEditInfo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -41,6 +41,12 @@
             this.txt_Profile_Email = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Status = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,13 +71,13 @@
             this.btnEditPhoto.IdleIconRightImage = null;
             this.btnEditPhoto.Location = new System.Drawing.Point(30, 233);
             this.btnEditPhoto.Name = "btnEditPhoto";
-            stateProperties3.BorderColor = System.Drawing.Color.DeepPink;
-            stateProperties3.BorderRadius = 35;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.DeepPink;
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btnEditPhoto.onHoverState = stateProperties3;
+            stateProperties1.BorderColor = System.Drawing.Color.DeepPink;
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.DeepPink;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnEditPhoto.onHoverState = stateProperties1;
             this.btnEditPhoto.Size = new System.Drawing.Size(159, 35);
             this.btnEditPhoto.TabIndex = 1;
             this.btnEditPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -106,15 +112,15 @@
             this.btnEditInfo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
             this.btnEditInfo.IdleIconLeftImage = null;
             this.btnEditInfo.IdleIconRightImage = null;
-            this.btnEditInfo.Location = new System.Drawing.Point(336, 404);
+            this.btnEditInfo.Location = new System.Drawing.Point(371, 409);
             this.btnEditInfo.Name = "btnEditInfo";
-            stateProperties4.BorderColor = System.Drawing.Color.DeepPink;
-            stateProperties4.BorderRadius = 35;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.DeepPink;
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btnEditInfo.onHoverState = stateProperties4;
+            stateProperties2.BorderColor = System.Drawing.Color.DeepPink;
+            stateProperties2.BorderRadius = 35;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.DeepPink;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnEditInfo.onHoverState = stateProperties2;
             this.btnEditInfo.Size = new System.Drawing.Size(176, 35);
             this.btnEditInfo.TabIndex = 2;
             this.btnEditInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +143,7 @@
             this.txt_Profile_Name.BorderRadius = 30;
             this.txt_Profile_Name.BorderThickness = 2;
             this.txt_Profile_Name.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txt_Profile_Name.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Profile_Name.DefaultText = "";
             this.txt_Profile_Name.Enabled = false;
             this.txt_Profile_Name.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
@@ -148,7 +154,7 @@
             this.txt_Profile_Name.IconPadding = 10;
             this.txt_Profile_Name.IconRight = null;
             this.txt_Profile_Name.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Name.Location = new System.Drawing.Point(271, 38);
+            this.txt_Profile_Name.Location = new System.Drawing.Point(306, 43);
             this.txt_Profile_Name.MaxLength = 32767;
             this.txt_Profile_Name.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Profile_Name.Modified = false;
@@ -184,7 +190,7 @@
             this.txt_Profile_Birthday.BorderRadius = 30;
             this.txt_Profile_Birthday.BorderThickness = 2;
             this.txt_Profile_Birthday.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Birthday.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txt_Profile_Birthday.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Profile_Birthday.DefaultText = "";
             this.txt_Profile_Birthday.Enabled = false;
             this.txt_Profile_Birthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
@@ -195,7 +201,7 @@
             this.txt_Profile_Birthday.IconPadding = 10;
             this.txt_Profile_Birthday.IconRight = null;
             this.txt_Profile_Birthday.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Birthday.Location = new System.Drawing.Point(271, 98);
+            this.txt_Profile_Birthday.Location = new System.Drawing.Point(306, 103);
             this.txt_Profile_Birthday.MaxLength = 32767;
             this.txt_Profile_Birthday.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Profile_Birthday.Modified = false;
@@ -231,7 +237,7 @@
             this.txt_Profile_Gender.BorderRadius = 30;
             this.txt_Profile_Gender.BorderThickness = 2;
             this.txt_Profile_Gender.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Gender.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txt_Profile_Gender.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Profile_Gender.DefaultText = "";
             this.txt_Profile_Gender.Enabled = false;
             this.txt_Profile_Gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
@@ -242,7 +248,7 @@
             this.txt_Profile_Gender.IconPadding = 10;
             this.txt_Profile_Gender.IconRight = null;
             this.txt_Profile_Gender.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Gender.Location = new System.Drawing.Point(271, 158);
+            this.txt_Profile_Gender.Location = new System.Drawing.Point(306, 163);
             this.txt_Profile_Gender.MaxLength = 32767;
             this.txt_Profile_Gender.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Profile_Gender.Modified = false;
@@ -278,7 +284,7 @@
             this.txt_Profile_Phone.BorderRadius = 30;
             this.txt_Profile_Phone.BorderThickness = 2;
             this.txt_Profile_Phone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Phone.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txt_Profile_Phone.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Profile_Phone.DefaultText = "";
             this.txt_Profile_Phone.Enabled = false;
             this.txt_Profile_Phone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
@@ -289,7 +295,7 @@
             this.txt_Profile_Phone.IconPadding = 10;
             this.txt_Profile_Phone.IconRight = null;
             this.txt_Profile_Phone.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Phone.Location = new System.Drawing.Point(271, 218);
+            this.txt_Profile_Phone.Location = new System.Drawing.Point(306, 223);
             this.txt_Profile_Phone.MaxLength = 32767;
             this.txt_Profile_Phone.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Profile_Phone.Modified = false;
@@ -325,7 +331,7 @@
             this.txt_Profile_Email.BorderRadius = 30;
             this.txt_Profile_Email.BorderThickness = 2;
             this.txt_Profile_Email.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Email.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txt_Profile_Email.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Profile_Email.DefaultText = "";
             this.txt_Profile_Email.Enabled = false;
             this.txt_Profile_Email.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
@@ -336,7 +342,7 @@
             this.txt_Profile_Email.IconPadding = 10;
             this.txt_Profile_Email.IconRight = null;
             this.txt_Profile_Email.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Email.Location = new System.Drawing.Point(271, 278);
+            this.txt_Profile_Email.Location = new System.Drawing.Point(306, 283);
             this.txt_Profile_Email.MaxLength = 32767;
             this.txt_Profile_Email.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Profile_Email.Modified = false;
@@ -372,7 +378,7 @@
             this.txt_Profile_Status.BorderRadius = 30;
             this.txt_Profile_Status.BorderThickness = 2;
             this.txt_Profile_Status.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Status.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.txt_Profile_Status.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Profile_Status.DefaultText = "";
             this.txt_Profile_Status.Enabled = false;
             this.txt_Profile_Status.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
@@ -383,7 +389,7 @@
             this.txt_Profile_Status.IconPadding = 10;
             this.txt_Profile_Status.IconRight = null;
             this.txt_Profile_Status.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Status.Location = new System.Drawing.Point(271, 338);
+            this.txt_Profile_Status.Location = new System.Drawing.Point(306, 343);
             this.txt_Profile_Status.MaxLength = 32767;
             this.txt_Profile_Status.MinimumSize = new System.Drawing.Size(100, 35);
             this.txt_Profile_Status.Modified = false;
@@ -407,18 +413,90 @@
             this.dateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTime.Enabled = false;
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTime.Location = new System.Drawing.Point(553, 111);
+            this.dateTime.Location = new System.Drawing.Point(588, 116);
             this.dateTime.Name = "dateTime";
             this.dateTime.Size = new System.Drawing.Size(20, 20);
             this.dateTime.TabIndex = 9;
             this.dateTime.Value = new System.DateTime(2019, 11, 30, 0, 0, 0, 0);
             this.dateTime.ValueChanged += new System.EventHandler(this.DateTime_ValueChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(220, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Full Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(220, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "DOB";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(220, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Gender";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(220, 236);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Phone";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(220, 296);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 20);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Email";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(220, 356);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Status";
+            // 
             // tabProfileInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTime);
             this.Controls.Add(this.txt_Profile_Status);
             this.Controls.Add(this.txt_Profile_Email);
@@ -429,10 +507,12 @@
             this.Controls.Add(this.btnEditInfo);
             this.Controls.Add(this.btnEditPhoto);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "tabProfileInfo";
             this.Size = new System.Drawing.Size(650, 452);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -448,5 +528,11 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Email;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Status;
         private System.Windows.Forms.DateTimePicker dateTime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
