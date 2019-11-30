@@ -42,7 +42,7 @@ namespace Internal_Society
         {
             var usernameLogin = txtUsername.Text;
             var passwordLogin = txtPassword.Text;
-            string urlRequest = App_Status.urlAPI + "c_user/Login/" + usernameLogin + "/" + passwordLogin;
+            string urlRequest = App_Status.urlAPI + "c_User/Login/" + usernameLogin + "/" + passwordLogin;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             StatusButtonLogin_Process();
 

@@ -34,7 +34,7 @@ namespace Internal_Society
         public chatbox(int conversation_id)
         {
             id_conversation = conversation_id.ToString();
-            
+
             if (!this.DesignMode)
             {
                 InitializeComponent();
@@ -43,7 +43,7 @@ namespace Internal_Society
             bbl_old.Top = 0 - bbl_old.Height + 10;
 
             //loading.Dock = DockStyle.Fill;
-            loading.Location = new Point(this.Width/2 - 50, 100);
+            loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
         }
         public void notifyChangeColor()
@@ -64,7 +64,7 @@ namespace Internal_Society
                 if (x is bubble)
                 {
                     ((bubble)x).ChangeColorBubble();
-                    
+
                 }
             }
         }
@@ -140,11 +140,19 @@ namespace Internal_Society
             messIndex++;
             var urlPushData = App_Status.urlAPI + "c_Message/Add_Conversation_Message/" + id_conversation + "/" + User_Info.k_ID +
                 "/" + message_Type + "/" + message_Detail;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlPushData); });
-            // await
-            string result = await getStringTask;
+            try
+            {
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlPushData); });
+                // await
+                string result = await getStringTask;
 
-            // Khi send xog thi lam function tiep theo...
+                // Khi send xog thi lam function tiep theo...
+            }
+            catch
+            {
+                MessageBox.Show("Connection Error");
+            }
+
         }
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -161,7 +169,7 @@ namespace Internal_Society
         {
             TimeRequest.Stop();
             TimeRequest.Start();
-            
+
             Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
             if (!dMess.success) return;
             for (int i = dMess.data.Count - 1; i >= 0; i--)
@@ -177,7 +185,7 @@ namespace Internal_Society
                 }
                 else
                 {
-                   
+
                     addOutMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
                         dMess.data[i].message_Detail.ToString(), dMess.data[i].message_Time.ToString());
                 }
@@ -190,15 +198,24 @@ namespace Internal_Society
             isReceiveFromMe = false;
         }
 
+        
 
         public async void GetMessageAsync()
         {
-            var urlGetData = App_Status.urlAPI + "c_Message/Get_Conversation_Message/" + id_conversation + "/" + messIndex;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetData); });
-            // await
-            string result = await getStringTask;
+            try
+            {
+                var urlGetData = App_Status.urlAPI + "c_Message/Get_Conversation_Message/" + id_conversation + "/" + messIndex;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetData); });
+                // await
+                string result = await getStringTask;
 
-            ProccessData(result);
+                ProccessData(result);
+            }
+            catch
+            {
+                MessageBox.Show("Connection Error");
+            }
+
         }
 
         void AddCookie(HttpRequest http, string cookie)
@@ -246,16 +263,20 @@ namespace Internal_Society
             var html = UploadData(null, "https://kunbr0.com/it008b/c_Upload/upload_file/" + id_conversation +
                 "/" + User_Info.k_ID, data);
 
-            
+
         }
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                UploadFile(dialog.FileName);
-                //MessageBox.Show(Path.GetFileName(dialog.FileName));
+                Task t = new Task(() => { UploadFile(dialog.FileName); });
+                t.Start();
+                addInMessage(User_Info.k_ID, "", "5", dialog.FileName, "");
+                
+               // MessageBox.Show(dialog.FileName);
             }
         }
 
@@ -299,7 +320,7 @@ namespace Internal_Society
         {
             TimeRequest.Stop();
             GetMessageAsync();
-            
+
         }
     }
 }

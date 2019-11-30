@@ -64,21 +64,33 @@ namespace Internal_Society
                 isPicture = 1;
                 gradientPanel.Visible = false;
                 this.BackColor = Color.Transparent;
-                if(message_Type == "1")
+                if (message_Type == "1")
                 {
                     picture_sticker.ImageLocation = "../../Resources\\" + message_Detail;
                 }
-                else if(message_Type == "2")
+                else if (message_Type == "2")
                 {
-                    picture_sticker.ImageLocation = App_Status.urlImage + message_Detail;
+                    picture_sticker.ImageLocation = App_Status.urlImage + "/" + message_Type + "/" + message_Detail;
+                    picture_sticker.Cursor = Cursors.Hand;
+                    picture_sticker.Click += ViewImage;
                 }
-                
+                else if (message_Type == "5")
+                {
+                    picture_sticker.ImageLocation = message_Detail;
+                    picture_sticker.Cursor = Cursors.Hand;
+                    picture_sticker.Click += ViewImage;
+                }
+
                 picture_sticker.Visible = true;
             }
             /*SetHeight(isPicture);*/
         }
 
-
+        void ViewImage(object sender, EventArgs e)
+        {
+            fileView fV = new fileView(App_Status.urlImage + "/" + message_Type + "/" + message_Detail);
+            fV.Show();
+        }
 
         //lets add the function 
 

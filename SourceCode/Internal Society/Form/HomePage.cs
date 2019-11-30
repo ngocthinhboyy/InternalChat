@@ -27,7 +27,7 @@ namespace Internal_Society
         Internal_Society.Panel_Cart panel_Cart = new Internal_Society.Panel_Cart();
         Internal_Society.Panel_Notification panel_Calendar = new Internal_Society.Panel_Notification();
         Internal_Society.Panel_Games panel_Games = new Internal_Society.Panel_Games();
-        Internal_Society.Panel_Settings panel_Settings = new Internal_Society.Panel_Settings();
+        //Internal_Society.Panel_Settings panel_Settings = new Internal_Society.Panel_Settings();
         Internal_Society.Panel_Search panel_Search1 = new Internal_Society.Panel_Search();
 
         public HomePage()
@@ -42,7 +42,7 @@ namespace Internal_Society
             panel_Cart.Dock = DockStyle.Fill;
             panel_Calendar.Dock = DockStyle.Fill;
             panel_Games.Dock = DockStyle.Fill;
-            panel_Settings.Dock = DockStyle.Fill;
+          //  panel_Settings.Dock = DockStyle.Fill;
             panel_Search1.Dock = DockStyle.Fill;
 
             
@@ -59,8 +59,8 @@ namespace Internal_Society
             ListPanel.Add(panel_Calendar);
             this.panel_Main.Controls.Add(panel_Games);
             ListPanel.Add(panel_Games);
-            this.panel_Main.Controls.Add(panel_Settings);
-            ListPanel.Add(panel_Settings);
+           // this.panel_Main.Controls.Add(panel_Settings);
+           // ListPanel.Add(panel_Settings);
             this.panel_Main.Controls.Add(panel_Search1);
             ListPanel.Add(panel_Search1);
         }
@@ -169,7 +169,7 @@ namespace Internal_Society
             Tab_DashBoard.Visible = false;
             Tab_Games.Visible = false;
             Tab_Profile.Visible = false;
-            Tab_Settings.Visible = false;
+           // Tab_Settings.Visible = false;
             indicator.Visible = false;
             onlineList1.Visible = true;
             onlineList1.Dock = DockStyle.Left;
@@ -201,13 +201,13 @@ namespace Internal_Society
             App_Status.time_delay = 10000;
         }
 
-        private void Tab_Settings_Click(object sender, EventArgs e)
+       /* private void Tab_Settings_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
             panel_Settings.Visible = true;
             App_Status.time_delay = 10000;
-        }
+        }*/
 
         private void HomePage_Resize(object sender, EventArgs e)
         {
@@ -277,7 +277,7 @@ namespace Internal_Society
             Tab_DashBoard.Visible = true;
             Tab_Games.Visible = true;
             Tab_Profile.Visible = true;
-            Tab_Settings.Visible = true;
+           // Tab_Settings.Visible = true;
             indicator.Visible = true;
         }
 

@@ -34,7 +34,6 @@ namespace Internal_Society
             this.panel1 = new System.Windows.Forms.Panel();
             this.onlineList1 = new Internal_Society.onlineList();
             this.indicator = new System.Windows.Forms.PictureBox();
-            this.Tab_Settings = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Games = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Notification = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Cart = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -60,7 +59,6 @@ namespace Internal_Society
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
             this.panel1.Controls.Add(this.onlineList1);
             this.panel1.Controls.Add(this.indicator);
-            this.panel1.Controls.Add(this.Tab_Settings);
             this.panel1.Controls.Add(this.Tab_Games);
             this.panel1.Controls.Add(this.Tab_Notification);
             this.panel1.Controls.Add(this.Tab_Cart);
@@ -70,7 +68,7 @@ namespace Internal_Society
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 661);
             this.panel1.TabIndex = 0;
@@ -89,48 +87,11 @@ namespace Internal_Society
             // 
             this.indicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(121)))), ((int)(((byte)(254)))));
             this.indicator.Location = new System.Drawing.Point(0, 134);
-            this.indicator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.indicator.Margin = new System.Windows.Forms.Padding(2);
             this.indicator.Name = "indicator";
             this.indicator.Size = new System.Drawing.Size(7, 48);
             this.indicator.TabIndex = 11;
             this.indicator.TabStop = false;
-            // 
-            // Tab_Settings
-            // 
-            this.Tab_Settings.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Tab_Settings.BorderRadius = 0;
-            this.Tab_Settings.ButtonText = "  Settings";
-            this.Tab_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Tab_Settings.DisabledColor = System.Drawing.Color.Gray;
-            this.Tab_Settings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Tab_Settings.Iconcolor = System.Drawing.Color.Transparent;
-            this.Tab_Settings.Iconimage = ((System.Drawing.Image)(resources.GetObject("Tab_Settings.Iconimage")));
-            this.Tab_Settings.Iconimage_right = null;
-            this.Tab_Settings.Iconimage_right_Selected = null;
-            this.Tab_Settings.Iconimage_Selected = null;
-            this.Tab_Settings.IconMarginLeft = 0;
-            this.Tab_Settings.IconMarginRight = 0;
-            this.Tab_Settings.IconRightVisible = true;
-            this.Tab_Settings.IconRightZoom = 0D;
-            this.Tab_Settings.IconVisible = true;
-            this.Tab_Settings.IconZoom = 40D;
-            this.Tab_Settings.IsTab = false;
-            this.Tab_Settings.Location = new System.Drawing.Point(0, 422);
-            this.Tab_Settings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Tab_Settings.Name = "Tab_Settings";
-            this.Tab_Settings.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Settings.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Settings.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.Tab_Settings.selected = false;
-            this.Tab_Settings.Size = new System.Drawing.Size(314, 48);
-            this.Tab_Settings.TabIndex = 12;
-            this.Tab_Settings.Text = "  Settings";
-            this.Tab_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tab_Settings.Textcolor = System.Drawing.Color.White;
-            this.Tab_Settings.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab_Settings.Click += new System.EventHandler(this.Tab_Settings_Click);
             // 
             // Tab_Games
             // 
@@ -360,7 +321,7 @@ namespace Internal_Society
             this.panel2.Controls.Add(this.btn_create_new);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(314, 134);
             this.panel2.TabIndex = 0;
@@ -409,7 +370,7 @@ namespace Internal_Society
             this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_header.Location = new System.Drawing.Point(314, 0);
-            this.pn_header.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_header.Margin = new System.Windows.Forms.Padding(2);
             this.pn_header.Name = "pn_header";
             this.pn_header.Size = new System.Drawing.Size(836, 65);
             this.pn_header.TabIndex = 1;
@@ -433,7 +394,7 @@ namespace Internal_Society
             this.picture_user_image.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_user_image.Image = ((System.Drawing.Image)(resources.GetObject("picture_user_image.Image")));
             this.picture_user_image.Location = new System.Drawing.Point(770, 0);
-            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2);
             this.picture_user_image.Name = "picture_user_image";
             this.picture_user_image.Size = new System.Drawing.Size(67, 65);
             this.picture_user_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -466,7 +427,7 @@ namespace Internal_Society
             // 
             this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main.Location = new System.Drawing.Point(314, 65);
-            this.panel_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_Main.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main.Name = "panel_Main";
             this.panel_Main.Size = new System.Drawing.Size(836, 596);
             this.panel_Main.TabIndex = 2;
@@ -480,7 +441,7 @@ namespace Internal_Society
             this.Controls.Add(this.panel_Main);
             this.Controls.Add(this.pn_header);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1094, 581);
             this.Name = "HomePage";
             this.Text = "Form1";
@@ -494,6 +455,7 @@ namespace Internal_Society
             this.ResumeLayout(false);
 
 
+            // xử lý event giữa 2 form, từ onlineList gửi qua cho HomePage rằng nnguowif dùng đã chọn user
             this.onlineList1.FriendClicked += FriendClicked;
         }
 
@@ -515,7 +477,6 @@ namespace Internal_Society
         private Bunifu.Framework.UI.BunifuTextbox textbox_Search;
         private System.Windows.Forms.PictureBox picture_user_image;
         private System.Windows.Forms.Label label_Fullname;
-        private BunifuFlatButton Tab_Settings;
         private onlineList onlineList1;
         private System.Windows.Forms.Panel panel_Main;
     }

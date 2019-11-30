@@ -118,34 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Tab_Settings.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
   <data name="Tab_Games.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
