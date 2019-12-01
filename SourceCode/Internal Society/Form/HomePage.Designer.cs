@@ -482,7 +482,7 @@ namespace Internal_Society
             this.pn_header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_user_image)).EndInit();
             this.ResumeLayout(false);
-
+            
         }
 
         

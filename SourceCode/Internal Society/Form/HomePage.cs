@@ -60,10 +60,9 @@ namespace Internal_Society
             ListPanel.Add(panel_Calendar);
             this.panel_Main.Controls.Add(panel_Games);
             ListPanel.Add(panel_Games);
-           // this.panel_Main.Controls.Add(panel_Settings);
-           // ListPanel.Add(panel_Settings);
             this.panel_Main.Controls.Add(panel_Search1);
             ListPanel.Add(panel_Search1);
+            this.onlineList1.FriendClicked += FriendClicked;
         }
         public void ChangeDarkMode()
         {
