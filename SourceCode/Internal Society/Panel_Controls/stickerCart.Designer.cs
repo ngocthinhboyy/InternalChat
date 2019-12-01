@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(stickerCart));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.lbl_description = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.btn_add = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_preview = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_preview = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_add = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,63 +51,13 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(115, 24);
+            this.lbl_name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.ForeColor = System.Drawing.Color.DeepPink;
+            this.lbl_name.Location = new System.Drawing.Point(114, 26);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(52, 18);
+            this.lbl_name.Size = new System.Drawing.Size(51, 20);
             this.lbl_name.TabIndex = 3;
             this.lbl_name.Text = "label2";
-            // 
-            // btn_add
-            // 
-            this.btn_add.ActiveBorderThickness = 1;
-            this.btn_add.ActiveCornerRadius = 20;
-            this.btn_add.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_add.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_add.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_add.BackColor = System.Drawing.Color.White;
-            this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
-            this.btn_add.ButtonText = "Add";
-            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_add.IdleBorderThickness = 3;
-            this.btn_add.IdleCornerRadius = 20;
-            this.btn_add.IdleFillColor = System.Drawing.Color.White;
-            this.btn_add.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_add.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_add.Location = new System.Drawing.Point(247, 50);
-            this.btn_add.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(75, 42);
-            this.btn_add.TabIndex = 7;
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_preview
-            // 
-            this.btn_preview.ActiveBorderThickness = 1;
-            this.btn_preview.ActiveCornerRadius = 20;
-            this.btn_preview.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_preview.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_preview.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_preview.BackColor = System.Drawing.Color.White;
-            this.btn_preview.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_preview.BackgroundImage")));
-            this.btn_preview.ButtonText = "Preview";
-            this.btn_preview.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_preview.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_preview.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_preview.IdleBorderThickness = 3;
-            this.btn_preview.IdleCornerRadius = 20;
-            this.btn_preview.IdleFillColor = System.Drawing.Color.White;
-            this.btn_preview.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btn_preview.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_preview.Location = new System.Drawing.Point(247, 5);
-            this.btn_preview.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_preview.Name = "btn_preview";
-            this.btn_preview.Size = new System.Drawing.Size(75, 42);
-            this.btn_preview.TabIndex = 6;
-            this.btn_preview.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_preview.Click += new System.EventHandler(this.Btn_preview_Click);
             // 
             // pictureBox1
             // 
@@ -116,11 +68,76 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_preview
+            // 
+            this.btn_preview.BackColor = System.Drawing.Color.Transparent;
+            this.btn_preview.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_preview.BackgroundImage")));
+            this.btn_preview.ButtonText = "Preview";
+            this.btn_preview.ButtonTextMarginLeft = 0;
+            this.btn_preview.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btn_preview.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btn_preview.DisabledForecolor = System.Drawing.Color.White;
+            this.btn_preview.ForeColor = System.Drawing.Color.Black;
+            this.btn_preview.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_preview.IconPadding = 10;
+            this.btn_preview.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_preview.IdleBorderColor = System.Drawing.Color.DeepPink;
+            this.btn_preview.IdleBorderRadius = 30;
+            this.btn_preview.IdleBorderThickness = 2;
+            this.btn_preview.IdleFillColor = System.Drawing.Color.DeepPink;
+            this.btn_preview.IdleIconLeftImage = null;
+            this.btn_preview.IdleIconRightImage = null;
+            this.btn_preview.Location = new System.Drawing.Point(249, 10);
+            this.btn_preview.Name = "btn_preview";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.BorderRadius = 30;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btn_preview.onHoverState = stateProperties1;
+            this.btn_preview.Size = new System.Drawing.Size(76, 36);
+            this.btn_preview.TabIndex = 10;
+            this.btn_preview.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_preview.Click += new System.EventHandler(this.Btn_preview_Click_1);
+            // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_add.BackgroundImage")));
+            this.btn_add.ButtonText = "Add";
+            this.btn_add.ButtonTextMarginLeft = 0;
+            this.btn_add.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btn_add.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btn_add.DisabledForecolor = System.Drawing.Color.White;
+            this.btn_add.ForeColor = System.Drawing.Color.Black;
+            this.btn_add.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_add.IconPadding = 10;
+            this.btn_add.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_add.IdleBorderColor = System.Drawing.Color.DeepPink;
+            this.btn_add.IdleBorderRadius = 30;
+            this.btn_add.IdleBorderThickness = 2;
+            this.btn_add.IdleFillColor = System.Drawing.Color.DeepPink;
+            this.btn_add.IdleIconLeftImage = null;
+            this.btn_add.IdleIconRightImage = null;
+            this.btn_add.Location = new System.Drawing.Point(249, 53);
+            this.btn_add.Name = "btn_add";
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties2.BorderRadius = 30;
+            stateProperties2.BorderThickness = 2;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btn_add.onHoverState = stateProperties2;
+            this.btn_add.Size = new System.Drawing.Size(76, 36);
+            this.btn_add.TabIndex = 13;
+            this.btn_add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // stickerCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.btn_preview);
@@ -139,7 +156,7 @@
         private System.Windows.Forms.Label lbl_description;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_preview;
-        private Bunifu.Framework.UI.BunifuThinButton2 btn_add;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_preview;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_add;
     }
 }

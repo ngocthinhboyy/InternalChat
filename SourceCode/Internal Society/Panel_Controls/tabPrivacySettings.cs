@@ -18,6 +18,7 @@ namespace Internal_Society.Panel_Controls
         public static DarkMode delegateChangePrivacySettings;
         public static DarkMode delegateChangeProfileInfo;
         public static DarkMode delegateChangeCart;
+
         public tabPrivacySettings()
         {
             InitializeComponent();
@@ -61,6 +62,7 @@ namespace Internal_Society.Panel_Controls
             delegateChangePrivacySettings();
             delegateChangeProfileInfo();
             delegateChangeCart();
-        }
+
     }
+}
 }

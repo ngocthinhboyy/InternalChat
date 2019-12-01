@@ -56,7 +56,7 @@ namespace Internal_Society
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.panel1.Controls.Add(this.onlineList1);
             this.panel1.Controls.Add(this.indicator);
             this.panel1.Controls.Add(this.Tab_Games);
@@ -85,8 +85,8 @@ namespace Internal_Society
             // 
             // Tab_Games
             // 
-            this.Tab_Games.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Games.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Games.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Games.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Games.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Tab_Games.BorderRadius = 0;
             this.Tab_Games.ButtonText = "  Games";
@@ -108,8 +108,8 @@ namespace Internal_Society
             this.Tab_Games.Location = new System.Drawing.Point(0, 374);
             this.Tab_Games.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Games.Name = "Tab_Games";
-            this.Tab_Games.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Games.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Games.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Games.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Games.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.Tab_Games.selected = false;
             this.Tab_Games.Size = new System.Drawing.Size(314, 48);
@@ -122,8 +122,8 @@ namespace Internal_Society
             // 
             // Tab_Notification
             // 
-            this.Tab_Notification.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Notification.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Notification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Notification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Tab_Notification.BorderRadius = 0;
             this.Tab_Notification.ButtonText = "  Notification";
@@ -145,8 +145,8 @@ namespace Internal_Society
             this.Tab_Notification.Location = new System.Drawing.Point(0, 326);
             this.Tab_Notification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Notification.Name = "Tab_Notification";
-            this.Tab_Notification.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Notification.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Notification.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Notification.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Notification.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.Tab_Notification.selected = false;
             this.Tab_Notification.Size = new System.Drawing.Size(314, 48);
@@ -159,8 +159,8 @@ namespace Internal_Society
             // 
             // Tab_Cart
             // 
-            this.Tab_Cart.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Cart.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Cart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Tab_Cart.BorderRadius = 0;
             this.Tab_Cart.ButtonText = "  Cart";
@@ -182,8 +182,8 @@ namespace Internal_Society
             this.Tab_Cart.Location = new System.Drawing.Point(0, 278);
             this.Tab_Cart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Cart.Name = "Tab_Cart";
-            this.Tab_Cart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Cart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Cart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Cart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Cart.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.Tab_Cart.selected = false;
             this.Tab_Cart.Size = new System.Drawing.Size(314, 48);
@@ -196,8 +196,8 @@ namespace Internal_Society
             // 
             // Tab_Chat
             // 
-            this.Tab_Chat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Chat.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Chat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Tab_Chat.BorderRadius = 0;
             this.Tab_Chat.ButtonText = "  Chat";
@@ -219,8 +219,8 @@ namespace Internal_Society
             this.Tab_Chat.Location = new System.Drawing.Point(0, 230);
             this.Tab_Chat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Chat.Name = "Tab_Chat";
-            this.Tab_Chat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Chat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Chat.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Chat.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Chat.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.Tab_Chat.selected = false;
             this.Tab_Chat.Size = new System.Drawing.Size(314, 48);
@@ -233,8 +233,8 @@ namespace Internal_Society
             // 
             // Tab_Profile
             // 
-            this.Tab_Profile.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Profile.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Profile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Tab_Profile.BorderRadius = 0;
             this.Tab_Profile.ButtonText = "  Profile";
@@ -256,8 +256,8 @@ namespace Internal_Society
             this.Tab_Profile.Location = new System.Drawing.Point(0, 182);
             this.Tab_Profile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_Profile.Name = "Tab_Profile";
-            this.Tab_Profile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_Profile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_Profile.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_Profile.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_Profile.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.Tab_Profile.selected = false;
             this.Tab_Profile.Size = new System.Drawing.Size(314, 48);
@@ -270,8 +270,8 @@ namespace Internal_Society
             // 
             // Tab_DashBoard
             // 
-            this.Tab_DashBoard.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_DashBoard.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_DashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_DashBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Tab_DashBoard.BorderRadius = 0;
             this.Tab_DashBoard.ButtonText = "  Dashboard";
@@ -294,8 +294,8 @@ namespace Internal_Society
             this.Tab_DashBoard.Location = new System.Drawing.Point(0, 134);
             this.Tab_DashBoard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tab_DashBoard.Name = "Tab_DashBoard";
-            this.Tab_DashBoard.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
-            this.Tab_DashBoard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.Tab_DashBoard.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.Tab_DashBoard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Tab_DashBoard.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.Tab_DashBoard.selected = true;
             this.Tab_DashBoard.Size = new System.Drawing.Size(314, 48);
@@ -308,6 +308,7 @@ namespace Internal_Society
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.panel2.Controls.Add(this.btn_create_new);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -354,7 +355,7 @@ namespace Internal_Society
             // 
             // pn_header
             // 
-            this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.pn_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.pn_header.Controls.Add(this.textbox_Search);
             this.pn_header.Controls.Add(this.label_Fullname);
             this.pn_header.Controls.Add(this.picture_user_image);
@@ -384,7 +385,7 @@ namespace Internal_Society
             this.textbox_Search.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.textbox_Search.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_Search.DefaultText = "";
-            this.textbox_Search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(56)))), ((int)(((byte)(69)))));
+            this.textbox_Search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.textbox_Search.ForeColor = System.Drawing.Color.White;
             this.textbox_Search.HideSelection = true;
             this.textbox_Search.IconLeft = null;
@@ -481,7 +482,7 @@ namespace Internal_Society
             this.pn_header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_user_image)).EndInit();
             this.ResumeLayout(false);
-            this.onlineList1.FriendClicked += FriendClicked;
+
         }
 
         

@@ -28,9 +28,9 @@ namespace Internal_Society
             lbl_description.Text = description;
         }
 
-        public void Btn_preview_Click(object sender, EventArgs e)
+        private void Btn_preview_Click_1(object sender, EventArgs e)
         {
-            int x=0;
+            int x = 0;
             switch (lbl_name.Text)
             {
                 case "Pink Pig":
