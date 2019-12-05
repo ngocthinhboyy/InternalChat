@@ -32,7 +32,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.btnEditPhoto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.btnEditInfo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txt_Profile_Name = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Birthday = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -47,7 +47,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEditPhoto
@@ -83,14 +83,14 @@
             this.btnEditPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditPhoto.Click += new System.EventHandler(this.BtnEditPhoto_Click);
             // 
-            // pictureBox1
+            // pb_Avatar
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(30, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 145);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pb_Avatar.Location = new System.Drawing.Point(30, 43);
+            this.pb_Avatar.Name = "pb_Avatar";
+            this.pb_Avatar.Size = new System.Drawing.Size(159, 145);
+            this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Avatar.TabIndex = 0;
+            this.pb_Avatar.TabStop = false;
             // 
             // btnEditInfo
             // 
@@ -506,11 +506,11 @@
             this.Controls.Add(this.txt_Profile_Name);
             this.Controls.Add(this.btnEditInfo);
             this.Controls.Add(this.btnEditPhoto);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_Avatar);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "tabProfileInfo";
             this.Size = new System.Drawing.Size(650, 452);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,7 +518,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_Avatar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditPhoto;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditInfo;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Name;

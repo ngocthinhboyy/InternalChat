@@ -81,12 +81,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileUpload.cs" />
     <Compile Include="fileView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fileView.Designer.cs">
       <DependentUpon>fileView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListSticker.cs" />
     <Compile Include="loading.cs">
       <SubType>UserControl</SubType>
     </Compile>

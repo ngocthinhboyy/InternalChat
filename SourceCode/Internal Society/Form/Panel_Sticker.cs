@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Internal_Society
@@ -17,7 +12,7 @@ namespace Internal_Society
         public int soCot = 3;
         public int marginRight = 30;
         public int marginBottom = 30;
-        kListPakage klp = new kListPakage();
+        private int NumOfUsersSticker = 0;
 
         public Panel_Sticker()
         {
@@ -25,137 +20,47 @@ namespace Internal_Society
             
             panel2.Controls.Clear();
 
-            kPakage kp1 = new kPakage("heohong","png",1,16);
-            klp.ListPakage.Add(kp1);
-            kPakage kp2 = new kPakage("Luci_&_Daisy", "png", 1, 25);
-            klp.ListPakage.Add(kp2);
-            kPakage kp3 = new kPakage("foxie", "png", 1, 19);
-            klp.ListPakage.Add(kp3);
-            kPakage kp4 = new kPakage("quick_answer", "png", 1, 7);
-            klp.ListPakage.Add(kp4);
-            kPakage kp5 = new kPakage("toto_dog", "png", 1, 20);
-            klp.ListPakage.Add(kp5);
-            kPakage kp6 = new kPakage("tonton_friends", "png", 1, 20);
-            klp.ListPakage.Add(kp6);
-            kPakage kp7 = new kPakage("pikalong", "png", 1, 14);
-            klp.ListPakage.Add(kp7);
-            kPakage kp8 = new kPakage("tien_len_vn", "png", 1, 10);
-            klp.ListPakage.Add(kp8);
-            kPakage kp9 = new kPakage("rong_vang", "png", 1, 19);
-            klp.ListPakage.Add(kp9);
-            kPakage kp10 = new kPakage("dev", "png", 1, 3);
-            klp.ListPakage.Add(kp10);
-            kPakage kp11 = new kPakage("tiger", "png", 1, 15);
-            klp.ListPakage.Add(kp11);
 
-
-            for (int i = 0; i < klp.ListPakage.Count; i++)
+            int kIndex = 0;
+            int kDefault = -1;
+            NumOfUsersSticker = 0;
+            foreach (kSticker sticker in ListSticker.data)
             {
-                Bunifu.Framework.UI.BunifuImageButton btnKun = new Bunifu.Framework.UI.BunifuImageButton();
-                btnKun.Width = 45;
-                btnKun.Height = 45;
-                btnKun.Click += pakage_click;
-                btnKun.BackColor = Color.Transparent;
-                btnKun.ImageLocation = "../../Resources/"+klp.ListPakage[i].PakageName+"_000.png";
-                loadPakageSticker(btnKun);
-                
+                if (sticker.IsOwned)
+                {
+                    if (kDefault == -1) kDefault = kIndex;
+                    Bunifu.Framework.UI.BunifuImageButton btnKun = new Bunifu.Framework.UI.BunifuImageButton();
+                    btnKun.Width = 45;
+                    btnKun.Height = 45;
+                    btnKun.Click += pakage_click;
+                    btnKun.BackColor = Color.Transparent;
+                    btnKun.ImageLocation = "../../Resources/" + sticker.Name + "_000.png";
+                    btnKun.Tag = kIndex.ToString();
+                    loadPakageSticker(btnKun);
+                    NumOfUsersSticker++;
+                }
+
+                kIndex++;
             }
-
             
-            loadStickerInPanel(klp.ListPakage[0].PakageName, klp.ListPakage[0].PakageExt,
-                klp.ListPakage[0].PakageFrom, klp.ListPakage[0].PakageTo);
 
+            if(NumOfUsersSticker > 0)
+            {
+                
+                loadStickerInPanel(ListSticker.data[kDefault].Name, ListSticker.data[kDefault].Extension,
+                1, ListSticker.data[kDefault].Quantity, ListSticker.data[kDefault].Description);
+            }
             
         }
+
+        // Only Show in Cart
         public Panel_Sticker(int index)
         {
             InitializeComponent();
-            panel2.Controls.Clear();
-            switch(index)
-            {
-                case 0:
-                    {
-                        kPakage kp1 = new kPakage("heohong", "png", 1, 16);
-                        klp.ListPakage.Add(kp1);
-                        break;
-                    }
-                case 1:
-                    {
-                        kPakage kp2 = new kPakage("Luci_&_Daisy", "png", 1, 25);
-                        klp.ListPakage.Add(kp2);
-                        break;
-                    }
-                case 2:
-                    {
-                        kPakage kp3 = new kPakage("foxie", "png", 1, 19);
-                        klp.ListPakage.Add(kp3);
-                        break;
-                    }
-                case 3:
-                    {
-                        kPakage kp4 = new kPakage("quick_answer", "png", 1, 7);
-                        klp.ListPakage.Add(kp4);
-                        break;
-                    }
-                case 4:
-                    {
-                        kPakage kp5 = new kPakage("toto_dog", "png", 1, 20);
-                        klp.ListPakage.Add(kp5);
-                        break;
-                    }
-                case 5:
-                    {
-                        kPakage kp6 = new kPakage("tonton_friends", "png", 1, 20);
-                        klp.ListPakage.Add(kp6);
-                        break;
-                    }
-                case 6:
-                    {
-                        kPakage kp7 = new kPakage("pikalong", "png", 1, 14);
-                        klp.ListPakage.Add(kp7);
-                        break;
-                    }
-                case 7:
-                    {
-                        kPakage kp8 = new kPakage("tien_len_vn", "png", 1, 10);
-                        klp.ListPakage.Add(kp8);
-                        break;
-                    }
-                case 8:
-                    {
-                        kPakage kp9 = new kPakage("rong_vang", "png", 1, 19);
-                        klp.ListPakage.Add(kp9);
-                        break;
-                    }
-                case 9:
-                    {
-                        kPakage kp10 = new kPakage("dev", "png", 1, 3);
-                        klp.ListPakage.Add(kp10);
-                        break;
-                    }
-                case 10:
-                    {
-                        kPakage kp11 = new kPakage("tiger", "png", 1, 15);
-                        klp.ListPakage.Add(kp11);
-                        break;
-                    }
-
-            }
-            for (int i = 0; i < klp.ListPakage.Count; i++)
-            {
-                Bunifu.Framework.UI.BunifuImageButton btnKun = new Bunifu.Framework.UI.BunifuImageButton();
-                btnKun.Width = 45;
-                btnKun.Height = 45;
-                btnKun.Click += pakage_click;
-                btnKun.BackColor = Color.Transparent;
-                btnKun.ImageLocation = "../../Resources/" + klp.ListPakage[i].PakageName + "_000.png";
-                loadPakageSticker(btnKun);
-
-            }
-
-
-            loadStickerInPanel(klp.ListPakage[0].PakageName, klp.ListPakage[0].PakageExt,
-                klp.ListPakage[0].PakageFrom, klp.ListPakage[0].PakageTo);
+            panel2.Visible = false;
+            panel1.Height += 120;
+            sticker_model.Location = new Point(25, 25);
+            //panel2.Controls.Clear();
 
 
         }
@@ -163,9 +68,10 @@ namespace Internal_Society
         {
             
             Bunifu.Framework.UI.BunifuImageButton btnKun = sender as Bunifu.Framework.UI.BunifuImageButton;
-            int kIndex = panel2.Controls.IndexOf(btnKun);
-            loadStickerInPanel(klp.ListPakage[kIndex].PakageName, klp.ListPakage[kIndex].PakageExt,
-                klp.ListPakage[kIndex].PakageFrom, klp.ListPakage[kIndex].PakageTo);
+
+            int kIndex = Convert.ToInt32(btnKun.Tag);
+            loadStickerInPanel(ListSticker.data[kIndex].Name, ListSticker.data[kIndex].Extension,
+                1, ListSticker.data[kIndex].Quantity, ListSticker.data[kIndex].Description);
 
         }
 
@@ -188,8 +94,9 @@ namespace Internal_Society
 
 
         // Tên gói sticker , đuôi file, bắt đầu, kết thúc
-        public void loadStickerInPanel(string stickerName="", string ext="png",int from = 1, int to = 2)
+        public void loadStickerInPanel(string stickerName="", string ext="png",int from = 1, int to = 2, string Description = "")
         {
+            lb_Description.Text = Description;
             panel1.Controls.Clear();
             panel1.AutoScroll = false;
             
@@ -234,48 +141,14 @@ namespace Internal_Society
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
         }
 
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 
 
-    public class kListPakage
-    {
-        private List<kPakage> listPakage;
+    
 
-        public kListPakage()
-        {
-            listPakage = new List<kPakage>();
-        }
-
-        public List<kPakage> ListPakage { get => listPakage; set => listPakage = value; }
-    }
-
-    public class kPakage
-    {
-        private string pakageName;
-        private string pakageExt;
-        private int pakageFrom;
-        private int pakageTo;
-
-        public kPakage()
-        {
-
-        }
-        public kPakage(string a)
-        {
-            pakageName = a;
-        }
-        public kPakage(string a, string b, int c, int d)
-        {
-            pakageName = a;
-            pakageExt = b;
-            pakageFrom = c;
-            pakageTo = d;
-        }
-        
-        
-        public string PakageName { get => pakageName; set => pakageName = value; }
-        public string PakageExt { get => pakageExt; set => pakageExt = value; }
-        public int PakageFrom { get => pakageFrom; set => pakageFrom = value; }
-        public int PakageTo { get => pakageTo; set => pakageTo = value; }
-    }
+    
 }

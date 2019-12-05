@@ -38,7 +38,7 @@ namespace Internal_Society
             btnRepresentLogin.Enabled = false;
         }
 
-        public async void LoginProcess()
+        private async void LoginProcess()
         {
             var usernameLogin = txtUsername.Text;
             var passwordLogin = txtPassword.Text;
@@ -88,8 +88,11 @@ namespace Internal_Society
                 User_Info.k_Birthday = LoginStatus.Birthday.ToString();
                 User_Info.k_Status = LoginStatus.Status.ToString();
                 User_Info.k_Address = LoginStatus.Address.ToString();
+                User_Info.k_Avatar = LoginStatus.urlAvatar.ToString();
+
 
                 // cho nguoi dung tien vao Homepage
+                
                 HomePage f1 = new HomePage();
                 this.Hide();
                 f1.ShowDialog();

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Internal_Society
 {
     //Tạo delegate để gọi hàm tạo label bên chatbox
+
     public delegate void Notify();
     public partial class Panel_Color_Bubble : Form
     {

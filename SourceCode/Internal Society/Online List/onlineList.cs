@@ -15,10 +15,22 @@ namespace Internal_Society
 {
     public partial class onlineList : UserControl
     {
+
+        List<int> ListIDOnline = new List<int>();
+
+        bool isExist(List<int> kList, int a)
+        {
+            foreach(int item in kList)
+            {
+                if (item == a) return true;
+            }
+            return false;
+        }
+
         public onlineList()
         {
             InitializeComponent();
-
+            
         }
         
         string listUsers = "";
@@ -44,7 +56,7 @@ namespace Internal_Society
 
             if (listUsers != "")
             {
-                this.Controls.Clear();
+                
                 label1.Visible = false;
                 List<Friend_Info> userArr = new List<Friend_Info>();
                 
@@ -56,22 +68,46 @@ namespace Internal_Society
                     friend_last.Top = 0 - friend_last.Height + 10;
                     for (int i = 0; i < userArr.Count(); i++)
                     {
-                        activeFriend friend = new activeFriend(userArr[i].friend_Username, userArr[i].friend_Fullname,
-                            userArr[i].friend_lastLogin);
-                        friend.Location = new Point(10, 0);
-                        friend.Top = friend_last.Bottom + 20;
-                        
-                        friend.Width = this.Width - 20;
-                        friend.Tag = userArr[i].friend_Conversation_ID.ToString();
+                        if (isExist(ListIDOnline, Convert.ToInt32(userArr[i].friend_Conversation_ID)))
+                        {
+                            foreach(var item in this.Controls)
+                            {
+                                if(item is activeFriend)
+                                {
+                                    activeFriend aFriend = item as activeFriend;
+                                    if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr[i].friend_Conversation_ID))
+                                    {
+                                        aFriend.UpdateFriend(userArr[i].friend_Username, userArr[i].friend_Fullname,
+                                userArr[i].friend_lastLogin);
+                                        break;
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
 
-                        friend.MouseEnter += Friend_Enter;
-                        friend.Click += Friend_Click;
+                        else
+                        {
+
+                            ListIDOnline.Add(Convert.ToInt32(userArr[i].friend_Conversation_ID));
+                            activeFriend friend = new activeFriend(userArr[i].friend_Username, userArr[i].friend_Fullname,
+                                userArr[i].friend_lastLogin);
+                            friend.Location = new Point(10, 0);
+                            friend.Top = friend_last.Bottom + 20;
+
+                            friend.Width = this.Width - 20;
+                            friend.Tag = userArr[i].friend_Conversation_ID.ToString();
+
+                            friend.MouseEnter += Friend_Enter;
+                            friend.Click += Friend_Click;
 
 
-                        this.Controls.Add(friend);
-                        //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
-                        //this.VerticalScroll.Visible = false;
-                        friend_last = friend;
+                            this.Controls.Add(friend);
+                            //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
+                            //this.VerticalScroll.Visible = false;
+                            friend_last = friend;
+                        }
                     }
                 }
 

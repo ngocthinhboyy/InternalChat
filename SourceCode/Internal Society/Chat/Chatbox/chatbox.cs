@@ -12,7 +12,7 @@ using xNet;
 
 namespace Internal_Society
 {
-
+    
     public partial class chatbox : UserControl
     {
         #region Define Variable
@@ -24,6 +24,7 @@ namespace Internal_Society
         string pSticker = "";
         int messIndex = 0;
         bool isReceiveFromMe = true;
+        private static int sequenceSticker = -1;
         Internal_Society.loading loading = new Internal_Society.loading();
         #endregion
 
@@ -194,7 +195,7 @@ namespace Internal_Society
 
             }
             //TimeRequest.Start();
-            loading.Visible = false;
+            
             isReceiveFromMe = false;
         }
 
@@ -208,7 +209,7 @@ namespace Internal_Society
                 Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetData); });
                 // await
                 string result = await getStringTask;
-
+                loading.Visible = false;
                 ProccessData(result);
             }
             catch
@@ -218,65 +219,15 @@ namespace Internal_Society
 
         }
 
-        void AddCookie(HttpRequest http, string cookie)
-        {
-            var temp = cookie.Split(';');
-            foreach (var item in temp)
-            {
-                var temp2 = item.Split('=');
-                if (temp2.Count() > 1)
-                {
-                    http.Cookies.Add(temp2[0], temp2[1]);
-                }
-            }
-        }
-
-        string UploadData(HttpRequest http, string url, MultipartContent data = null, string contentType = null, string userArgent = "", string cookie = null)
-        {
-            if (http == null)
-            {
-                http = new HttpRequest();
-                http.Cookies = new CookieDictionary();
-            }
-
-            if (!string.IsNullOrEmpty(cookie))
-            {
-                AddCookie(http, cookie);
-            }
-
-            if (!string.IsNullOrEmpty(userArgent))
-            {
-                http.UserAgent = userArgent;
-            }
-
-            string html = http.Post(url, data).ToString();
-            return html;
-        }
-
-        void UploadFile(string path)
-        {
-            MultipartContent data = new MultipartContent() {
-
-                { new FileContent(path), "HinhAvatar", Path.GetFileName(path)}
-            };
-
-            var html = UploadData(null, "https://kunbr0.com/it008b/c_Upload/upload_file/" + id_conversation +
-                "/" + User_Info.k_ID, data);
-
-
-        }
+        
+        
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation);
+            if (fu.UploadFile())
             {
-                Task t = new Task(() => { UploadFile(dialog.FileName); });
-                t.Start();
-                addInMessage(User_Info.k_ID, "", "5", dialog.FileName, "");
-                
-               // MessageBox.Show(dialog.FileName);
+                addInMessage(User_Info.k_ID, "", "5", fu.FilePath, "");
             }
         }
 
@@ -284,7 +235,22 @@ namespace Internal_Society
         private void Button_Sticker_Click(object sender, EventArgs e)
         {
             Time_Sticker.Start();
-            pn_Sticker.Show();
+            if (!pn_Sticker.IsDisposed)
+            {
+                if(sequenceSticker != ListSticker.Sequence)
+                {
+                    pn_Sticker.Close();
+                    pn_Sticker = new Panel_Sticker();
+                }
+                pn_Sticker.Show();
+            }
+            else
+            {
+                pn_Sticker = new Panel_Sticker();
+                pn_Sticker.Show();
+            }
+
+            sequenceSticker = ListSticker.Sequence;
         }
         private void Panel2_MouseClick(object sender, MouseEventArgs e)
         {

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
 namespace Internal_Society
@@ -63,6 +64,8 @@ namespace Internal_Society
             this.panel_Main.Controls.Add(panel_Search1);
             ListPanel.Add(panel_Search1);
             this.onlineList1.FriendClicked += FriendClicked;
+
+            ListSticker.getSticker();
         }
         public void ChangeDarkMode()
         {
@@ -159,8 +162,12 @@ namespace Internal_Society
         {
             foreach(var tabchat in onlineList1.Controls)
             {
-                Internal_Society.activeFriend atf = tabchat as Internal_Society.activeFriend;
-                atf.BackColor = inactiveTabChat;
+                if(tabchat is activeFriend)
+                {
+                    Internal_Society.activeFriend atf = tabchat as Internal_Society.activeFriend;
+                    atf.BackColor = inactiveTabChat;
+                }
+                
             }
         }
 
@@ -212,6 +219,7 @@ namespace Internal_Society
             TurnOffPanel();
             panel_Cart.Visible = true;
             App_Status.time_delay = 10000;
+
         }
 
         private void Tab_Notification_Click(object sender, EventArgs e)
@@ -228,6 +236,8 @@ namespace Internal_Society
             TurnOffPanel();
             panel_Games.Visible = true;
             App_Status.time_delay = 10000;
+
+
         }
 
         private void HomePage_Resize(object sender, EventArgs e)
@@ -301,8 +311,7 @@ namespace Internal_Society
 
 
 
-
-
+        
 
 
 

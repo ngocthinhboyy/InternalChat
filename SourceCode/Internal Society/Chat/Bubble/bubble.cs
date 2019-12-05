@@ -18,6 +18,7 @@ namespace Internal_Society
         private string message_Type;
         private string message_Detail;
         private string message_Time;
+        private string urlImage;
         private msgType InOrOut;
 
 
@@ -66,17 +67,20 @@ namespace Internal_Society
                 this.BackColor = Color.Transparent;
                 if (message_Type == "1")
                 {
-                    picture_sticker.ImageLocation = "../../Resources\\" + message_Detail;
+                    this.urlImage = App_Status.urlLocalResources + message_Detail;
+                    picture_sticker.ImageLocation = this.urlImage;
                 }
                 else if (message_Type == "2")
                 {
-                    picture_sticker.ImageLocation = App_Status.urlImage + "/" + message_Type + "/" + message_Detail;
+                    this.urlImage = App_Status.urlImage + "/" + message_Type + "/" + message_Detail;
+                    picture_sticker.ImageLocation = this.urlImage;
                     picture_sticker.Cursor = Cursors.Hand;
                     picture_sticker.Click += ViewImage;
                 }
                 else if (message_Type == "5")
                 {
-                    picture_sticker.ImageLocation = message_Detail;
+                    urlImage = message_Detail;
+                    picture_sticker.ImageLocation = urlImage;
                     picture_sticker.Cursor = Cursors.Hand;
                     picture_sticker.Click += ViewImage;
                 }
@@ -88,7 +92,7 @@ namespace Internal_Society
 
         void ViewImage(object sender, EventArgs e)
         {
-            fileView fV = new fileView(App_Status.urlImage + "/" + message_Type + "/" + message_Detail);
+            fileView fV = new fileView(this.urlImage);
             fV.Show();
         }
 

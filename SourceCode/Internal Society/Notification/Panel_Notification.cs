@@ -22,15 +22,23 @@ namespace Internal_Society
 
         public async void GetDataAsync()
         {
-            string urlGetNotification = App_Status.urlAPI + "c_Notification/Get_Notification/" + User_Info.k_ID;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetNotification); });
-            // await
-            string result = await getStringTask;
-            if (result != data_notification)
+            try
             {
-                data_notification = result;
-                ShowNotification();
+                string urlGetNotification = App_Status.urlAPI + "c_Notification/Get_Notification/" + User_Info.k_ID;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetNotification); });
+                // await
+                string result = await getStringTask;
+                if (result != data_notification)
+                {
+                    data_notification = result;
+                    ShowNotification();
+                }
             }
+            catch
+            {
+                MessageBox.Show("Connection Error");
+            }
+            
             TimeRequest.Stop();
             TimeRequest.Start();
         }

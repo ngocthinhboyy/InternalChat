@@ -111,6 +111,7 @@
             this.tabProfileInfo1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.tabProfileInfo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.tabProfileInfo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.tabProfileInfo1.ForeColor = System.Drawing.Color.White;
             this.tabProfileInfo1.Location = new System.Drawing.Point(26, 76);
             this.tabProfileInfo1.Name = "tabProfileInfo1";
             this.tabProfileInfo1.Size = new System.Drawing.Size(650, 452);
@@ -160,6 +161,7 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.lblPrivacySettings);
             this.Controls.Add(this.lblProfile);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Name = "Panel_Profile";
