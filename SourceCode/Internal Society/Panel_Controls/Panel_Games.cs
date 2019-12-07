@@ -15,6 +15,11 @@ namespace Internal_Society
         public Panel_Games()
         {
             InitializeComponent();
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeGames = new Panel_Controls.DarkMode(this.ChangeDarkMode);
+        }
+        public void ChangeDarkMode()
+        {
+            this.BackColor = App_Status.backFormColor;
         }
     }
 }

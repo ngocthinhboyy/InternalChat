@@ -37,12 +37,12 @@
             this.label_Error.AutoSize = true;
             this.label_Error.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Error.ForeColor = System.Drawing.Color.Red;
-            this.label_Error.Location = new System.Drawing.Point(152, 65);
+            this.label_Error.Location = new System.Drawing.Point(41, 53);
             this.label_Error.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Error.Name = "label_Error";
-            this.label_Error.Size = new System.Drawing.Size(407, 32);
+            this.label_Error.Size = new System.Drawing.Size(629, 32);
             this.label_Error.TabIndex = 0;
-            this.label_Error.Text = "Không tìm thấy dữ liệu liên quan !";
+            this.label_Error.Text = "We could not find anything that matches your search.";
             this.label_Error.Visible = false;
             // 
             // Panel_Search
@@ -50,7 +50,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.label_Error);
             this.Name = "Panel_Search";
             this.Size = new System.Drawing.Size(715, 499);

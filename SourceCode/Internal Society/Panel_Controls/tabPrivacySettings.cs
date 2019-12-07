@@ -18,6 +18,8 @@ namespace Internal_Society.Panel_Controls
         public static DarkMode delegateChangePrivacySettings;
         public static DarkMode delegateChangeProfileInfo;
         public static DarkMode delegateChangeCart;
+        public static DarkMode delegateChangeGames;
+        public static DarkMode delegateChangeSearch;
 
         public tabPrivacySettings()
         {
@@ -27,7 +29,7 @@ namespace Internal_Society.Panel_Controls
         }
         public void ChangeDarkMode()
         {
-            label1.ForeColor = label2.ForeColor = label3.ForeColor = label4.ForeColor =
+            label1.ForeColor = label2.ForeColor = label4.ForeColor =
             label5.ForeColor = label6.ForeColor = label7.ForeColor = label8.ForeColor = label9.ForeColor =
             label10.ForeColor = label11.ForeColor = App_Status.textColor;
         }
@@ -62,7 +64,15 @@ namespace Internal_Society.Panel_Controls
             delegateChangePrivacySettings();
             delegateChangeProfileInfo();
             delegateChangeCart();
+            delegateChangeSearch();
+            delegateChangeGames();
+        }
 
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            LogOutConfirmation logOutConfirmation = new LogOutConfirmation();
+            logOutConfirmation.StartPosition = FormStartPosition.CenterScreen;
+            logOutConfirmation.Show();
+        }
     }
-}
 }

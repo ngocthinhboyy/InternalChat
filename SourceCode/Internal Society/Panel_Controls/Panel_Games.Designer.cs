@@ -33,7 +33,8 @@
             // 
             // games_LuckyWheel1
             // 
-            this.games_LuckyWheel1.Location = new System.Drawing.Point(112, 41);
+            this.games_LuckyWheel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.games_LuckyWheel1.Location = new System.Drawing.Point(197, 78);
             this.games_LuckyWheel1.Name = "games_LuckyWheel1";
             this.games_LuckyWheel1.Size = new System.Drawing.Size(498, 498);
             this.games_LuckyWheel1.TabIndex = 0;
@@ -42,7 +43,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.games_LuckyWheel1);
             this.Name = "Panel_Games";
             this.Size = new System.Drawing.Size(884, 662);

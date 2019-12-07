@@ -20,7 +20,11 @@ namespace Internal_Society
         public Panel_Search()
         {
             InitializeComponent();
-
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeSearch = new Panel_Controls.DarkMode(this.ChangeDarkMode);
+        }
+        public void ChangeDarkMode()
+        {
+            this.BackColor = App_Status.backFormColor;
         }
 
         public async void SearchUserAsync()
@@ -67,7 +71,7 @@ namespace Internal_Society
                         friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
                         Convert.ToInt32(dSearchUser.data[i].user_id));
                         friend.Location = new Point(this.Width - friend.Width - 70, 0);
-
+                        friend.Anchor = AnchorStyles.Top;
                         friend.Top = friend_last.Bottom + 20;
                         this.Controls.Add(friend);
 

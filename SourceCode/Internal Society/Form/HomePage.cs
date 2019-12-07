@@ -181,7 +181,8 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            panel_Dashboard.Visible = true;
+            bunifuTransition1.ShowSync(panel_Dashboard);
+            //panel_Dashboard.Visible = true;
             App_Status.time_delay = 10000;
         }
 
@@ -189,7 +190,8 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            panel_Profile.Visible = true;
+            bunifuTransition2.ShowSync(panel_Profile);
+            //panel_Profile.Visible = true;
             App_Status.time_delay = 10000;
         }
 
@@ -197,7 +199,7 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            
+
             App_Status.time_delay = 1500;
             Tab_Notification.Visible = false;
             Tab_Cart.Visible = false;
@@ -205,19 +207,22 @@ namespace Internal_Society
             Tab_DashBoard.Visible = false;
             Tab_Games.Visible = false;
             Tab_Profile.Visible = false;
-           // Tab_Settings.Visible = false;
+            // Tab_Settings.Visible = false;
             indicator.Visible = false;
-            onlineList1.Visible = true;
+            onlineList1.Show();
             onlineList1.Dock = DockStyle.Left;
-            btn_create_new.Text = "Back to menu";
+            //btn_create_new.Text = "Back to menu";
             onlineList1.ShowOnlineUser();
+            btnBack.Visible = true;
+            btn_create_new.Visible = false;
         }
 
         private void Tab_Cart_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            panel_Cart.Visible = true;
+            bunifuTransition3.ShowSync(panel_Cart);
+            //panel_Cart.Visible = true;
             App_Status.time_delay = 10000;
 
         }
@@ -226,7 +231,8 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            panel_Calendar.Visible = true;
+            bunifuTransition4.ShowSync(panel_Calendar);
+            //panel_Calendar.Visible = true;
             App_Status.time_delay = 10000;
         }
 
@@ -234,7 +240,8 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
-            panel_Games.Visible = true;
+            bunifuTransition5.ShowSync(panel_Games);
+            //panel_Games.Visible = true;
             App_Status.time_delay = 10000;
 
 
@@ -263,18 +270,7 @@ namespace Internal_Society
 
         private void Btn_create_new_Click(object sender, EventArgs e)
         {
-            MoveIndicator((Control)Tab_DashBoard);
-            TurnOffPanel();
-            onlineList1.Visible = false;
-            panel_Dashboard.Visible = true;
-            Tab_Notification.Visible = true;
-            Tab_Cart.Visible = true;
-            Tab_Chat.Visible = true;
-            Tab_DashBoard.Visible = true;
-            Tab_Games.Visible = true;
-            Tab_Profile.Visible = true;
-           // Tab_Settings.Visible = true;
-            indicator.Visible = true;
+            
         }
 
         private void Textbox_Search_Leave_1(object sender, EventArgs e)
@@ -306,12 +302,29 @@ namespace Internal_Society
             textbox_Search.Text = "";
         }
 
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            MoveIndicator((Control)Tab_DashBoard);
+            TurnOffPanel();
+            onlineList1.Visible = false;
+            panel_Dashboard.Visible = true;
+            Tab_Notification.Visible = true;
+            Tab_Cart.Visible = true;
+            Tab_Chat.Visible = true;
+            Tab_DashBoard.Visible = true;
+            Tab_Games.Visible = true;
+            Tab_Profile.Visible = true;
+            indicator.Visible = true;
+            btnBack.Visible = false;
+            btn_create_new.Visible = true;
+        }
 
 
 
 
 
-        
+
+
 
 
 

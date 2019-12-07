@@ -35,17 +35,13 @@
             Bunifu.ToggleSwitch.ToggleState toggleState4 = new Bunifu.ToggleSwitch.ToggleState();
             Bunifu.ToggleSwitch.ToggleState toggleState5 = new Bunifu.ToggleSwitch.ToggleState();
             Bunifu.ToggleSwitch.ToggleState toggleState6 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState7 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState8 = new Bunifu.ToggleSwitch.ToggleState();
-            Bunifu.ToggleSwitch.ToggleState toggleState9 = new Bunifu.ToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DarkModeSwitch = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.ActiveStatusSwitch = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
-            this.ProfileSwitch = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuRadioButton3 = new Bunifu.UI.WinForms.BunifuRadioButton();
@@ -60,6 +56,7 @@
             this.bunifuRadioButton5 = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuRadioButton6 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.btnLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -86,23 +83,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Active Status";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(76, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Public my profile";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(75, 208);
+            this.label4.Location = new System.Drawing.Point(75, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(188, 21);
             this.label4.TabIndex = 3;
@@ -113,7 +99,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(76, 318);
+            this.label5.Location = new System.Drawing.Point(76, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(188, 21);
             this.label5.TabIndex = 4;
@@ -200,46 +186,6 @@
             this.ActiveStatusSwitch.ToggleStateOn = toggleState6;
             this.ActiveStatusSwitch.Value = true;
             // 
-            // ProfileSwitch
-            // 
-            this.ProfileSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProfileSwitch.Animation = 5;
-            this.ProfileSwitch.BackColor = System.Drawing.Color.Transparent;
-            this.ProfileSwitch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProfileSwitch.BackgroundImage")));
-            this.ProfileSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ProfileSwitch.Location = new System.Drawing.Point(495, 155);
-            this.ProfileSwitch.Name = "ProfileSwitch";
-            this.ProfileSwitch.Size = new System.Drawing.Size(35, 20);
-            this.ProfileSwitch.TabIndex = 7;
-            toggleState7.BackColor = System.Drawing.Color.Empty;
-            toggleState7.BackColorInner = System.Drawing.Color.Empty;
-            toggleState7.BorderColor = System.Drawing.Color.DeepPink;
-            toggleState7.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState7.BorderRadius = 1;
-            toggleState7.BorderRadiusInner = 1;
-            toggleState7.BorderThickness = 1;
-            toggleState7.BorderThicknessInner = 1;
-            this.ProfileSwitch.ToggleStateDisabled = toggleState7;
-            toggleState8.BackColor = System.Drawing.Color.Empty;
-            toggleState8.BackColorInner = System.Drawing.Color.Empty;
-            toggleState8.BorderColor = System.Drawing.Color.DeepPink;
-            toggleState8.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState8.BorderRadius = 1;
-            toggleState8.BorderRadiusInner = 1;
-            toggleState8.BorderThickness = 1;
-            toggleState8.BorderThicknessInner = 1;
-            this.ProfileSwitch.ToggleStateOff = toggleState8;
-            toggleState9.BackColor = System.Drawing.Color.DeepPink;
-            toggleState9.BackColorInner = System.Drawing.Color.White;
-            toggleState9.BorderColor = System.Drawing.Color.DeepPink;
-            toggleState9.BorderColorInner = System.Drawing.Color.White;
-            toggleState9.BorderRadius = 17;
-            toggleState9.BorderRadiusInner = 15;
-            toggleState9.BorderThickness = 1;
-            toggleState9.BorderThicknessInner = 1;
-            this.ProfileSwitch.ToggleStateOn = toggleState9;
-            this.ProfileSwitch.Value = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label8);
@@ -248,7 +194,7 @@
             this.panel1.Controls.Add(this.bunifuRadioButton2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.bunifuRadioButton1);
-            this.panel1.Location = new System.Drawing.Point(78, 243);
+            this.panel1.Location = new System.Drawing.Point(78, 186);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 49);
             this.panel1.TabIndex = 8;
@@ -327,7 +273,7 @@
             this.panel2.Controls.Add(this.bunifuRadioButton5);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.bunifuRadioButton6);
-            this.panel2.Location = new System.Drawing.Point(80, 356);
+            this.panel2.Location = new System.Drawing.Point(80, 299);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 49);
             this.panel2.TabIndex = 9;
@@ -398,19 +344,53 @@
             this.bunifuRadioButton6.TabIndex = 0;
             this.bunifuRadioButton6.Text = null;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
+            this.btnLogout.ButtonText = "Log Out";
+            this.btnLogout.ButtonTextMarginLeft = 0;
+            this.btnLogout.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnLogout.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btnLogout.DisabledForecolor = System.Drawing.Color.White;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogout.IconPadding = 10;
+            this.btnLogout.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogout.IdleBorderColor = System.Drawing.Color.DeepPink;
+            this.btnLogout.IdleBorderRadius = 35;
+            this.btnLogout.IdleBorderThickness = 2;
+            this.btnLogout.IdleFillColor = System.Drawing.Color.DeepPink;
+            this.btnLogout.IdleIconLeftImage = null;
+            this.btnLogout.IdleIconRightImage = null;
+            this.btnLogout.Location = new System.Drawing.Point(201, 371);
+            this.btnLogout.Name = "btnLogout";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnLogout.onHoverState = stateProperties1;
+            this.btnLogout.Size = new System.Drawing.Size(210, 45);
+            this.btnLogout.TabIndex = 10;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
             // tabPrivacySettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ProfileSwitch);
             this.Controls.Add(this.ActiveStatusSwitch);
             this.Controls.Add(this.DarkModeSwitch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "tabPrivacySettings";
@@ -428,12 +408,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Bunifu.ToggleSwitch.BunifuToggleSwitch DarkModeSwitch;
         private Bunifu.ToggleSwitch.BunifuToggleSwitch ActiveStatusSwitch;
-        private Bunifu.ToggleSwitch.BunifuToggleSwitch ProfileSwitch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton3;
@@ -448,5 +426,6 @@
         private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton5;
         private System.Windows.Forms.Label label11;
         private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton6;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogout;
     }
 }
