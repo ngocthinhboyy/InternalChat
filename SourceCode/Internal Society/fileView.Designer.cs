@@ -104,6 +104,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "fileView";
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageView)).EndInit();

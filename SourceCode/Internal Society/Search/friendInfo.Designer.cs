@@ -88,10 +88,10 @@
             this.btn_addFriend.IdleIconRightImage = null;
             this.btn_addFriend.Location = new System.Drawing.Point(402, 26);
             this.btn_addFriend.Name = "btn_addFriend";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
             this.btn_addFriend.onHoverState = stateProperties1;

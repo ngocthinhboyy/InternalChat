@@ -34,6 +34,7 @@ namespace Internal_Society
         public HomePage()
         {
             InitializeComponent();
+            Internal_Society.Panel_Notification.delegateNoti = new Notification(this.Noti);
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeHomePage = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             this.StartPosition = FormStartPosition.CenterScreen;
             label_Fullname.Text = User_Info.k_Fullname;
@@ -46,6 +47,7 @@ namespace Internal_Society
             panel_Games.Dock = DockStyle.Fill;
           //  panel_Settings.Dock = DockStyle.Fill;
             panel_Search1.Dock = DockStyle.Fill;
+            //MessageBox.Show(App_Status.notification.ToString());
 
             
 
@@ -97,7 +99,24 @@ namespace Internal_Society
             //Change panel background
             panel_Main.BackColor = App_Status.backPanelColor;
         }
+        public void Noti()
+        {
+            if (App_Status.notification != 0)
+            {
+                lbl_Noti.Visible = true;
+                lbl_Noti.Text = App_Status.notification.ToString();
+                pictureBox2.Visible = true;
+                //MessageBox.Show(App_Status.notification.ToString());
+                //lbl_Noti.Text = "h";
+            }
+            else
+            {
+                pictureBox2.Visible = false;
 
+                //lbl_Noti.Text = App_Status.notification.ToString();
+                lbl_Noti.Visible = false;
+            }
+        }
 
         private void FriendClicked(object sender, EventArgs e)
         {
@@ -197,9 +216,11 @@ namespace Internal_Society
 
         private void Tab_Chat_Click(object sender, EventArgs e)
         {
+            
             MoveIndicator((Control)sender);
             TurnOffPanel();
-
+            lbl_Noti.Visible = false;
+            pictureBox2.Visible = false;
             App_Status.time_delay = 1500;
             Tab_Notification.Visible = false;
             Tab_Cart.Visible = false;

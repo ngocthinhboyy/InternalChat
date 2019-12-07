@@ -24,6 +24,12 @@ namespace Internal_Society
         public static string k_Address;
         public static string k_Avatar;
 
+        public static string UpdateData()
+        {
+            string result = "";
+            return result;
+        }
+
         private async static void ExecuteUpdate()
         {
             string urlSearchUser = App_Status.urlAPI + "c_User/EditAll/" + User_Info.k_ID + "/" + k_Fullname + "/" 

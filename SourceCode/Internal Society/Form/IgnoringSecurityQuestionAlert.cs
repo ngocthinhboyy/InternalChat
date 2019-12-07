@@ -31,5 +31,6 @@ namespace Internal_Society
             checkSureIgnore = 1;
             this.Close();
         }
+        
     }
 }

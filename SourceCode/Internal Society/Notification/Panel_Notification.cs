@@ -12,9 +12,11 @@ using System.Web.Script.Serialization;
 
 namespace Internal_Society
 {
+    public delegate void Notification();
     public partial class Panel_Notification : UserControl
     {
         string data_notification = "";
+        public static Notification delegateNoti;
         public Panel_Notification()
         {
             InitializeComponent();
@@ -53,14 +55,18 @@ namespace Internal_Society
 
             int iTop = 10;
             int iLeft = 30;
-
+            App_Status.notification = 0;
             for (int i = notiData.data.Count - 1; i >= 0; i--)
             {
+
                 if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "0") {
                     Notification_AddFriend ntAddFriend = new Notification_AddFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
                     ntAddFriend.Location = new Point(iLeft, 0);
+                    ntAddFriend.Anchor = AnchorStyles.Top;
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
+                    App_Status.notification++;
+                    
                     iTop = ntAddFriend.Bottom;
                 }
                 else if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "1")
@@ -68,11 +74,16 @@ namespace Internal_Society
                     Notification_AcceptFriend ntAddFriend = new Notification_AcceptFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
                     ntAddFriend.Location = new Point(iLeft, 0);
                     ntAddFriend.Top = iTop + 20;
+                    ntAddFriend.Anchor = AnchorStyles.Top;
                     this.Controls.Add(ntAddFriend);
+                    App_Status.notification++;
+                    
                     iTop = ntAddFriend.Bottom;
                 }
 
             }
+            //MessageBox.Show(App_Status.notification.ToString());
+            delegateNoti();
         }
 
         private void TimeRequest_Tick(object sender, EventArgs e)

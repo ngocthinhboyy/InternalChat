@@ -26,12 +26,18 @@ namespace Internal_Society
             pn_sticker.Show();
         }
 
-
+        private void UpdateData()
+        {
+            lb_Gold.Text = User_Info.k_Gold;
+            lb_Diamond.Text = User_Info.k_Diamond;
+        }
             public Panel_Cart()
         {
             InitializeComponent();
+            lb_Gold.Text = User_Info.k_Gold;
+            lb_Diamond.Text = User_Info.k_Diamond;
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeCart = new Panel_Controls.DarkMode(this.ChangeDarkMode);
-            
+            UpdateData();
         }
 
         private void ShowDetail()
@@ -65,7 +71,8 @@ namespace Internal_Society
 
         public void ChangeDarkMode()
         {
-            panel1.BackColor = panel2.BackColor = App_Status.backPanelColor;
+            panel1.BackColor = panel2.BackColor = panel3.BackColor = App_Status.backPanelColor;
+            lb_Diamond.ForeColor = lb_Gold.ForeColor = App_Status.textColor;
         }
 
         private void Timer_GetSticker_Tick(object sender, EventArgs e)

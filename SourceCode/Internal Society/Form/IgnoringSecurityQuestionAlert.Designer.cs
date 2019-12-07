@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IgnoringSecurityQuestionAlert));
             this.elipseIgnoring = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGiveBack = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnSkip = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnGiveBack = new Bunifu.Framework.UI.BunifuTileButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,27 +53,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 38);
             this.panel1.TabIndex = 0;
-            // 
-            // btnGiveBack
-            // 
-            this.btnGiveBack.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnGiveBack.color = System.Drawing.Color.SeaGreen;
-            this.btnGiveBack.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.btnGiveBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGiveBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnGiveBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiveBack.ForeColor = System.Drawing.Color.White;
-            this.btnGiveBack.Image = ((System.Drawing.Image)(resources.GetObject("btnGiveBack.Image")));
-            this.btnGiveBack.ImagePosition = 14;
-            this.btnGiveBack.ImageZoom = 50;
-            this.btnGiveBack.LabelPosition = 30;
-            this.btnGiveBack.LabelText = "Give me back";
-            this.btnGiveBack.Location = new System.Drawing.Point(0, 0);
-            this.btnGiveBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnGiveBack.Name = "btnGiveBack";
-            this.btnGiveBack.Size = new System.Drawing.Size(154, 38);
-            this.btnGiveBack.TabIndex = 0;
-            this.btnGiveBack.Click += new System.EventHandler(this.BtnGiveBack_Click);
             // 
             // btnSkip
             // 
@@ -95,6 +74,27 @@
             this.btnSkip.Size = new System.Drawing.Size(154, 38);
             this.btnSkip.TabIndex = 1;
             this.btnSkip.Click += new System.EventHandler(this.BtnSkip_Click);
+            // 
+            // btnGiveBack
+            // 
+            this.btnGiveBack.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnGiveBack.color = System.Drawing.Color.SeaGreen;
+            this.btnGiveBack.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.btnGiveBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGiveBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnGiveBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiveBack.ForeColor = System.Drawing.Color.White;
+            this.btnGiveBack.Image = ((System.Drawing.Image)(resources.GetObject("btnGiveBack.Image")));
+            this.btnGiveBack.ImagePosition = 14;
+            this.btnGiveBack.ImageZoom = 50;
+            this.btnGiveBack.LabelPosition = 30;
+            this.btnGiveBack.LabelText = "Give me back";
+            this.btnGiveBack.Location = new System.Drawing.Point(0, 0);
+            this.btnGiveBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGiveBack.Name = "btnGiveBack";
+            this.btnGiveBack.Size = new System.Drawing.Size(154, 38);
+            this.btnGiveBack.TabIndex = 0;
+            this.btnGiveBack.Click += new System.EventHandler(this.BtnGiveBack_Click);
             // 
             // label1
             // 

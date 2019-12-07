@@ -1095,5 +1095,14 @@
   <ItemGroup>
     <None Include="Resources\back_to_96px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold_bars_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

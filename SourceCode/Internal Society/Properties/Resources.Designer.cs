@@ -323,6 +323,16 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diamond {
+            get {
+                object obj = ResourceManager.GetObject("diamond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap done_001 {
             get {
                 object obj = ResourceManager.GetObject("done_001", resourceCulture);
@@ -586,6 +596,26 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap foxie_019 {
             get {
                 object obj = ResourceManager.GetObject("foxie_019", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gold {
+            get {
+                object obj = ResourceManager.GetObject("gold", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gold_bars_96px {
+            get {
+                object obj = ResourceManager.GetObject("gold_bars_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
