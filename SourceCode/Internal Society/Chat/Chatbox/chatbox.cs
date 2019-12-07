@@ -9,10 +9,12 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Web.Script.Serialization;
 using xNet;
+using System.Text;
+using System.Net.Http;
 
 namespace Internal_Society
 {
-    
+
     public partial class chatbox : UserControl
     {
         #region Define Variable
@@ -26,6 +28,7 @@ namespace Internal_Society
         bool isReceiveFromMe = true;
         private static int sequenceSticker = -1;
         Internal_Society.loading loading = new Internal_Society.loading();
+        public static readonly HttpClient client = new HttpClient();
         #endregion
 
         public chatbox()
@@ -138,9 +141,10 @@ namespace Internal_Society
 
         public async void PushMessageAsync(string message_Type, string message_Detail)
         {
-            messIndex++;
+            /*messIndex++;
+            message_Detail = MaHoa.EncryptDecrypt2(message_Detail,App_Status.keyKun);
             var urlPushData = App_Status.urlAPI + "c_Message/Add_Conversation_Message/" + id_conversation + "/" + User_Info.k_ID +
-                "/" + message_Type + "/" + message_Detail;
+                "/" + message_Type + "?data=" + message_Detail;
             try
             {
                 Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlPushData); });
@@ -152,7 +156,21 @@ namespace Internal_Society
             catch
             {
                 MessageBox.Show("Connection Error");
-            }
+            }*/
+
+            message_Detail = MaHoa.EncryptDecrypt2(message_Detail, App_Status.keyKun);
+            var values = new Dictionary<string, string>
+                {
+                    { "data", message_Detail },
+                };
+            var urlPushData = App_Status.urlAPI + "c_Message/Add_Conversation_Message/" + id_conversation + "/" + User_Info.k_ID +
+                "/" + message_Type;
+
+            var content = new System.Net.Http.FormUrlEncodedContent(values);
+
+            var response = await client.PostAsync(urlPushData, content);
+
+            var responseString = await response.Content.ReadAsStringAsync();
 
         }
 
@@ -175,6 +193,11 @@ namespace Internal_Society
             if (!dMess.success) return;
             for (int i = dMess.data.Count - 1; i >= 0; i--)
             {
+                if (dMess.data[i].message_Type != "2")
+                    dMess.data[i].message_Detail = MaHoa.EncryptDecrypt2(dMess.data[i].message_Detail.ToString(), App_Status.keyKun);
+
+
+
                 if (Convert.ToInt32(dMess.data[i].message_ID) > messIndex) messIndex = Convert.ToInt32(dMess.data[i].message_ID);
 
                 if (dMess.data[i].user_ID == User_Info.k_ID)
@@ -195,11 +218,11 @@ namespace Internal_Society
 
             }
             //TimeRequest.Start();
-            
+
             isReceiveFromMe = false;
         }
 
-        
+
 
         public async void GetMessageAsync()
         {
@@ -210,6 +233,10 @@ namespace Internal_Society
                 // await
                 string result = await getStringTask;
                 loading.Visible = false;
+
+                byte[] bytes = Encoding.Default.GetBytes(result);
+                result = Encoding.UTF8.GetString(bytes);
+
                 ProccessData(result);
             }
             catch
@@ -219,8 +246,8 @@ namespace Internal_Society
 
         }
 
-        
-        
+
+
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
@@ -237,7 +264,7 @@ namespace Internal_Society
             Time_Sticker.Start();
             if (!pn_Sticker.IsDisposed)
             {
-                if(sequenceSticker != ListSticker.Sequence)
+                if (sequenceSticker != ListSticker.Sequence)
                 {
                     pn_Sticker.Close();
                     pn_Sticker = new Panel_Sticker();

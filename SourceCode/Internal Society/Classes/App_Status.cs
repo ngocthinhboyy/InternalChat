@@ -17,6 +17,8 @@ namespace Internal_Society
 
         public static int time_delay = 1500;
 
+        public static string keyKun = "thinh phuong toan";
+
 
         public static string urlAPI = "https://kunbr0.com/it008b/";
         public static string urlLocalResources = "../../Resources\\";
@@ -27,7 +29,7 @@ namespace Internal_Society
         public static int RedTabChat = 23;
         public static int GreenTabChat = 23;
         public static int BlueTabChat = 23;
-        public static Color backFormColor = Color.FromArgb(42,42,49);
+        public static Color backFormColor = Color.FromArgb(42, 42, 49);
         public static Color backPanelColor;
         public static Color textColor;
         public static string iconDashboard;

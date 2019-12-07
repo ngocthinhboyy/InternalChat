@@ -101,6 +101,7 @@
     <Compile Include="Form\LogOutConfirmation.Designer.cs">
       <DependentUpon>LogOutConfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaHoa.cs" />
     <Compile Include="Notification\Notification_AddFriend.cs">
       <SubType>UserControl</SubType>
     </Compile>
