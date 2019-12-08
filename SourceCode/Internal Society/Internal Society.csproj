@@ -81,18 +81,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileUpload.cs" />
-    <Compile Include="fileView.cs">
+    <Compile Include="Classes\FileUpload.cs" />
+    <Compile Include="Form\fileView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fileView.Designer.cs">
+    <Compile Include="Form\fileView.Designer.cs">
       <DependentUpon>fileView.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListSticker.cs" />
-    <Compile Include="loading.cs">
+    <Compile Include="Classes\ListSticker.cs" />
+    <Compile Include="Panel_Controls\loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="loading.Designer.cs">
+    <Compile Include="Panel_Controls\loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\LogOutConfirmation.cs">
@@ -101,7 +101,7 @@
     <Compile Include="Form\LogOutConfirmation.Designer.cs">
       <DependentUpon>LogOutConfirmation.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaHoa.cs" />
+    <Compile Include="Classes\MaHoa.cs" />
     <Compile Include="Notification\Notification_AddFriend.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -279,13 +279,13 @@
     </Compile>
     <Compile Include="Search\userSearchInfo.cs" />
     <Compile Include="Classes\User_Info.cs" />
-    <EmbeddedResource Include="fileView.resx">
+    <EmbeddedResource Include="Form\fileView.resx">
       <DependentUpon>fileView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loading.resx">
+    <EmbeddedResource Include="Panel_Controls\loading.resx">
       <DependentUpon>loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notification\Notification_AddFriend.resx">
@@ -1103,6 +1103,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled_circle_60px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

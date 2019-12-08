@@ -37,7 +37,7 @@
             // pb_Avatar
             // 
             this.pb_Avatar.Image = global::Internal_Society.Properties.Resources.user_001;
-            this.pb_Avatar.Location = new System.Drawing.Point(29, 18);
+            this.pb_Avatar.Location = new System.Drawing.Point(30, 36);
             this.pb_Avatar.Name = "pb_Avatar";
             this.pb_Avatar.Size = new System.Drawing.Size(70, 70);
             this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -48,7 +48,7 @@
             // 
             this.lb_Fullname.AutoSize = true;
             this.lb_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Fullname.Location = new System.Drawing.Point(116, 18);
+            this.lb_Fullname.Location = new System.Drawing.Point(117, 36);
             this.lb_Fullname.Name = "lb_Fullname";
             this.lb_Fullname.Size = new System.Drawing.Size(103, 20);
             this.lb_Fullname.TabIndex = 11;
@@ -59,7 +59,7 @@
             this.lb_More.AutoSize = true;
             this.lb_More.Font = new System.Drawing.Font("Segoe UI Semibold", 9.818182F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_More.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lb_More.Location = new System.Drawing.Point(117, 46);
+            this.lb_More.Location = new System.Drawing.Point(118, 64);
             this.lb_More.Name = "lb_More";
             this.lb_More.Size = new System.Drawing.Size(280, 19);
             this.lb_More.TabIndex = 11;
@@ -74,9 +74,9 @@
             this.Controls.Add(this.pb_Avatar);
             this.Controls.Add(this.lb_More);
             this.Controls.Add(this.lb_Fullname);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Notification_AcceptFriend";
-            this.Size = new System.Drawing.Size(598, 108);
+            this.Size = new System.Drawing.Size(598, 141);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

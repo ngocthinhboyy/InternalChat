@@ -14,14 +14,15 @@ namespace Internal_Society.Panel_Controls
     public partial class tabProfileInfo : UserControl
     {
         string k_user_id;
-        DateTime birthday = DateTime.Parse("2005-5-22");
+        DateTime birthday = DateTime.Parse("2005-05-22");
+        //MessageBox.Show(User_Info.k_Birthday);
         //DateTime birthday = DateTime.Parse(User_Info.k_Birthday);
         public tabProfileInfo()
         {
 
             InitializeComponent();
-            
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeProfileInfo = new Panel_Controls.DarkMode(this.ChangeDarkMode);
+           
 
             k_user_id = User_Info.k_ID;
             txt_Profile_Name.Text = User_Info.k_Fullname;
@@ -63,6 +64,8 @@ namespace Internal_Society.Panel_Controls
             txt_Profile_Birthday.Text = dateTime.Value.Year.ToString() + "-" + dateTime.Value.Month.ToString() + "-" + dateTime.Value.Day.ToString();
         }
 
+
+
         private void BtnEditPhoto_Click(object sender, EventArgs e)
         {
             FileUpload fu = new FileUpload(App_Status.urlUpload, "-1");
@@ -70,6 +73,7 @@ namespace Internal_Society.Panel_Controls
             {
                 pb_Avatar.ImageLocation = fu.FilePath;
             }
+            User_Info.k_Avatar = fu.FilePath;
         }
 
         private void BtnEditInfo_Click(object sender, EventArgs e)

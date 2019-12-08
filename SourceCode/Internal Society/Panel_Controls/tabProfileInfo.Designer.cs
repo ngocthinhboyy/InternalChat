@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabProfileInfo));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            this.btnEditPhoto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pb_Avatar = new System.Windows.Forms.PictureBox();
-            this.btnEditInfo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txt_Profile_Name = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Birthday = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Gender = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -47,41 +45,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnEditPhoto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnEditInfo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnEditPhoto
-            // 
-            this.btnEditPhoto.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditPhoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditPhoto.BackgroundImage")));
-            this.btnEditPhoto.ButtonText = "Edit Photo";
-            this.btnEditPhoto.ButtonTextMarginLeft = 0;
-            this.btnEditPhoto.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnEditPhoto.DisabledFillColor = System.Drawing.Color.Gray;
-            this.btnEditPhoto.DisabledForecolor = System.Drawing.Color.White;
-            this.btnEditPhoto.ForeColor = System.Drawing.Color.White;
-            this.btnEditPhoto.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEditPhoto.IconPadding = 10;
-            this.btnEditPhoto.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEditPhoto.IdleBorderColor = System.Drawing.Color.DeepPink;
-            this.btnEditPhoto.IdleBorderRadius = 35;
-            this.btnEditPhoto.IdleBorderThickness = 0;
-            this.btnEditPhoto.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
-            this.btnEditPhoto.IdleIconLeftImage = null;
-            this.btnEditPhoto.IdleIconRightImage = null;
-            this.btnEditPhoto.Location = new System.Drawing.Point(30, 233);
-            this.btnEditPhoto.Name = "btnEditPhoto";
-            stateProperties1.BorderColor = System.Drawing.Color.DeepPink;
-            stateProperties1.BorderRadius = 35;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.DeepPink;
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnEditPhoto.onHoverState = stateProperties1;
-            this.btnEditPhoto.Size = new System.Drawing.Size(159, 35);
-            this.btnEditPhoto.TabIndex = 1;
-            this.btnEditPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditPhoto.Click += new System.EventHandler(this.BtnEditPhoto_Click);
             // 
             // pb_Avatar
             // 
@@ -91,40 +58,6 @@
             this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Avatar.TabIndex = 0;
             this.pb_Avatar.TabStop = false;
-            // 
-            // btnEditInfo
-            // 
-            this.btnEditInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEditInfo.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditInfo.BackgroundImage")));
-            this.btnEditInfo.ButtonText = "Edit Information";
-            this.btnEditInfo.ButtonTextMarginLeft = 0;
-            this.btnEditInfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnEditInfo.DisabledFillColor = System.Drawing.Color.Gray;
-            this.btnEditInfo.DisabledForecolor = System.Drawing.Color.White;
-            this.btnEditInfo.ForeColor = System.Drawing.Color.White;
-            this.btnEditInfo.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEditInfo.IconPadding = 10;
-            this.btnEditInfo.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnEditInfo.IdleBorderColor = System.Drawing.Color.DeepPink;
-            this.btnEditInfo.IdleBorderRadius = 35;
-            this.btnEditInfo.IdleBorderThickness = 0;
-            this.btnEditInfo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
-            this.btnEditInfo.IdleIconLeftImage = null;
-            this.btnEditInfo.IdleIconRightImage = null;
-            this.btnEditInfo.Location = new System.Drawing.Point(371, 409);
-            this.btnEditInfo.Name = "btnEditInfo";
-            stateProperties2.BorderColor = System.Drawing.Color.DeepPink;
-            stateProperties2.BorderRadius = 35;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.DeepPink;
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnEditInfo.onHoverState = stateProperties2;
-            this.btnEditInfo.Size = new System.Drawing.Size(176, 35);
-            this.btnEditInfo.TabIndex = 2;
-            this.btnEditInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditInfo.Click += new System.EventHandler(this.BtnEditInfo_Click);
             // 
             // txt_Profile_Name
             // 
@@ -486,11 +419,82 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Status";
             // 
+            // btnEditPhoto
+            // 
+            this.btnEditPhoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditPhoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditPhoto.BackgroundImage")));
+            this.btnEditPhoto.ButtonText = "Edit Photo";
+            this.btnEditPhoto.ButtonTextMarginLeft = 0;
+            this.btnEditPhoto.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnEditPhoto.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btnEditPhoto.DisabledForecolor = System.Drawing.Color.White;
+            this.btnEditPhoto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditPhoto.ForeColor = System.Drawing.Color.White;
+            this.btnEditPhoto.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEditPhoto.IconPadding = 10;
+            this.btnEditPhoto.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEditPhoto.IdleBorderColor = System.Drawing.Color.DeepPink;
+            this.btnEditPhoto.IdleBorderRadius = 35;
+            this.btnEditPhoto.IdleBorderThickness = 2;
+            this.btnEditPhoto.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
+            this.btnEditPhoto.IdleIconLeftImage = null;
+            this.btnEditPhoto.IdleIconRightImage = null;
+            this.btnEditPhoto.Location = new System.Drawing.Point(30, 236);
+            this.btnEditPhoto.Name = "btnEditPhoto";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.BorderRadius = 35;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnEditPhoto.onHoverState = stateProperties1;
+            this.btnEditPhoto.Size = new System.Drawing.Size(159, 45);
+            this.btnEditPhoto.TabIndex = 18;
+            this.btnEditPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditPhoto.Click += new System.EventHandler(this.BtnEditPhoto_Click);
+            // 
+            // btnEditInfo
+            // 
+            this.btnEditInfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEditInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditInfo.BackgroundImage")));
+            this.btnEditInfo.ButtonText = "Edit Information";
+            this.btnEditInfo.ButtonTextMarginLeft = 0;
+            this.btnEditInfo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnEditInfo.DisabledFillColor = System.Drawing.Color.Gray;
+            this.btnEditInfo.DisabledForecolor = System.Drawing.Color.White;
+            this.btnEditInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditInfo.ForeColor = System.Drawing.Color.White;
+            this.btnEditInfo.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEditInfo.IconPadding = 10;
+            this.btnEditInfo.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEditInfo.IdleBorderColor = System.Drawing.Color.DeepPink;
+            this.btnEditInfo.IdleBorderRadius = 35;
+            this.btnEditInfo.IdleBorderThickness = 2;
+            this.btnEditInfo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(48)))), ((int)(((byte)(69)))));
+            this.btnEditInfo.IdleIconLeftImage = null;
+            this.btnEditInfo.IdleIconRightImage = null;
+            this.btnEditInfo.Location = new System.Drawing.Point(389, 404);
+            this.btnEditInfo.Name = "btnEditInfo";
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties2.BorderRadius = 35;
+            stateProperties2.BorderThickness = 2;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnEditInfo.onHoverState = stateProperties2;
+            this.btnEditInfo.Size = new System.Drawing.Size(159, 45);
+            this.btnEditInfo.TabIndex = 19;
+            this.btnEditInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditInfo.Click += new System.EventHandler(this.BtnEditInfo_Click);
+            // 
             // tabProfileInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnEditInfo);
+            this.Controls.Add(this.btnEditPhoto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -504,8 +508,6 @@
             this.Controls.Add(this.txt_Profile_Gender);
             this.Controls.Add(this.txt_Profile_Birthday);
             this.Controls.Add(this.txt_Profile_Name);
-            this.Controls.Add(this.btnEditInfo);
-            this.Controls.Add(this.btnEditPhoto);
             this.Controls.Add(this.pb_Avatar);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "tabProfileInfo";
@@ -519,8 +521,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pb_Avatar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditPhoto;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditInfo;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Name;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Birthday;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Gender;
@@ -534,5 +534,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditPhoto;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditInfo;
     }
 }

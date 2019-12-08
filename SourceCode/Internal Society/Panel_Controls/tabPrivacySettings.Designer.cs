@@ -185,6 +185,7 @@
             toggleState6.BorderThicknessInner = 1;
             this.ActiveStatusSwitch.ToggleStateOn = toggleState6;
             this.ActiveStatusSwitch.Value = true;
+            this.ActiveStatusSwitch.OnValuechange += new System.EventHandler(this.ActiveStatusSwitch_OnValuechange);
             // 
             // panel1
             // 

@@ -63,11 +63,16 @@ namespace Internal_Society
             activeStatus.Text = this.userStatus;
             TimeSpan span = DateTime.Now.Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc));
             int time = (int)span.TotalSeconds;
-
             string sStatus = "";
-            
-            if (time - this.userLastLogin < 60) { sStatus = "Online"; onlineStatus(); }
-            else { sStatus = (time - this.userLastLogin) / 60 + " minutes ago"; offlineStatus(); }
+            if(Internal_Society.Panel_Controls.tabPrivacySettings.activeStatus == true)
+            {
+                if (time - this.userLastLogin < 60) { sStatus = "Online"; onlineStatus(); }
+                else { sStatus = (time - this.userLastLogin) / 60 + " minutes ago"; offlineStatus(); }
+            }
+            else
+            {
+                sStatus = "";
+            }
             activeStatus.Text = sStatus;
         }
 

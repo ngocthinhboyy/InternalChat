@@ -65,8 +65,8 @@ namespace Internal_Society
         private void Btn_Accept1_Click(object sender, EventArgs e)
         {
             AcceptFriendAsync();
-            App_Status.notification--;
-            Panel_Notification.delegateNoti();
+            //App_Status.notification--;
+            //Panel_Notification.delegateNoti();
             disableButton();
         }
 
@@ -74,8 +74,8 @@ namespace Internal_Society
         private void Btn_Remove1_Click(object sender, EventArgs e)
         {
             RemoveFriendAsync();
-            App_Status.notification--;
-            Panel_Notification.delegateNoti();
+            //App_Status.notification--;
+            //Panel_Notification.delegateNoti();
             disableButton();
         }
     }

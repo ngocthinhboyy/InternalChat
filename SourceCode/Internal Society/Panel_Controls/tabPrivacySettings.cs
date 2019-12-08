@@ -20,6 +20,7 @@ namespace Internal_Society.Panel_Controls
         public static DarkMode delegateChangeCart;
         public static DarkMode delegateChangeGames;
         public static DarkMode delegateChangeSearch;
+        public static bool activeStatus = true;
 
         public tabPrivacySettings()
         {
@@ -73,6 +74,19 @@ namespace Internal_Society.Panel_Controls
             LogOutConfirmation logOutConfirmation = new LogOutConfirmation();
             logOutConfirmation.StartPosition = FormStartPosition.CenterScreen;
             logOutConfirmation.Show();
+            
+        }
+
+        private void ActiveStatusSwitch_OnValuechange(object sender, EventArgs e)
+        {
+            if( ActiveStatusSwitch.Value == true)
+            {
+                activeStatus = true;
+            }
+            else
+            {
+                activeStatus = false;
+            }
         }
     }
 }

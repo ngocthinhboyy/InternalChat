@@ -18,27 +18,26 @@ namespace Internal_Society
     {
         public static List<UserControl> ListPanel = new List<UserControl>();
         public static List<UserControl> ListChat = new List<UserControl>();
-        
+        public static string searchInfo = "";
+        string searchInfoLast = "";
         Color activeTabChat = Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat);
         Color inactiveTabChat = Color.Transparent;
-
         Internal_Society.Panel_Dashboard panel_Dashboard = new Internal_Society.Panel_Dashboard();
-        //Internal_Society.Panel_Chat panel_Chat = new Internal_Society.Panel_Chat(1);
         Internal_Society.Panel_Profile panel_Profile = new Internal_Society.Panel_Profile();
         Internal_Society.Panel_Cart panel_Cart = new Internal_Society.Panel_Cart();
         Internal_Society.Panel_Notification panel_Calendar = new Internal_Society.Panel_Notification();
         Internal_Society.Panel_Games panel_Games = new Internal_Society.Panel_Games();
-        //Internal_Society.Panel_Settings panel_Settings = new Internal_Society.Panel_Settings();
         Internal_Society.Panel_Search panel_Search1 = new Internal_Society.Panel_Search();
-
+        public static bool isClickedNotiTab = false;
         public HomePage()
         {
             InitializeComponent();
+            LoginForm.isClick = false;
+            LogOutConfirmation.delegateCloseHomePage = new CloseHomePage(this.closeHomePage);
             Internal_Society.Panel_Notification.delegateNoti = new Notification(this.Noti);
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeHomePage = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             this.StartPosition = FormStartPosition.CenterScreen;
             label_Fullname.Text = User_Info.k_Fullname;
-
             panel_Dashboard.Dock = DockStyle.Fill;
             //panel_Chat.Dock = DockStyle.Fill;
             panel_Profile.Dock = DockStyle.Fill;
@@ -68,6 +67,10 @@ namespace Internal_Society
             this.onlineList1.FriendClicked += FriendClicked;
 
             ListSticker.getSticker();
+        }
+        public void closeHomePage()
+        {
+            this.Close();
         }
         public void ChangeDarkMode()
         {
@@ -101,23 +104,19 @@ namespace Internal_Society
         }
         public void Noti()
         {
-            if (App_Status.notification != 0)
+            if (App_Status.notification > 0)
             {
                 lbl_Noti.Visible = true;
                 lbl_Noti.Text = App_Status.notification.ToString();
                 pictureBox2.Visible = true;
-                //MessageBox.Show(App_Status.notification.ToString());
-                //lbl_Noti.Text = "h";
+                isClickedNotiTab = false;
             }
             else
             {
                 pictureBox2.Visible = false;
-
-                //lbl_Noti.Text = App_Status.notification.ToString();
                 lbl_Noti.Visible = false;
             }
         }
-
         private void FriendClicked(object sender, EventArgs e)
         {
             
@@ -152,7 +151,6 @@ namespace Internal_Society
 
             
         }
-
         public void Update_App_Status()
         {
             App_Status.HomePage_Left = this.Left;
@@ -160,8 +158,6 @@ namespace Internal_Society
             App_Status.HomePage_Width = this.Width;
             App_Status.HomePage_Height = this.Height;
         }
-
-
         void TurnOffPanel()
         {
             foreach(var pnl in ListPanel)
@@ -175,8 +171,6 @@ namespace Internal_Society
                 
             }
         }
-
-        
         void TurnOffTabChat()
         {
             foreach(var tabchat in onlineList1.Controls)
@@ -189,13 +183,11 @@ namespace Internal_Society
                 
             }
         }
-
         void MoveIndicator(Control control)
         {
             indicator.Top = control.Top;
             indicator.Height = control.Height;
         }
-
         private void Tab_DashBoard_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
@@ -203,8 +195,11 @@ namespace Internal_Society
             bunifuTransition1.ShowSync(panel_Dashboard);
             //panel_Dashboard.Visible = true;
             App_Status.time_delay = 10000;
+            if (isClickedNotiTab == false)
+            {
+                Noti();
+            }
         }
-
         private void Tab_Profile_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
@@ -212,11 +207,15 @@ namespace Internal_Society
             bunifuTransition2.ShowSync(panel_Profile);
             //panel_Profile.Visible = true;
             App_Status.time_delay = 10000;
-        }
+            if (isClickedNotiTab == false)
+            {
+                Noti();
+            }
+            
 
+        }
         private void Tab_Chat_Click(object sender, EventArgs e)
         {
-            
             MoveIndicator((Control)sender);
             TurnOffPanel();
             lbl_Noti.Visible = false;
@@ -237,7 +236,6 @@ namespace Internal_Society
             btnBack.Visible = true;
             btn_create_new.Visible = false;
         }
-
         private void Tab_Cart_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
@@ -245,9 +243,12 @@ namespace Internal_Society
             bunifuTransition3.ShowSync(panel_Cart);
             //panel_Cart.Visible = true;
             App_Status.time_delay = 10000;
+            if(isClickedNotiTab == false)
+            {
+                Noti();
+            }
 
         }
-
         private void Tab_Notification_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
@@ -255,8 +256,13 @@ namespace Internal_Society
             bunifuTransition4.ShowSync(panel_Calendar);
             //panel_Calendar.Visible = true;
             App_Status.time_delay = 10000;
+            isClickedNotiTab = true;
+            App_Status.notification = 0;
+            string urlRequest = App_Status.urlAPI + "c_User/Edit/" + User_Info.k_ID + "/lastNotification/" + Panel_Notification.lastNoti;
+            //MessageBox.Show(urlRequest);
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
+            Noti();
         }
-
         private void Tab_Games_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
@@ -264,41 +270,32 @@ namespace Internal_Society
             bunifuTransition5.ShowSync(panel_Games);
             //panel_Games.Visible = true;
             App_Status.time_delay = 10000;
-
-
+            if (isClickedNotiTab == false)
+            {
+                Noti();
+            }
         }
-
         private void HomePage_Resize(object sender, EventArgs e)
         {
             Update_App_Status();
         }
-
         private void HomePage_Move(object sender, EventArgs e)
         {
             Update_App_Status();
 
         }
-
-        
-        public static string searchInfo = "";
-        string searchInfoLast = "";
-       
         private void Picture_user_image_Click(object sender, EventArgs e)
         {
 
         }
-
-
         private void Btn_create_new_Click(object sender, EventArgs e)
         {
             
         }
-
         private void Textbox_Search_Leave_1(object sender, EventArgs e)
         {
             textbox_Search.Text = "Search...";
         }
-
         private void Textbox_Search_KeyUp(object sender, KeyEventArgs e)
         {
             TurnOffPanel();
@@ -317,12 +314,10 @@ namespace Internal_Society
                 searchInfoLast = searchInfo;
             }
         }
-
         private void Textbox_Search_Enter_1(object sender, EventArgs e)
         {
             textbox_Search.Text = "";
         }
-
         private void BtnBack_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)Tab_DashBoard);
@@ -339,17 +334,6 @@ namespace Internal_Society
             btnBack.Visible = false;
             btn_create_new.Visible = true;
         }
-
-
-
-
-
-
-
-
-
-
-
 
         // Function Profile CLick
 

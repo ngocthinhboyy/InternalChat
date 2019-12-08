@@ -106,7 +106,7 @@
             // 
             // tabProfileInfo1
             // 
-            this.tabProfileInfo1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabProfileInfo1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabProfileInfo1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.tabProfileInfo1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
@@ -119,7 +119,7 @@
             // 
             // tabPrivacySettings1
             // 
-            this.tabPrivacySettings1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabPrivacySettings1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabPrivacySettings1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.tabPrivacySettings1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);

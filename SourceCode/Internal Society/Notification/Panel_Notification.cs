@@ -17,6 +17,7 @@ namespace Internal_Society
     {
         string data_notification = "";
         public static Notification delegateNoti;
+        public static string lastNoti;
         public Panel_Notification()
         {
             InitializeComponent();
@@ -44,18 +45,27 @@ namespace Internal_Society
             TimeRequest.Stop();
             TimeRequest.Start();
         }
-
         public void ShowNotification()
         {
             TimeRequest.Stop();
             TimeRequest.Start();
             List_Notification notiData = new JavaScriptSerializer().Deserialize<List_Notification>(data_notification);
+            //Count();
+            lastNoti = notiData.data[0].id;
             this.Controls.Clear();
             if (!notiData.success) return;
-
             int iTop = 10;
             int iLeft = 30;
             App_Status.notification = 0;
+            int dem = 1;
+            for (int i = notiData.data.Count - 1; i >=0 ; i--)
+            {
+                if (notiData.data[i].id.ToString() != User_Info.k_LastNoti)
+                {
+                    dem++;
+                }
+                else break;
+            }
             for (int i = notiData.data.Count - 1; i >= 0; i--)
             {
 
@@ -65,8 +75,6 @@ namespace Internal_Society
                     ntAddFriend.Anchor = AnchorStyles.Top;
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
-                    App_Status.notification++;
-                    
                     iTop = ntAddFriend.Bottom;
                 }
                 else if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "1")
@@ -76,16 +84,23 @@ namespace Internal_Society
                     ntAddFriend.Top = iTop + 20;
                     ntAddFriend.Anchor = AnchorStyles.Top;
                     this.Controls.Add(ntAddFriend);
-                    App_Status.notification++;
-                    
                     iTop = ntAddFriend.Bottom;
                 }
-
             }
-            //MessageBox.Show(App_Status.notification.ToString());
+            //MessageBox.Show(HomePage.isClickedNotiTab.ToString());
+            App_Status.notification = notiData.data.Count - dem;
             delegateNoti();
         }
-
+        //public void Count()
+        //{
+        //    foreach (Control x in this.Controls)
+        //    {
+        //        if (x is Notification_AcceptFriend || x is Notification_AddFriend)
+        //        {
+        //            lastNoti++;
+        //        }
+        //    }
+        //}
         private void TimeRequest_Tick(object sender, EventArgs e)
         {
             TimeRequest.Stop();

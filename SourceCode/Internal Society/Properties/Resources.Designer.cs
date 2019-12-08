@@ -373,6 +373,16 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap filled_circle_60px {
+            get {
+                object obj = ResourceManager.GetObject("filled_circle_60px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap font_awesome_4_7_0_circle_15_0_58de40_none {
             get {
                 object obj = ResourceManager.GetObject("font-awesome_4-7-0_circle_15_0_58de40_none", resourceCulture);
@@ -386,6 +396,16 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap font_awesome_4_7_0_square_90_0_ff0000_none {
             get {
                 object obj = ResourceManager.GetObject("font-awesome_4-7-0_square_90_0_ff0000_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap font_awesome_4_7_0_square_90_0_ff0000_none1 {
+            get {
+                object obj = ResourceManager.GetObject("font-awesome_4-7-0_square_90_0_ff0000_none1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1846,6 +1866,16 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap speech_bubble {
             get {
                 object obj = ResourceManager.GetObject("speech-bubble", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap square_64px {
+            get {
+                object obj = ResourceManager.GetObject("square_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

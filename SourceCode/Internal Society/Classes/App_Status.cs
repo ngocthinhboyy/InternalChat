@@ -17,7 +17,7 @@ namespace Internal_Society
 
         public static int time_delay = 1500;
 
-        public static string keyKun = "thinh phuong toan";
+        public static string keyKun = "1";
 
 
         public static string urlAPI = "https://kunbr0.com/it008b/";

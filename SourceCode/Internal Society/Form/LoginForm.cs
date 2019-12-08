@@ -12,10 +12,11 @@ namespace Internal_Society
 
     public partial class LoginForm : Form
     {
-
+        public static bool isClick;
         public LoginForm()
         {
             InitializeComponent();
+            isClick = false;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -45,7 +46,6 @@ namespace Internal_Society
             string urlRequest = App_Status.urlAPI + "c_User/Login/" + usernameLogin + "/" + passwordLogin;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             StatusButtonLogin_Process();
-
             // await
             string result = await getStringTask;
             dynamic data = JsonConvert.DeserializeObject(result);
@@ -76,6 +76,8 @@ namespace Internal_Society
             if (LoginStatus.Success == "1")
             {
                 // dang nhap thanh cong.
+                txtUsername.Text = "";
+                txtPassword.Text = "";
                 // define
                 User_Info.k_ID = LoginStatus.ID;
                 User_Info.k_Username = LoginStatus.Username.ToString();
@@ -89,14 +91,16 @@ namespace Internal_Society
                 User_Info.k_Status = LoginStatus.Status.ToString();
                 User_Info.k_Address = LoginStatus.Address.ToString();
                 User_Info.k_Avatar = LoginStatus.urlAvatar.ToString();
-
-
+                User_Info.k_LastNoti = LoginStatus.lastNotification.ToString();
                 // cho nguoi dung tien vao Homepage
-                
+
                 HomePage f1 = new HomePage();
                 this.Hide();
                 f1.ShowDialog();
-                this.Close();
+                if (isClick == false)
+                    this.Close();
+                else
+                    this.Show();
             }
             else
             {
