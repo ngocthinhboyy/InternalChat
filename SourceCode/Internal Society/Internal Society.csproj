@@ -1113,5 +1113,11 @@
   <ItemGroup>
     <None Include="Resources\kisspng-bamboo-wall-3d-film-mural-wallpaper-bamboo-5a92f976d0c422.8794907315195815588551.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading_002.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

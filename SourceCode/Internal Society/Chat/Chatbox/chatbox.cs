@@ -137,8 +137,8 @@ namespace Internal_Society
                 string kInput = txt_input.Text.ToString();
                 pMessage = txt_input.Text;
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-                addInMessage(User_Info.k_ID, "-1", "0", @pMessage, "now");
-                PushMessageAsync("0", pMessage);
+                addInMessage(User_Info.k_ID, "-1", "text", @pMessage, "now");
+                PushMessageAsync("text", pMessage);
                 txt_input.Text = "";
             }
         }
@@ -198,7 +198,7 @@ namespace Internal_Society
             if (!dMess.success) return;
             for (int i = dMess.data.Count - 1; i >= 0; i--)
             {
-                if (dMess.data[i].message_Type != "2")
+                if (dMess.data[i].message_Type != "image")
                     dMess.data[i].message_Detail = MaHoa.EncryptDecrypt2(dMess.data[i].message_Detail.ToString(), App_Status.keyKun);
 
 
@@ -256,7 +256,11 @@ namespace Internal_Society
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
-            
+            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation ,"otherFile");
+            if (fu.UploadFile("otherFile"))
+            {
+                addInMessage(User_Info.k_ID, "", "otherLocalFile", fu.FilePath, "");
+            }
         }
 
         Panel_Sticker pn_Sticker = new Panel_Sticker();
@@ -292,8 +296,8 @@ namespace Internal_Society
         public void AddSticker(string pSticker)
         {
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-                addInMessage(User_Info.k_ID, "-1", "1", pSticker, inputTime);
-                PushMessageAsync("1", pSticker);
+                addInMessage(User_Info.k_ID, "-1", "sticker", pSticker, inputTime);
+                PushMessageAsync("sticker", pSticker);
         }
 
         
@@ -316,10 +320,10 @@ namespace Internal_Society
 
         private void Button_Picture_Click(object sender, EventArgs e)
         {
-            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation);
-            if (fu.UploadFile())
+            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation, "image");
+            if (fu.UploadFile("image"))
             {
-                addInMessage(User_Info.k_ID, "", "5", fu.FilePath, "");
+                addInMessage(User_Info.k_ID, "", "localImage", fu.FilePath, "");
             }
         }
     }

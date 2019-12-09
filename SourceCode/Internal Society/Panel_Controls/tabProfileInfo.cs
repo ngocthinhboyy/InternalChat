@@ -70,8 +70,8 @@ namespace Internal_Society.Panel_Controls
 
         private void BtnEditPhoto_Click(object sender, EventArgs e)
         {
-            FileUpload fu = new FileUpload(App_Status.urlUpload, "-1");
-            if (fu.UploadFile())
+            FileUpload fu = new FileUpload(App_Status.urlUpload, "-1" ,"avatar");
+            if (fu.UploadFile("image"))
             {
                 pb_Avatar.ImageLocation = fu.FilePath;
             }

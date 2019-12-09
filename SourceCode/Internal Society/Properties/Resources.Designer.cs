@@ -973,17 +973,6 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kisspng_bamboo_wall_3d_film_mural_wallpaper_bamboo_5a92f976d0c422_8794907315195815588551 {
-            get {
-                object obj = ResourceManager.GetObject("kisspng-bamboo-wall-3d-film-mural-wallpaper-bamboo-5a92f976d0c422.879490731519581" +
-                        "5588551", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap L7Oxo_5clOa {
             get {
                 object obj = ResourceManager.GetObject("L7Oxo-5clOa", resourceCulture);
@@ -1007,6 +996,26 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap left_arrow {
             get {
                 object obj = ResourceManager.GetObject("left-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading {
+            get {
+                object obj = ResourceManager.GetObject("loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading_002 {
+            get {
+                object obj = ResourceManager.GetObject("loading_002", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using xNet;
+using System.IO;
+using System.Diagnostics;
 
 namespace Internal_Society
 {
@@ -45,8 +47,16 @@ namespace Internal_Society
 
 
             lb_message.Text = message_Detail.ToString();
+            if (message_Type == "otherFile" || message_Type == "otherLocalFile")
+            {
+                lb_message.Text = "<< Click to see attachment >>";
+                lb_message.Cursor = Cursors.Hand;
+                lb_message.Click += ViewOtherFile;
+                message_Type = "text";
+            }
             
-            if (message_Type == "0")
+
+            if (message_Type == "text")
             {
                 this.Width = lb_message.Width + 20;
             }
@@ -61,32 +71,35 @@ namespace Internal_Society
             lb_time.Text = message_Time;
             SetHeight();
             ChangeColorBubble();
-            if (message_Type != "0")
+
+            
+
+            if (message_Type != "text")
             {
                 isPicture = 1;
                 gradientPanel.Visible = false;
+                picture_sticker.Visible = true;
                 this.BackColor = Color.Transparent;
-                if (message_Type == "1")
+                if (message_Type == "sticker")
                 {
                     this.urlImage = App_Status.urlLocalResources + message_Detail;
                     picture_sticker.ImageLocation = this.urlImage;
                 }
-                else if (message_Type == "2")
+                else if (message_Type == "image")
                 {
                     this.urlImage = App_Status.urlImage + "/" + message_Type + "/" + message_Detail;
                     picture_sticker.ImageLocation = this.urlImage;
                     picture_sticker.Cursor = Cursors.Hand;
                     picture_sticker.Click += ViewImage;
                 }
-                else if (message_Type == "5")
+                else if (message_Type == "localImage")
                 {
                     urlImage = message_Detail;
                     picture_sticker.ImageLocation = urlImage;
                     picture_sticker.Cursor = Cursors.Hand;
                     picture_sticker.Click += ViewImage;
                 }
-
-                picture_sticker.Visible = true;
+               
             }
             /*SetHeight(isPicture);*/
         }
@@ -96,6 +109,35 @@ namespace Internal_Society
             fileView fV = new fileView(this.urlImage);
             fV.Show();
         }
+
+        void ViewOtherFile(object sender, EventArgs e)
+        {
+
+            System.IO.Directory.CreateDirectory("Download");
+            string fileName = "";
+            if (message_Type == "otherLocalFile")
+            {
+                fileName = message_Detail;
+            }
+            else
+            {
+                HttpRequest http = new HttpRequest();
+                http.ConnectTimeout = 99999999;
+                http.KeepAliveTimeout = 99999999;
+                http.ReadWriteTimeout = 99999999;
+
+                string urlFile = MaHoa.EncryptDecrypt2(message_Detail.ToString(), App_Status.keyKun);
+                var binImg = http.Get("https://kunbr0.com/it008b/c_View/file/3/" + urlFile).ToMemoryStream().ToArray();
+
+                fileName = "Download\\" + urlFile + ".txt";
+
+                File.WriteAllBytes(fileName, binImg);
+            }
+            
+
+            Process.Start(fileName);
+        }
+
 
         //lets add the function 
 
@@ -117,9 +159,9 @@ namespace Internal_Society
             }
             if (isPicture == 1)
             {
-                picture_sticker.Top = -10;
-                lb_time.Top = picture_sticker.Bottom + 10;
-                this.Height = picture_sticker.Bottom + 10;
+               // picture_sticker.Top = -10;
+                
+                this.Height = picture_sticker.Bottom;
                 //this.Width = picture_sticker.Width + 20;
                 //picture_sticker.Visible = true;
             }

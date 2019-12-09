@@ -10,18 +10,30 @@ namespace Internal_Society
     public class FileUpload
     {
         private string urlUpload;
-        private string id;
-        public string FilePath; 
-        public FileUpload(string urlUpload, string id)
+        private string pConversationID;
+        private string pType;
+        public string FilePath;
+        public FileUpload(string urlUpload, string id, string type)
         {
             this.urlUpload = urlUpload;
-            this.id = id;
+            this.pConversationID = id;
+            this.pType = type;
         }
 
-        public bool UploadFile()
+        public bool UploadFile(string type)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            switch (type)
+            {
+                case "image":
+                    dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+                    break;
+                case "otherFile":
+                    dialog.Filter = "Image files (*.txt) |  *.txt";
+                    break;
+            }
+
+
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 Task t = new Task(() => { UploadFileInChat(dialog.FileName); });
@@ -78,8 +90,8 @@ namespace Internal_Society
                 { new FileContent(path), "HinhAvatar", Path.GetFileName(path)}
             };
 
-            var html = UploadData(null, this.urlUpload + this.id +
-                "/" + User_Info.k_ID, data);
+            var html = UploadData(null, this.urlUpload + this.pConversationID +
+                "/" + this.pType + "/" + User_Info.k_ID, data);
 
 
         }
