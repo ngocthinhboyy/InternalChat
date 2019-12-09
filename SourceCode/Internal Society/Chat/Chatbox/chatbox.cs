@@ -29,6 +29,7 @@ namespace Internal_Society
         private static int sequenceSticker = -1;
         Internal_Society.loading loading = new Internal_Society.loading();
         public static readonly HttpClient client = new HttpClient();
+        
         #endregion
 
         public chatbox()
@@ -49,6 +50,10 @@ namespace Internal_Society
             //loading.Dock = DockStyle.Fill;
             loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
+
+
+            
+            
         }
         public void notifyChangeColor()
         {
@@ -132,7 +137,7 @@ namespace Internal_Society
                 string kInput = txt_input.Text.ToString();
                 pMessage = txt_input.Text;
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-                addInMessage(User_Info.k_ID, "-1", "0", pMessage, "now");
+                addInMessage(User_Info.k_ID, "-1", "0", @pMessage, "now");
                 PushMessageAsync("0", pMessage);
                 txt_input.Text = "";
             }
@@ -261,7 +266,8 @@ namespace Internal_Society
         Panel_Sticker pn_Sticker = new Panel_Sticker();
         private void Button_Sticker_Click(object sender, EventArgs e)
         {
-            Time_Sticker.Start();
+            Panel_Sticker.ExecuteDelegate = AddSticker;
+            
             if (!pn_Sticker.IsDisposed)
             {
                 if (sequenceSticker != ListSticker.Sequence)
@@ -281,26 +287,22 @@ namespace Internal_Society
         }
         private void Panel2_MouseClick(object sender, MouseEventArgs e)
         {
-            Time_Sticker.Stop();
+            
             pn_Sticker.Hide();
             pn_Color_Bubble.Hide();
         }
 
-        public void AddStickerFromQueue()
+
+        public void AddSticker(string pSticker)
         {
-            while (Queue_Sticker.data.Count() != 0)
-            {
                 string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-                pSticker = Queue_Sticker.data.Dequeue();
                 addInMessage(User_Info.k_ID, "-1", "1", pSticker, inputTime);
                 PushMessageAsync("1", pSticker);
-            }
         }
 
-        private void Time_Sticker_Tick(object sender, EventArgs e)
-        {
-            AddStickerFromQueue();
-        }
+        
+
+        
         Panel_Color_Bubble pn_Color_Bubble = new Panel_Color_Bubble();
 
         private void Button_More_Click(object sender, EventArgs e)

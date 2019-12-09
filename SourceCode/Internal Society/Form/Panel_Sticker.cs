@@ -5,9 +5,13 @@ using System.Windows.Forms;
 
 namespace Internal_Society
 {
+    public delegate void kVoidDelegate(string a);
+
     public partial class Panel_Sticker : Form
     {
         List <string> urlSticker = new List<string>();
+        public static kVoidDelegate ExecuteDelegate;
+        
 
         public int soCot = 3;
         public int marginRight = 30;
@@ -110,7 +114,6 @@ namespace Internal_Society
                 sticker st = new sticker(stickerName + index + "." + ext);
                 st.Left = kLeft;
                 st.Top = kTop;
-
                 panel1.Controls.Add(st);
                 
                 if (i % soCot == 0 && i / soCot > 0)
@@ -145,6 +148,9 @@ namespace Internal_Society
         {
             this.Hide();
         }
+
+
+        
     }
 
 

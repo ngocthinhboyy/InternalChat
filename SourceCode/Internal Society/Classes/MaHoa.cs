@@ -8,7 +8,21 @@ namespace Internal_Society
 {
     public class MaHoa
     {
-        public static string EncryptDecrypt2(string kunPlainText, string kunEncryptionKey)
+        public static string EncryptDecrypt2(string szPlainText, int szEncryptionKey)
+        {
+            StringBuilder szInputStringBuild = new StringBuilder(szPlainText);
+            StringBuilder szOutStringBuild = new StringBuilder(szPlainText.Length);
+            char Textch;
+            for (int iCount = 0; iCount < szPlainText.Length; iCount++)
+            {
+                Textch = szInputStringBuild[iCount];
+                Textch = (char)(Textch ^ szEncryptionKey);
+                szOutStringBuild.Append(Textch);
+            }
+            return szOutStringBuild.ToString();
+        }
+
+        public static string EncryptDecrypt1(string kunPlainText, string kunEncryptionKey)
         {
             StringBuilder kunInputStringBuild = new StringBuilder(kunPlainText);
             StringBuilder kunOutStringBuild = new StringBuilder(kunPlainText.Length);

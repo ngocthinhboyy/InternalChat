@@ -44,7 +44,8 @@ namespace Internal_Society
             #endregion
 
 
-            lb_message.Text = message_Detail;
+            lb_message.Text = message_Detail.ToString();
+            
             if (message_Type == "0")
             {
                 this.Width = lb_message.Width + 20;

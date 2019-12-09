@@ -43,7 +43,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.bubble2 = new Internal_Society.bubble();
             this.bubble1 = new Internal_Society.bubble();
-            this.Time_Sticker = new System.Windows.Forms.Timer(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TimeRequest = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -65,10 +64,9 @@
             this.panel1.Controls.Add(this.button_Attach);
             this.panel1.Controls.Add(this.button_Send);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 499);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 767);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(715, 66);
+            this.panel1.Size = new System.Drawing.Size(1192, 102);
             this.panel1.TabIndex = 3;
             // 
             // panel3
@@ -77,9 +75,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.txt_input);
-            this.panel3.Location = new System.Drawing.Point(245, 14);
+            this.panel3.Location = new System.Drawing.Point(408, 22);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(407, 36);
+            this.panel3.Size = new System.Drawing.Size(678, 55);
             this.panel3.TabIndex = 4;
             // 
             // txt_input
@@ -89,10 +88,9 @@
             this.txt_input.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txt_input.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_input.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_input.Location = new System.Drawing.Point(18, 0);
-            this.txt_input.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_input.Location = new System.Drawing.Point(30, 0);
             this.txt_input.Name = "txt_input";
-            this.txt_input.Size = new System.Drawing.Size(399, 36);
+            this.txt_input.Size = new System.Drawing.Size(665, 57);
             this.txt_input.TabIndex = 0;
             this.txt_input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox1_KeyDown);
             // 
@@ -102,10 +100,9 @@
             this.button_More.BackColor = System.Drawing.Color.Transparent;
             this.button_More.Image = global::Internal_Society.Properties.Resources.color_wheel_96px;
             this.button_More.ImageActive = null;
-            this.button_More.Location = new System.Drawing.Point(185, 4);
-            this.button_More.Margin = new System.Windows.Forms.Padding(2);
+            this.button_More.Location = new System.Drawing.Point(308, 6);
             this.button_More.Name = "button_More";
-            this.button_More.Size = new System.Drawing.Size(57, 55);
+            this.button_More.Size = new System.Drawing.Size(95, 85);
             this.button_More.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.button_More.TabIndex = 1;
             this.button_More.TabStop = false;
@@ -118,10 +115,9 @@
             this.button_Sticker.BackColor = System.Drawing.Color.Transparent;
             this.button_Sticker.Image = global::Internal_Society.Properties.Resources.bored_96px;
             this.button_Sticker.ImageActive = null;
-            this.button_Sticker.Location = new System.Drawing.Point(124, 4);
-            this.button_Sticker.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Sticker.Location = new System.Drawing.Point(207, 6);
             this.button_Sticker.Name = "button_Sticker";
-            this.button_Sticker.Size = new System.Drawing.Size(57, 55);
+            this.button_Sticker.Size = new System.Drawing.Size(95, 85);
             this.button_Sticker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.button_Sticker.TabIndex = 1;
             this.button_Sticker.TabStop = false;
@@ -134,10 +130,9 @@
             this.button_Picture.BackColor = System.Drawing.Color.Transparent;
             this.button_Picture.Image = global::Internal_Society.Properties.Resources.picture_200px;
             this.button_Picture.ImageActive = null;
-            this.button_Picture.Location = new System.Drawing.Point(63, 4);
-            this.button_Picture.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Picture.Location = new System.Drawing.Point(105, 6);
             this.button_Picture.Name = "button_Picture";
-            this.button_Picture.Size = new System.Drawing.Size(57, 55);
+            this.button_Picture.Size = new System.Drawing.Size(95, 85);
             this.button_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.button_Picture.TabIndex = 1;
             this.button_Picture.TabStop = false;
@@ -149,10 +144,9 @@
             this.button_Attach.BackColor = System.Drawing.Color.Transparent;
             this.button_Attach.Image = global::Internal_Society.Properties.Resources.attach_96px;
             this.button_Attach.ImageActive = null;
-            this.button_Attach.Location = new System.Drawing.Point(2, 4);
-            this.button_Attach.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Attach.Location = new System.Drawing.Point(3, 6);
             this.button_Attach.Name = "button_Attach";
-            this.button_Attach.Size = new System.Drawing.Size(57, 55);
+            this.button_Attach.Size = new System.Drawing.Size(95, 85);
             this.button_Attach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.button_Attach.TabIndex = 1;
             this.button_Attach.TabStop = false;
@@ -165,10 +159,9 @@
             this.button_Send.BackColor = System.Drawing.Color.Transparent;
             this.button_Send.Image = global::Internal_Society.Properties.Resources.send_001;
             this.button_Send.ImageActive = null;
-            this.button_Send.Location = new System.Drawing.Point(656, 4);
-            this.button_Send.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Send.Location = new System.Drawing.Point(1093, 6);
             this.button_Send.Name = "button_Send";
-            this.button_Send.Size = new System.Drawing.Size(57, 55);
+            this.button_Send.Size = new System.Drawing.Size(95, 85);
             this.button_Send.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.button_Send.TabIndex = 1;
             this.button_Send.TabStop = false;
@@ -185,9 +178,8 @@
             this.panel2.Controls.Add(this.bubble2);
             this.panel2.Controls.Add(this.bubble1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(715, 499);
+            this.panel2.Size = new System.Drawing.Size(1192, 768);
             this.panel2.TabIndex = 4;
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseClick);
             // 
@@ -198,11 +190,11 @@
             this.bubble2.AutoSize = true;
             this.bubble2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(147)))));
             this.bubble2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.bubble2.Location = new System.Drawing.Point(9, 11);
-            this.bubble2.Margin = new System.Windows.Forms.Padding(1);
-            this.bubble2.MaximumSize = new System.Drawing.Size(400, 0);
+            this.bubble2.Location = new System.Drawing.Point(15, 17);
+            this.bubble2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bubble2.MaximumSize = new System.Drawing.Size(667, 0);
             this.bubble2.Name = "bubble2";
-            this.bubble2.Size = new System.Drawing.Size(346, 80);
+            this.bubble2.Size = new System.Drawing.Size(577, 90);
             this.bubble2.TabIndex = 3;
             this.bubble2.Visible = false;
             // 
@@ -212,18 +204,13 @@
             this.bubble1.AutoSize = true;
             this.bubble1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(147)))));
             this.bubble1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
-            this.bubble1.Location = new System.Drawing.Point(367, 11);
-            this.bubble1.Margin = new System.Windows.Forms.Padding(1);
-            this.bubble1.MaximumSize = new System.Drawing.Size(400, 0);
+            this.bubble1.Location = new System.Drawing.Point(612, 17);
+            this.bubble1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bubble1.MaximumSize = new System.Drawing.Size(667, 0);
             this.bubble1.Name = "bubble1";
-            this.bubble1.Size = new System.Drawing.Size(331, 80);
+            this.bubble1.Size = new System.Drawing.Size(552, 90);
             this.bubble1.TabIndex = 2;
             this.bubble1.Visible = false;
-            // 
-            // Time_Sticker
-            // 
-            this.Time_Sticker.Interval = 50;
-            this.Time_Sticker.Tick += new System.EventHandler(this.Time_Sticker_Tick);
             // 
             // bunifuElipse1
             // 
@@ -238,13 +225,12 @@
             // 
             // chatbox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "chatbox";
-            this.Size = new System.Drawing.Size(715, 565);
+            this.Size = new System.Drawing.Size(1192, 869);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -270,7 +256,6 @@
         private Bunifu.Framework.UI.BunifuImageButton button_Sticker;
         private Bunifu.Framework.UI.BunifuImageButton button_Picture;
         private Bunifu.Framework.UI.BunifuImageButton button_Attach;
-        private System.Windows.Forms.Timer Time_Sticker;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Timer TimeRequest;
