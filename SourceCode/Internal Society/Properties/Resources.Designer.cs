@@ -253,6 +253,16 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_0021 {
+            get {
+                object obj = ResourceManager.GetObject("delete_0021", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_003 {
             get {
                 object obj = ResourceManager.GetObject("delete_003", resourceCulture);
@@ -956,6 +966,17 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap img_01 {
             get {
                 object obj = ResourceManager.GetObject("img-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_bamboo_wall_3d_film_mural_wallpaper_bamboo_5a92f976d0c422_8794907315195815588551 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-bamboo-wall-3d-film-mural-wallpaper-bamboo-5a92f976d0c422.879490731519581" +
+                        "5588551", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,6 +13,8 @@ namespace Internal_Society
     public partial class LoginForm : Form
     {
         public static bool isClick;
+        private bool mouseDown;
+        private Point lastLocation;
         public LoginForm()
         {
             InitializeComponent();
@@ -179,7 +181,29 @@ namespace Internal_Society
             else
                 this.Show();
         }
-        #endregion  
+        #endregion
 
+        private void BunifuGradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
+        }
+        private void BunifuGradientPanel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+        private void BunifuGradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

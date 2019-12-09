@@ -55,7 +55,9 @@ namespace Internal_Society.Panel_Controls
             txt_Profile_Gender.FillColor = txt_Profile_Name.FillColor = txt_Profile_Phone.FillColor
             = Color.FromArgb(255, App_Status.backFormColor.R, App_Status.backFormColor.G, App_Status.backFormColor.B);
 
-            label1.ForeColor = label2.ForeColor = label3.ForeColor = label4.ForeColor =
+            txt_Profile_Status.ForeColor = txt_Profile_Birthday.ForeColor = txt_Profile_Email.ForeColor =
+            txt_Profile_Gender.ForeColor = txt_Profile_Name.ForeColor = txt_Profile_Phone.ForeColor
+            = label1.ForeColor = label2.ForeColor = label3.ForeColor = label4.ForeColor =
             label5.ForeColor = label6.ForeColor = App_Status.textColor;
         }
         

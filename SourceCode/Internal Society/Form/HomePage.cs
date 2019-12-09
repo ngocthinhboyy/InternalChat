@@ -47,9 +47,7 @@ namespace Internal_Society
           //  panel_Settings.Dock = DockStyle.Fill;
             panel_Search1.Dock = DockStyle.Fill;
             //MessageBox.Show(App_Status.notification.ToString());
-
-            
-
+            //picture_user_image.ImageLocation = App_Status.urlImage + "/image/" + User_Info.k_Avatar;
             this.panel_Main.Controls.Add(panel_Dashboard);
             ListPanel.Add(panel_Dashboard);
             //this.panel_Main.Controls.Add(panel_Chat);
@@ -91,7 +89,7 @@ namespace Internal_Society
             Tab_Cart.Textcolor = Tab_Chat.Textcolor = Tab_DashBoard.Textcolor = Tab_Games.Textcolor
             = Tab_Notification.Textcolor = Tab_Profile.Textcolor = textbox_Search.ForeColor =
             textbox_Search.BorderColorIdle = textbox_Search.BorderColorHover = textbox_Search.BorderColorActive =
-            textbox_Search.BorderColorDisabled = App_Status.textColor;
+            textbox_Search.BorderColorDisabled = label_Fullname.ForeColor = App_Status.textColor;
             //Change color of icon
             Tab_DashBoard.Iconimage = Image.FromFile(App_Status.iconDashboard);
             Tab_Cart.Iconimage = Image.FromFile(App_Status.iconCart);
@@ -234,7 +232,7 @@ namespace Internal_Society
             //btn_create_new.Text = "Back to menu";
             onlineList1.ShowOnlineUser();
             btnBack.Visible = true;
-            btn_create_new.Visible = false;
+            //btn_create_new.Visible = false;
         }
         private void Tab_Cart_Click(object sender, EventArgs e)
         {
@@ -332,13 +330,8 @@ namespace Internal_Society
             Tab_Profile.Visible = true;
             indicator.Visible = true;
             btnBack.Visible = false;
-            btn_create_new.Visible = true;
+            //btn_create_new.Visible = true;
         }
-
-        // Function Profile CLick
-
-
-
 
     }
 }

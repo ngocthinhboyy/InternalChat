@@ -1110,5 +1110,8 @@
   <ItemGroup>
     <None Include="Resources\filled_circle_60px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-bamboo-wall-3d-film-mural-wallpaper-bamboo-5a92f976d0c422.8794907315195815588551.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

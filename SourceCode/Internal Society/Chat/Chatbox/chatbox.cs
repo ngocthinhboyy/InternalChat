@@ -256,11 +256,7 @@ namespace Internal_Society
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
-            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation);
-            if (fu.UploadFile())
-            {
-                addInMessage(User_Info.k_ID, "", "5", fu.FilePath, "");
-            }
+            
         }
 
         Panel_Sticker pn_Sticker = new Panel_Sticker();
@@ -316,6 +312,15 @@ namespace Internal_Society
             TimeRequest.Stop();
             GetMessageAsync();
 
+        }
+
+        private void Button_Picture_Click(object sender, EventArgs e)
+        {
+            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation);
+            if (fu.UploadFile())
+            {
+                addInMessage(User_Info.k_ID, "", "5", fu.FilePath, "");
+            }
         }
     }
 }
