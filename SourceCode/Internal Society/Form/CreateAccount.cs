@@ -17,6 +17,7 @@ namespace Internal_Society
 
         bool isPasswordInvalid = false;
         string usernameInDBStatus = "0";
+
         public CreateAccount()
         {
             InitializeComponent();
@@ -53,7 +54,7 @@ namespace Internal_Society
             {
                 lblNullPassword.Visible = false;
             }
-            if (txtPasswordCreate.Text != "" && txtUsernameCreate.Text != "" && usernameInDBStatus != "1" && isPasswordInvalid == true && txtRepassword.Text == txtPasswordCreate.Text)
+            if (txtPasswordCreate.Text != "" && txtUsernameCreate.Text != "" && usernameInDBStatus == "1" && isPasswordInvalid == true && txtRepassword.Text == txtPasswordCreate.Text)
             {
 
                 Reg_Info.reg_Username = txtUsernameCreate.Text;
@@ -85,8 +86,9 @@ namespace Internal_Society
         {
 
             var urlCheckUsername = "https://kunbr0.com/it008b/c_User/CheckExist/" + txtUsernameCreate.Text;
-            usernameInDBStatus = new WebClient().DownloadString(urlCheckUsername);
-
+            string data1 = new WebClient().DownloadString(urlCheckUsername);
+            dynamic data2 = JsonConvert.DeserializeObject(data1);
+            usernameInDBStatus = data2.Success;
 
             if (txtUsernameCreate.Text == "")
             {
@@ -94,13 +96,13 @@ namespace Internal_Society
                 lblExistedAlert.Visible = false;
                 lblNullUsername.Visible = true;
             }
-            else if (usernameInDBStatus == "1")
+            else if (usernameInDBStatus == "0")
             {
 
                 lblExistedAlert.Visible = true;
                 lblNullUsername.Visible = false;
             }
-            else
+            else if (usernameInDBStatus == "1")
             {
                 lblNullUsername.Visible = false;
                 lblExistedAlert.Visible = false;

@@ -17,15 +17,20 @@ namespace Internal_Society
     public partial class Panel_Search : UserControl
     {
         int page = 0;
+        List<int> ListUserID;
         public Panel_Search()
         {
             InitializeComponent();
+            ListUserID = new List<int>();
+            panel_Main.Controls.Clear();
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeSearch = new Panel_Controls.DarkMode(this.ChangeDarkMode);
         }
         public void ChangeDarkMode()
         {
             this.BackColor = App_Status.backFormColor;
         }
+
+
 
         public async void SearchUserAsync()
         {
@@ -37,23 +42,156 @@ namespace Internal_Society
             ProccessData(result);
         }
 
-        
+        public void LabelHuongDanSuDung()
+        {
+            label_Message.Text = "Please input some character to search !";
+            panel_Main.Visible = false;
+            label_Message.Visible = true;
+        }
+
+        public void ErrorNonUser()
+        {
+            label_Message.Text = "We could not find anything that matches your search.";
+            panel_Main.Visible = false;
+            label_Message.Visible = true;
+        }
+
         public void AddFriendInfo()
         {   // list dùng để lưu kết quả ứng với username mà người dùng search
-            label_Error.Visible = false;
-            string urlSearchUser = App_Status.urlAPI + "/c_User/Search/" + HomePage.searchInfo + "/" + page;
-
+            label_Message.Visible = false;
             SearchUserAsync();
+        }
+
+        private bool IsExistInList(List<int> kList, int a)
+        {
+            foreach (int item in kList)
+            {
+                if (item == a) return true;
+            }
+            return false;
         }
 
         private void ProccessData(string listUsers)
         {
+            
             ListSearchUser dSearchUser = new JavaScriptSerializer().Deserialize<ListSearchUser>(listUsers);
-            this.Controls.Clear();
-            //listUser không rỗng, nghĩa là tồn tại những user có username trùng với tên người dùng nhập
-            //thì sẽ chuyển chuỗi đó thành các đối tượng thuộc list
+
             if (dSearchUser.success)
             {
+                panel_Main.Visible = true;
+                friendInfo friend_last = new friendInfo();
+                friend_last.Height = 2;
+
+                foreach (Control item in panel_Main.Controls)
+                {
+                    if(item is friendInfo)
+                    {
+                        friendInfo fI = item as friendInfo;
+                        friend_last = fI;
+                    }
+                    
+                }
+
+                int CountExist = 0;
+                for (int i = 0; i < dSearchUser.data.Count(); i++)
+                {
+                    if (IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id))) CountExist++;
+                }
+
+                if (CountExist == ListUserID.Count && dSearchUser.data.Count() == ListUserID.Count)
+                {
+                    //MessageBox.Show("1");
+                    //MessageBox.Show(panel_Main.Visible.ToString());
+                    return;
+                }
+                else if (dSearchUser.data.Count() > ListUserID.Count)
+                {
+                    //MessageBox.Show("2");
+                    for (int i = 0; i < dSearchUser.data.Count(); i++)
+                    {
+                        if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)))
+                        {
+                            ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                            friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
+                            Convert.ToInt32(dSearchUser.data[i].user_id));
+                            friend.Left = (this.Width - friend.Width) / 2;
+                            friend.Top = friend_last.Bottom + 20;
+                            panel_Main.Controls.Add(friend);
+                            this.VerticalScroll.Value = this.VerticalScroll.Maximum;
+                            friend_last = friend;
+
+                        }
+                    }
+                }
+                else if (dSearchUser.data.Count() < ListUserID.Count)
+                {
+                    //MessageBox.Show("3");
+                    
+                    for(int i=0; i<(ListUserID.Count - dSearchUser.data.Count()); i++)
+                    {
+                        panel_Main.Controls.RemoveAt(panel_Main.Controls.Count - 1);
+                    }
+
+                    ListUserID.Clear();
+
+                    for (int i = 0; i < dSearchUser.data.Count(); i++)
+                    {
+                        friendInfo fI = panel_Main.Controls[i] as friendInfo;
+                        fI.UpdateUserInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
+                                    Convert.ToInt32(dSearchUser.data[i].user_id));
+                        ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("4");
+                    // List >< lay moi lap vao cu
+
+                    // index cua data moi
+                    List<int> kNewData = new List<int>();
+
+                    // id cua nhung user da co trong List
+                    List<int> kExistData = new List<int>();
+                    for (int i = 0; i < dSearchUser.data.Count(); i++)
+                    {
+                        // Danh sach nhung user moi
+                        if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)))
+                            kNewData.Add(i);
+                        else kExistData.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                    }
+
+                    if ((kExistData.Count + kNewData.Count) == ListUserID.Count)
+                    {
+                        foreach (Control item in panel_Main.Controls)
+                        {
+                            if (item is friendInfo)
+                            {
+                                friendInfo fI = item as friendInfo;
+                                if (!IsExistInList(kExistData, fI.FriendID))
+                                {
+                                    if(kNewData.Count > 0)
+                                    {
+                                        fI.UpdateUserInfo(dSearchUser.data[kNewData[0]].username, dSearchUser.data[kNewData[0]].fullname,
+                                    Convert.ToInt32(dSearchUser.data[kNewData[0]].user_id));
+                                        kNewData.RemoveAt(0);
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                ErrorNonUser();
+            }
+
+            /*panel_Main.Controls.Clear();
+            //listUser không rỗng, nghĩa là tồn tại những user có username trùng với tên người dùng nhập
+            //thì sẽ chuyển chuỗi đó thành các đối tượng thuộc list
+            
                 
                 
                 label_Error.Visible = false;
@@ -63,18 +201,19 @@ namespace Internal_Society
                 if (dSearchUser.data.Count() > 0)
                 {
                     // hiển thị các user trùng với username người dùng nhập
-                    friendInfo friend_last = new friendInfo(dSearchUser.data[0].username, dSearchUser.data[0].fullname,
-                        Convert.ToInt32(dSearchUser.data[0].user_id));
+                    
                     friend_last.Top = 0 - friend_last.Height + 10;
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
                         friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
                         Convert.ToInt32(dSearchUser.data[i].user_id));
                         //friend.Location = new Point(this.Width - friend.Width - 70, 0);
-                        friend.Location = new Point(70, 0);
-                        friend.Anchor = AnchorStyles.Top;
+
+                        //friend.Location = new Point(70, 0);
+                        //friend.Anchor = AnchorStyles.Left;
+                        friend.Left = (this.Width - friend.Width) / 2;
                         friend.Top = friend_last.Bottom + 20;
-                        this.Controls.Add(friend);
+                        panel_Main.Controls.Add(friend);
 
                         this.VerticalScroll.Value = this.VerticalScroll.Maximum;
                         friend_last = friend;
@@ -82,12 +221,30 @@ namespace Internal_Society
                 }
 
 
-            }
-            else
+            }*/
+
+        }
+
+        private void Panel_Search_Resize(object sender, EventArgs e)
+        {
+            foreach (var item in panel_Main.Controls)
             {
-                label_Error.Visible = true;
-                this.Controls.Add(label_Error);
+                if (item is friendInfo)
+                {
+                    friendInfo fI = item as friendInfo;
+                    fI.Left = (this.Width - fI.Width) / 2;
+                }
             }
+        }
+
+        private void Panel_Main_Click(object sender, EventArgs e)
+        {
+            string kData = "";
+            foreach (int item in ListUserID)
+            {
+                kData += " - " + item.ToString();
+            }
+            MessageBox.Show(kData);
         }
     }
 }

@@ -29,11 +29,13 @@ namespace Internal_Society
         private void Process_Register()
         {
             if (Reg_Info.reg_Nickname == "") Reg_Info.reg_Nickname = Reg_Info.reg_Username;
-            var urlCreateUser = "https://kunbr0.com/it008/reg.php?us=" + Reg_Info.reg_Username + "&ps=" + Reg_Info.reg_Password + "&nickname=" + Reg_Info.reg_Nickname + "&ques_1=" + Reg_Info.reg_Question_1 + "&ans_1=" + Reg_Info.reg_Answer_1 + "&ques_2=" + Reg_Info.reg_Question_2 + "&ans_2=" + Reg_Info.reg_Answer_2;
-            string userRegisterStatus = new WebClient().DownloadString(urlCreateUser);
-            if(userRegisterStatus == "1")
+            var urlCreateUser = App_Status.urlAPI + "c_User/Reg/"  + Reg_Info.reg_Username + "/" + Reg_Info.reg_Password + "/" + Reg_Info.reg_Nickname + "/" + Reg_Info.reg_Question_1 + "/" + Reg_Info.reg_Answer_1 + "/" + Reg_Info.reg_Question_2 + "/" + Reg_Info.reg_Answer_2;
+            string data1 = new WebClient().DownloadString(urlCreateUser);
+            dynamic data2 = JsonConvert.DeserializeObject(data1);
+            string userRegisterStatus = data2.Success;
+            if (userRegisterStatus == "1")
             {
-                var urlLogin = "https://kunbr0.com/it008/login.php?us=" + Reg_Info.reg_Username + "&ps=" + Reg_Info.reg_Password;
+                var urlLogin = App_Status.urlAPI + "c_User/Login/" + Reg_Info.reg_Username + "/" + Reg_Info.reg_Password;
                 LoginStatus = new WebClient().DownloadString(urlLogin);
                 dynamic data_user = JsonConvert.DeserializeObject(LoginStatus);
                 User_Info.k_ID = data_user.ID;

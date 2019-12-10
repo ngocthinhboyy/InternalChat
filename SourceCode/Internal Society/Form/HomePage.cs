@@ -19,7 +19,7 @@ namespace Internal_Society
         public static List<UserControl> ListPanel = new List<UserControl>();
         public static List<UserControl> ListChat = new List<UserControl>();
         public static string searchInfo = "";
-        string searchInfoLast = "";
+
         Color activeTabChat = Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat);
         Color inactiveTabChat = Color.Transparent;
         Internal_Society.Panel_Dashboard panel_Dashboard = new Internal_Society.Panel_Dashboard();
@@ -301,15 +301,13 @@ namespace Internal_Society
             searchInfo = textbox_Search.Text;
             // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
             if (searchInfo == "")
-                panel_Search1.Controls.Clear();
+                panel_Search1.LabelHuongDanSuDung();
             else
-            // Mỗi khi sự kiện keyup xảy ra phải kiểm tra xem  username nhập vô khác với username trước đó không
-            // Nếu khác phải clear kết quả cũ, hiển thị một list các kết quả mới.
-            if (searchInfo != searchInfoLast)
+
             {
                 //panel_Search1.Controls.Clear();
                 panel_Search1.AddFriendInfo();
-                searchInfoLast = searchInfo;
+
             }
         }
         private void Textbox_Search_Enter_1(object sender, EventArgs e)

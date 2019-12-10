@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Net;
 using Newtonsoft.Json;
+using System.Web.Script.Serialization;
 
 namespace Internal_Society
 {
@@ -20,7 +21,7 @@ namespace Internal_Society
 
         bool isExist(List<int> kList, int a)
         {
-            foreach(int item in kList)
+            foreach (int item in kList)
             {
                 if (item == a) return true;
             }
@@ -30,9 +31,9 @@ namespace Internal_Society
         public onlineList()
         {
             InitializeComponent();
-            
+
         }
-        
+
         string listUsers = "";
 
         public async void GetDataAsync()
@@ -52,71 +53,72 @@ namespace Internal_Society
 
         public void ShowOnlineUser()
         {
-            label1.Visible = false;
+            label_NoActiveFriend.Visible = false;
 
-            if (listUsers != "")
+            if (listUsers == "") return;
+            ListUserOnline userArr = new JavaScriptSerializer().Deserialize<ListUserOnline>(listUsers);
+
+            if (!userArr.success)
             {
-                
-                label1.Visible = false;
-                List<Friend_Info> userArr = new List<Friend_Info>();
-                
-                userArr = JsonConvert.DeserializeObject<List<Friend_Info>>(listUsers);
-                if (userArr.Count() > 0)
+                label_NoActiveFriend.Visible = true;
+                return;
+            }
+            if (userArr.data.Count() > 0)
+            {
+                activeFriend friend_last = new activeFriend(userArr.data[0].friend_Username, userArr.data[0].friend_Fullname,
+                    userArr.data[0].friend_lastLogin);
+                friend_last.Top = 0 - friend_last.Height + 10;
+                for (int i = 0; i < userArr.data.Count(); i++)
                 {
-                    activeFriend friend_last = new activeFriend(userArr[0].friend_Username, userArr[0].friend_Fullname,
-                        userArr[0].friend_lastLogin);
-                    friend_last.Top = 0 - friend_last.Height + 10;
-                    for (int i = 0; i < userArr.Count(); i++)
+                    if (isExist(ListIDOnline, Convert.ToInt32(userArr.data[i].friend_Conversation_ID)))
                     {
-                        if (isExist(ListIDOnline, Convert.ToInt32(userArr[i].friend_Conversation_ID)))
+                        foreach (var item in this.Controls)
                         {
-                            foreach(var item in this.Controls)
+                            if (item is activeFriend)
                             {
-                                if(item is activeFriend)
+                                activeFriend aFriend = item as activeFriend;
+                                if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr.data[i].friend_Conversation_ID))
                                 {
-                                    activeFriend aFriend = item as activeFriend;
-                                    if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr[i].friend_Conversation_ID))
-                                    {
-                                        aFriend.UpdateFriend(userArr[i].friend_Username, userArr[i].friend_Fullname,
-                                userArr[i].friend_lastLogin);
-                                        break;
-                                    }
+                                    aFriend.UpdateFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
+                            userArr.data[i].friend_lastLogin);
+                                    break;
                                 }
-                                
                             }
-                            
+
                         }
 
-                        else
-                        {
+                    }
 
-                            ListIDOnline.Add(Convert.ToInt32(userArr[i].friend_Conversation_ID));
-                            activeFriend friend = new activeFriend(userArr[i].friend_Username, userArr[i].friend_Fullname,
-                                userArr[i].friend_lastLogin);
-                            friend.Location = new Point(10, 0);
-                            friend.Top = friend_last.Bottom + 20;
+                    else
+                    {
 
-                            friend.Width = this.Width - 20;
-                            friend.Tag = userArr[i].friend_Conversation_ID.ToString();
+                        ListIDOnline.Add(Convert.ToInt32(userArr.data[i].friend_Conversation_ID));
+                        activeFriend friend = new activeFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
+                            userArr.data[i].friend_lastLogin);
+                        friend.Location = new Point(10, 0);
+                        friend.Top = friend_last.Bottom + 20;
 
-                            friend.MouseEnter += Friend_Enter;
-                            friend.Click += Friend_Click;
+                        friend.Width = this.Width - 20;
+                        friend.Tag = userArr.data[i].friend_Conversation_ID.ToString();
+
+                        friend.MouseEnter += Friend_Enter;
+                        friend.Click += Friend_Click;
 
 
-                            this.Controls.Add(friend);
-                            //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
-                            //this.VerticalScroll.Visible = false;
-                            friend_last = friend;
-                        }
+                        this.Controls.Add(friend);
+                        //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
+                        //this.VerticalScroll.Visible = false;
+                        friend_last = friend;
                     }
                 }
-
-                if (listUsers == "[]")
-                {
-                    label1.Visible = true;
-                    this.Controls.Add(label1);
-                }
             }
+
+            if (listUsers == "[]")
+            {
+                label_NoActiveFriend.Visible = true;
+                this.Controls.Add(label_NoActiveFriend);
+            }
+            
         }
 
         private void TimeRequest_Tick(object sender, EventArgs e)
@@ -130,9 +132,9 @@ namespace Internal_Society
         protected virtual void OnFriendClicked(object sender, EventArgs e)
         {
             var handler = FriendClicked;
-            
+
             if (handler != null)
-                handler(sender,e);
+                handler(sender, e);
         }
 
         private void Friend_Enter(object sender, EventArgs e)
@@ -145,7 +147,7 @@ namespace Internal_Society
         private void Friend_Click(object sender, EventArgs e)
         {
             //While you can call `this.ParentForm.Close()` it's better to raise an event
-            OnFriendClicked(sender,e);
+            OnFriendClicked(sender, e);
         }
 
         private void OnlineList_MouseEnter(object sender, EventArgs e)
@@ -154,8 +156,10 @@ namespace Internal_Society
             foreach (var item in this.Controls)
             {
                 Internal_Society.activeFriend atf = item as Internal_Society.activeFriend;
-                if(atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat)) atf.BackColor = Color.Transparent;
+                if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat)) atf.BackColor = Color.Transparent;
             }
         }
     }
+
+    
 }

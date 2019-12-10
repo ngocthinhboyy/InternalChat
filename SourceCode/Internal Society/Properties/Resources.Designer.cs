@@ -193,6 +193,16 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buy_001 {
+            get {
+                object obj = ResourceManager.GetObject("buy_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
@@ -263,6 +273,16 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_0022 {
+            get {
+                object obj = ResourceManager.GetObject("delete_0022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_003 {
             get {
                 object obj = ResourceManager.GetObject("delete_003", resourceCulture);
@@ -276,6 +296,16 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap delete_004 {
             get {
                 object obj = ResourceManager.GetObject("delete_004", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_005 {
+            get {
+                object obj = ResourceManager.GetObject("delete_005", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -973,6 +1003,26 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap itVang_001 {
+            get {
+                object obj = ResourceManager.GetObject("itVang_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key_001 {
+            get {
+                object obj = ResourceManager.GetObject("key_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap L7Oxo_5clOa {
             get {
                 object obj = ResourceManager.GetObject("L7Oxo-5clOa", resourceCulture);
@@ -1286,6 +1336,16 @@ namespace Internal_Society.Properties {
         internal static System.Drawing.Bitmap more_001 {
             get {
                 object obj = ResourceManager.GetObject("more_001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nhieuVang_001 {
+            get {
+                object obj = ResourceManager.GetObject("nhieuVang_001", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

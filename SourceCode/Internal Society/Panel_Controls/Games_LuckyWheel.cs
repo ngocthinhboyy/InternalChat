@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace Internal_Society
 {
      
     public partial class Games_LuckyWheel : UserControl
     {
+        string kMessage = "";
         int kIndex = 1;
         int kTarget = 0;
         Color cFocus = Color.Gainsboro;
@@ -34,19 +37,77 @@ namespace Internal_Society
             InitializeComponent();
         }
 
+
+        public async void Play()
+        {
+            try
+            {
+                var urlGetData = App_Status.urlAPI + "c_LuckyWheel/Play/" + User_Info.k_ID;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetData); });
+                // await
+                string result = await getStringTask;
+                dynamic data = JsonConvert.DeserializeObject(result);
+                if(Convert.ToBoolean(data.success.ToString()) == true)
+                {
+                    DangQuay();
+                    kTarget = 9 - kIndex + 8 * 6 + Convert.ToInt32(data.index);
+                    kMessage = data.message.ToString();
+                }
+                else
+                {
+                    MacDinh();
+                    MessageBox.Show("You don't have enough key to play !");
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Connection Error");
+            }
+
+        }
+
+        private void loading()
+        {
+            button_play.Enabled = false;
+            button_play.Text = "...";
+        }
+
+        private void DangQuay()
+        {
+            button_play.Enabled = false;
+            button_play.Text = "...";
+            timer1.Start();
+        }
+
+        private void QuayXong()
+        {
+            button_play.Enabled = true;
+            button_play.Text = "Play";
+            MessageBox.Show(kMessage);
+        }
+
+        private void MacDinh()
+        {
+            button_play.Enabled = true;
+            button_play.Text = "Play";
+            
+        }
+
         private void Button_play_Click(object sender, EventArgs e)
         {
-            timer1.Start();
-            
-            kTarget = 0;
-            Random rnd = new Random();
-            kTarget = rnd.Next(40, 60);
+            loading();
+            Play();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             if (kIndex > 8) kIndex = 1;
-            if(kTarget < 1) { timer1.Stop(); return; }
+            if(kTarget < 1) {
+                timer1.Stop();
+                QuayXong();
+                return;
+            }
             defualPanel();
             if (kIndex == 1) Slot_1.BackColor = cFocus;
             else if (kIndex == 2) Slot_2.BackColor = cFocus;

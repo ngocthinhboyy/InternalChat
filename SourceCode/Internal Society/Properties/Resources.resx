@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="quick_answer_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick_answer_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Luci_&amp;_Daisy_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,6 +148,9 @@
   <data name="tonton_friends_015" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="send-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\send-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,14 +163,17 @@
   <data name="quick_answer_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quick_answer_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="loading_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading_002.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tonton_friends_010" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foxie_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foxie_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rong_vang_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rong_vang_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="quick_answer_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick_answer_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Luci_&amp;_Daisy_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,9 +208,6 @@
   <data name="toto_dog_010" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foxie_008" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foxie_008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="rong_vang_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rong_vang_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -235,8 +241,8 @@
   <data name="foxie_014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foxie_014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heohong_0021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heohong_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rong_vang_008" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rong_vang_008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,11 +253,17 @@
   <data name="color1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\color1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pikalong_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pikalong_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Luci_&amp;_Daisy_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pikalong_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikalong_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_0022" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_0021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="x_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,8 +283,8 @@
   <data name="Luci_&amp;_Daisy_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rong_vang_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rong_vang_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Luci_&amp;_Daisy_020" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luci_&amp;_Daisy_020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pikalong_010" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikalong_010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,9 +297,6 @@
   </data>
   <data name="Luci_&amp;_Daisy_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tonton_friends_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tonton_friends_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="send_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\send_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,14 +337,8 @@
   <data name="dev_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dev_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tonton_friends_017" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tonton_friends_017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="rong_vang_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rong_vang_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-clock-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-clock-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rong_vang_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rong_vang_004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,6 +355,9 @@
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Luci_&amp;_Daisy_013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luci_&amp;_Daisy_013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="heohong_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -360,9 +366,6 @@
   </data>
   <data name="pikalong_014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikalong_014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="picture_200px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\picture_200px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tonton_friends_011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,8 +382,14 @@
   <data name="Luci_&amp;_Daisy_017" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quick_answer_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quick_answer_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heohong_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heohong_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tien_len_vn_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tien_len_vn_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonton_friends_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tonton_friends_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Luci_&amp;_Daisy_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -390,6 +399,9 @@
   </data>
   <data name="font-awesome_4-7-0_circle_15_0_58de40_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\font-awesome_4-7-0_circle_15_0_58de40_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonton_friends_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tonton_friends_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gradient4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gradient4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -433,11 +445,8 @@
   <data name="back_0011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foxie_015" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foxie_015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rong_vang_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rong_vang_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rong_vang_013" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rong_vang_013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -454,8 +463,8 @@
   <data name="toto_dog_013" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo-1-1566458630468345601603" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo-1-1566458630468345601603.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Luci_&amp;_Daisy_025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luci_&amp;_Daisy_025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tien_len_vn_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tien_len_vn_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -472,14 +481,11 @@
   <data name="picture_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="toto_dog_020" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\toto_dog_020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="heohong_013" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rong_vang_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rong_vang_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back_to_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back_to_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -496,8 +502,8 @@
   <data name="pikalong_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikalong_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quick_answer_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quick_answer_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rong_vang_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rong_vang_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="offline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\offline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -523,14 +529,17 @@
   <data name="Luci_&amp;_Daisy_021" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="foxie_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foxie_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tonton_friends_019" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_019.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="done_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\done_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="itVang_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\itVang_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Luci_&amp;_Daisy_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luci_&amp;_Daisy_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vertical-dots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vertical-dots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -538,17 +547,29 @@
   <data name="foxie_012" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foxie_012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="attach_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attach_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quick_answer_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick_answer_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="toto_dog_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="heohong_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="L7Oxo-5clOa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\L7Oxo-5clOa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="heohong_0022" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Luci_&amp;_Daisy_023" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_023.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foxie_018" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foxie_018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="heohong_012" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -571,9 +592,6 @@
   <data name="pikalong_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikalong_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gradient1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gradient1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Luci_&amp;_Daisy_019" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_019.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -586,8 +604,8 @@
   <data name="bored_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bored_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Luci_&amp;_Daisy_013" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Luci_&amp;_Daisy_013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-clock-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-clock-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="process" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\process.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -622,8 +640,8 @@
   <data name="tonton_friends_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attach_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attach_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toto_dog_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -634,20 +652,20 @@
   <data name="Luci_&amp;_Daisy_024" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tien_len_vn_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tien_len_vn_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pikalong_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pikalong_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tonton_friends_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="toto_dog_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\toto_dog_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="heohong_0021" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heohong_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picture_200px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture_200px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Luci_&amp;_Daisy_022" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quick_answer_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick_answer_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foxie_017" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foxie_017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -657,9 +675,6 @@
   </data>
   <data name="toto_dog_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="toto_dog_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\toto_dog_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="left-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\left-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -682,8 +697,8 @@
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Luci_&amp;_Daisy_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Luci_&amp;_Daisy_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="toto_dog_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toto_dog_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="quick_answer_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quick_answer_004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -694,8 +709,8 @@
   <data name="square_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\square_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foxie_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foxie_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Luci_&amp;_Daisy_015" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Luci_&amp;_Daisy_015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toto_dog_018" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -703,14 +718,20 @@
   <data name="heohong_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rong_vang_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rong_vang_016.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo-1-1566458630468345601603" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo-1-1566458630468345601603.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buy_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buy_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tonton_friends_014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pikalong_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pikalong_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quick_answer_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quick_answer_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="detete_006" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\detete_006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -721,14 +742,11 @@
   <data name="Luci_&amp;_Daisy_010" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="font-awesome_4-7-0_square_90_0_ff0000_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\font-awesome_4-7-0_square_90_0_ff0000_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="attach_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\attach_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quick_answer_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quick_answer_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rong_vang_005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rong_vang_005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tien_len_vn_010" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tien_len_vn_010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -736,8 +754,8 @@
   <data name="foxie_011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foxie_011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foxie_000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foxie_000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foxie_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foxie_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -745,14 +763,14 @@
   <data name="Luci_&amp;_Daisy_018" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Luci_&amp;_Daisy_018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tonton_friends_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tonton_friends_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="512x512bb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\512x512bb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toto_dog_011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gradient1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gradient1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="heohong_cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -766,8 +784,11 @@
   <data name="foxie_004" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foxie_004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quick_answer_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quick_answer_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rong_vang_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rong_vang_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="key_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key_0011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tonton_friends_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -781,20 +802,17 @@
   <data name="noti_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\noti_002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="L7Oxo-5clOa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\L7Oxo-5clOa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foxie_008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foxie_008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tonton_friends_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonton_friends_016.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pikalong_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pikalong_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="font-awesome_4-7-0_square_90_0_ff0000_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font-awesome_4-7-0_square_90_0_ff0000_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Luci_&amp;_Daisy_020" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Luci_&amp;_Daisy_020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="layout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\layout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="toto_dog_020" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toto_dog_020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="speech-bubble" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speech-bubble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -808,35 +826,35 @@
   <data name="heohong_0011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\heohong_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Luci_&amp;_Daisy_025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Luci_&amp;_Daisy_025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="toto_dog_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\toto_dog_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pikalong_012" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pikalong_012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quick_answer_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quick_answer_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rong_vang_003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rong_vang_003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toto_dog_019" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toto_dog_019.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tonton_friends_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tonton_friends_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="done_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\done_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="heohong_007" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heohong_007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foxie_015" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foxie_015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foxie_018" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foxie_018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rong_vang_016" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rong_vang_016.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="512x512bb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\512x512bb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tonton_friends_017" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tonton_friends_017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rong_vang_010" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rong_vang_010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Luci_&amp;_Daisy_015" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Luci_&amp;_Daisy_015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tonton_friends_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tonton_friends_009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -847,7 +865,7 @@
   <data name="font-awesome_4-7-0_user_24_0_666666_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\font-awesome_4-7-0_user_24_0_666666_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading_002" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading_002.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nhieuVang_001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nhieuVang_001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

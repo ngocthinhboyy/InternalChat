@@ -13,15 +13,20 @@ namespace Internal_Society
 {
     public partial class friendInfo : UserControl
     {
-        int FriendID;
+        public int FriendID;
         public friendInfo()
         {
             InitializeComponent();
         }
         public friendInfo(string userName, string userFullname, int FriendID)
         {
-            this.FriendID = FriendID;
             InitializeComponent();
+            UpdateUserInfo(userName, userFullname, FriendID);
+        }
+
+        public void UpdateUserInfo(string userName, string userFullname, int FriendID)
+        {
+            this.FriendID = FriendID;
             username.Text = userName;
             if (userFullname == "")
             {

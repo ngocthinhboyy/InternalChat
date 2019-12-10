@@ -1119,5 +1119,23 @@
   <ItemGroup>
     <None Include="Resources\loading_002.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itVang_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_0021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhieuVang_001.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
