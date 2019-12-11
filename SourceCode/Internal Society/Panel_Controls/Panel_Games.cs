@@ -43,6 +43,9 @@ namespace Internal_Society
         public void ChangeDarkMode()
         {
             this.BackColor = App_Status.backFormColor;
+            this.panel1.BackColor = App_Status.backFormColor;
+            this.panel2.BackColor = App_Status.backFormColor;
+            this.panel3.BackColor = App_Status.backFormColor;
         }
 
         private void Games_LuckyWheel1_Load(object sender, EventArgs e)
