@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace Internal_Society
 {
@@ -38,8 +40,24 @@ namespace Internal_Society
             lb_Diamond.Text = User_Info.k_Diamond;
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeCart = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             UpdateData();
+            Internal_Society.stickerCart.delegateUpdateGold = new UpdateGold(this.UpdateGoldAsync);
         }
+        public async void UpdateGoldAsync()
+        {
+            //string urlSearchUser = App_Status.urlAPI + "c_User/GetUserInfo/" + User_Info.k_ID ;
+            //string result = new WebClient().DownloadString(urlSearchUser);
+            //User_Info.k_Gold = result.Gol
+            //lb_Diamond.Text = User_Info.k_Diamond;
+            string urlRequest = App_Status.urlAPI + "c_User/GetUserInfo/" + User_Info.k_ID;
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
 
+            // await
+            string result = await getStringTask;
+            dynamic data = JsonConvert.DeserializeObject(result);
+            User_Info.k_Gold = data.Gold;
+            User_Info.k_Diamond = data.Diamond;
+            UpdateData();
+        }
         private void ShowDetail()
         {
             stickerCart stick;

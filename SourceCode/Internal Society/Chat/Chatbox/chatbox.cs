@@ -14,7 +14,6 @@ using System.Net.Http;
 
 namespace Internal_Society
 {
-
     public partial class chatbox : UserControl
     {
         #region Define Variable
@@ -29,9 +28,9 @@ namespace Internal_Society
         private static int sequenceSticker = -1;
         Internal_Society.loading loading = new Internal_Society.loading();
         public static readonly HttpClient client = new HttpClient();
-        
-        #endregion
 
+        #endregion
+        public static int x = 0;
         public chatbox()
         {
 
@@ -50,10 +49,6 @@ namespace Internal_Society
             //loading.Dock = DockStyle.Fill;
             loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
-
-
-            
-            
         }
         public void notifyChangeColor()
         {
@@ -189,7 +184,7 @@ namespace Internal_Society
 
         }
 
-        public void ProccessData(string dataMessage)
+        public async void ProccessData(string dataMessage)
         {
             TimeRequest.Stop();
             TimeRequest.Start();
@@ -218,13 +213,50 @@ namespace Internal_Society
                     addOutMessage(User_Info.k_ID, dMess.data[i].message_ID.ToString(), dMess.data[i].message_Type.ToString(),
                         dMess.data[i].message_Detail.ToString(), dMess.data[i].message_Time.ToString());
                 }
-
-
-
             }
+            isReceiveFromMe = false;
             //TimeRequest.Start();
 
-            isReceiveFromMe = false;
+            //string urlRequest = App_Status.urlAPI + "c_Friend/Get_FriendList/" + User_Info.k_ID;
+            ////MessageBox.Show(urlRequest);
+            //Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
+            //string result = await getStringTask;
+            //FriendList friend = new JavaScriptSerializer().Deserialize<FriendList>(result);
+            ////MessageBox.Show(result);
+            //if (!friend.success) return;
+            ////MessageBox.Show("Hello");
+            ////MessageBox.Show(friend.data.Count.ToString());
+            //int lastSeenIndex = 0;
+            //for (int i = friend.data.Count - 1; i >= 0; i--)
+            //{
+            //    //MessageBox.Show(friend.data[i].friend_Conversation_ID.ToString());
+            //    if (friend.data[i].friend_Conversation_ID == id_conversation && friend.data[i].lastSeen_ID != dMess.data[0].message_ID)
+            //    {
+            //        //App_Status.message++;
+            //        //delegateMessage();
+            //        //delegateNotiMess();
+            //        lastSeenIndex = Convert.ToInt32(friend.data[i].lastSeen_ID);
+            //        //x++;
+            //        break;
+            //    }
+            //}
+
+            //if (this.Visible == true)
+            //{
+            //    //int lastSeenindex = 
+            //    string urlRequest1 = App_Status.urlAPI + "c_Message/UpdateLastSeen/" + id_conversation + "/" + User_Info.k_ID + "/" + dMess.data[0].message_ID;
+            //    Task<string> getStringTask1 = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
+            //    if (App_Status.message > 0)
+            //    {
+            //        //int last
+            //        App_Status.message = App_Status.message -  lastSeenIndex;
+            //        delegateMessage();
+            //    }
+            //}
+            //else
+            //{
+                
+            //}
         }
 
 

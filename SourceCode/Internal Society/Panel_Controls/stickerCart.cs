@@ -12,13 +12,14 @@ using Newtonsoft.Json;
 
 namespace Internal_Society
 {
+    public delegate void UpdateGold();
     public partial class stickerCart : UserControl
     {
         
         public string PakageUrl;
         private int Price;
         private int StickerID;
-
+        public static UpdateGold delegateUpdateGold;
         public stickerCart()
         {
             InitializeComponent();
@@ -99,6 +100,7 @@ namespace Internal_Society
                 MessageBox.Show("Buy successfully !");
                 DisableButtonAdd();
                 ListSticker.getSticker();
+                delegateUpdateGold();
             }
             else
             {

@@ -39,6 +39,8 @@ namespace Internal_Society
         public static string iconNoti;
         public static string iconGames;
 
-        public static int notification = 0; 
+        public static int notification = 0;
+
+        public static int message = 0;
     }
 }

@@ -94,6 +94,8 @@ namespace Internal_Society
                 User_Info.k_Address = LoginStatus.Address.ToString();
                 User_Info.k_Avatar = LoginStatus.urlAvatar.ToString();
                 User_Info.k_LastNoti = LoginStatus.lastNotification.ToString();
+                User_Info.k_LuckyWheel = LoginStatus.LuckyKey.ToString();
+
                 // cho nguoi dung tien vao Homepage
 
                 HomePage f1 = new HomePage();

@@ -80,7 +80,7 @@ namespace Internal_Society
                                 if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr.data[i].friend_Conversation_ID))
                                 {
                                     aFriend.UpdateFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
-                            userArr.data[i].friend_lastLogin);
+                            userArr.data[i].friend_lastLogin, App_Status.message);
                                     break;
                                 }
                             }

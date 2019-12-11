@@ -89,6 +89,7 @@
       <DependentUpon>fileView.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\ListSticker.cs" />
+    <Compile Include="Chat\FriendList.cs" />
     <Compile Include="Panel_Controls\loading.cs">
       <SubType>UserControl</SubType>
     </Compile>

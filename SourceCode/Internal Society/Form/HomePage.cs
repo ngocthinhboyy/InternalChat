@@ -29,12 +29,14 @@ namespace Internal_Society
         Internal_Society.Panel_Games panel_Games = new Internal_Society.Panel_Games();
         Internal_Society.Panel_Search panel_Search1 = new Internal_Society.Panel_Search();
         public static bool isClickedNotiTab = false;
+        public static bool isClickedChatTab = false;
         public HomePage()
         {
             InitializeComponent();
             LoginForm.isClick = false;
             LogOutConfirmation.delegateCloseHomePage = new CloseHomePage(this.closeHomePage);
             Internal_Society.Panel_Notification.delegateNoti = new Notification(this.Noti);
+            //Internal_Society.chatbox.delegateMessage = new CompletedGetMessage(this.MessageNoti);
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeHomePage = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             this.StartPosition = FormStartPosition.CenterScreen;
             label_Fullname.Text = User_Info.k_Fullname;
@@ -70,6 +72,21 @@ namespace Internal_Society
         {
             this.Close();
         }
+        //public void MessageNoti()
+        //{
+        //    if (App_Status.message > 0)
+        //    {
+        //        lbl_MessageNoti.Visible = true;
+        //        lbl_MessageNoti.Text = App_Status.message.ToString();
+        //        pictureBox1.Visible = true;
+        //        isClickedChatTab = false;
+        //    }
+        //    else
+        //    {
+        //        pictureBox1.Visible = false;
+        //        lbl_MessageNoti.Visible = false;
+        //    }
+        //}
         public void ChangeDarkMode()
         {
             // Change background color of panels and tabs
@@ -117,19 +134,19 @@ namespace Internal_Society
         }
         private void FriendClicked(object sender, EventArgs e)
         {
-            
             TurnOffPanel();
             TurnOffTabChat();
             bool isExist = false;
-            
             Internal_Society.activeFriend atf = sender as Internal_Society.activeFriend;
             atf.BackColor = activeTabChat;
             for (int i = 0; i < ListChat.Count; i++)
             {
                 if(ListChat[i].Tag.ToString() == atf.Tag.ToString())
                 {
-                    ListChat[i].Visible = true;
+                    //ListChat[i].Visible = true;
+                    bunifuTransition6.ShowSync(ListChat[i]);
                     isExist = true;
+                    break;
                 }
             }
 
@@ -139,7 +156,8 @@ namespace Internal_Society
 
 
                 panel_Chat.Dock = DockStyle.Fill;
-                panel_Chat.Visible = true;
+                //panel_Chat.Visible = true;
+                bunifuTransition6.ShowSync(panel_Chat);
                 panel_Chat.Tag = atf.Tag;
 
                 ListChat.Add(panel_Chat);
@@ -160,13 +178,20 @@ namespace Internal_Society
         {
             foreach(var pnl in ListPanel)
             {
-                pnl.Visible = false;
+                //pnl.Visible = false;
+                if( pnl is Panel_Chat)
+                bunifuTransition6.HideSync(pnl);
+                else pnl.Visible = false;
             }
 
             foreach (var pnl in ListChat)
             {
-                pnl.Visible = false;
-                
+                //pnl.Visible = false;
+                if (pnl is Panel_Chat)
+                    bunifuTransition6.HideSync(pnl);
+                else pnl.Visible = false;
+
+
             }
         }
         void TurnOffTabChat()
@@ -209,7 +234,7 @@ namespace Internal_Society
             {
                 Noti();
             }
-            
+
 
         }
         private void Tab_Chat_Click(object sender, EventArgs e)
