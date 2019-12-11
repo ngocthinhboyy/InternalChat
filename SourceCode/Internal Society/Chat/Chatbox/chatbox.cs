@@ -30,7 +30,6 @@ namespace Internal_Society
         public static readonly HttpClient client = new HttpClient();
 
         #endregion
-        public static int x = 0;
         public chatbox()
         {
 
@@ -215,48 +214,7 @@ namespace Internal_Society
                 }
             }
             isReceiveFromMe = false;
-            //TimeRequest.Start();
-
-            //string urlRequest = App_Status.urlAPI + "c_Friend/Get_FriendList/" + User_Info.k_ID;
-            ////MessageBox.Show(urlRequest);
-            //Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
-            //string result = await getStringTask;
-            //FriendList friend = new JavaScriptSerializer().Deserialize<FriendList>(result);
-            ////MessageBox.Show(result);
-            //if (!friend.success) return;
-            ////MessageBox.Show("Hello");
-            ////MessageBox.Show(friend.data.Count.ToString());
-            //int lastSeenIndex = 0;
-            //for (int i = friend.data.Count - 1; i >= 0; i--)
-            //{
-            //    //MessageBox.Show(friend.data[i].friend_Conversation_ID.ToString());
-            //    if (friend.data[i].friend_Conversation_ID == id_conversation && friend.data[i].lastSeen_ID != dMess.data[0].message_ID)
-            //    {
-            //        //App_Status.message++;
-            //        //delegateMessage();
-            //        //delegateNotiMess();
-            //        lastSeenIndex = Convert.ToInt32(friend.data[i].lastSeen_ID);
-            //        //x++;
-            //        break;
-            //    }
-            //}
-
-            //if (this.Visible == true)
-            //{
-            //    //int lastSeenindex = 
-            //    string urlRequest1 = App_Status.urlAPI + "c_Message/UpdateLastSeen/" + id_conversation + "/" + User_Info.k_ID + "/" + dMess.data[0].message_ID;
-            //    Task<string> getStringTask1 = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
-            //    if (App_Status.message > 0)
-            //    {
-            //        //int last
-            //        App_Status.message = App_Status.message -  lastSeenIndex;
-            //        delegateMessage();
-            //    }
-            //}
-            //else
-            //{
-                
-            //}
+            
         }
 
 

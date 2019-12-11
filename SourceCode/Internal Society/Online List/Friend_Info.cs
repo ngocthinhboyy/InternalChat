@@ -21,7 +21,9 @@ namespace Internal_Society
         public string friend_Fullname { get; set; }
         public int friend_lastLogin { get; set; }
         public int friend_Conversation_ID { get; set; }
-        
+
+        public int NumOfUnSeenMessage { get; set; }
+
         public Friend_Info()
         {
 

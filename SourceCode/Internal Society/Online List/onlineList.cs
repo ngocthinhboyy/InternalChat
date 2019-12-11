@@ -14,8 +14,11 @@ using System.Web.Script.Serialization;
 
 namespace Internal_Society
 {
+
     public partial class onlineList : UserControl
     {
+
+        public static int isViewing = -1;
 
         List<int> ListIDOnline = new List<int>();
 
@@ -65,8 +68,8 @@ namespace Internal_Society
             }
             if (userArr.data.Count() > 0)
             {
-                activeFriend friend_last = new activeFriend(userArr.data[0].friend_Username, userArr.data[0].friend_Fullname,
-                    userArr.data[0].friend_lastLogin);
+                activeFriend friend_last = new activeFriend("", "",
+                    0, 0, 0);
                 friend_last.Top = 0 - friend_last.Height + 10;
                 for (int i = 0; i < userArr.data.Count(); i++)
                 {
@@ -80,7 +83,7 @@ namespace Internal_Society
                                 if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr.data[i].friend_Conversation_ID))
                                 {
                                     aFriend.UpdateFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
-                            userArr.data[i].friend_lastLogin, App_Status.message);
+                            userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
                                     break;
                                 }
                             }
@@ -94,7 +97,7 @@ namespace Internal_Society
 
                         ListIDOnline.Add(Convert.ToInt32(userArr.data[i].friend_Conversation_ID));
                         activeFriend friend = new activeFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
-                            userArr.data[i].friend_lastLogin);
+                            userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
                         friend.Location = new Point(10, 0);
                         friend.Top = friend_last.Bottom + 20;
 
@@ -147,6 +150,12 @@ namespace Internal_Society
         private void Friend_Click(object sender, EventArgs e)
         {
             //While you can call `this.ParentForm.Close()` it's better to raise an event
+            if(sender is activeFriend)
+            {
+                activeFriend aF = sender as activeFriend;
+                isViewing = aF.ConversationID;
+                aF.TurnOffNumOfMessage();
+            }
             OnFriendClicked(sender, e);
         }
 

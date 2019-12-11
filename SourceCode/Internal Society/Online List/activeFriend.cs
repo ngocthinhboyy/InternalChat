@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace Internal_Society
 {
@@ -15,15 +16,13 @@ namespace Internal_Society
         private string userName;
         private string userStatus;
         private int userLastLogin;
-        private int newMess;
+        private int NumOfUnSeenMessage = 0;
+        public int ConversationID = -1;
         public activeFriend()
         {
             InitializeComponent();
         }
-        public void MessageNoti(int x)
-        {
-            
-        }
+
         public void offlineStatus()
         {
             this.onlineIcon.Visible = false;
@@ -35,27 +34,28 @@ namespace Internal_Society
             this.offlineIcon.Visible = false;
         }
 
-        private void UpdateLocalProperties(string userName, string userStatus, int userLastLogin)
+        private void UpdateLocalProperties(string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
             this.userName = userName;
             this.userStatus = userStatus;
             this.userLastLogin = userLastLogin;
-            
+            this.NumOfUnSeenMessage = NumOfUnSeenMessage;
+            this.ConversationID = ConversationID;
         }
-        public activeFriend(string userName, string userStatus, int userLastLogin)
+        public activeFriend(string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
             InitializeComponent();
-            UpdateLocalProperties(userName, userStatus, userLastLogin);
+            UpdateLocalProperties(userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
             UpdateFriend();
 
         }
 
-        public void UpdateFriend(string userName, string userStatus, int userLastLogin,int x)
+        public void UpdateFriend(string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
-            UpdateLocalProperties(userName, userStatus, userLastLogin);
-            newMess = x;
+            UpdateLocalProperties(userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
             UpdateFriend();
         }
+
 
         public void UpdateFriend()
         {
@@ -63,10 +63,10 @@ namespace Internal_Society
             Timer_Offline.Stop();
             Timer_Offline.Start();
             //MessageBox.Show(this.newMess.ToString());
-            if (chatbox.x > 0)
+            if (NumOfUnSeenMessage > 0 && onlineList.isViewing != this.ConversationID)
             {
                 lbl_NewMess.Visible = true;
-                lbl_NewMess.Text = chatbox.x.ToString();
+                lbl_NewMess.Text = NumOfUnSeenMessage.ToString();
                 pictureBox2.Visible = true;
                 //isClickedChatTab = false;
             }
@@ -91,6 +91,18 @@ namespace Internal_Society
                 sStatus = "";
             }
             activeStatus.Text = sStatus;
+            
+        }
+
+        public async void TurnOffNumOfMessage()
+        {
+            pictureBox2.Visible = false;
+            lbl_NewMess.Visible = false;
+
+            string urlSearchUser = App_Status.urlAPI + "c_Message/ReadMessage/" + ConversationID + "/" + User_Info.k_ID;
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
+            // await
+            string result = await getStringTask;
         }
 
         private void Timer_Offline_Tick(object sender, EventArgs e)

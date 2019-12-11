@@ -41,6 +41,6 @@ namespace Internal_Society
 
         public static int notification = 0;
 
-        public static int message = 0;
+
     }
 }
