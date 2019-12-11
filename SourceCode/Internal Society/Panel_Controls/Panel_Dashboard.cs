@@ -17,8 +17,82 @@ namespace Internal_Society
         public Panel_Dashboard()
         {
             InitializeComponent();
+            Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeDashboard = new Panel_Controls.DarkMode(this.ChangeDarkMode);
         }
+        public void ChangeDarkMode()
+        {
+            this.BackColor = App_Status.backFormColor;
+            bunifuDataViz2.BackColor = App_Status.backFormColor;
+            bunifuDataViz3.BackColor = App_Status.backFormColor;
+            bunifuDataViz1.BackColor = App_Status.backFormColor;
 
+            bunifuDataViz1.colorSet.Clear();
+            bunifuDataViz2.colorSet.Clear();
+            bunifuDataViz3.colorSet.Clear();
+
+
+
+            DataPoint c1 = new DataPoint(BunifuDataViz._type.Bunifu_spline);
+            DataPoint c2 = new DataPoint(BunifuDataViz._type.Bunifu_spline);
+            DataPoint c3 = new DataPoint(BunifuDataViz._type.Bunifu_spline);
+
+
+            DataPoint b1 = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DataPoint b2 = new DataPoint(BunifuDataViz._type.Bunifu_column);
+            DataPoint b3 = new DataPoint(BunifuDataViz._type.Bunifu_column);
+
+            DataPoint d1 = new DataPoint(BunifuDataViz._type.Bunifu_pie);
+
+
+
+
+
+
+            Random ran = new Random();
+            for (int i = 0; i <= 10; i++)
+            {
+                c1.addLabely(i.ToString(), ran.Next(1, 50));
+                c2.addLabely(i.ToString(), ran.Next(1, 50));
+                c3.addLabely(i.ToString(), ran.Next(1, 50));
+
+                b1.addLabely(i.ToString(), ran.Next(1, 50));
+                b2.addLabely(i.ToString(), ran.Next(1, 50));
+                b3.addLabely(i.ToString(), ran.Next(1, 50));
+
+
+
+
+            }
+            d1.addLabely("MON", ran.Next(0, 50).ToString());
+            d1.addLabely("TUE", ran.Next(0, 50).ToString());
+            d1.addLabely("WED", ran.Next(0, 50).ToString());
+            d1.addLabely("THU", ran.Next(0, 50).ToString());
+            d1.addLabely("FRI", ran.Next(0, 50).ToString());
+            d1.addLabely("SAT", ran.Next(0, 50).ToString());
+            d1.addLabely("SUN", ran.Next(0, 50).ToString());
+
+
+            Canvas canvas = new Canvas();
+            canvas.addData(c1);
+            canvas.addData(c2);
+            canvas.addData(c3);
+
+
+            bunifuDataViz1.Render(canvas);
+
+            Canvas canvas1 = new Canvas();
+            canvas1.addData(b1);
+            canvas1.addData(b2);
+            canvas1.addData(b3);
+
+
+            bunifuDataViz2.Render(canvas1);
+            Canvas canvas2 = new Canvas();
+            canvas2.addData(d1);
+
+
+            bunifuDataViz3.Render(canvas2);
+        }
         private void Label1_Click(object sender, EventArgs e)
         {
 

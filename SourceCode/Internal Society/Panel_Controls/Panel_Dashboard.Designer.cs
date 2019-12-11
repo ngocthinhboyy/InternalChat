@@ -422,7 +422,7 @@
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz1.Location = new System.Drawing.Point(210, 117);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(540, 254);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(537, 254);
             this.bunifuDataViz1.TabIndex = 15;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -457,7 +457,7 @@
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz2.Location = new System.Drawing.Point(8, 409);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
-            this.bunifuDataViz2.Size = new System.Drawing.Size(742, 152);
+            this.bunifuDataViz2.Size = new System.Drawing.Size(739, 152);
             this.bunifuDataViz2.TabIndex = 16;
             this.bunifuDataViz2.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz2.Title = "";
@@ -497,7 +497,7 @@
             this.bunifuDataViz3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz3.Location = new System.Drawing.Point(101, 567);
             this.bunifuDataViz3.Name = "bunifuDataViz3";
-            this.bunifuDataViz3.Size = new System.Drawing.Size(408, 445);
+            this.bunifuDataViz3.Size = new System.Drawing.Size(405, 445);
             this.bunifuDataViz3.TabIndex = 18;
             this.bunifuDataViz3.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz3.Title = "";
@@ -507,7 +507,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.bunifuDataViz3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.bunifuDataViz2);
@@ -530,7 +530,7 @@
             this.Controls.Add(this.lblTotalTime);
             this.Controls.Add(this.panel1);
             this.Name = "Panel_Dashboard";
-            this.Size = new System.Drawing.Size(753, 650);
+            this.Size = new System.Drawing.Size(736, 633);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

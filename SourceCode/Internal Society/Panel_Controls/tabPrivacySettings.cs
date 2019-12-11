@@ -20,6 +20,7 @@ namespace Internal_Society.Panel_Controls
         public static DarkMode delegateChangeCart;
         public static DarkMode delegateChangeGames;
         public static DarkMode delegateChangeSearch;
+        public static DarkMode delegateChangeDashboard;
         public static bool activeStatus = true;
 
         public tabPrivacySettings()
@@ -67,6 +68,7 @@ namespace Internal_Society.Panel_Controls
             delegateChangeCart();
             delegateChangeSearch();
             delegateChangeGames();
+            delegateChangeDashboard();
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
