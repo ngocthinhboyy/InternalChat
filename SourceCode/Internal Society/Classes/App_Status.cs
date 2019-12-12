@@ -19,6 +19,7 @@ namespace Internal_Society
 
         public static int keyKun = 132034;
 
+        public static bool isDarkMode  = false;
 
         public static string urlAPI = "https://kunbr0.com/it008b/";
         public static string urlLocalResources = "../../Resources\\";

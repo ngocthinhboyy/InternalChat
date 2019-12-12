@@ -19,7 +19,7 @@ namespace Internal_Society
     {
 
         public static int isViewing = -1;
-
+        private static int MarginBottomOfFriend = 20;
         List<int> ListIDOnline = new List<int>();
 
         bool isExist(List<int> kList, int a)
@@ -34,7 +34,7 @@ namespace Internal_Society
         public onlineList()
         {
             InitializeComponent();
-            
+
         }
 
         string listUsers = "";
@@ -57,20 +57,36 @@ namespace Internal_Society
         public void ShowOnlineUser()
         {
             label_NoActiveFriend.Visible = false;
+            List<int> ProcessedFriend = new List<int>();
 
             if (listUsers == "") return;
             ListUserOnline userArr = new JavaScriptSerializer().Deserialize<ListUserOnline>(listUsers);
 
+
             if (!userArr.success)
             {
+                this.Controls.Clear();
+                this.Controls.Add(label_NoActiveFriend);
+                CopyListToList(ProcessedFriend, ListIDOnline);
                 label_NoActiveFriend.Visible = true;
                 return;
             }
+
+
             if (userArr.data.Count() > 0)
             {
-                activeFriend friend_last = new activeFriend("","", "",
+                activeFriend friend_last = new activeFriend("", "", "",
                     0, 0, 0);
+
                 friend_last.Top = 0 - friend_last.Height + 10;
+                foreach (Control kk in this.Controls)
+                {
+                    if (kk is activeFriend)
+                    {
+                        activeFriend aF = kk as activeFriend;
+                        friend_last = aF;
+                    }
+                }
                 for (int i = 0; i < userArr.data.Count(); i++)
                 {
                     if (isExist(ListIDOnline, Convert.ToInt32(userArr.data[i].friend_Conversation_ID)))
@@ -84,7 +100,10 @@ namespace Internal_Society
                                 {
                                     aFriend.UpdateFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
                             userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
+                                    ProcessedFriend.Add(userArr.data[i].friend_Conversation_ID);
+
                                     break;
+
                                 }
                             }
 
@@ -99,9 +118,9 @@ namespace Internal_Society
                         activeFriend friend = new activeFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
                             userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
                         friend.Location = new Point(10, 0);
-                        friend.Top = friend_last.Bottom + 20;
+                        friend.Top = friend_last.Bottom + MarginBottomOfFriend;
 
-                        friend.Width = this.Width - 20;
+                        friend.Width = this.Width - MarginBottomOfFriend;
                         friend.Tag = userArr.data[i].friend_Conversation_ID.ToString();
 
                         friend.MouseEnter += Friend_Enter;
@@ -112,16 +131,59 @@ namespace Internal_Society
                         //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
                         //this.VerticalScroll.Visible = false;
                         friend_last = friend;
+                        ProcessedFriend.Add(userArr.data[i].friend_Conversation_ID);
                     }
+                }
+
+
+            }
+
+            for (int i = 0; i < ListIDOnline.Count; i++)
+            {
+                if (!isExist(ProcessedFriend, ListIDOnline[i]))
+                {
+                    RemoveFriendFromUserID(ListIDOnline[i]);
+                    //MessageBox.Show("remove");
                 }
             }
 
-            if (listUsers == "[]")
+
+            CopyListToList(ProcessedFriend, ListIDOnline);
+        }
+
+        private void CopyListToList(List<int> From, List<int> To)
+        {
+            To.Clear();
+            foreach (int item in From)
             {
-                label_NoActiveFriend.Visible = true;
-                this.Controls.Add(label_NoActiveFriend);
+                To.Add(item);
             }
-            
+        }
+
+        private void RemoveFriendFromUserID(int a)
+        {
+            int kIndex = 0;
+
+            foreach (var item in this.Controls)
+            {
+                if (item is activeFriend)
+                {
+
+                    activeFriend aFriend = item as activeFriend;
+                    if (Convert.ToInt32(aFriend.Tag) == a)
+                    {
+                        this.Controls.Remove(aFriend);
+                        kIndex++;
+                        break;
+                    }
+                }
+
+            }
+            for (int i = kIndex; i < this.Controls.Count; i++)
+            {
+                activeFriend aF = this.Controls[i] as activeFriend;
+                aF.Top -= (aF.Height + MarginBottomOfFriend);
+            }
         }
 
         private void TimeRequest_Tick(object sender, EventArgs e)
@@ -150,7 +212,7 @@ namespace Internal_Society
         private void Friend_Click(object sender, EventArgs e)
         {
             //While you can call `this.ParentForm.Close()` it's better to raise an event
-            if(sender is activeFriend)
+            if (sender is activeFriend)
             {
                 activeFriend aF = sender as activeFriend;
                 isViewing = aF.ConversationID;
@@ -170,5 +232,5 @@ namespace Internal_Society
         }
     }
 
-    
+
 }
