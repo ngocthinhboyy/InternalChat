@@ -15,6 +15,7 @@ namespace Internal_Society
     {
         private string userName;
         private string userStatus;
+        private string userAva;
         private int userLastLogin;
         private int NumOfUnSeenMessage = 0;
         public int ConversationID = -1;
@@ -34,25 +35,26 @@ namespace Internal_Society
             this.offlineIcon.Visible = false;
         }
 
-        private void UpdateLocalProperties(string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
+        private void UpdateLocalProperties(string userAva,string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
+            this.userAva = userAva; 
             this.userName = userName;
             this.userStatus = userStatus;
             this.userLastLogin = userLastLogin;
             this.NumOfUnSeenMessage = NumOfUnSeenMessage;
             this.ConversationID = ConversationID;
         }
-        public activeFriend(string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
+        public activeFriend(string userAva,string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
             InitializeComponent();
-            UpdateLocalProperties(userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
+            UpdateLocalProperties(userAva, userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
             UpdateFriend();
 
         }
 
-        public void UpdateFriend(string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
+        public void UpdateFriend(string userAva,string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
-            UpdateLocalProperties(userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
+            UpdateLocalProperties(userAva,userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
             UpdateFriend();
         }
 
@@ -75,8 +77,18 @@ namespace Internal_Society
                 pictureBox2.Visible = false;
                 lbl_NewMess.Visible = false;
             }
-        
-        username.Text = this.userName;
+            //MessageBox.Show(this.userAva);
+            if (this.userAva == "")
+            {
+                user_Avatar.ImageLocation = App_Status.urlLocalResources + "user_001.png";
+            }
+            else
+            {
+                user_Avatar.ImageLocation = App_Status.urlImage + "/image/" + this.userAva;
+
+            }
+
+            username.Text = this.userName;
             activeStatus.Text = this.userStatus;
             TimeSpan span = DateTime.Now.Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc));
             int time = (int)span.TotalSeconds;

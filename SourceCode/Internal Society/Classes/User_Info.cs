@@ -25,6 +25,10 @@ namespace Internal_Society
         public static string k_Avatar;
         public static string k_LastNoti;
         public static string k_LuckyWheel;
+
+        //local
+        public static string localAvatar;
+
         public static string UpdateData()
         {
             string result = "";

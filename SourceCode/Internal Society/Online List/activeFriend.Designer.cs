@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.activeStatus = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
-            this.lbl_NewMess = new System.Windows.Forms.Label();
             this.Timer_Offline = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.onlineIcon = new System.Windows.Forms.PictureBox();
             this.offlineIcon = new System.Windows.Forms.PictureBox();
             this.user_Avatar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.lbl_NewMess = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.onlineIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offlineIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_Avatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // activeStatus
@@ -65,35 +65,10 @@
             this.username.TabIndex = 2;
             this.username.Text = "Username";
             // 
-            // lbl_NewMess
-            // 
-            this.lbl_NewMess.AutoSize = true;
-            this.lbl_NewMess.BackColor = System.Drawing.Color.Red;
-            this.lbl_NewMess.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NewMess.ForeColor = System.Drawing.Color.White;
-            this.lbl_NewMess.Location = new System.Drawing.Point(246, 52);
-            this.lbl_NewMess.Name = "lbl_NewMess";
-            this.lbl_NewMess.Size = new System.Drawing.Size(26, 18);
-            this.lbl_NewMess.TabIndex = 6;
-            this.lbl_NewMess.Text = "01";
-            this.lbl_NewMess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_NewMess.Visible = false;
-            // 
             // Timer_Offline
             // 
             this.Timer_Offline.Interval = 58000;
             this.Timer_Offline.Tick += new System.EventHandler(this.Timer_Offline_Tick);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Internal_Society.Properties.Resources.font_awesome_4_7_0_square_90_0_ff0000_none1;
-            this.pictureBox2.Location = new System.Drawing.Point(241, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
             // 
             // onlineIcon
             // 
@@ -129,6 +104,31 @@
             this.user_Avatar.TabIndex = 1;
             this.user_Avatar.TabStop = false;
             // 
+            // lbl_NewMess
+            // 
+            this.lbl_NewMess.AutoSize = true;
+            this.lbl_NewMess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(32)))), ((int)(((byte)(16)))));
+            this.lbl_NewMess.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NewMess.ForeColor = System.Drawing.Color.White;
+            this.lbl_NewMess.Location = new System.Drawing.Point(254, 54);
+            this.lbl_NewMess.Name = "lbl_NewMess";
+            this.lbl_NewMess.Size = new System.Drawing.Size(17, 18);
+            this.lbl_NewMess.TabIndex = 17;
+            this.lbl_NewMess.Text = "1";
+            this.lbl_NewMess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_NewMess.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Internal_Society.Properties.Resources.filled_circle_60px;
+            this.pictureBox2.Location = new System.Drawing.Point(240, 40);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
             // activeFriend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,10 +144,10 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "activeFriend";
             this.Size = new System.Drawing.Size(282, 100);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onlineIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offlineIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.user_Avatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,8 +160,8 @@
         private System.Windows.Forms.Label username;
         private System.Windows.Forms.PictureBox offlineIcon;
         private System.Windows.Forms.PictureBox onlineIcon;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lbl_NewMess;
         private System.Windows.Forms.Timer Timer_Offline;
+        private System.Windows.Forms.Label lbl_NewMess;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

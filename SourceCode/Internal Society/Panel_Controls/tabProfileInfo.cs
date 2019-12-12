@@ -11,9 +11,11 @@ using System.Net;
 
 namespace Internal_Society.Panel_Controls
 {
+    public delegate void ChangeAva();
     public partial class tabProfileInfo : UserControl
     {
         string k_user_id;
+        public static ChangeAva delegateChangeAva;
         DateTime birthday = DateTime.Parse("2005-05-22");
         //MessageBox.Show(User_Info.k_Birthday);
         //DateTime birthday = DateTime.Parse(User_Info.k_Birthday);
@@ -74,8 +76,10 @@ namespace Internal_Society.Panel_Controls
             if (fu.UploadFile("image"))
             {
                 pb_Avatar.ImageLocation = fu.FilePath;
+                User_Info.localAvatar = fu.FilePath;
+                delegateChangeAva();
             }
-            User_Info.k_Avatar = fu.FilePath;
+            
         }
 
         private void BtnEditInfo_Click(object sender, EventArgs e)

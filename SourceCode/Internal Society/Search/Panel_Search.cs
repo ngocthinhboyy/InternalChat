@@ -109,7 +109,7 @@ namespace Internal_Society
                     //MessageBox.Show("2");
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
-                        if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)))
+                        if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)) && dSearchUser.data[i].user_id != User_Info.k_ID)
                         {
                             ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
                             friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
@@ -123,7 +123,7 @@ namespace Internal_Society
                         }
                     }
                 }
-                else if (dSearchUser.data.Count() < ListUserID.Count)
+                else if (dSearchUser.data.Count() < ListUserID.Count )
                 {
                     //MessageBox.Show("3");
                     
@@ -136,10 +136,11 @@ namespace Internal_Society
 
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
-                        friendInfo fI = panel_Main.Controls[i] as friendInfo;
-                        fI.UpdateUserInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
-                                    Convert.ToInt32(dSearchUser.data[i].user_id));
-                        ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                        if (dSearchUser.data[i].user_id != User_Info.k_ID)
+                        { friendInfo fI = panel_Main.Controls[i] as friendInfo;
+                            fI.UpdateUserInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
+                                        Convert.ToInt32(dSearchUser.data[i].user_id));
+                            ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id)); }
                     }
                 }
                 else
@@ -155,9 +156,12 @@ namespace Internal_Society
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
                         // Danh sach nhung user moi
-                        if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)))
-                            kNewData.Add(i);
-                        else kExistData.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                        if (dSearchUser.data[i].user_id != User_Info.k_ID)
+                        {
+                            if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)))
+                                kNewData.Add(i);
+                            else kExistData.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                        }
                     }
 
                     if ((kExistData.Count + kNewData.Count) == ListUserID.Count)

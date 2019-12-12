@@ -34,7 +34,7 @@ namespace Internal_Society
         public onlineList()
         {
             InitializeComponent();
-
+            
         }
 
         string listUsers = "";
@@ -68,7 +68,7 @@ namespace Internal_Society
             }
             if (userArr.data.Count() > 0)
             {
-                activeFriend friend_last = new activeFriend("", "",
+                activeFriend friend_last = new activeFriend("","", "",
                     0, 0, 0);
                 friend_last.Top = 0 - friend_last.Height + 10;
                 for (int i = 0; i < userArr.data.Count(); i++)
@@ -82,7 +82,7 @@ namespace Internal_Society
                                 activeFriend aFriend = item as activeFriend;
                                 if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr.data[i].friend_Conversation_ID))
                                 {
-                                    aFriend.UpdateFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
+                                    aFriend.UpdateFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
                             userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
                                     break;
                                 }
@@ -96,7 +96,7 @@ namespace Internal_Society
                     {
 
                         ListIDOnline.Add(Convert.ToInt32(userArr.data[i].friend_Conversation_ID));
-                        activeFriend friend = new activeFriend(userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
+                        activeFriend friend = new activeFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
                             userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
                         friend.Location = new Point(10, 0);
                         friend.Top = friend_last.Bottom + 20;

@@ -33,7 +33,10 @@ namespace Internal_Society
         public HomePage()
         {
             InitializeComponent();
+            //MessageBox.Show(App_Status.notification.ToString());
             LoginForm.isClick = false;
+            Internal_Society.Panel_Controls.tabProfileInfo.delegateChangeAva = new Panel_Controls.ChangeAva(this.ChangeAva);
+
             LogOutConfirmation.delegateCloseHomePage = new CloseHomePage(this.closeHomePage);
             Internal_Society.Panel_Notification.delegateNoti = new Notification(this.Noti);
             //Internal_Society.chatbox.delegateMessage = new CompletedGetMessage(this.MessageNoti);
@@ -49,7 +52,14 @@ namespace Internal_Society
           //  panel_Settings.Dock = DockStyle.Fill;
             panel_Search1.Dock = DockStyle.Fill;
             //MessageBox.Show(App_Status.notification.ToString());
-            //picture_user_image.ImageLocation = App_Status.urlImage + "/image/" + User_Info.k_Avatar;
+            if (User_Info.k_Avatar == "")
+            {
+                picture_user_image.ImageLocation = App_Status.urlLocalResources + "user_001.png";
+            }
+            else
+            {
+                picture_user_image.ImageLocation = App_Status.urlImage + "/image/" + User_Info.k_Avatar;
+            }
             this.panel_Main.Controls.Add(panel_Dashboard);
             ListPanel.Add(panel_Dashboard);
             //this.panel_Main.Controls.Add(panel_Chat);
@@ -67,6 +77,11 @@ namespace Internal_Society
             this.onlineList1.FriendClicked += FriendClicked;
 
             ListSticker.getSticker();
+        }
+        public async void ChangeAva()
+        {
+
+            picture_user_image.ImageLocation = User_Info.localAvatar;
         }
         public void closeHomePage()
         {

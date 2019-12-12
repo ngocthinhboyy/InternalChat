@@ -87,20 +87,10 @@ namespace Internal_Society
                     iTop = ntAddFriend.Bottom;
                 }
             }
-            //MessageBox.Show(HomePage.isClickedNotiTab.ToString());
-            App_Status.notification = notiData.data.Count - dem;
+             
+            App_Status.notification = Math.Abs(notiData.data.Count - dem);
             delegateNoti();
         }
-        //public void Count()
-        //{
-        //    foreach (Control x in this.Controls)
-        //    {
-        //        if (x is Notification_AcceptFriend || x is Notification_AddFriend)
-        //        {
-        //            lastNoti++;
-        //        }
-        //    }
-        //}
         private void TimeRequest_Tick(object sender, EventArgs e)
         {
             TimeRequest.Stop();

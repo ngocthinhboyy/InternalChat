@@ -16,6 +16,7 @@ namespace Internal_Society
 
     public class Friend_Info
     {
+        public string friend_Avatar { get; set; }
         public string friend_ID { get; set; }
         public string friend_Username { get; set; }
         public string friend_Fullname { get; set; }
