@@ -207,10 +207,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             if (caro_chess.KiemTraChienThang())
             {
                 caro_chess.EndgameOnline(friendUserName,turnID,Convert.ToInt32(User_Info.k_ID),friendUserID);
-                if (turnID != myUserID)
-                    caro_chess.BIsPlaying = false;
-                else
-                    caro_chess.BIsPlaying = true;
+                caro_chess.BIsPlaying = false;
                 return;
             }
         }

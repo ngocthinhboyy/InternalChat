@@ -168,7 +168,6 @@ namespace Internal_Society
 
                 string sName1 = "Bạn đã thua!!";
                 IncorrectAlert incorrect1 = new IncorrectAlert(sName1);
-                incorrect1.Show();
             }
             else if(iTurn == friendID)
             {
