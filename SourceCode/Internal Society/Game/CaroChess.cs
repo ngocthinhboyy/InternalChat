@@ -145,14 +145,15 @@ namespace Internal_Society
             switch (iLuotDi)
             {
                 case 1:
-                    string sName2 = User_Info.k_Username.ToString() + "đã chiến thắng!!";
-                    IncorrectAlert incorrect2 = new IncorrectAlert(sName2);
-                    incorrect2.Show();
-                    break;
-                case 2:
                     string sName1 = username2 + " đã chiến thắng!!";
                     IncorrectAlert incorrect1 = new IncorrectAlert(sName1);
                     incorrect1.Show();
+                    break;
+                case 2:
+                    
+                    string sName2 = User_Info.k_Fullname.ToString() + " đã chiến thắng!!";
+                    IncorrectAlert incorrect2 = new IncorrectAlert(sName2);
+                    incorrect2.Show();
                     break;
             }
         }

@@ -142,10 +142,15 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             dynamic data = JsonConvert.DeserializeObject(result);
             string newestData = data.data.ToString();
             string turnID = data.turn.ToString();
+            int turnIDOnline = Convert.ToInt32(turnID);
+            if (turnIDOnline == myUserID)
+                isMyUserTurnInOnline = true;
+            else
+                isMyUserTurnInOnline = false;
             if (newestData != caro_chess.PreviousData && newestData != "" && newestData != null)
             {
                 caro_chess.PreviousData = newestData;
-                int turnIDOnline = Convert.ToInt32(turnID);
+                //int turnIDOnline = Convert.ToInt32(turnID);
                 if (turnIDOnline == myUserID)
                     isMyUserTurnInOnline = true;
                 else
@@ -375,7 +380,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
                                 aFriend.Width = 200;
                                 if (Convert.ToInt32(aFriend.Tag) == Convert.ToInt32(userArr.data[i].friend_Conversation_ID))
                                 {
-                                    aFriend.UpdateFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
+                                    aFriend.UpdateFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Fullname, userArr.data[i].friend_Fullname,
                             userArr.data[i].friend_lastLogin);
                                     ProcessedFriend.Add(userArr.data[i].friend_Conversation_ID);
 
@@ -392,7 +397,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
                     {
 
                         ListIDOnline.Add(Convert.ToInt32(userArr.data[i].friend_Conversation_ID));
-                        friend friend = new friend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
+                        friend friend = new friend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Fullname, userArr.data[i].friend_Fullname,
                             userArr.data[i].friend_lastLogin);
                         friend.Location = new Point(10, 0);
                         friend.Top = friend_last.Bottom + MarginBottomOfFriend;
