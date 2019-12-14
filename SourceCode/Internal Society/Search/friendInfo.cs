@@ -36,8 +36,6 @@ namespace Internal_Society
             if (isFriend)
             {
                 btn_addFriend.IdleFillColor = Color.FromArgb(227, 38, 54);
-                //btn_addFriend.Normalcolor = Color.FromArgb(227, 38, 54);
-                //btn_addFriend.OnHovercolor = Color.FromArgb(217, 38, 54);
                 btn_addFriend.ButtonText = "Remove request";
                 isClicked = !isClicked;
             }
@@ -69,8 +67,6 @@ namespace Internal_Society
             {
                 AddFriendAsync();
                 btn_addFriend.IdleFillColor = Color.FromArgb(227, 38, 54);
-                //btn_addFriend.Normalcolor = Color.FromArgb(227, 38, 54);
-                //btn_addFriend.OnHovercolor = Color.FromArgb(217, 38, 54);
                 btn_addFriend.ButtonText = "Remove request";
                 isClicked = !isClicked;
             }
@@ -78,8 +74,6 @@ namespace Internal_Society
             {
                 RemoveFriendAsync();
                 btn_addFriend.IdleFillColor = Color.DeepPink;
-                //btn_addFriend.Normalcolor = Color.FromArgb(46, 139, 87);
-                //btn_addFriend.OnHovercolor = Color.FromArgb(36, 129, 77);
                 btn_addFriend.ButtonText = "Add friend";
                 isClicked = !isClicked;
             }

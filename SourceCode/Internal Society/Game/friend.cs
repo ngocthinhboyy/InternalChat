@@ -17,8 +17,6 @@ namespace Internal_Society
         private string userStatus;
         private string userAva;
         private int userLastLogin;
-        //private int NumOfUnSeenMessage = 0;
-       // public int ConversationID = -1;
         public friend()
         {
             InitializeComponent();
@@ -41,8 +39,6 @@ namespace Internal_Society
             this.userName = userName;
             this.userStatus = userStatus;
             this.userLastLogin = userLastLogin;
-            //this.NumOfUnSeenMessage = NumOfUnSeenMessage;
-            //this.ConversationID = ConversationID;
         }
         public friend(string userAva, string userName, string userStatus, int userLastLogin)
         {

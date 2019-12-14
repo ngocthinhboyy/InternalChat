@@ -17,7 +17,6 @@ namespace Internal_Society
     public partial class Panel_Color_Bubble : Form
     {
         public static Notify NotifyChangeColor;
-        
         //Màu khởi tạo là blue.
         static public Color LeftColor = Color.FromArgb(0, 132, 255);
         static public Color RightColor = Color.FromArgb(0, 132, 255);

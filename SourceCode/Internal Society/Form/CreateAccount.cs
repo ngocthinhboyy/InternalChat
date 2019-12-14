@@ -59,8 +59,6 @@ namespace Internal_Society
 
                 Reg_Info.reg_Username = txtUsernameCreate.Text;
                 Reg_Info.reg_Password = txtPasswordCreate.Text;
-
-
                 // create Thanh cong - mo trang add Information.
                 CreateAccount_PersonalInfo personalInfoForm = new CreateAccount_PersonalInfo();
                 this.Hide();

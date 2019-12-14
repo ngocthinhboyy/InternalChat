@@ -78,7 +78,8 @@ namespace Internal_Society
                     lb_KeyWheel.Text = User_Info.k_LuckyWheel;
                     delegateChangeDiamondGame();
                     delegateChangeDiamondCart();
-                    delegateChangeDiamondFrmGame();
+                    if(delegateChangeDiamondFrmGame != null)
+                        delegateChangeDiamondFrmGame();
                     IncorrectAlert alert = new IncorrectAlert("Buy Successfully.");
                     alert.Show();
                 }

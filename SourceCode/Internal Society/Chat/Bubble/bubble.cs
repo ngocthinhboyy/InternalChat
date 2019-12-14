@@ -137,13 +137,8 @@ namespace Internal_Society
 
             Process.Start(fileName);
         }
-
-
-        //lets add the function 
-
         void SetHeight()
         {
-            //Size maxSize = new Size(495, int.MaxValue);
             Graphics g = CreateGraphics();
 
 
@@ -151,19 +146,11 @@ namespace Internal_Society
             {
                 SizeF size = g.MeasureString(lb_message.Text, lb_message.Font, lb_message.Width);
                 lb_message.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
-
-                //lb_time.Top = lb_message.Bottom + 10;
                 this.Height = lb_message.Height + 20;
-                //this.Width = lb_message.Width + 20;
-                //picture_sticker.Visible = false;
             }
             if (isPicture == 1)
             {
-               // picture_sticker.Top = -10;
-                
                 this.Height = picture_sticker.Bottom;
-                //this.Width = picture_sticker.Width + 20;
-                //picture_sticker.Visible = true;
             }
 
 
@@ -187,17 +174,12 @@ namespace Internal_Society
         {
             if (this.InOrOut.ToString() == "In")
             {
-                // Incoming message
-                //this.BackColor = Color.FromArgb(0, 164, 147);
                 gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft = Panel_Color_Bubble.LeftColor;
                 gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Panel_Color_Bubble.RightColor;
-
                 lb_message.TextAlign = ContentAlignment.MiddleLeft;
             }
             else
             {
-                // Message from me
-                //this.BackColor = Color.Gray;
                 gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft =
                 gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Color.FromArgb(241, 240, 240);
                 lb_message.TextAlign = ContentAlignment.MiddleLeft;

@@ -44,8 +44,6 @@ namespace Internal_Society
                 Queue_Sticker.data = new Queue<string>();
             }
             bbl_old.Top = 0 - bbl_old.Height + 10;
-
-            //loading.Dock = DockStyle.Fill;
             loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
             
@@ -89,17 +87,6 @@ namespace Internal_Society
             panel2.Controls.Add(bbl);
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             bbl_old = bbl;
-            /*if (Panel_Color_Bubble.isChangedColor == true)
-            {
-                foreach (Control x in panel2.Controls)
-                {
-                    if (x is bubble)
-                    {
-                        ((bubble)x).ChangeColorBubble();
-                        Panel_Color_Bubble.isChangedColor = false;
-                    }
-                }
-            }*/
         }
 
         public void addOutMessage(string user_ID, string message_ID, string message_Type,
@@ -141,23 +128,6 @@ namespace Internal_Society
 
         public async void PushMessageAsync(string message_Type, string message_Detail)
         {
-            /*messIndex++;
-            message_Detail = MaHoa.EncryptDecrypt2(message_Detail,App_Status.keyKun);
-            var urlPushData = App_Status.urlAPI + "c_Message/Add_Conversation_Message/" + id_conversation + "/" + User_Info.k_ID +
-                "/" + message_Type + "?data=" + message_Detail;
-            try
-            {
-                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlPushData); });
-                // await
-                string result = await getStringTask;
-
-                // Khi send xog thi lam function tiep theo...
-            }
-            catch
-            {
-                MessageBox.Show("Connection Error");
-            }*/
-
             message_Detail = MaHoa.EncryptDecrypt2(message_Detail, App_Status.keyKun);
             var values = new Dictionary<string, string>
                 {

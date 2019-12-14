@@ -16,8 +16,6 @@ namespace Internal_Society.Panel_Controls
     {
         string k_user_id;
         public static ChangeAva delegateChangeAva;
-        //DateTime birthday = DateTime.Parse("2005-05-22");
-        //MessageBox.Show(User_Info.k_Birthday);
         string vBirthday = User_Info.k_Birthday;
 
         public tabProfileInfo()
@@ -96,20 +94,17 @@ namespace Internal_Society.Panel_Controls
             if (btnEditInfo.ButtonText == "Edit Information")
             {
                 txt_Profile_Name.Enabled = true;
-                //txt_Profile_Gender.Enabled = true;
                 Male.Enabled = Female.Enabled = Undefined.Enabled = true;
                 txt_Profile_Phone.Enabled = true;
                 txt_Profile_Email.Enabled = true;
                 txt_Profile_Address.Enabled = true;
                 dateTime.Enabled = true;
-                //MessageBox.Show(dateTime.Value.ToString());
                 btnEditInfo.ButtonText = "Save";
             }
             else
             {
                 btnEditInfo.ButtonText = "Edit Information";
                 txt_Profile_Name.Enabled = false;
-                //txt_Profile_Gender.Enabled = false;
                 Male.Enabled = Female.Enabled = Undefined.Enabled = false;
                 txt_Profile_Phone.Enabled = false;
                 txt_Profile_Email.Enabled = false;
@@ -132,9 +127,7 @@ namespace Internal_Society.Panel_Controls
                 User_Info.k_Phone = txt_Profile_Phone.Text;
                 User_Info.k_Email = txt_Profile_Email.Text;
                 User_Info.k_Address = txt_Profile_Address.Text;
-                //MessageBox.Show(edit_data_Name);
                 User_Info.UpdateUserInfo();
-                //change_user_info(edit_data_Name, edit_data_Birthday, edit_data_Gender, edit_data_Phone, edit_data_Email, edit_data_Status);
             }
         }
     }

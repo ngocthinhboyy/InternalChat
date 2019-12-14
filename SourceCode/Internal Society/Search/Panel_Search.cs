@@ -100,13 +100,10 @@ namespace Internal_Society
 
                 if (CountExist == ListUserID.Count && dSearchUser.data.Count() == ListUserID.Count)
                 {
-                    //MessageBox.Show("1");
-                    //MessageBox.Show(panel_Main.Visible.ToString());
                     return;
                 }
                 else if (dSearchUser.data.Count() > ListUserID.Count)
                 {
-                    //MessageBox.Show("2");
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
                         if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)) && dSearchUser.data[i].user_id != User_Info.k_ID)
@@ -125,7 +122,7 @@ namespace Internal_Society
                 }
                 else if (dSearchUser.data.Count() < ListUserID.Count)
                 {
-                    //MessageBox.Show("3");
+                    
 
                     for (int i = 0; i < (ListUserID.Count - dSearchUser.data.Count()); i++)
                     {
@@ -147,7 +144,7 @@ namespace Internal_Society
                 }
                 else
                 {
-                    //MessageBox.Show("4");
+                    
                     // List >< lay moi lap vao cu
 
                     // index cua data moi
@@ -193,42 +190,6 @@ namespace Internal_Society
             {
                 ErrorNonUser();
             }
-
-            /*panel_Main.Controls.Clear();
-            //listUser không rỗng, nghĩa là tồn tại những user có username trùng với tên người dùng nhập
-            //thì sẽ chuyển chuỗi đó thành các đối tượng thuộc list
-            
-                
-                
-                label_Error.Visible = false;
-                
-                
-
-                if (dSearchUser.data.Count() > 0)
-                {
-                    // hiển thị các user trùng với username người dùng nhập
-                    
-                    friend_last.Top = 0 - friend_last.Height + 10;
-                    for (int i = 0; i < dSearchUser.data.Count(); i++)
-                    {
-                        friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
-                        Convert.ToInt32(dSearchUser.data[i].user_id));
-                        //friend.Location = new Point(this.Width - friend.Width - 70, 0);
-
-                        //friend.Location = new Point(70, 0);
-                        //friend.Anchor = AnchorStyles.Left;
-                        friend.Left = (this.Width - friend.Width) / 2;
-                        friend.Top = friend_last.Bottom + 20;
-                        panel_Main.Controls.Add(friend);
-
-                        this.VerticalScroll.Value = this.VerticalScroll.Maximum;
-                        friend_last = friend;
-                    }
-                }
-
-
-            }*/
-
         }
 
         private void Panel_Search_Resize(object sender, EventArgs e)
@@ -245,12 +206,6 @@ namespace Internal_Society
 
         private void Panel_Main_Click(object sender, EventArgs e)
         {
-            /*string kData = "";
-            foreach (int item in ListUserID)
-            {
-                kData += " - " + item.ToString();
-            }
-            MessageBox.Show(kData);*/
         }
     }
 }

@@ -51,6 +51,7 @@ namespace Internal_Society
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
             BuyKey buyKeyForm = new BuyKey();
+            buyKeyForm.StartPosition = FormStartPosition.CenterScreen;
             buyKeyForm.Show();
         }
 

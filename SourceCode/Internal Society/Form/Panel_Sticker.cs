@@ -81,8 +81,6 @@ namespace Internal_Society
 
         public void InitialLocation()
         {
-            //this.Top = App_Status.HomePage_Top;
-            //this.Left = App_Status.HomePage_Left + App_Status.HomePage_Width + 10;
             this.StartPosition = FormStartPosition.CenterParent;
         }
 

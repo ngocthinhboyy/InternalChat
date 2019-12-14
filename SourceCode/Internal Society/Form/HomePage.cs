@@ -39,19 +39,15 @@ namespace Internal_Society
 
             LogOutConfirmation.delegateCloseHomePage = new CloseHomePage(this.closeHomePage);
             Internal_Society.Panel_Notification.delegateNoti = new Notification(this.Noti);
-            //Internal_Society.chatbox.delegateMessage = new CompletedGetMessage(this.MessageNoti);
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeHomePage = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             this.StartPosition = FormStartPosition.CenterScreen;
             label_Fullname.Text = User_Info.k_Fullname;
             panel_Dashboard.Dock = DockStyle.Fill;
-            //panel_Chat.Dock = DockStyle.Fill;
             panel_Profile.Dock = DockStyle.Fill;
             panel_Cart.Dock = DockStyle.Fill;
             panel_Calendar.Dock = DockStyle.Fill;
             panel_Games.Dock = DockStyle.Fill;
-          //  panel_Settings.Dock = DockStyle.Fill;
             panel_Search1.Dock = DockStyle.Fill;
-            //MessageBox.Show(App_Status.notification.ToString());
             if (User_Info.k_Avatar == "")
             {
                 picture_user_image.ImageLocation = App_Status.urlLocalResources + "user_001.png";
@@ -62,8 +58,6 @@ namespace Internal_Society
             }
             this.panel_Main.Controls.Add(panel_Dashboard);
             ListPanel.Add(panel_Dashboard);
-            //this.panel_Main.Controls.Add(panel_Chat);
-            //ListPanel.Add(panel_Chat);
             this.panel_Main.Controls.Add(panel_Profile);
             ListPanel.Add(panel_Profile);
             this.panel_Main.Controls.Add(panel_Cart);
@@ -87,21 +81,6 @@ namespace Internal_Society
         {
             this.Close();
         }
-        //public void MessageNoti()
-        //{
-        //    if (App_Status.message > 0)
-        //    {
-        //        lbl_MessageNoti.Visible = true;
-        //        lbl_MessageNoti.Text = App_Status.message.ToString();
-        //        pictureBox1.Visible = true;
-        //        isClickedChatTab = false;
-        //    }
-        //    else
-        //    {
-        //        pictureBox1.Visible = false;
-        //        lbl_MessageNoti.Visible = false;
-        //    }
-        //}
         public void ChangeDarkMode()
         {
             // Change background color of panels and tabs
@@ -157,7 +136,6 @@ namespace Internal_Society
             {
                 if(ListChat[i].Tag.ToString() == atf.Tag.ToString())
                 {
-                    //ListChat[i].Visible = true;
                     bunifuTransition6.ShowSync(ListChat[i]);
                     isExist = true;
                     break;
@@ -170,7 +148,6 @@ namespace Internal_Society
 
 
                 panel_Chat.Dock = DockStyle.Fill;
-                //panel_Chat.Visible = true;
                 bunifuTransition6.ShowSync(panel_Chat);
                 panel_Chat.Tag = atf.Tag;
 
@@ -192,7 +169,6 @@ namespace Internal_Society
         {
             foreach(var pnl in ListPanel)
             {
-                //pnl.Visible = false;
                 if( pnl is Panel_Chat)
                 bunifuTransition6.HideSync(pnl);
                 else pnl.Visible = false;
@@ -200,7 +176,6 @@ namespace Internal_Society
 
             foreach (var pnl in ListChat)
             {
-                //pnl.Visible = false;
                 if (pnl is Panel_Chat)
                     bunifuTransition6.HideSync(pnl);
                 else pnl.Visible = false;
@@ -230,7 +205,6 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             bunifuTransition1.ShowSync(panel_Dashboard);
-            //panel_Dashboard.Visible = true;
             App_Status.time_delay = 10000;
             if (isClickedNotiTab == false)
             {
@@ -242,7 +216,6 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             bunifuTransition2.ShowSync(panel_Profile);
-            //panel_Profile.Visible = true;
             App_Status.time_delay = 10000;
             if (isClickedNotiTab == false)
             {
@@ -265,11 +238,9 @@ namespace Internal_Society
             Tab_DashBoard.Visible = false;
             Tab_Games.Visible = false;
             Tab_Profile.Visible = false;
-            // Tab_Settings.Visible = false;
             indicator.Visible = false;
             onlineList1.Show();
             onlineList1.Dock = DockStyle.Left;
-            //btn_create_new.Text = "Back to menu";
             onlineList1.ShowOnlineUser();
             btnBack.Visible = true;
             //btn_create_new.Visible = false;
@@ -279,7 +250,6 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             bunifuTransition3.ShowSync(panel_Cart);
-            //panel_Cart.Visible = true;
             App_Status.time_delay = 10000;
             if(isClickedNotiTab == false)
             {
@@ -292,12 +262,10 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             bunifuTransition4.ShowSync(panel_Calendar);
-            //panel_Calendar.Visible = true;
             App_Status.time_delay = 10000;
             isClickedNotiTab = true;
             App_Status.notification = 0;
             string urlRequest = App_Status.urlAPI + "c_User/Edit/" + User_Info.k_ID + "/lastNotification/" + Panel_Notification.lastNoti;
-            //MessageBox.Show(urlRequest);
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             Noti();
         }
@@ -306,7 +274,6 @@ namespace Internal_Society
             MoveIndicator((Control)sender);
             TurnOffPanel();
             bunifuTransition5.ShowSync(panel_Games);
-            //panel_Games.Visible = true;
             App_Status.time_delay = 10000;
             if (isClickedNotiTab == false)
             {
@@ -343,11 +310,8 @@ namespace Internal_Society
             if (searchInfo == "")
                 panel_Search1.LabelHuongDanSuDung();
             else
-
             {
-                //panel_Search1.Controls.Clear();
                 panel_Search1.AddFriendInfo();
-
             }
         }
         private void Textbox_Search_Enter_1(object sender, EventArgs e)
@@ -369,7 +333,6 @@ namespace Internal_Society
             indicator.Visible = true;
             btnBack.Visible = false;
             Logo.Visible = true;
-            //btn_create_new.Visible = true;
         }
 
         private void Txt_Search_Leave(object sender, EventArgs e)
@@ -391,11 +354,8 @@ namespace Internal_Society
             if (searchInfo == "")
                 panel_Search1.LabelHuongDanSuDung();
             else
-
             {
-                //panel_Search1.Controls.Clear();
                 panel_Search1.AddFriendInfo();
-
             }
         }
     }

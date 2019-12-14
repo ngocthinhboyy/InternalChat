@@ -200,10 +200,10 @@
       <DependentUpon>friendInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Online List\Friend_Info.cs" />
-    <Compile Include="Panel_Controls\Games_LuckyWheel.cs">
+    <Compile Include="Game\Games_LuckyWheel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel_Controls\Games_LuckyWheel.Designer.cs">
+    <Compile Include="Game\Games_LuckyWheel.Designer.cs">
       <DependentUpon>Games_LuckyWheel.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\HomePage.cs">
@@ -367,7 +367,7 @@
     <EmbeddedResource Include="Search\friendInfo.resx">
       <DependentUpon>friendInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel_Controls\Games_LuckyWheel.resx">
+    <EmbeddedResource Include="Game\Games_LuckyWheel.resx">
       <DependentUpon>Games_LuckyWheel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\HomePage.resx">

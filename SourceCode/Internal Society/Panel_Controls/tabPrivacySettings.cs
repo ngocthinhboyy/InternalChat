@@ -89,8 +89,6 @@ namespace Internal_Society.Panel_Controls
                 App_Status.iconGames = "../../Resources/font-awesome_4-7-0_gamepad_35_0_000000_none.png";
                 App_Status.iconNoti = "../../Resources/ionicons_2-0-1_android-notifications_35_0_000000_none.png";
                 App_Status.logo = "../../Resources/IC.html-page-001.jpg";
-                /*User_Info.k_DarkMode = false;
-                User_Info.UpdateUserInfo();*/
             }
             delegateChangeHomePage();
             delegateChangeProfile();
@@ -99,7 +97,7 @@ namespace Internal_Society.Panel_Controls
             delegateChangeCart();
             delegateChangeSearch();
             delegateChangeGames();
-            //delegateChangeDashboard();
+            delegateChangeDashboard();
         }
 
         private void BtnLogout_Click(object sender, EventArgs e)
