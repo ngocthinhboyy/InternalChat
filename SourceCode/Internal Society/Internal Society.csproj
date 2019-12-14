@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\friend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Game\friend.Designer.cs">
+      <DependentUpon>friend.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game\CaroChess.cs" />
     <Compile Include="Game\Ban_Co.cs" />
     <Compile Include="Form\BuyKey.cs">
@@ -309,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\friend.resx">
+      <DependentUpon>friend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Game\frmCaro.resx">
       <DependentUpon>frmCaro.cs</DependentUpon>

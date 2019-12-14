@@ -140,7 +140,7 @@ namespace Internal_Society
         #endregion
         #region KiemTraChienThang
 
-        public void EndgameOnline()
+        public void EndgameOnline(string username2)
         {
             switch (iLuotDi)
             {
@@ -150,7 +150,7 @@ namespace Internal_Society
                     incorrect2.Show();
                     break;
                 case 2:
-                    string sName1 = "O đã chiến thắng!!";
+                    string sName1 = username2 + " đã chiến thắng!!";
                     IncorrectAlert incorrect1 = new IncorrectAlert(sName1);
                     incorrect1.Show();
                     break;
