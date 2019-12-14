@@ -48,16 +48,24 @@ namespace Internal_Society
             this.panel2.BackColor = App_Status.backFormColor;
             this.panel3.BackColor = App_Status.backFormColor;
         }
-
-        private void Games_LuckyWheel1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BunifuImageButton1_Click(object sender, EventArgs e)
         {
             BuyKey buyKeyForm = new BuyKey();
             buyKeyForm.Show();
+        }
+
+        private void BtnGameLuckyWheels_Click(object sender, EventArgs e)
+        {
+            frmLuckyWheel frmLuckyWheel = new frmLuckyWheel();
+            frmLuckyWheel.StartPosition = FormStartPosition.CenterScreen;
+            frmLuckyWheel.Show();
+        }
+
+        private void BtnGameCaro_Click(object sender, EventArgs e)
+        {
+            frmCaro frmCaro = new frmCaro();
+            frmCaro.StartPosition = FormStartPosition.CenterScreen;
+            frmCaro.Show();
         }
     }
 }

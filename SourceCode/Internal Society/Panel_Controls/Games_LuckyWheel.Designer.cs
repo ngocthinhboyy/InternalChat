@@ -46,7 +46,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.Slot_1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_play = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -56,6 +55,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button_play = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_LuckyWheel.SuspendLayout();
             this.Slot_4.SuspendLayout();
             this.Slot_8.SuspendLayout();
@@ -77,7 +77,7 @@
             // 
             // Panel_LuckyWheel
             // 
-            this.Panel_LuckyWheel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Panel_LuckyWheel.BackColor = System.Drawing.Color.HotPink;
             this.Panel_LuckyWheel.Controls.Add(this.Slot_4);
             this.Panel_LuckyWheel.Controls.Add(this.Slot_8);
             this.Panel_LuckyWheel.Controls.Add(this.Slot_5);
@@ -245,42 +245,6 @@
             this.panel3.Size = new System.Drawing.Size(166, 166);
             this.panel3.TabIndex = 2;
             // 
-            // button_play
-            // 
-            this.button_play.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.button_play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_play.BorderRadius = 0;
-            this.button_play.ButtonText = "Play";
-            this.button_play.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_play.DisabledColor = System.Drawing.Color.Gray;
-            this.button_play.Iconcolor = System.Drawing.Color.Transparent;
-            this.button_play.Iconimage = null;
-            this.button_play.Iconimage_right = null;
-            this.button_play.Iconimage_right_Selected = null;
-            this.button_play.Iconimage_Selected = null;
-            this.button_play.IconMarginLeft = 0;
-            this.button_play.IconMarginRight = 0;
-            this.button_play.IconRightVisible = true;
-            this.button_play.IconRightZoom = 0D;
-            this.button_play.IconVisible = true;
-            this.button_play.IconZoom = 90D;
-            this.button_play.IsTab = false;
-            this.button_play.Location = new System.Drawing.Point(200, 226);
-            this.button_play.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_play.Name = "button_play";
-            this.button_play.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.button_play.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.button_play.OnHoverTextColor = System.Drawing.Color.White;
-            this.button_play.selected = false;
-            this.button_play.Size = new System.Drawing.Size(92, 48);
-            this.button_play.TabIndex = 0;
-            this.button_play.Text = "Play";
-            this.button_play.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button_play.Textcolor = System.Drawing.Color.White;
-            this.button_play.TextFont = new System.Drawing.Font("Segoe UI", 18.23377F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_play.Click += new System.EventHandler(this.Button_play_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 70;
@@ -382,6 +346,42 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // button_play
+            // 
+            this.button_play.Activecolor = System.Drawing.Color.DarkSlateBlue;
+            this.button_play.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_play.BorderRadius = 0;
+            this.button_play.ButtonText = "Play";
+            this.button_play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_play.DisabledColor = System.Drawing.Color.Gray;
+            this.button_play.Iconcolor = System.Drawing.Color.Transparent;
+            this.button_play.Iconimage = null;
+            this.button_play.Iconimage_right = null;
+            this.button_play.Iconimage_right_Selected = null;
+            this.button_play.Iconimage_Selected = null;
+            this.button_play.IconMarginLeft = 0;
+            this.button_play.IconMarginRight = 0;
+            this.button_play.IconRightVisible = true;
+            this.button_play.IconRightZoom = 0D;
+            this.button_play.IconVisible = true;
+            this.button_play.IconZoom = 90D;
+            this.button_play.IsTab = false;
+            this.button_play.Location = new System.Drawing.Point(200, 226);
+            this.button_play.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_play.Name = "button_play";
+            this.button_play.Normalcolor = System.Drawing.Color.DarkSlateBlue;
+            this.button_play.OnHovercolor = System.Drawing.Color.DarkSlateBlue;
+            this.button_play.OnHoverTextColor = System.Drawing.Color.White;
+            this.button_play.selected = false;
+            this.button_play.Size = new System.Drawing.Size(92, 48);
+            this.button_play.TabIndex = 0;
+            this.button_play.Text = "Play";
+            this.button_play.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_play.Textcolor = System.Drawing.Color.White;
+            this.button_play.TextFont = new System.Drawing.Font("Segoe UI", 18.23377F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_play.Click += new System.EventHandler(this.Button_play_Click);
+            // 
             // Games_LuckyWheel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,7 +430,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel Slot_1;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuFlatButton button_play;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -440,5 +439,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private Bunifu.Framework.UI.BunifuFlatButton button_play;
     }
 }

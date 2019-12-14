@@ -81,6 +81,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game\CaroChess.cs" />
+    <Compile Include="Game\Ban_Co.cs" />
     <Compile Include="Form\BuyKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +98,19 @@
     </Compile>
     <Compile Include="Classes\ListSticker.cs" />
     <Compile Include="Chat\FriendList.cs" />
+    <Compile Include="Game\frmCaro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\frmCaro.Designer.cs">
+      <DependentUpon>frmCaro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\frmLuckyWheel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\frmLuckyWheel.Designer.cs">
+      <DependentUpon>frmLuckyWheel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\O_Co.cs" />
     <Compile Include="Panel_Controls\loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -294,6 +309,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\frmCaro.resx">
+      <DependentUpon>frmCaro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\frmLuckyWheel.resx">
+      <DependentUpon>frmLuckyWheel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_Controls\loading.resx">
       <DependentUpon>loading.cs</DependentUpon>
@@ -1167,6 +1188,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\videos_purchased_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76702389_482550149040133_3998274060453675008_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53896999_2088402937942505_8495001933424099328_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74241430_2251576318475912_6738065945186533376_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53316601_437145770358436_3641021317882314752_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80017681_721804111677896_4503219617254080512_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78592373_1202118866658060_8563396324085465088_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74241430_2251576318475912_6738065945186533376_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74241430_2251576318475912_6738065945186533376_n2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

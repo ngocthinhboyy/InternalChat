@@ -29,24 +29,27 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lb_Diamond = new System.Windows.Forms.Label();
             this.lb_KeyWheel = new System.Windows.Forms.Label();
             this.lb_Gold = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.games_LuckyWheel1 = new Internal_Society.Games_LuckyWheel();
+            this.btnGameCaro = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnGameLuckyWheels = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGameCaro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGameLuckyWheels)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -64,22 +67,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(775, 60);
             this.panel3.TabIndex = 1;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1.Image = global::Internal_Society.Properties.Resources.buy_001;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(2, 6);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(43, 46);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 4;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
             // 
             // lb_Diamond
             // 
@@ -132,6 +119,47 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(775, 619);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.btnGameCaro);
+            this.panel2.Controls.Add(this.btnGameLuckyWheels);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(775, 619);
+            this.panel2.TabIndex = 0;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = global::Internal_Society.Properties.Resources.buy_001;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(2, 6);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(43, 46);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 4;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -165,37 +193,35 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panel1
+            // btnGameCaro
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 619);
-            this.panel1.TabIndex = 7;
+            this.btnGameCaro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGameCaro.BackColor = System.Drawing.Color.Transparent;
+            this.btnGameCaro.Image = global::Internal_Society.Properties.Resources._53316601_437145770358436_3641021317882314752_n;
+            this.btnGameCaro.ImageActive = null;
+            this.btnGameCaro.Location = new System.Drawing.Point(420, 158);
+            this.btnGameCaro.Name = "btnGameCaro";
+            this.btnGameCaro.Size = new System.Drawing.Size(253, 269);
+            this.btnGameCaro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnGameCaro.TabIndex = 1;
+            this.btnGameCaro.TabStop = false;
+            this.btnGameCaro.Zoom = 10;
+            this.btnGameCaro.Click += new System.EventHandler(this.BtnGameCaro_Click);
             // 
-            // panel2
+            // btnGameLuckyWheels
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.panel2.Controls.Add(this.games_LuckyWheel1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(775, 560);
-            this.panel2.TabIndex = 0;
-            // 
-            // games_LuckyWheel1
-            // 
-            this.games_LuckyWheel1.Location = new System.Drawing.Point(138, 19);
-            this.games_LuckyWheel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.games_LuckyWheel1.Name = "games_LuckyWheel1";
-            this.games_LuckyWheel1.Size = new System.Drawing.Size(498, 498);
-            this.games_LuckyWheel1.TabIndex = 0;
-            this.games_LuckyWheel1.Load += new System.EventHandler(this.Games_LuckyWheel1_Load);
+            this.btnGameLuckyWheels.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGameLuckyWheels.BackColor = System.Drawing.Color.Transparent;
+            this.btnGameLuckyWheels.Image = global::Internal_Society.Properties.Resources._74241430_2251576318475912_6738065945186533376_n;
+            this.btnGameLuckyWheels.ImageActive = null;
+            this.btnGameLuckyWheels.Location = new System.Drawing.Point(92, 158);
+            this.btnGameLuckyWheels.Name = "btnGameLuckyWheels";
+            this.btnGameLuckyWheels.Size = new System.Drawing.Size(253, 269);
+            this.btnGameLuckyWheels.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGameLuckyWheels.TabIndex = 0;
+            this.btnGameLuckyWheels.TabStop = false;
+            this.btnGameLuckyWheels.Zoom = 10;
+            this.btnGameLuckyWheels.Click += new System.EventHandler(this.BtnGameLuckyWheels_Click);
             // 
             // Panel_Games
             // 
@@ -207,12 +233,14 @@
             this.Size = new System.Drawing.Size(775, 619);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnGameCaro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGameLuckyWheels)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,10 +254,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private Games_LuckyWheel games_LuckyWheel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label lb_KeyWheel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuImageButton btnGameLuckyWheels;
+        private Bunifu.Framework.UI.BunifuImageButton btnGameCaro;
     }
 }
