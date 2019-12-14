@@ -12,10 +12,13 @@ namespace Internal_Society
 
     public partial class LoginForm : Form
     {
-
+        public static bool isClick;
+        private bool mouseDown;
+        private Point lastLocation;
         public LoginForm()
         {
             InitializeComponent();
+            isClick = false;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -38,14 +41,13 @@ namespace Internal_Society
             btnRepresentLogin.Enabled = false;
         }
 
-        public async void LoginProcess()
+        private async void LoginProcess()
         {
             var usernameLogin = txtUsername.Text;
             var passwordLogin = txtPassword.Text;
-            string urlRequest = App_Status.urlAPI + "c_user/Login/" + usernameLogin + "/" + passwordLogin;
+            string urlRequest = App_Status.urlAPI + "c_User/Login/" + usernameLogin + "/" + passwordLogin;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             StatusButtonLogin_Process();
-
             // await
             string result = await getStringTask;
             dynamic data = JsonConvert.DeserializeObject(result);
@@ -76,6 +78,8 @@ namespace Internal_Society
             if (LoginStatus.Success == "1")
             {
                 // dang nhap thanh cong.
+                txtUsername.Text = "";
+                txtPassword.Text = "";
                 // define
                 User_Info.k_ID = LoginStatus.ID;
                 User_Info.k_Username = LoginStatus.Username.ToString();
@@ -88,12 +92,19 @@ namespace Internal_Society
                 User_Info.k_Birthday = LoginStatus.Birthday.ToString();
                 User_Info.k_Status = LoginStatus.Status.ToString();
                 User_Info.k_Address = LoginStatus.Address.ToString();
+                User_Info.k_Avatar = LoginStatus.urlAvatar.ToString();
+                User_Info.k_LastNoti = LoginStatus.lastNotification.ToString();
+                User_Info.k_LuckyWheel = LoginStatus.LuckyKey.ToString();
 
                 // cho nguoi dung tien vao Homepage
+
                 HomePage f1 = new HomePage();
                 this.Hide();
                 f1.ShowDialog();
-                this.Close();
+                if (isClick == false)
+                    this.Close();
+                else
+                    this.Show();
             }
             else
             {
@@ -172,7 +183,29 @@ namespace Internal_Society
             else
                 this.Show();
         }
-        #endregion  
+        #endregion
 
+        private void BunifuGradientPanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
+        }
+        private void BunifuGradientPanel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+        private void BunifuGradientPanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

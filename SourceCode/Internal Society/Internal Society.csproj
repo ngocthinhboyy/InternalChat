@@ -36,15 +36,27 @@
     <Reference Include="Bunifu.Core">
       <HintPath>Resources\Bunifu.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>Resources\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
+      <HintPath>Resources\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
+    </Reference>
     <Reference Include="BunifuDataViz">
       <HintPath>Resources\BunifuDataViz.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Resources\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework">
-      <HintPath>..\..\20190921_test005\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -69,12 +81,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="loading.cs">
+    <Compile Include="Form\BuyKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BuyKey.Designer.cs">
+      <DependentUpon>BuyKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FileUpload.cs" />
+    <Compile Include="Form\fileView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fileView.Designer.cs">
+      <DependentUpon>fileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ListSticker.cs" />
+    <Compile Include="Chat\FriendList.cs" />
+    <Compile Include="Panel_Controls\loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="loading.Designer.cs">
+    <Compile Include="Panel_Controls\loading.Designer.cs">
       <DependentUpon>loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\LogOutConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LogOutConfirmation.Designer.cs">
+      <DependentUpon>LogOutConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\MaHoa.cs" />
     <Compile Include="Notification\Notification_AddFriend.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +154,18 @@
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Chat\Data_Message.cs" />
+    <Compile Include="Panel_Controls\tabPrivacySettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel_Controls\tabPrivacySettings.Designer.cs">
+      <DependentUpon>tabPrivacySettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel_Controls\tabProfileInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel_Controls\tabProfileInfo.Designer.cs">
+      <DependentUpon>tabProfileInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Search\friendInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,7 +286,16 @@
     </Compile>
     <Compile Include="Search\userSearchInfo.cs" />
     <Compile Include="Classes\User_Info.cs" />
-    <EmbeddedResource Include="loading.resx">
+    <EmbeddedResource Include="Form\BuyKey.resx">
+      <DependentUpon>BuyKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fileView.resx">
+      <DependentUpon>fileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LogOutConfirmation.resx">
+      <DependentUpon>LogOutConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Controls\loading.resx">
       <DependentUpon>loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notification\Notification_AddFriend.resx">
@@ -263,6 +318,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\CreateAccount_PersonalInfo.resx">
       <DependentUpon>CreateAccount_PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Controls\tabPrivacySettings.resx">
+      <DependentUpon>tabPrivacySettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel_Controls\tabProfileInfo.resx">
+      <DependentUpon>tabProfileInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search\friendInfo.resx">
       <DependentUpon>friendInfo.cs</DependentUpon>
@@ -1022,6 +1083,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\detete_006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bored_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_wheel_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_to_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold_bars_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled_circle_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-bamboo-wall-3d-film-mural-wallpaper-bamboo-5a92f976d0c422.8794907315195815588551.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading_002.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_0011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itVang_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_0021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhieuVang_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keywheel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videos_purchased_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

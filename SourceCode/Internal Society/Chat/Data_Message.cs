@@ -31,18 +31,10 @@ namespace Internal_Society
 
 
 
-        public Data_Message() { }
-        public Data_Message(string user_ID, string message_ID, string message_Type,
-            string message_Detail, string message_Time)
-        {
-
-            this.user_ID = user_ID;
-            this.message_ID = message_ID;
-            this.message_Type = message_Type;
-            this.message_Detail = message_Detail;
-            this.message_Time = message_Time;
+        public Data_Message() {
 
         }
+        
 
     }
 
@@ -55,6 +47,7 @@ namespace Internal_Society
     }
 
 
+    
 
 
 }

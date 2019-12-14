@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace Internal_Society
 {
     public partial class activeFriend : UserControl
     {
+        private string userName;
+        private string userStatus;
+        private string userAva;
+        private int userLastLogin;
+        private int NumOfUnSeenMessage = 0;
+        public int ConversationID = -1;
         public activeFriend()
         {
             InitializeComponent();
         }
+
         public void offlineStatus()
         {
             this.onlineIcon.Visible = false;
@@ -26,25 +34,93 @@ namespace Internal_Society
             this.onlineIcon.Visible = true;
             this.offlineIcon.Visible = false;
         }
-        public activeFriend(string userName, string userStatus, int userLastLogin)
+
+        private void UpdateLocalProperties(string userAva,string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
+        {
+            this.userAva = userAva; 
+            this.userName = userName;
+            this.userStatus = userStatus;
+            this.userLastLogin = userLastLogin;
+            this.NumOfUnSeenMessage = NumOfUnSeenMessage;
+            this.ConversationID = ConversationID;
+        }
+        public activeFriend(string userAva,string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
         {
             InitializeComponent();
-            username.Text = userName;
-            activeStatus.Text = userStatus;
-            //MessageBox.Show(userLastLogin.ToString());
+            UpdateLocalProperties(userAva, userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
+            UpdateFriend();
 
-            TimeSpan span = DateTime.Now.Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc));
-            int time = (int)span.TotalSeconds;
+        }
 
-            string sStatus = "";
-            if (time - userLastLogin < 60) { sStatus = "Online"; onlineStatus(); }
-            else { sStatus = (time - userLastLogin) / 60 + " minutes ago"; offlineStatus(); }
-            activeStatus.Text = sStatus;
+        public void UpdateFriend(string userAva,string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
+        {
+            UpdateLocalProperties(userAva,userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
+            UpdateFriend();
         }
 
 
+        public void UpdateFriend()
+        {
+            
+            Timer_Offline.Stop();
+            Timer_Offline.Start();
+            //MessageBox.Show(this.newMess.ToString());
+            if (NumOfUnSeenMessage > 0 && onlineList.isViewing != this.ConversationID)
+            {
+                lbl_NewMess.Visible = true;
+                lbl_NewMess.Text = NumOfUnSeenMessage.ToString();
+                pictureBox2.Visible = true;
+                //isClickedChatTab = false;
+            }
+            else
+            {
+                pictureBox2.Visible = false;
+                lbl_NewMess.Visible = false;
+            }
+            //MessageBox.Show(this.userAva);
+            if (this.userAva == "")
+            {
+                user_Avatar.ImageLocation = App_Status.urlLocalResources + "user_001.png";
+            }
+            else
+            {
+                user_Avatar.ImageLocation = App_Status.urlImage + "/image/" + this.userAva;
 
+            }
 
-        
+            username.Text = this.userName;
+            activeStatus.Text = this.userStatus;
+            TimeSpan span = DateTime.Now.Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc));
+            int time = (int)span.TotalSeconds;
+            string sStatus = "";
+            if(Internal_Society.Panel_Controls.tabPrivacySettings.activeStatus == true)
+            {
+                if (time - this.userLastLogin < 60) { sStatus = "Online"; onlineStatus(); }
+                else { sStatus = (time - this.userLastLogin) / 60 + " minutes ago"; offlineStatus(); }
+            }
+            else
+            {
+                sStatus = "";
+            }
+            activeStatus.Text = sStatus;
+            
+        }
+
+        public async void TurnOffNumOfMessage()
+        {
+            pictureBox2.Visible = false;
+            lbl_NewMess.Visible = false;
+
+            string urlSearchUser = App_Status.urlAPI + "c_Message/ReadMessage/" + ConversationID + "/" + User_Info.k_ID;
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
+            // await
+            string result = await getStringTask;
+        }
+
+        private void Timer_Offline_Tick(object sender, EventArgs e)
+        {
+            Timer_Offline.Stop();
+            UpdateFriend();
+        }
     }
 }

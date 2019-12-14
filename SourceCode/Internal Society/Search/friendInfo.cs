@@ -13,15 +13,20 @@ namespace Internal_Society
 {
     public partial class friendInfo : UserControl
     {
-        int FriendID;
+        public int FriendID;
         public friendInfo()
         {
             InitializeComponent();
         }
         public friendInfo(string userName, string userFullname, int FriendID)
         {
-            this.FriendID = FriendID;
             InitializeComponent();
+            UpdateUserInfo(userName, userFullname, FriendID);
+        }
+
+        public void UpdateUserInfo(string userName, string userFullname, int FriendID)
+        {
+            this.FriendID = FriendID;
             username.Text = userName;
             if (userFullname == "")
             {
@@ -49,28 +54,28 @@ namespace Internal_Society
         }
 
         bool isClicked = false;
-        private void btn_addFriend_Click(object sender, EventArgs e)
+
+        private void BunifuButton1_Click(object sender, EventArgs e)
         {
             if (!isClicked)
             {
                 AddFriendAsync();
-                btn_addFriend.BackColor = Color.FromArgb(227, 38, 54);
-                btn_addFriend.Normalcolor = Color.FromArgb(227, 38, 54);
-                btn_addFriend.OnHovercolor = Color.FromArgb(217, 38, 54);
-                btn_addFriend.Text = "Remove request";
+                btn_addFriend.IdleFillColor = Color.FromArgb(227, 38, 54);
+                //btn_addFriend.Normalcolor = Color.FromArgb(227, 38, 54);
+                //btn_addFriend.OnHovercolor = Color.FromArgb(217, 38, 54);
+                btn_addFriend.ButtonText = "Remove request";
                 isClicked = !isClicked;
             }
             else
             {
                 RemoveFriendAsync();
-                btn_addFriend.BackColor = Color.FromArgb(46, 139, 87);
-                btn_addFriend.Normalcolor = Color.FromArgb(46, 139, 87);
-                btn_addFriend.OnHovercolor = Color.FromArgb(36, 129, 77);
-                btn_addFriend.Text = "Add friend";
+                btn_addFriend.IdleFillColor = Color.DeepPink;
+                //btn_addFriend.Normalcolor = Color.FromArgb(46, 139, 87);
+                //btn_addFriend.OnHovercolor = Color.FromArgb(36, 129, 77);
+                btn_addFriend.ButtonText = "Add friend";
                 isClicked = !isClicked;
             }
-            
-            
+
         }
     }
 }

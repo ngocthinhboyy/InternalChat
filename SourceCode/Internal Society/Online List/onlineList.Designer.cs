@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_NoActiveFriend = new System.Windows.Forms.Label();
             this.TimeRequest = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // label1
+            // label_NoActiveFriend
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 94);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(370, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "No active people";
+            this.label_NoActiveFriend.AutoSize = true;
+            this.label_NoActiveFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NoActiveFriend.ForeColor = System.Drawing.Color.White;
+            this.label_NoActiveFriend.Location = new System.Drawing.Point(60, 94);
+            this.label_NoActiveFriend.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_NoActiveFriend.Name = "label_NoActiveFriend";
+            this.label_NoActiveFriend.Size = new System.Drawing.Size(370, 54);
+            this.label_NoActiveFriend.TabIndex = 0;
+            this.label_NoActiveFriend.Text = "No active people";
             // 
             // TimeRequest
             // 
@@ -56,7 +56,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_NoActiveFriend);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "onlineList";
             this.Size = new System.Drawing.Size(523, 642);
@@ -68,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_NoActiveFriend;
         private System.Windows.Forms.Timer TimeRequest;
     }
 }

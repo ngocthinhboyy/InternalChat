@@ -10,10 +10,13 @@ using System.Windows.Forms;
 
 namespace Internal_Society
 {
+    
     public partial class sticker : UserControl
     {
-        private string urlSticker;
+        public string urlSticker;
         public string name;
+        
+
         public sticker()
         {
             InitializeComponent();
@@ -30,8 +33,9 @@ namespace Internal_Society
         private void StickerBox_Click(object sender, EventArgs e)
         {
             Bunifu.Framework.UI.BunifuImageButton btnKun = sender as Bunifu.Framework.UI.BunifuImageButton;
-            
-            Queue_Sticker.data.Enqueue(urlSticker);
+            Panel_Sticker.ExecuteDelegate(urlSticker);
         }
+
+        
     }
 }

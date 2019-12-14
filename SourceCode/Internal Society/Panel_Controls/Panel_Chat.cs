@@ -15,6 +15,7 @@ namespace Internal_Society
         public Panel_Chat(int conversation_id)
         {
             InitializeComponent();
+            //MessageBox.Show("1");
             Internal_Society.chatbox cb = new Internal_Society.chatbox(conversation_id);
             cb.Dock = DockStyle.Fill;
             this.Controls.Add(cb);

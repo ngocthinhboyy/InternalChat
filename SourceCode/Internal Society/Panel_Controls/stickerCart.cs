@@ -7,90 +7,107 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace Internal_Society
 {
+    public delegate void UpdateGold();
     public partial class stickerCart : UserControl
     {
+        
+        public string PakageUrl;
+        private int Price;
+        private int StickerID;
+        public static UpdateGold delegateUpdateGold;
         public stickerCart()
         {
             InitializeComponent();
+           
         }
-        public stickerCart(string urlSticker,int X, int Y)
+
+        private void EnableButtonAdd()
         {
+            btn_add.ButtonText = this.Price.ToString();
+        }
+        private void DisableButtonAdd()
+        {
+            btn_add.Enabled = false;
+            btn_add.ButtonText = "Owned";
+        }
+
+        public stickerCart(string urlSticker,int X, int Y, int Price)
+        {
+
             InitializeComponent();
+            this.PakageUrl = urlSticker;
             pictureBox1.ImageLocation = urlSticker;
             this.Location = new Point(X, Y);
+            this.Price = Price;
         }
-        public void SetDetailSticker(string name, string description)
+        public void SetDetailSticker(string name, string description, bool IsOwned, int ID)
         {
             lbl_name.Text = name;
             lbl_description.Text = description;
+            this.StickerID = ID;
+
+
+            if (IsOwned)
+            {
+                DisableButtonAdd();
+            }
+            else
+            {
+                EnableButtonAdd();
+                
+            }
         }
 
-        public void Btn_preview_Click(object sender, EventArgs e)
+
+        public event EventHandler PreviewButtonClicked;
+
+        protected virtual void OnPrivewButtonClicked(object sender, EventArgs e)
         {
-            int x=0;
-            switch (lbl_name.Text)
+            var handler = PreviewButtonClicked;
+
+            if (handler != null)
+                handler(sender, e);
+        }
+
+
+        private void Btn_preview_Click_1(object sender, EventArgs e)
+        {
+            OnPrivewButtonClicked(this, e);
+        }
+
+        private void Btn_add_Click(object sender, EventArgs e)
+        {
+            BuyProcess();
+        }
+
+        private async void BuyProcess()
+        {
+           
+            string urlRequest = App_Status.urlAPI + "c_Sticker/BuySticker/" + User_Info.k_ID + "/" + StickerID.ToString();
+            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
+            
+
+            // await
+            string result = await getStringTask;
+            dynamic data = JsonConvert.DeserializeObject(result);
+            if(data.Success == "1")
             {
-                case "Pink Pig":
-                    {
-                        x = 0;
-                        break;
-                    }
-                case "Lucy and Daisy":
-                    {
-                        x = 1;
-                        break;
-                    }
-                case "Foxie":
-                    {
-                        x = 2;
-                        break;
-                    }
-                case "Quick Answer":
-                    {
-                        x = 3;
-                        break;
-                    }
-                case "ToTo dog":
-                    {
-                        x = 4;
-                        break;
-                    }
-                case "TonTon Friend":
-                    {
-                        x = 5;
-                        break;
-                    }
-                case "Pikalong":
-                    {
-                        x = 6;
-                        break;
-                    }
-                case "Tiến Lên Việt Nam":
-                    {
-                        x = 7;
-                        break;
-                    }
-                case "Rồng vàng":
-                    {
-                        x = 8;
-                        break;
-                    }
-                case "Dev":
-                    {
-                        x = 9;
-                        break;
-                    }
-                case "Kingdom of Tigers":
-                    {
-                        x = 10;
-                        break;
-                    }
+                IncorrectAlert alert = new IncorrectAlert("Buy successfully !");
+                alert.Show();
+                DisableButtonAdd();
+                ListSticker.getSticker();
+                delegateUpdateGold();
             }
-            Panel_Sticker pn_sticker = new Panel_Sticker(x);
-            pn_sticker.Show();
+            else
+            {
+                IncorrectAlert alert = new IncorrectAlert("You don't have enough gold.");
+                alert.Show();
+            }
         }
     }
 }

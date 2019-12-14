@@ -39,10 +39,10 @@
             this.stickerBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stickerBox.Image = global::Internal_Society.Properties.Resources.tonton_friends_011;
             this.stickerBox.ImageActive = null;
-            this.stickerBox.Location = new System.Drawing.Point(2, 10);
+            this.stickerBox.Location = new System.Drawing.Point(3, 15);
             this.stickerBox.Margin = new System.Windows.Forms.Padding(0);
             this.stickerBox.Name = "stickerBox";
-            this.stickerBox.Size = new System.Drawing.Size(121, 121);
+            this.stickerBox.Size = new System.Drawing.Size(202, 186);
             this.stickerBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.stickerBox.TabIndex = 3;
             this.stickerBox.TabStop = false;
@@ -51,11 +51,12 @@
             // 
             // sticker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.stickerBox);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "sticker";
-            this.Size = new System.Drawing.Size(130, 147);
+            this.Size = new System.Drawing.Size(217, 226);
             ((System.ComponentModel.ISupportInitialize)(this.stickerBox)).EndInit();
             this.ResumeLayout(false);
 

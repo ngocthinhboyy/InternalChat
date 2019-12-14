@@ -37,10 +37,9 @@
             // pb_Avatar
             // 
             this.pb_Avatar.Image = global::Internal_Society.Properties.Resources.user_001;
-            this.pb_Avatar.Location = new System.Drawing.Point(49, 27);
-            this.pb_Avatar.Margin = new System.Windows.Forms.Padding(5);
+            this.pb_Avatar.Location = new System.Drawing.Point(30, 36);
             this.pb_Avatar.Name = "pb_Avatar";
-            this.pb_Avatar.Size = new System.Drawing.Size(117, 108);
+            this.pb_Avatar.Size = new System.Drawing.Size(70, 70);
             this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Avatar.TabIndex = 15;
             this.pb_Avatar.TabStop = false;
@@ -49,10 +48,9 @@
             // 
             this.lb_Fullname.AutoSize = true;
             this.lb_Fullname.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Fullname.Location = new System.Drawing.Point(194, 27);
-            this.lb_Fullname.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lb_Fullname.Location = new System.Drawing.Point(117, 36);
             this.lb_Fullname.Name = "lb_Fullname";
-            this.lb_Fullname.Size = new System.Drawing.Size(173, 35);
+            this.lb_Fullname.Size = new System.Drawing.Size(103, 20);
             this.lb_Fullname.TabIndex = 11;
             this.lb_Fullname.Text = "Tân Hữu Toàn";
             // 
@@ -61,23 +59,24 @@
             this.lb_More.AutoSize = true;
             this.lb_More.Font = new System.Drawing.Font("Segoe UI Semibold", 9.818182F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_More.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lb_More.Location = new System.Drawing.Point(195, 71);
-            this.lb_More.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lb_More.Location = new System.Drawing.Point(118, 64);
             this.lb_More.Name = "lb_More";
-            this.lb_More.Size = new System.Drawing.Size(436, 30);
+            this.lb_More.Size = new System.Drawing.Size(280, 19);
             this.lb_More.TabIndex = 11;
             this.lb_More.Text = "Hãy gửi cho bạn ấy những lời chúc tốt đẹp ";
             // 
             // Notification_AcceptFriend
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pb_Avatar);
             this.Controls.Add(this.lb_More);
             this.Controls.Add(this.lb_Fullname);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Notification_AcceptFriend";
-            this.Size = new System.Drawing.Size(1000, 170);
+            this.Size = new System.Drawing.Size(598, 141);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
