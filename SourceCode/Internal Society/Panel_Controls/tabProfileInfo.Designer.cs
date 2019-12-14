@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabProfileInfo));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.txt_Profile_Name = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Birthday = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.txt_Profile_Gender = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Phone = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Email = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Status = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -47,7 +46,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnEditPhoto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnEditInfo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.Male = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Female = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Undefined = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_Avatar
@@ -152,53 +159,6 @@
             this.txt_Profile_Birthday.TextMarginLeft = 5;
             this.txt_Profile_Birthday.TextPlaceholder = "";
             this.txt_Profile_Birthday.UseSystemPasswordChar = false;
-            // 
-            // txt_Profile_Gender
-            // 
-            this.txt_Profile_Gender.AcceptsReturn = false;
-            this.txt_Profile_Gender.AcceptsTab = false;
-            this.txt_Profile_Gender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Profile_Gender.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_Profile_Gender.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_Profile_Gender.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Profile_Gender.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Profile_Gender.BackgroundImage")));
-            this.txt_Profile_Gender.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
-            this.txt_Profile_Gender.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txt_Profile_Gender.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(207)))), ((int)(((byte)(214)))));
-            this.txt_Profile_Gender.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(195)))), ((int)(((byte)(49)))));
-            this.txt_Profile_Gender.BorderRadius = 30;
-            this.txt_Profile_Gender.BorderThickness = 2;
-            this.txt_Profile_Gender.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Gender.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Profile_Gender.DefaultText = "";
-            this.txt_Profile_Gender.Enabled = false;
-            this.txt_Profile_Gender.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.txt_Profile_Gender.ForeColor = System.Drawing.Color.White;
-            this.txt_Profile_Gender.HideSelection = true;
-            this.txt_Profile_Gender.IconLeft = null;
-            this.txt_Profile_Gender.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Gender.IconPadding = 10;
-            this.txt_Profile_Gender.IconRight = null;
-            this.txt_Profile_Gender.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Gender.Location = new System.Drawing.Point(306, 163);
-            this.txt_Profile_Gender.MaxLength = 32767;
-            this.txt_Profile_Gender.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txt_Profile_Gender.Modified = false;
-            this.txt_Profile_Gender.Name = "txt_Profile_Gender";
-            this.txt_Profile_Gender.PasswordChar = '\0';
-            this.txt_Profile_Gender.ReadOnly = false;
-            this.txt_Profile_Gender.SelectedText = "";
-            this.txt_Profile_Gender.SelectionLength = 0;
-            this.txt_Profile_Gender.SelectionStart = 0;
-            this.txt_Profile_Gender.ShortcutsEnabled = true;
-            this.txt_Profile_Gender.Size = new System.Drawing.Size(316, 49);
-            this.txt_Profile_Gender.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_Profile_Gender.TabIndex = 5;
-            this.txt_Profile_Gender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Profile_Gender.TextMarginLeft = 5;
-            this.txt_Profile_Gender.TextPlaceholder = "";
-            this.txt_Profile_Gender.UseSystemPasswordChar = false;
             // 
             // txt_Profile_Phone
             // 
@@ -441,13 +401,13 @@
             this.btnEditPhoto.IdleIconRightImage = null;
             this.btnEditPhoto.Location = new System.Drawing.Point(30, 236);
             this.btnEditPhoto.Name = "btnEditPhoto";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties1.BorderRadius = 35;
-            stateProperties1.BorderThickness = 2;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnEditPhoto.onHoverState = stateProperties1;
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties9.BorderRadius = 35;
+            stateProperties9.BorderThickness = 2;
+            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties9.IconLeftImage = null;
+            stateProperties9.IconRightImage = null;
+            this.btnEditPhoto.onHoverState = stateProperties9;
             this.btnEditPhoto.Size = new System.Drawing.Size(159, 45);
             this.btnEditPhoto.TabIndex = 18;
             this.btnEditPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -476,23 +436,106 @@
             this.btnEditInfo.IdleIconRightImage = null;
             this.btnEditInfo.Location = new System.Drawing.Point(389, 404);
             this.btnEditInfo.Name = "btnEditInfo";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties2.BorderRadius = 35;
-            stateProperties2.BorderThickness = 2;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnEditInfo.onHoverState = stateProperties2;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties10.BorderRadius = 35;
+            stateProperties10.BorderThickness = 2;
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties10.IconLeftImage = null;
+            stateProperties10.IconRightImage = null;
+            this.btnEditInfo.onHoverState = stateProperties10;
             this.btnEditInfo.Size = new System.Drawing.Size(159, 45);
             this.btnEditInfo.TabIndex = 19;
             this.btnEditInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditInfo.Click += new System.EventHandler(this.BtnEditInfo_Click);
+            // 
+            // Male
+            // 
+            this.Male.Checked = true;
+            this.Male.Enabled = false;
+            this.Male.Location = new System.Drawing.Point(35, 13);
+            this.Male.Name = "Male";
+            this.Male.OutlineColor = System.Drawing.Color.DeepPink;
+            this.Male.RadioColor = System.Drawing.Color.DeepPink;
+            this.Male.Size = new System.Drawing.Size(25, 25);
+            this.Male.TabIndex = 0;
+            this.Male.Text = null;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(66, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Male";
+            // 
+            // Female
+            // 
+            this.Female.Checked = false;
+            this.Female.Enabled = false;
+            this.Female.Location = new System.Drawing.Point(133, 13);
+            this.Female.Name = "Female";
+            this.Female.OutlineColor = System.Drawing.Color.DeepPink;
+            this.Female.RadioColor = System.Drawing.Color.DeepPink;
+            this.Female.Size = new System.Drawing.Size(25, 25);
+            this.Female.TabIndex = 2;
+            this.Female.Text = null;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(164, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 20);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Female";
+            // 
+            // Undefined
+            // 
+            this.Undefined.Checked = false;
+            this.Undefined.Enabled = false;
+            this.Undefined.Location = new System.Drawing.Point(246, 13);
+            this.Undefined.Name = "Undefined";
+            this.Undefined.OutlineColor = System.Drawing.Color.DeepPink;
+            this.Undefined.RadioColor = System.Drawing.Color.DeepPink;
+            this.Undefined.Size = new System.Drawing.Size(25, 25);
+            this.Undefined.TabIndex = 4;
+            this.Undefined.Text = null;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(277, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 20);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Undefined";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.Undefined);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.Female);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.Male);
+            this.panel1.Location = new System.Drawing.Point(289, 168);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(358, 49);
+            this.panel1.TabIndex = 21;
             // 
             // tabProfileInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEditInfo);
             this.Controls.Add(this.btnEditPhoto);
             this.Controls.Add(this.label6);
@@ -505,7 +548,6 @@
             this.Controls.Add(this.txt_Profile_Status);
             this.Controls.Add(this.txt_Profile_Email);
             this.Controls.Add(this.txt_Profile_Phone);
-            this.Controls.Add(this.txt_Profile_Gender);
             this.Controls.Add(this.txt_Profile_Birthday);
             this.Controls.Add(this.txt_Profile_Name);
             this.Controls.Add(this.pb_Avatar);
@@ -513,6 +555,8 @@
             this.Name = "tabProfileInfo";
             this.Size = new System.Drawing.Size(650, 452);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,7 +567,6 @@
         private System.Windows.Forms.PictureBox pb_Avatar;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Name;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Birthday;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Gender;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Phone;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Email;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Status;
@@ -536,5 +579,12 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditPhoto;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEditInfo;
+        private Bunifu.UI.WinForms.BunifuRadioButton Male;
+        private System.Windows.Forms.Label label9;
+        private Bunifu.UI.WinForms.BunifuRadioButton Female;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.UI.WinForms.BunifuRadioButton Undefined;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -97,14 +97,16 @@ namespace Internal_Society
             dynamic data = JsonConvert.DeserializeObject(result);
             if(data.Success == "1")
             {
-                MessageBox.Show("Buy successfully !");
+                IncorrectAlert alert = new IncorrectAlert("Buy successfully !");
+                alert.Show();
                 DisableButtonAdd();
                 ListSticker.getSticker();
                 delegateUpdateGold();
             }
             else
             {
-                MessageBox.Show("Fail !");
+                IncorrectAlert alert = new IncorrectAlert("You don't have enough gold.");
+                alert.Show();
             }
         }
     }

@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\BuyKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BuyKey.Designer.cs">
+      <DependentUpon>BuyKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\FileUpload.cs" />
     <Compile Include="Form\fileView.cs">
       <SubType>Form</SubType>
@@ -280,6 +286,9 @@
     </Compile>
     <Compile Include="Search\userSearchInfo.cs" />
     <Compile Include="Classes\User_Info.cs" />
+    <EmbeddedResource Include="Form\BuyKey.resx">
+      <DependentUpon>BuyKey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\fileView.resx">
       <DependentUpon>fileView.cs</DependentUpon>
     </EmbeddedResource>
@@ -1137,6 +1146,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nhieuVang_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keywheel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\videos_purchased_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

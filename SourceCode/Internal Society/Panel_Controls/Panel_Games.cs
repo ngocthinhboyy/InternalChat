@@ -16,6 +16,7 @@ namespace Internal_Society
         public Panel_Games()
         {
             InitializeComponent();
+            BuyKey.delegateChangeDiamondGame = new ChangeDiamond(this.Change);
             Internal_Society.Games_LuckyWheel.delegatechangeKeyGame = new ChangeKey(this.ChangeKey);
             Internal_Society.Games_LuckyWheel.delegatechangeGame = new ChangeKey(this.Change);
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeGames = new Panel_Controls.DarkMode(this.ChangeDarkMode);
@@ -51,6 +52,12 @@ namespace Internal_Society
         private void Games_LuckyWheel1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            BuyKey buyKeyForm = new BuyKey();
+            buyKeyForm.Show();
         }
     }
 }

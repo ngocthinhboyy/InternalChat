@@ -38,6 +38,7 @@ namespace Internal_Society
             InitializeComponent();
             lb_Gold.Text = User_Info.k_Gold;
             lb_Diamond.Text = User_Info.k_Diamond;
+            BuyKey.delegateChangeDiamondCart = new ChangeDiamond(this.UpdateData);
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeCart = new Panel_Controls.DarkMode(this.ChangeDarkMode);
             UpdateData();
             Internal_Society.stickerCart.delegateUpdateGold = new UpdateGold(this.UpdateGoldAsync);

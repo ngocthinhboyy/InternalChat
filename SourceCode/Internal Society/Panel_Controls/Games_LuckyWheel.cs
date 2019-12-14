@@ -37,6 +37,7 @@ namespace Internal_Society
         public Games_LuckyWheel()
         {
             InitializeComponent();
+
         }
 
 
@@ -58,13 +59,15 @@ namespace Internal_Society
                 else
                 {
                     MacDinh();
-                    MessageBox.Show("You don't have enough key to play !");
+                    IncorrectAlert alert = new IncorrectAlert("You don't have enough key to play !");
+                    alert.Show();
                 }
                 
             }
             catch
             {
-                MessageBox.Show("Connection Error");
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
             }
 
         }
@@ -86,7 +89,8 @@ namespace Internal_Society
         {
             button_play.Enabled = true;
             button_play.Text = "Play";
-            MessageBox.Show(kMessage);
+            IncorrectAlert alert = new IncorrectAlert(kMessage);
+            alert.Show();
             string urlRequest = App_Status.urlAPI + "c_User/GetUserInfo/" + User_Info.k_ID;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
 

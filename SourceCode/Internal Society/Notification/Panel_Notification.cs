@@ -39,7 +39,8 @@ namespace Internal_Society
             }
             catch
             {
-                MessageBox.Show("Connection Error");
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
             }
             
             TimeRequest.Stop();

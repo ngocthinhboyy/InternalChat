@@ -248,7 +248,8 @@ namespace Internal_Society
             {
                 kData += " - " + item.ToString();
             }
-            MessageBox.Show(kData);
+            IncorrectAlert alert = new IncorrectAlert(kData);
+            alert.Show();
         }
     }
 }
