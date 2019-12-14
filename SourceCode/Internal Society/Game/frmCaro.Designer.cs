@@ -30,21 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaro));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnl = new System.Windows.Forms.Panel();
-            this.grbLuatChoi = new System.Windows.Forms.GroupBox();
-            this.lblLuatChoi = new System.Windows.Forms.Label();
+            this.timer_Load = new System.Windows.Forms.Timer(this.components);
+            this.pnlGameCaro = new System.Windows.Forms.Panel();
             this.btnReset = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnChoiMoi1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnThoat1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPlayOffline1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPlayOnline1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.grbLuatChoi = new System.Windows.Forms.GroupBox();
+            this.lblLuatChoi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer_Load = new System.Windows.Forms.Timer(this.components);
+            this.pnlGameCaro.SuspendLayout();
             this.grbLuatChoi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,32 +54,33 @@
             // pnl
             // 
             this.pnl.BackColor = System.Drawing.Color.LightGray;
-            this.pnl.Location = new System.Drawing.Point(213, 24);
+            this.pnl.Location = new System.Drawing.Point(225, 55);
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(501, 501);
             this.pnl.TabIndex = 34;
             this.pnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Paint);
             this.pnl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Pnl_MouseClick);
             // 
-            // grbLuatChoi
+            // timer_Load
             // 
-            this.grbLuatChoi.Controls.Add(this.lblLuatChoi);
-            this.grbLuatChoi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbLuatChoi.ForeColor = System.Drawing.Color.Black;
-            this.grbLuatChoi.Location = new System.Drawing.Point(16, 223);
-            this.grbLuatChoi.Name = "grbLuatChoi";
-            this.grbLuatChoi.Size = new System.Drawing.Size(177, 178);
-            this.grbLuatChoi.TabIndex = 33;
-            this.grbLuatChoi.TabStop = false;
-            this.grbLuatChoi.Text = "Luật chơi";
+            this.timer_Load.Interval = 1000;
+            this.timer_Load.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // lblLuatChoi
+            // pnlGameCaro
             // 
-            this.lblLuatChoi.AutoSize = true;
-            this.lblLuatChoi.Location = new System.Drawing.Point(7, 21);
-            this.lblLuatChoi.Name = "lblLuatChoi";
-            this.lblLuatChoi.Size = new System.Drawing.Size(0, 13);
-            this.lblLuatChoi.TabIndex = 0;
+            this.pnlGameCaro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(153)))));
+            this.pnlGameCaro.Controls.Add(this.btnReset);
+            this.pnlGameCaro.Controls.Add(this.btnChoiMoi1);
+            this.pnlGameCaro.Controls.Add(this.btnThoat1);
+            this.pnlGameCaro.Controls.Add(this.btnPlayOffline1);
+            this.pnlGameCaro.Controls.Add(this.btnPlayOnline1);
+            this.pnlGameCaro.Controls.Add(this.grbLuatChoi);
+            this.pnlGameCaro.Controls.Add(this.pictureBox1);
+            this.pnlGameCaro.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlGameCaro.Location = new System.Drawing.Point(0, 0);
+            this.pnlGameCaro.Name = "pnlGameCaro";
+            this.pnlGameCaro.Size = new System.Drawing.Size(207, 606);
+            this.pnlGameCaro.TabIndex = 40;
             // 
             // btnReset
             // 
@@ -99,19 +102,19 @@
             this.btnReset.IdleFillColor = System.Drawing.Color.DeepPink;
             this.btnReset.IdleIconLeftImage = null;
             this.btnReset.IdleIconRightImage = null;
-            this.btnReset.Location = new System.Drawing.Point(26, 510);
+            this.btnReset.Location = new System.Drawing.Point(20, 500);
             this.btnReset.Name = "btnReset";
-            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties16.BorderRadius = 30;
-            stateProperties16.BorderThickness = 2;
-            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties16.IconLeftImage = null;
-            stateProperties16.IconRightImage = null;
-            this.btnReset.onHoverState = stateProperties16;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties26.BorderRadius = 30;
+            stateProperties26.BorderThickness = 2;
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties26.IconLeftImage = null;
+            stateProperties26.IconRightImage = null;
+            this.btnReset.onHoverState = stateProperties26;
             this.btnReset.Size = new System.Drawing.Size(150, 42);
-            this.btnReset.TabIndex = 39;
+            this.btnReset.TabIndex = 46;
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click_1);
             // 
             // btnChoiMoi1
             // 
@@ -134,19 +137,19 @@
             this.btnChoiMoi1.IdleFillColor = System.Drawing.Color.DeepPink;
             this.btnChoiMoi1.IdleIconLeftImage = null;
             this.btnChoiMoi1.IdleIconRightImage = null;
-            this.btnChoiMoi1.Location = new System.Drawing.Point(103, 558);
+            this.btnChoiMoi1.Location = new System.Drawing.Point(97, 548);
             this.btnChoiMoi1.Name = "btnChoiMoi1";
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties17.BorderRadius = 30;
-            stateProperties17.BorderThickness = 2;
-            stateProperties17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties17.IconLeftImage = null;
-            stateProperties17.IconRightImage = null;
-            this.btnChoiMoi1.onHoverState = stateProperties17;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties27.BorderRadius = 30;
+            stateProperties27.BorderThickness = 2;
+            stateProperties27.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties27.IconLeftImage = null;
+            stateProperties27.IconRightImage = null;
+            this.btnChoiMoi1.onHoverState = stateProperties27;
             this.btnChoiMoi1.Size = new System.Drawing.Size(104, 45);
-            this.btnChoiMoi1.TabIndex = 38;
+            this.btnChoiMoi1.TabIndex = 45;
             this.btnChoiMoi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnChoiMoi1.Click += new System.EventHandler(this.BtnChoiMoi1_Click);
+            this.btnChoiMoi1.Click += new System.EventHandler(this.BtnChoiMoi1_Click_1);
             // 
             // btnThoat1
             // 
@@ -168,19 +171,19 @@
             this.btnThoat1.IdleFillColor = System.Drawing.Color.DeepPink;
             this.btnThoat1.IdleIconLeftImage = null;
             this.btnThoat1.IdleIconRightImage = null;
-            this.btnThoat1.Location = new System.Drawing.Point(12, 558);
+            this.btnThoat1.Location = new System.Drawing.Point(6, 548);
             this.btnThoat1.Name = "btnThoat1";
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties18.BorderRadius = 30;
-            stateProperties18.BorderThickness = 2;
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties18.IconLeftImage = null;
-            stateProperties18.IconRightImage = null;
-            this.btnThoat1.onHoverState = stateProperties18;
+            stateProperties28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties28.BorderRadius = 30;
+            stateProperties28.BorderThickness = 2;
+            stateProperties28.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties28.IconLeftImage = null;
+            stateProperties28.IconRightImage = null;
+            this.btnThoat1.onHoverState = stateProperties28;
             this.btnThoat1.Size = new System.Drawing.Size(85, 45);
-            this.btnThoat1.TabIndex = 37;
+            this.btnThoat1.TabIndex = 44;
             this.btnThoat1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnThoat1.Click += new System.EventHandler(this.BtnThoat1_Click);
+            this.btnThoat1.Click += new System.EventHandler(this.BtnThoat1_Click_1);
             // 
             // btnPlayOffline1
             // 
@@ -202,19 +205,19 @@
             this.btnPlayOffline1.IdleFillColor = System.Drawing.Color.DeepPink;
             this.btnPlayOffline1.IdleIconLeftImage = null;
             this.btnPlayOffline1.IdleIconRightImage = null;
-            this.btnPlayOffline1.Location = new System.Drawing.Point(43, 462);
+            this.btnPlayOffline1.Location = new System.Drawing.Point(37, 452);
             this.btnPlayOffline1.Name = "btnPlayOffline1";
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties19.BorderRadius = 30;
-            stateProperties19.BorderThickness = 2;
-            stateProperties19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties19.IconLeftImage = null;
-            stateProperties19.IconRightImage = null;
-            this.btnPlayOffline1.onHoverState = stateProperties19;
+            stateProperties29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties29.BorderRadius = 30;
+            stateProperties29.BorderThickness = 2;
+            stateProperties29.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties29.IconLeftImage = null;
+            stateProperties29.IconRightImage = null;
+            this.btnPlayOffline1.onHoverState = stateProperties29;
             this.btnPlayOffline1.Size = new System.Drawing.Size(120, 42);
-            this.btnPlayOffline1.TabIndex = 36;
+            this.btnPlayOffline1.TabIndex = 43;
             this.btnPlayOffline1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPlayOffline1.Click += new System.EventHandler(this.BtnPlayOffline1_Click);
+            this.btnPlayOffline1.Click += new System.EventHandler(this.BtnPlayOffline1_Click_1);
             // 
             // btnPlayOnline1
             // 
@@ -236,54 +239,65 @@
             this.btnPlayOnline1.IdleFillColor = System.Drawing.Color.DeepPink;
             this.btnPlayOnline1.IdleIconLeftImage = null;
             this.btnPlayOnline1.IdleIconRightImage = null;
-            this.btnPlayOnline1.Location = new System.Drawing.Point(43, 417);
+            this.btnPlayOnline1.Location = new System.Drawing.Point(37, 407);
             this.btnPlayOnline1.Name = "btnPlayOnline1";
-            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties20.BorderRadius = 30;
-            stateProperties20.BorderThickness = 2;
-            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties20.IconLeftImage = null;
-            stateProperties20.IconRightImage = null;
-            this.btnPlayOnline1.onHoverState = stateProperties20;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties30.BorderRadius = 30;
+            stateProperties30.BorderThickness = 2;
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties30.IconLeftImage = null;
+            stateProperties30.IconRightImage = null;
+            this.btnPlayOnline1.onHoverState = stateProperties30;
             this.btnPlayOnline1.Size = new System.Drawing.Size(120, 39);
-            this.btnPlayOnline1.TabIndex = 35;
+            this.btnPlayOnline1.TabIndex = 42;
             this.btnPlayOnline1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPlayOnline1.Click += new System.EventHandler(this.BtnPlayOnline1_Click);
+            this.btnPlayOnline1.Click += new System.EventHandler(this.BtnPlayOnline1_Click_1);
+            // 
+            // grbLuatChoi
+            // 
+            this.grbLuatChoi.Controls.Add(this.lblLuatChoi);
+            this.grbLuatChoi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbLuatChoi.ForeColor = System.Drawing.Color.Black;
+            this.grbLuatChoi.Location = new System.Drawing.Point(10, 213);
+            this.grbLuatChoi.Name = "grbLuatChoi";
+            this.grbLuatChoi.Size = new System.Drawing.Size(177, 178);
+            this.grbLuatChoi.TabIndex = 41;
+            this.grbLuatChoi.TabStop = false;
+            this.grbLuatChoi.Text = "Luật chơi";
+            // 
+            // lblLuatChoi
+            // 
+            this.lblLuatChoi.AutoSize = true;
+            this.lblLuatChoi.Location = new System.Drawing.Point(7, 21);
+            this.lblLuatChoi.Name = "lblLuatChoi";
+            this.lblLuatChoi.Size = new System.Drawing.Size(0, 13);
+            this.lblLuatChoi.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Internal_Society.Properties.Resources.unnamed1;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(177, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
-            // 
-            // timer_Load
-            // 
-            this.timer_Load.Interval = 1000;
-            this.timer_Load.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // frmCaro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Salmon;
             this.ClientSize = new System.Drawing.Size(747, 606);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnChoiMoi1);
-            this.Controls.Add(this.btnThoat1);
-            this.Controls.Add(this.btnPlayOffline1);
-            this.Controls.Add(this.btnPlayOnline1);
+            this.Controls.Add(this.pnlGameCaro);
             this.Controls.Add(this.pnl);
-            this.Controls.Add(this.grbLuatChoi);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCaro";
             this.Text = "frmCaro";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmCaro_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmCaro_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmCaro_MouseUp);
+            this.pnlGameCaro.ResumeLayout(false);
             this.grbLuatChoi.ResumeLayout(false);
             this.grbLuatChoi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -292,16 +306,16 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel pnl;
+        private System.Windows.Forms.Timer timer_Load;
+        private System.Windows.Forms.Panel pnlGameCaro;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnReset;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnChoiMoi1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnThoat1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPlayOffline1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPlayOnline1;
-        private System.Windows.Forms.Panel pnl;
         private System.Windows.Forms.GroupBox grbLuatChoi;
         private System.Windows.Forms.Label lblLuatChoi;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer_Load;
     }
 }

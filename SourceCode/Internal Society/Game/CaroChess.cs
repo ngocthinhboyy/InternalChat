@@ -161,10 +161,12 @@ namespace Internal_Society
             switch (iLuotDi)
             {
                 case 1:
-                    MessageBox.Show("Player 2 chiến thắng!!!");
+                    IncorrectAlert incorrect2 = new IncorrectAlert("Player 2 đã chiến thắng");
+                    incorrect2.Show();
                     break;
                 case 2:
-                    MessageBox.Show("Player 1 chiến thắng!!!");
+                    IncorrectAlert incorrect1 = new IncorrectAlert("Player 1 đã chiến thắng");
+                    incorrect1.Show();
                     break;
             }
         }

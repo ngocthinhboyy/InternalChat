@@ -295,5 +295,77 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
                 this.Update();
             }
         }
+
+        private void BtnPlayOffline1_Click_1(object sender, EventArgs e)
+        {
+            caro_chess.BIsPlaying = true;
+            g.Clear(pnl.BackColor);
+            caro_chess.VeBanCo(g);
+            caro_chess.TaoMangOCo();
+            caro_chess.StartPlayOffline();
+            btnPlayOffline1.Enabled = false;
+            btnPlayOnline1.Enabled = true;
+            btnChoiMoi1.Enabled = true;
+        }
+
+        private void BtnPlayOnline1_Click_1(object sender, EventArgs e)
+        {
+            CreateNewGameOnline(myUserID, 1);
+            caro_chess.BIsPlaying = true;
+            g.Clear(pnl.BackColor);
+            caro_chess.VeBanCo(g);
+            caro_chess.TaoMangOCo();
+            timer_Load.Enabled = true;
+            caro_chess.StartPlayOnline();
+            btnPlayOnline1.Enabled = false;
+            btnPlayOffline1.Enabled = true;
+            btnChoiMoi1.Enabled = true;
+        }
+
+        private void BtnReset_Click_1(object sender, EventArgs e)
+        {
+            caro_chess.BIsPlaying = false;
+            g.Clear(pnl.BackColor);
+            caro_chess.VeBanCo(g);
+            caro_chess.IGameMode = 0;
+            btnPlayOnline1.Enabled = true;
+            btnPlayOffline1.Enabled = true;
+            btnChoiMoi1.Enabled = false;
+        }
+
+        private void BtnThoat1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnChoiMoi1_Click_1(object sender, EventArgs e)
+        {
+            if (caro_chess.IGameMode == 0)
+            {
+                MessageBox.Show("Chưa chọn chế độ chơi !", "Lỗi");
+                return;
+            }
+            if (caro_chess.IGameMode == 1)
+            {
+                // play Offline
+                caro_chess.BIsPlaying = true;
+                g.Clear(pnl.BackColor);
+                caro_chess.TaoMangOCo();
+                caro_chess.VeBanCo(g);
+                caro_chess.StartPlayOffline();
+                btnChoiMoi1.Enabled = true;
+            }
+            else
+            {
+                // play Online
+                CreateNewGameOnline(myUserID, 1);
+                caro_chess.BIsPlaying = true;
+                g.Clear(pnl.BackColor);
+                caro_chess.TaoMangOCo();
+                caro_chess.VeBanCo(g);
+                caro_chess.StartPlayOnline();
+                btnChoiMoi1.Enabled = true;
+            }
+        }
     }
 }
