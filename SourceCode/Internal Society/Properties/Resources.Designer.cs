@@ -1083,6 +1083,26 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IC_html__1__page_001 {
+            get {
+                object obj = ResourceManager.GetObject("IC.html (1)-page-001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IC_html__2__page_001 {
+            get {
+                object obj = ResourceManager.GetObject("IC.html (2)-page-001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_clock_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-clock-100", resourceCulture);

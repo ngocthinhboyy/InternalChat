@@ -456,7 +456,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
         private void Friend_MouseEnter1(object sender, EventArgs e)
         {
             Internal_Society.friend atf = sender as Internal_Society.friend;
-            atf.BackColor = Color.FromArgb(App_Status.backFormColor.R - 10, App_Status.backFormColor.G - 10, App_Status.backFormColor.B - 10);
+            atf.BackColor = Color.FromArgb(255 - 10, 255 - 10, 255 - 10);
             /*if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat))
                 atf.BackColor = Color.FromArgb(App_Status.backFormColor.R - 10, App_Status.backFormColor.G - 10, App_Status.backFormColor.B - 10);
                 */
@@ -492,10 +492,10 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
         private void Friend_MouseEnter(object sender, EventArgs e)
         {
             Internal_Society.friend atf = sender as Internal_Society.friend;
-            if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat))
-                atf.BackColor = Color.FromArgb(App_Status.backFormColor.R - 10, App_Status.backFormColor.G - 10, App_Status.backFormColor.B - 10);
-            else
-                atf.BackColor = Color.FromArgb(App_Status.backFormColor.R, App_Status.backFormColor.G, App_Status.backFormColor.B);
+            if (atf != null && atf.BackColor != Color.FromArgb(255, 255,255))
+                atf.BackColor = Color.FromArgb(255 - 10, 255 - 10, 255 - 10);
+            //else
+            //    atf.BackColor = Color.FromArgb(App_Status.backFormColor.R, App_Status.backFormColor.G, App_Status.backFormColor.B);
         }
 
         private void BtnPlayOnline1_Click_1(object sender, EventArgs e)
@@ -596,7 +596,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             foreach (var item in pnl_Friend.Controls)
             {
                 Internal_Society.friend atf = item as Internal_Society.friend;
-                if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat)) atf.BackColor = Color.Transparent;
+                if (atf != null && atf.BackColor != Color.FromArgb(255, 255,255)) atf.BackColor = Color.Transparent;
             }
         }
 

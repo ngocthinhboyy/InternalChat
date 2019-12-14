@@ -51,12 +51,12 @@
             // 
             // activeStatus
             // 
-            this.activeStatus.AutoSize = true;
+            this.activeStatus.AutoEllipsis = true;
             this.activeStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeStatus.ForeColor = System.Drawing.Color.DeepPink;
             this.activeStatus.Location = new System.Drawing.Point(76, 32);
             this.activeStatus.Name = "activeStatus";
-            this.activeStatus.Size = new System.Drawing.Size(64, 15);
+            this.activeStatus.Size = new System.Drawing.Size(121, 15);
             this.activeStatus.TabIndex = 5;
             this.activeStatus.Text = "active now";
             // 

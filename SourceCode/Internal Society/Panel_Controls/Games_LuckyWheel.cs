@@ -17,6 +17,8 @@ namespace Internal_Society
     {
         public static ChangeKey delegatechangeKeyGame;
         public static ChangeKey delegatechangeGame;
+        public static ChangeKey delegatechangeKeyFrmGame;
+        public static ChangeKey delegatechangeFrmGame;
         string kMessage = "";
         int kIndex = 1;
         int kTarget = 0;
@@ -101,6 +103,7 @@ namespace Internal_Society
             User_Info.k_Diamond = data.Diamond;
             User_Info.k_LuckyWheel = data.LuckyKey;
             delegatechangeGame();
+            delegatechangeFrmGame();
         }
 
         private void MacDinh()
@@ -110,13 +113,12 @@ namespace Internal_Society
             
         }
 
-        private async void Button_play_Click(object sender, EventArgs e)
+        private void Button_play_Click(object sender, EventArgs e)
         {
             loading();
             delegatechangeKeyGame();
+            delegatechangeKeyFrmGame();
             Play();
-            
-
         }
 
         private void Timer1_Tick(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace Internal_Society
     {
         public static ChangeDiamond delegateChangeDiamondGame;
         public static ChangeDiamond delegateChangeDiamondCart;
+        public static ChangeDiamond delegateChangeDiamondFrmGame;
         private bool mouseDown;
         private Point lastLocation;
         public BuyKey()
@@ -77,6 +78,7 @@ namespace Internal_Society
                     lb_KeyWheel.Text = User_Info.k_LuckyWheel;
                     delegateChangeDiamondGame();
                     delegateChangeDiamondCart();
+                    delegateChangeDiamondFrmGame();
                     IncorrectAlert alert = new IncorrectAlert("Buy Successfully.");
                     alert.Show();
                 }

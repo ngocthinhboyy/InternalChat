@@ -39,7 +39,7 @@ namespace Internal_Society
         public static string iconCart;
         public static string iconNoti;
         public static string iconGames;
-
+        public static string logo;
         public static int notification = 0;
 
 

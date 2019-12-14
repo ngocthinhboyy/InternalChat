@@ -105,9 +105,9 @@ namespace Internal_Society
         public void ChangeDarkMode()
         {
             // Change background color of panels and tabs
-            panel1.BackColor = panel2.BackColor = pn_header.BackColor = textbox_Search.FillColor =
+            panel1.BackColor = panel2.BackColor = pn_header.BackColor =
            Tab_Cart.BackColor = Tab_Chat.BackColor = Tab_DashBoard.BackColor = Tab_Games.BackColor
-           = Tab_Notification.BackColor = Tab_Profile.BackColor = onlineList1.BackColor = App_Status.backFormColor;
+           = Tab_Notification.BackColor = Tab_Profile.BackColor = onlineList1.BackColor = Logo.BackColor =App_Status.backFormColor;
 
             Tab_Cart.Activecolor = Tab_Chat.Activecolor = Tab_DashBoard.Activecolor = Tab_Games.Activecolor
             = Tab_Notification.Activecolor = Tab_Profile.Activecolor = App_Status.backFormColor;
@@ -119,9 +119,7 @@ namespace Internal_Society
             = Tab_Notification.Normalcolor = Tab_Profile.Normalcolor = App_Status.backFormColor;
             //Change font color
             Tab_Cart.Textcolor = Tab_Chat.Textcolor = Tab_DashBoard.Textcolor = Tab_Games.Textcolor
-            = Tab_Notification.Textcolor = Tab_Profile.Textcolor = textbox_Search.ForeColor =
-            textbox_Search.BorderColorIdle = textbox_Search.BorderColorHover = textbox_Search.BorderColorActive =
-            textbox_Search.BorderColorDisabled = label_Fullname.ForeColor = App_Status.textColor;
+            = Tab_Notification.Textcolor = Tab_Profile.Textcolor = textbox_Search.ForeColor = textbox_Search.LineIdleColor = label_Fullname.ForeColor = App_Status.textColor;
             //Change color of icon
             Tab_DashBoard.Iconimage = Image.FromFile(App_Status.iconDashboard);
             Tab_Cart.Iconimage = Image.FromFile(App_Status.iconCart);
@@ -131,6 +129,7 @@ namespace Internal_Society
             Tab_Chat.Iconimage = Image.FromFile(App_Status.iconChat);
             //Change panel background
             panel_Main.BackColor = App_Status.backPanelColor;
+            Logo.Image = Image.FromFile(App_Status.logo);
         }
         public void Noti()
         {
@@ -256,6 +255,7 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
+            Logo.Visible = false;
             lbl_Noti.Visible = false;
             pictureBox2.Visible = false;
             App_Status.time_delay = 1500;
@@ -368,8 +368,35 @@ namespace Internal_Society
             Tab_Profile.Visible = true;
             indicator.Visible = true;
             btnBack.Visible = false;
+            Logo.Visible = true;
             //btn_create_new.Visible = true;
         }
 
+        private void Txt_Search_Leave(object sender, EventArgs e)
+        {
+            textbox_Search.Text = "Search...";
+        }
+
+        private void Txt_Search_Enter(object sender, EventArgs e)
+        {
+            textbox_Search.Text = "";
+        }
+
+        private void Txt_Search_KeyUp(object sender, KeyEventArgs e)
+        {
+            TurnOffPanel();
+            panel_Search1.Visible = true;
+            searchInfo = textbox_Search.Text;
+            // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
+            if (searchInfo == "")
+                panel_Search1.LabelHuongDanSuDung();
+            else
+
+            {
+                //panel_Search1.Controls.Clear();
+                panel_Search1.AddFriendInfo();
+
+            }
+        }
     }
 }

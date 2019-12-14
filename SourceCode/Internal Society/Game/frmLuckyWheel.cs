@@ -17,7 +17,37 @@ namespace Internal_Society
         public frmLuckyWheel()
         {
             InitializeComponent();
+            lb_Diamond.Text = User_Info.k_Diamond;
+            lb_Gold.Text = User_Info.k_Gold;
+            lb_KeyWheel.Text = User_Info.k_LuckyWheel;
+            Internal_Society.Games_LuckyWheel.delegatechangeKeyFrmGame = new ChangeKey(this.ChangeKey);
+            Internal_Society.Games_LuckyWheel.delegatechangeFrmGame = new ChangeKey(this.Change);
+            BuyKey.delegateChangeDiamondFrmGame = new ChangeDiamond(this.UpdateData);
+        }
 
+        private void UpdateData()
+        {
+            lb_Diamond.Text = User_Info.k_Diamond;
+            lb_KeyWheel.Text = User_Info.k_LuckyWheel;
+        }
+
+        private void Change()
+        {
+            lb_Diamond.Text = User_Info.k_Diamond;
+            lb_Gold.Text = User_Info.k_Gold;
+            lb_KeyWheel.Text = User_Info.k_LuckyWheel;
+        }
+
+        private void ChangeKey()
+        {
+            int key = Convert.ToInt32(lb_KeyWheel.Text);
+            key--;
+            if (key < 0)
+            {
+                key = 0;
+                return;
+            }
+            lb_KeyWheel.Text = key.ToString();
         }
 
         private void BunifuImageButton1_Click(object sender, EventArgs e)

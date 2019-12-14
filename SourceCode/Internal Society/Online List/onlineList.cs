@@ -227,7 +227,7 @@ namespace Internal_Society
             foreach (var item in this.Controls)
             {
                 Internal_Society.activeFriend atf = item as Internal_Society.activeFriend;
-                if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat)) atf.BackColor = Color.Transparent;
+                if (atf != null && atf.BackColor != Color.FromArgb(App_Status.backFormColor.R, App_Status.backFormColor.G, App_Status.backFormColor.B)) atf.BackColor = Color.Transparent;
             }
         }
     }

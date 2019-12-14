@@ -72,7 +72,7 @@ namespace Internal_Society
 
                 if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "0") {
                     Notification_AddFriend ntAddFriend = new Notification_AddFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
-                    ntAddFriend.Location = new Point(iLeft, 0);
+                    ntAddFriend.Location = new Point((this.Width - ntAddFriend.Width) / 2, 0);
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
@@ -80,7 +80,7 @@ namespace Internal_Society
                 else if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "1")
                 {
                     Notification_AcceptFriend ntAddFriend = new Notification_AcceptFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
-                    ntAddFriend.Location = new Point(iLeft, 0);
+                    ntAddFriend.Location = new Point((this.Width - ntAddFriend.Width) / 2, 0);
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
@@ -88,7 +88,7 @@ namespace Internal_Society
                 else if (notiData.data[i].type == "CaroInvite")
                 {
                     NotiCaro ntAddFriend = new NotiCaro(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].detail));
-                    ntAddFriend.Location = new Point(iLeft, 0);
+                    ntAddFriend.Location = new Point((this.Width - ntAddFriend.Width) / 2, 0);
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
