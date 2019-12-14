@@ -63,9 +63,9 @@ namespace Internal_Society
 
         private void BtnGameCaro_Click(object sender, EventArgs e)
         {
-            frmCaro frmCaro = new frmCaro();
-            frmCaro.StartPosition = FormStartPosition.CenterScreen;
-            frmCaro.Show();
+            frmCaro frmCaro1 = new frmCaro();
+            frmCaro1.StartPosition = FormStartPosition.CenterScreen;
+            frmCaro1.Show();
         }
     }
 }

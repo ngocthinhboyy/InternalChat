@@ -21,7 +21,7 @@ namespace Internal_Society
         // lay tam hinh cua X
         private Image ImageX = new Bitmap(Properties.Resources._80017681_721804111677896_4503219617254080512_n);
         // luot di 1 là nguoi choi dau tien 2 la nguoi choi sau do
-        public static int iLuotDi = 1;
+        public int iLuotDi = 1;
         private bool bIsPlaying = false;
         // iGameMode = 1 choi offline   
         // iGameMode = 2= choi online
@@ -168,6 +168,7 @@ namespace Internal_Society
 
                 string sName1 = "Bạn đã thua!!";
                 IncorrectAlert incorrect1 = new IncorrectAlert(sName1);
+                incorrect1.Show();
             }
             else if(iTurn == friendID)
             {

@@ -31,8 +31,8 @@ namespace Internal_Society
         private void Btn_Accept_Click(object sender, EventArgs e)
         {
 
-            frmCaro frmCaro = new frmCaro(GameID,friendName);
-            frmCaro.Show();
+            frmCaro frmCaro2 = new frmCaro(GameID,friendName);
+            frmCaro2.Show();
         }
 
         private void Btn_Remove_Click(object sender, EventArgs e)

@@ -18,15 +18,15 @@ namespace Internal_Society
     {
         Graphics g;
         Caro_Chess caro_chess = new Caro_Chess();
-        int myUserID = Convert.ToInt32(User_Info.k_ID);
-        int friendUserID = -1;
-        string friendUserName = "";
+        private int myUserID = Convert.ToInt32(User_Info.k_ID);
+        private int friendUserID = -1;
+        private string friendUserName = "";
         private bool mouseDown;
         private Point lastLocation;
-        int myGameID = -1;
-        bool isMyUserTurnInOnline = true;
-        private static int MarginBottomOfFriend = 20;
-        List<int> ListIDOnline = new List<int>();
+        private int myGameID = -1;
+        private bool isMyUserTurnInOnline = true;
+        private int MarginBottomOfFriend = 20;
+        private List<int> ListIDOnline = new List<int>();
         public frmCaro()
         {
             InitializeComponent();
