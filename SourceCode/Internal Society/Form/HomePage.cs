@@ -358,5 +358,50 @@ namespace Internal_Society
                 panel_Search1.AddFriendInfo();
             }
         }
+
+        private void BunifuImageButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        bool isMaximized = false;
+        private void BunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            if (isMaximized == false)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                isMaximized = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                isMaximized = false;
+            }
+        }
+        private bool mouseDown;
+        private Point lastLocation;
+        private void Pn_header_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Pn_header_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                this.Update();
+            }
+        }
+
+        private void Pn_header_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
     }
 }

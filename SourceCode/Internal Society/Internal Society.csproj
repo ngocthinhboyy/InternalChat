@@ -1237,5 +1237,14 @@
   <ItemGroup>
     <None Include="Resources\IC.html %282%29-page-001.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled_circle_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
