@@ -532,12 +532,16 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             else
             {
                 // play Online
-                CreateNewGameOnline(myUserID, 1);
+                CreateNewGameOnline(myUserID, friendUserID);
                 caro_chess.BIsPlaying = true;
                 g.Clear(pnl.BackColor);
-                caro_chess.TaoMangOCo();
                 caro_chess.VeBanCo(g);
+                caro_chess.TaoMangOCo();
+                timer_Load.Enabled = true;
                 caro_chess.StartPlayOnline();
+                btnPlayOnline1.ButtonText = "Chơi với " + friendUserName;
+                btnPlayOnline1.Enabled = false;
+                btnPlayOffline1.Enabled = true;
                 btnChoiMoi1.Enabled = true;
             }
         }
