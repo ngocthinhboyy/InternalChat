@@ -40,13 +40,13 @@
             // 
             // Panel_Notification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Panel_Notification";
-            this.Size = new System.Drawing.Size(1257, 925);
+            this.Size = new System.Drawing.Size(754, 601);
+            this.Resize += new System.EventHandler(this.Panel_Notification_Resize);
             this.ResumeLayout(false);
 
         }

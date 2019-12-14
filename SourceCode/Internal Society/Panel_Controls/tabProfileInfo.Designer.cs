@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabProfileInfo));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.txt_Profile_Name = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Birthday = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Phone = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_Profile_Email = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.txt_Profile_Status = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.txt_Profile_Address = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             // 
             this.txt_Profile_Name.AcceptsReturn = false;
             this.txt_Profile_Name.AcceptsTab = false;
-            this.txt_Profile_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Profile_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Profile_Name.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txt_Profile_Name.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -117,7 +117,7 @@
             // 
             this.txt_Profile_Birthday.AcceptsReturn = false;
             this.txt_Profile_Birthday.AcceptsTab = false;
-            this.txt_Profile_Birthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Profile_Birthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Profile_Birthday.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txt_Profile_Birthday.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -164,7 +164,7 @@
             // 
             this.txt_Profile_Phone.AcceptsReturn = false;
             this.txt_Profile_Phone.AcceptsTab = false;
-            this.txt_Profile_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Profile_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Profile_Phone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txt_Profile_Phone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -211,7 +211,7 @@
             // 
             this.txt_Profile_Email.AcceptsReturn = false;
             this.txt_Profile_Email.AcceptsTab = false;
-            this.txt_Profile_Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Profile_Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Profile_Email.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txt_Profile_Email.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -254,52 +254,52 @@
             this.txt_Profile_Email.TextPlaceholder = "";
             this.txt_Profile_Email.UseSystemPasswordChar = false;
             // 
-            // txt_Profile_Status
+            // txt_Profile_Address
             // 
-            this.txt_Profile_Status.AcceptsReturn = false;
-            this.txt_Profile_Status.AcceptsTab = false;
-            this.txt_Profile_Status.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_Profile_Address.AcceptsReturn = false;
+            this.txt_Profile_Address.AcceptsTab = false;
+            this.txt_Profile_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Profile_Status.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_Profile_Status.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_Profile_Status.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Profile_Status.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Profile_Status.BackgroundImage")));
-            this.txt_Profile_Status.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
-            this.txt_Profile_Status.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txt_Profile_Status.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(189)))), ((int)(((byte)(172)))));
-            this.txt_Profile_Status.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(23)))), ((int)(((byte)(54)))));
-            this.txt_Profile_Status.BorderRadius = 30;
-            this.txt_Profile_Status.BorderThickness = 2;
-            this.txt_Profile_Status.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_Profile_Status.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Profile_Status.DefaultText = "";
-            this.txt_Profile_Status.Enabled = false;
-            this.txt_Profile_Status.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
-            this.txt_Profile_Status.ForeColor = System.Drawing.Color.White;
-            this.txt_Profile_Status.HideSelection = true;
-            this.txt_Profile_Status.IconLeft = null;
-            this.txt_Profile_Status.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Status.IconPadding = 10;
-            this.txt_Profile_Status.IconRight = null;
-            this.txt_Profile_Status.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txt_Profile_Status.Location = new System.Drawing.Point(306, 343);
-            this.txt_Profile_Status.MaxLength = 32767;
-            this.txt_Profile_Status.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txt_Profile_Status.Modified = false;
-            this.txt_Profile_Status.Name = "txt_Profile_Status";
-            this.txt_Profile_Status.PasswordChar = '\0';
-            this.txt_Profile_Status.ReadOnly = false;
-            this.txt_Profile_Status.SelectedText = "";
-            this.txt_Profile_Status.SelectionLength = 0;
-            this.txt_Profile_Status.SelectionStart = 0;
-            this.txt_Profile_Status.ShortcutsEnabled = true;
-            this.txt_Profile_Status.Size = new System.Drawing.Size(316, 49);
-            this.txt_Profile_Status.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txt_Profile_Status.TabIndex = 8;
-            this.txt_Profile_Status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Profile_Status.TextMarginLeft = 5;
-            this.txt_Profile_Status.TextPlaceholder = "";
-            this.txt_Profile_Status.UseSystemPasswordChar = false;
+            this.txt_Profile_Address.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Profile_Address.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Profile_Address.BackColor = System.Drawing.Color.Transparent;
+            this.txt_Profile_Address.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Profile_Address.BackgroundImage")));
+            this.txt_Profile_Address.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
+            this.txt_Profile_Address.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txt_Profile_Address.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(189)))), ((int)(((byte)(172)))));
+            this.txt_Profile_Address.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(23)))), ((int)(((byte)(54)))));
+            this.txt_Profile_Address.BorderRadius = 30;
+            this.txt_Profile_Address.BorderThickness = 2;
+            this.txt_Profile_Address.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_Profile_Address.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Profile_Address.DefaultText = "";
+            this.txt_Profile_Address.Enabled = false;
+            this.txt_Profile_Address.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(49)))));
+            this.txt_Profile_Address.ForeColor = System.Drawing.Color.White;
+            this.txt_Profile_Address.HideSelection = true;
+            this.txt_Profile_Address.IconLeft = null;
+            this.txt_Profile_Address.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.txt_Profile_Address.IconPadding = 10;
+            this.txt_Profile_Address.IconRight = null;
+            this.txt_Profile_Address.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.txt_Profile_Address.Location = new System.Drawing.Point(306, 343);
+            this.txt_Profile_Address.MaxLength = 32767;
+            this.txt_Profile_Address.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txt_Profile_Address.Modified = false;
+            this.txt_Profile_Address.Name = "txt_Profile_Address";
+            this.txt_Profile_Address.PasswordChar = '\0';
+            this.txt_Profile_Address.ReadOnly = false;
+            this.txt_Profile_Address.SelectedText = "";
+            this.txt_Profile_Address.SelectionLength = 0;
+            this.txt_Profile_Address.SelectionStart = 0;
+            this.txt_Profile_Address.ShortcutsEnabled = true;
+            this.txt_Profile_Address.Size = new System.Drawing.Size(316, 49);
+            this.txt_Profile_Address.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txt_Profile_Address.TabIndex = 8;
+            this.txt_Profile_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Profile_Address.TextMarginLeft = 5;
+            this.txt_Profile_Address.TextPlaceholder = "";
+            this.txt_Profile_Address.UseSystemPasswordChar = false;
             // 
             // dateTime
             // 
@@ -375,9 +375,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(220, 356);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.Size = new System.Drawing.Size(66, 20);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Status";
+            this.label6.Text = "Address";
             // 
             // btnEditPhoto
             // 
@@ -401,13 +401,13 @@
             this.btnEditPhoto.IdleIconRightImage = null;
             this.btnEditPhoto.Location = new System.Drawing.Point(30, 236);
             this.btnEditPhoto.Name = "btnEditPhoto";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties9.BorderRadius = 35;
-            stateProperties9.BorderThickness = 2;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.btnEditPhoto.onHoverState = stateProperties9;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties3.BorderRadius = 35;
+            stateProperties3.BorderThickness = 2;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btnEditPhoto.onHoverState = stateProperties3;
             this.btnEditPhoto.Size = new System.Drawing.Size(159, 45);
             this.btnEditPhoto.TabIndex = 18;
             this.btnEditPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -436,13 +436,13 @@
             this.btnEditInfo.IdleIconRightImage = null;
             this.btnEditInfo.Location = new System.Drawing.Point(389, 404);
             this.btnEditInfo.Name = "btnEditInfo";
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties10.BorderRadius = 35;
-            stateProperties10.BorderThickness = 2;
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.btnEditInfo.onHoverState = stateProperties10;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties4.BorderRadius = 35;
+            stateProperties4.BorderThickness = 2;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btnEditInfo.onHoverState = stateProperties4;
             this.btnEditInfo.Size = new System.Drawing.Size(159, 45);
             this.btnEditInfo.TabIndex = 19;
             this.btnEditInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,7 +450,7 @@
             // 
             // Male
             // 
-            this.Male.Checked = true;
+            this.Male.Checked = false;
             this.Male.Enabled = false;
             this.Male.Location = new System.Drawing.Point(35, 13);
             this.Male.Name = "Male";
@@ -545,7 +545,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTime);
-            this.Controls.Add(this.txt_Profile_Status);
+            this.Controls.Add(this.txt_Profile_Address);
             this.Controls.Add(this.txt_Profile_Email);
             this.Controls.Add(this.txt_Profile_Phone);
             this.Controls.Add(this.txt_Profile_Birthday);
@@ -569,7 +569,7 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Birthday;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Phone;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Email;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Status;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_Profile_Address;
         private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

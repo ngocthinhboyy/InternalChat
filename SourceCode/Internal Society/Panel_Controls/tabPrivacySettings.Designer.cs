@@ -44,18 +44,18 @@
             this.ActiveStatusSwitch = new Bunifu.ToggleSwitch.BunifuToggleSwitch();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton3 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.searchMe_OnlyMe = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton2 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.searchMe_OnlyFriend = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton1 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.searchMe_AllPeople = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton4 = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton5 = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton6 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.seeProfile_OnlyMe = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.seeProfile_Friends = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.seeProfile_Public = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.btnLogout = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -90,9 +90,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(75, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 21);
+            this.label4.Size = new System.Drawing.Size(158, 21);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Who can see my profile?";
+            this.label4.Text = "Who can search me?";
             // 
             // label5
             // 
@@ -125,12 +125,12 @@
             toggleState1.BorderThickness = 1;
             toggleState1.BorderThicknessInner = 1;
             this.DarkModeSwitch.ToggleStateDisabled = toggleState1;
-            toggleState2.BackColor = System.Drawing.Color.Empty;
-            toggleState2.BackColorInner = System.Drawing.Color.Empty;
-            toggleState2.BorderColor = System.Drawing.Color.DeepPink;
-            toggleState2.BorderColorInner = System.Drawing.Color.Empty;
-            toggleState2.BorderRadius = 1;
-            toggleState2.BorderRadiusInner = 1;
+            toggleState2.BackColor = System.Drawing.Color.Gray;
+            toggleState2.BackColorInner = System.Drawing.Color.White;
+            toggleState2.BorderColor = System.Drawing.Color.Gray;
+            toggleState2.BorderColorInner = System.Drawing.Color.White;
+            toggleState2.BorderRadius = 17;
+            toggleState2.BorderRadiusInner = 15;
             toggleState2.BorderThickness = 1;
             toggleState2.BorderThicknessInner = 1;
             this.DarkModeSwitch.ToggleStateOff = toggleState2;
@@ -190,11 +190,11 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.bunifuRadioButton3);
+            this.panel1.Controls.Add(this.searchMe_OnlyMe);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.bunifuRadioButton2);
+            this.panel1.Controls.Add(this.searchMe_OnlyFriend);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.bunifuRadioButton1);
+            this.panel1.Controls.Add(this.searchMe_AllPeople);
             this.panel1.Location = new System.Drawing.Point(78, 186);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 49);
@@ -211,16 +211,17 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Only me";
             // 
-            // bunifuRadioButton3
+            // searchMe_OnlyMe
             // 
-            this.bunifuRadioButton3.Checked = false;
-            this.bunifuRadioButton3.Location = new System.Drawing.Point(343, 13);
-            this.bunifuRadioButton3.Name = "bunifuRadioButton3";
-            this.bunifuRadioButton3.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton3.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton3.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton3.TabIndex = 4;
-            this.bunifuRadioButton3.Text = null;
+            this.searchMe_OnlyMe.Checked = false;
+            this.searchMe_OnlyMe.Location = new System.Drawing.Point(343, 13);
+            this.searchMe_OnlyMe.Name = "searchMe_OnlyMe";
+            this.searchMe_OnlyMe.OutlineColor = System.Drawing.Color.DeepPink;
+            this.searchMe_OnlyMe.RadioColor = System.Drawing.Color.DeepPink;
+            this.searchMe_OnlyMe.Size = new System.Drawing.Size(25, 25);
+            this.searchMe_OnlyMe.TabIndex = 4;
+            this.searchMe_OnlyMe.Text = null;
+            this.searchMe_OnlyMe.Click += new System.EventHandler(this.SearchMe_OnlyMe_Click);
             // 
             // label7
             // 
@@ -229,20 +230,21 @@
             this.label7.ForeColor = System.Drawing.Color.Silver;
             this.label7.Location = new System.Drawing.Point(220, 13);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 20);
+            this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Friends";
+            this.label7.Text = "Only Friend";
             // 
-            // bunifuRadioButton2
+            // searchMe_OnlyFriend
             // 
-            this.bunifuRadioButton2.Checked = false;
-            this.bunifuRadioButton2.Location = new System.Drawing.Point(189, 13);
-            this.bunifuRadioButton2.Name = "bunifuRadioButton2";
-            this.bunifuRadioButton2.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton2.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton2.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton2.TabIndex = 2;
-            this.bunifuRadioButton2.Text = null;
+            this.searchMe_OnlyFriend.Checked = false;
+            this.searchMe_OnlyFriend.Location = new System.Drawing.Point(189, 13);
+            this.searchMe_OnlyFriend.Name = "searchMe_OnlyFriend";
+            this.searchMe_OnlyFriend.OutlineColor = System.Drawing.Color.DeepPink;
+            this.searchMe_OnlyFriend.RadioColor = System.Drawing.Color.DeepPink;
+            this.searchMe_OnlyFriend.Size = new System.Drawing.Size(25, 25);
+            this.searchMe_OnlyFriend.TabIndex = 2;
+            this.searchMe_OnlyFriend.Text = null;
+            this.searchMe_OnlyFriend.Click += new System.EventHandler(this.SearchMe_OnlyFriend_Click);
             // 
             // label6
             // 
@@ -251,55 +253,57 @@
             this.label6.ForeColor = System.Drawing.Color.Silver;
             this.label6.Location = new System.Drawing.Point(66, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.Size = new System.Drawing.Size(78, 20);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Public";
+            this.label6.Text = "All people";
             // 
-            // bunifuRadioButton1
+            // searchMe_AllPeople
             // 
-            this.bunifuRadioButton1.Checked = true;
-            this.bunifuRadioButton1.Location = new System.Drawing.Point(35, 13);
-            this.bunifuRadioButton1.Name = "bunifuRadioButton1";
-            this.bunifuRadioButton1.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton1.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton1.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton1.TabIndex = 0;
-            this.bunifuRadioButton1.Text = null;
+            this.searchMe_AllPeople.Checked = false;
+            this.searchMe_AllPeople.Location = new System.Drawing.Point(35, 13);
+            this.searchMe_AllPeople.Name = "searchMe_AllPeople";
+            this.searchMe_AllPeople.OutlineColor = System.Drawing.Color.DeepPink;
+            this.searchMe_AllPeople.RadioColor = System.Drawing.Color.DeepPink;
+            this.searchMe_AllPeople.Size = new System.Drawing.Size(25, 25);
+            this.searchMe_AllPeople.TabIndex = 0;
+            this.searchMe_AllPeople.Text = null;
+            this.searchMe_AllPeople.Click += new System.EventHandler(this.SearchMe_AllPeople_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.bunifuRadioButton4);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.bunifuRadioButton5);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.bunifuRadioButton6);
+            this.panel2.Controls.Add(this.seeProfile_OnlyMe);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.seeProfile_Friends);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.seeProfile_Public);
             this.panel2.Location = new System.Drawing.Point(80, 299);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 49);
             this.panel2.TabIndex = 9;
             // 
-            // label9
+            // label11
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(374, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 20);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Only me";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(374, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Only me";
             // 
-            // bunifuRadioButton4
+            // seeProfile_OnlyMe
             // 
-            this.bunifuRadioButton4.Checked = false;
-            this.bunifuRadioButton4.Location = new System.Drawing.Point(343, 13);
-            this.bunifuRadioButton4.Name = "bunifuRadioButton4";
-            this.bunifuRadioButton4.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton4.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton4.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton4.TabIndex = 4;
-            this.bunifuRadioButton4.Text = null;
+            this.seeProfile_OnlyMe.Checked = false;
+            this.seeProfile_OnlyMe.Location = new System.Drawing.Point(343, 13);
+            this.seeProfile_OnlyMe.Name = "seeProfile_OnlyMe";
+            this.seeProfile_OnlyMe.OutlineColor = System.Drawing.Color.DeepPink;
+            this.seeProfile_OnlyMe.RadioColor = System.Drawing.Color.DeepPink;
+            this.seeProfile_OnlyMe.Size = new System.Drawing.Size(25, 25);
+            this.seeProfile_OnlyMe.TabIndex = 4;
+            this.seeProfile_OnlyMe.Text = null;
+            this.seeProfile_OnlyMe.Click += new System.EventHandler(this.SeeProfile_OnlyMe_Click);
             // 
             // label10
             // 
@@ -312,38 +316,40 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Friends";
             // 
-            // bunifuRadioButton5
+            // seeProfile_Friends
             // 
-            this.bunifuRadioButton5.Checked = false;
-            this.bunifuRadioButton5.Location = new System.Drawing.Point(189, 13);
-            this.bunifuRadioButton5.Name = "bunifuRadioButton5";
-            this.bunifuRadioButton5.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton5.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton5.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton5.TabIndex = 2;
-            this.bunifuRadioButton5.Text = null;
+            this.seeProfile_Friends.Checked = false;
+            this.seeProfile_Friends.Location = new System.Drawing.Point(189, 13);
+            this.seeProfile_Friends.Name = "seeProfile_Friends";
+            this.seeProfile_Friends.OutlineColor = System.Drawing.Color.DeepPink;
+            this.seeProfile_Friends.RadioColor = System.Drawing.Color.DeepPink;
+            this.seeProfile_Friends.Size = new System.Drawing.Size(25, 25);
+            this.seeProfile_Friends.TabIndex = 2;
+            this.seeProfile_Friends.Text = null;
+            this.seeProfile_Friends.Click += new System.EventHandler(this.SeeProfile_Friends_Click);
             // 
-            // label11
+            // label9
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.Silver;
-            this.label11.Location = new System.Drawing.Point(66, 13);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 20);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Public";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(66, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Public";
             // 
-            // bunifuRadioButton6
+            // seeProfile_Public
             // 
-            this.bunifuRadioButton6.Checked = true;
-            this.bunifuRadioButton6.Location = new System.Drawing.Point(35, 13);
-            this.bunifuRadioButton6.Name = "bunifuRadioButton6";
-            this.bunifuRadioButton6.OutlineColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton6.RadioColor = System.Drawing.Color.DeepPink;
-            this.bunifuRadioButton6.Size = new System.Drawing.Size(25, 25);
-            this.bunifuRadioButton6.TabIndex = 0;
-            this.bunifuRadioButton6.Text = null;
+            this.seeProfile_Public.Checked = false;
+            this.seeProfile_Public.Location = new System.Drawing.Point(35, 13);
+            this.seeProfile_Public.Name = "seeProfile_Public";
+            this.seeProfile_Public.OutlineColor = System.Drawing.Color.DeepPink;
+            this.seeProfile_Public.RadioColor = System.Drawing.Color.DeepPink;
+            this.seeProfile_Public.Size = new System.Drawing.Size(25, 25);
+            this.seeProfile_Public.TabIndex = 0;
+            this.seeProfile_Public.Text = null;
+            this.seeProfile_Public.Click += new System.EventHandler(this.SeeProfile_Public_Click);
             // 
             // btnLogout
             // 
@@ -415,18 +421,18 @@
         private Bunifu.ToggleSwitch.BunifuToggleSwitch ActiveStatusSwitch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton3;
+        private Bunifu.UI.WinForms.BunifuRadioButton searchMe_OnlyMe;
         private System.Windows.Forms.Label label7;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton2;
+        private Bunifu.UI.WinForms.BunifuRadioButton searchMe_OnlyFriend;
         private System.Windows.Forms.Label label6;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton1;
+        private Bunifu.UI.WinForms.BunifuRadioButton searchMe_AllPeople;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton4;
-        private System.Windows.Forms.Label label10;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton5;
         private System.Windows.Forms.Label label11;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton6;
+        private Bunifu.UI.WinForms.BunifuRadioButton seeProfile_OnlyMe;
+        private System.Windows.Forms.Label label10;
+        private Bunifu.UI.WinForms.BunifuRadioButton seeProfile_Friends;
+        private System.Windows.Forms.Label label9;
+        private Bunifu.UI.WinForms.BunifuRadioButton seeProfile_Public;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogout;
     }
 }

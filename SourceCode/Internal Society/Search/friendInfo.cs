@@ -18,13 +18,13 @@ namespace Internal_Society
         {
             InitializeComponent();
         }
-        public friendInfo(string userName, string userFullname, int FriendID)
+        public friendInfo(string userName, string userFullname, int FriendID, bool isFriend)
         {
             InitializeComponent();
-            UpdateUserInfo(userName, userFullname, FriendID);
+            UpdateUserInfo(userName, userFullname, FriendID, isFriend);
         }
 
-        public void UpdateUserInfo(string userName, string userFullname, int FriendID)
+        public void UpdateUserInfo(string userName, string userFullname, int FriendID, bool isFriend)
         {
             this.FriendID = FriendID;
             username.Text = userName;
@@ -33,6 +33,14 @@ namespace Internal_Society
                 userFullname = "Người dùng Internal Chat";
             }
             user_fullname.Text = userFullname;
+            if (isFriend)
+            {
+                btn_addFriend.IdleFillColor = Color.FromArgb(227, 38, 54);
+                //btn_addFriend.Normalcolor = Color.FromArgb(227, 38, 54);
+                //btn_addFriend.OnHovercolor = Color.FromArgb(217, 38, 54);
+                btn_addFriend.ButtonText = "Remove request";
+                isClicked = !isClicked;
+            }
         }
 
         public async void AddFriendAsync()
@@ -41,7 +49,7 @@ namespace Internal_Society
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
             // await
             string result = await getStringTask;
-            
+
         }
 
         public async void RemoveFriendAsync()

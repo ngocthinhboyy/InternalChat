@@ -48,6 +48,7 @@ namespace Internal_Society
             //loading.Dock = DockStyle.Fill;
             loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
+            
         }
         public void notifyChangeColor()
         {

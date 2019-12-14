@@ -24,9 +24,10 @@ namespace Internal_Society.Panel_Controls
         {
 
             InitializeComponent();
+            Male.Checked = false;
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangeProfileInfo = new Panel_Controls.DarkMode(this.ChangeDarkMode);
-           
-            if( vBirthday == null || vBirthday == "")
+
+            if (vBirthday == null || vBirthday == "")
             {
                 vBirthday = "2000-01-01";
             }
@@ -47,9 +48,9 @@ namespace Internal_Society.Panel_Controls
             }
             txt_Profile_Phone.Text = User_Info.k_Phone;
             txt_Profile_Email.Text = User_Info.k_Email;
-            txt_Profile_Status.Text = User_Info.k_Status;
-            
-            if(User_Info.k_Avatar == "")
+            txt_Profile_Address.Text = User_Info.k_Address;
+
+            if (User_Info.k_Avatar == "")
             {
                 pb_Avatar.ImageLocation = App_Status.urlLocalResources + "user_001.png";
             }
@@ -57,20 +58,20 @@ namespace Internal_Society.Panel_Controls
             {
                 pb_Avatar.ImageLocation = App_Status.urlImage + "/image/" + User_Info.k_Avatar;
             }
-            
+
         }
         public void ChangeDarkMode()
         {
-            txt_Profile_Status.FillColor = txt_Profile_Birthday.FillColor = txt_Profile_Email.FillColor 
+            txt_Profile_Address.FillColor = txt_Profile_Birthday.FillColor = txt_Profile_Email.FillColor
             = txt_Profile_Name.FillColor = txt_Profile_Phone.FillColor
             = Color.FromArgb(255, App_Status.backFormColor.R, App_Status.backFormColor.G, App_Status.backFormColor.B);
 
-            txt_Profile_Status.ForeColor = txt_Profile_Birthday.ForeColor = txt_Profile_Email.ForeColor 
+            txt_Profile_Address.ForeColor = txt_Profile_Birthday.ForeColor = txt_Profile_Email.ForeColor
              = txt_Profile_Name.ForeColor = txt_Profile_Phone.ForeColor
             = label1.ForeColor = label2.ForeColor = label3.ForeColor = label4.ForeColor =
             label5.ForeColor = label6.ForeColor = label7.ForeColor = label8.ForeColor = label9.ForeColor = App_Status.textColor;
         }
-        
+
         private void DateTime_ValueChanged(object sender, EventArgs e)
         {
             txt_Profile_Birthday.Text = dateTime.Value.Year.ToString() + "-" + dateTime.Value.Month.ToString() + "-" + dateTime.Value.Day.ToString();
@@ -80,14 +81,14 @@ namespace Internal_Society.Panel_Controls
 
         private void BtnEditPhoto_Click(object sender, EventArgs e)
         {
-            FileUpload fu = new FileUpload(App_Status.urlUpload, "-1" ,"avatar");
+            FileUpload fu = new FileUpload(App_Status.urlUpload, "-1", "avatar");
             if (fu.UploadFile("image"))
             {
                 pb_Avatar.ImageLocation = fu.FilePath;
                 User_Info.localAvatar = fu.FilePath;
                 delegateChangeAva();
             }
-            
+
         }
 
         private void BtnEditInfo_Click(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace Internal_Society.Panel_Controls
                 Male.Enabled = Female.Enabled = Undefined.Enabled = true;
                 txt_Profile_Phone.Enabled = true;
                 txt_Profile_Email.Enabled = true;
-                txt_Profile_Status.Enabled = true;
+                txt_Profile_Address.Enabled = true;
                 dateTime.Enabled = true;
                 //MessageBox.Show(dateTime.Value.ToString());
                 btnEditInfo.ButtonText = "Save";
@@ -112,12 +113,12 @@ namespace Internal_Society.Panel_Controls
                 Male.Enabled = Female.Enabled = Undefined.Enabled = false;
                 txt_Profile_Phone.Enabled = false;
                 txt_Profile_Email.Enabled = false;
-                txt_Profile_Status.Enabled = false;
+                txt_Profile_Address.Enabled = false;
                 dateTime.Enabled = false;
 
                 User_Info.k_Fullname = txt_Profile_Name.Text;
                 User_Info.k_Birthday = txt_Profile_Birthday.Text;
-                if (Male.Checked ==  true)
+                if (Male.Checked == true)
                 {
                     User_Info.k_Gender = "0";
                 }
@@ -130,7 +131,7 @@ namespace Internal_Society.Panel_Controls
                 }
                 User_Info.k_Phone = txt_Profile_Phone.Text;
                 User_Info.k_Email = txt_Profile_Email.Text;
-                User_Info.k_Status = txt_Profile_Status.Text;
+                User_Info.k_Address = txt_Profile_Address.Text;
                 //MessageBox.Show(edit_data_Name);
                 User_Info.UpdateUserInfo();
                 //change_user_info(edit_data_Name, edit_data_Birthday, edit_data_Gender, edit_data_Phone, edit_data_Email, edit_data_Status);

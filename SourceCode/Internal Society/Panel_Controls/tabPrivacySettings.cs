@@ -27,13 +27,38 @@ namespace Internal_Society.Panel_Controls
         {
             InitializeComponent();
             Internal_Society.Panel_Controls.tabPrivacySettings.delegateChangePrivacySettings = new Panel_Controls.DarkMode(this.ChangeDarkMode);
+            if (User_Info.k_SearchAvailable)
+            {
+                searchMe_AllPeople.Checked = true;
+            }
+            else
+            {
+                searchMe_OnlyMe.Checked = true;
+            }
+            if (User_Info.k_SeeProfileAvailable)
+            {
+                seeProfile_Public.Checked = true;
+            }
+            else
+            {
+                seeProfile_OnlyMe.Checked = true;
+            }
+            if (User_Info.k_DarkMode)
+            {
+                //DarkModeSwitch.Value = true;
+            }
+            else
+            {
+                //DarkModeSwitch.Value = false;
+            }
+
 
         }
         public void ChangeDarkMode()
         {
             label1.ForeColor = label2.ForeColor = label4.ForeColor =
-            label5.ForeColor = label6.ForeColor = label7.ForeColor = label8.ForeColor = label9.ForeColor =
-            label10.ForeColor = label11.ForeColor = App_Status.textColor;
+            label5.ForeColor = label6.ForeColor = label7.ForeColor = label8.ForeColor = label11.ForeColor =
+            label10.ForeColor = label9.ForeColor = App_Status.textColor;
         }
         private void DarkModeSwitch_OnValuechange(object sender, EventArgs e)
         {
@@ -48,6 +73,8 @@ namespace Internal_Society.Panel_Controls
                 App_Status.iconProfile = "../../Resources/icomoon-free_2014-12-23_profile_35_0_ffffff_none.png";
                 App_Status.iconGames = "../../Resources/font-awesome_4-7-0_gamepad_35_0_ffffff_none.png";
                 App_Status.iconNoti = "../../Resources/ionicons_2-0-1_android-notifications_35_0_ffffff_none.png";
+                /*User_Info.k_DarkMode = true;
+                User_Info.UpdateUserInfo();*/
             }
             else
             {
@@ -60,6 +87,8 @@ namespace Internal_Society.Panel_Controls
                 App_Status.iconProfile = "../../Resources/icomoon-free_2014-12-23_profile_35_0_000000_none.png";
                 App_Status.iconGames = "../../Resources/font-awesome_4-7-0_gamepad_35_0_000000_none.png";
                 App_Status.iconNoti = "../../Resources/ionicons_2-0-1_android-notifications_35_0_000000_none.png";
+                /*User_Info.k_DarkMode = false;
+                User_Info.UpdateUserInfo();*/
             }
             delegateChangeHomePage();
             delegateChangeProfile();
@@ -76,12 +105,12 @@ namespace Internal_Society.Panel_Controls
             LogOutConfirmation logOutConfirmation = new LogOutConfirmation();
             logOutConfirmation.StartPosition = FormStartPosition.CenterScreen;
             logOutConfirmation.Show();
-            
+
         }
 
         private void ActiveStatusSwitch_OnValuechange(object sender, EventArgs e)
         {
-            if( ActiveStatusSwitch.Value == true)
+            if (ActiveStatusSwitch.Value == true)
             {
                 activeStatus = true;
             }
@@ -89,6 +118,42 @@ namespace Internal_Society.Panel_Controls
             {
                 activeStatus = false;
             }
+        }
+
+        private void SearchMe_AllPeople_Click(object sender, EventArgs e)
+        {
+            User_Info.k_SearchAvailable = true;
+            User_Info.UpdateUserInfo();
+        }
+
+        private void SearchMe_OnlyFriend_Click(object sender, EventArgs e)
+        {
+            User_Info.k_SearchAvailable = false;
+            User_Info.UpdateUserInfo();
+        }
+
+        private void SearchMe_OnlyMe_Click(object sender, EventArgs e)
+        {
+            User_Info.k_SearchAvailable = false;
+            User_Info.UpdateUserInfo();
+        }
+
+        private void SeeProfile_Public_Click(object sender, EventArgs e)
+        {
+            User_Info.k_SeeProfileAvailable = true;
+            User_Info.UpdateUserInfo();
+        }
+
+        private void SeeProfile_Friends_Click(object sender, EventArgs e)
+        {
+            User_Info.k_SeeProfileAvailable = false;
+            User_Info.UpdateUserInfo();
+        }
+
+        private void SeeProfile_OnlyMe_Click(object sender, EventArgs e)
+        {
+            User_Info.k_SeeProfileAvailable = false;
+            User_Info.UpdateUserInfo();
         }
     }
 }

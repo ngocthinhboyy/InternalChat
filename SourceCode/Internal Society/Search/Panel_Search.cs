@@ -34,7 +34,7 @@ namespace Internal_Society
 
         public async void SearchUserAsync()
         {
-            string urlSearchUser = App_Status.urlAPI + "/c_User/Search/" + HomePage.searchInfo + "/" + page;
+            string urlSearchUser = App_Status.urlAPI + "/c_User/Search/" + User_Info.k_ID + "/" + HomePage.searchInfo + "/" + page;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
             // await
             string result = await getStringTask;
@@ -73,7 +73,7 @@ namespace Internal_Society
 
         private void ProccessData(string listUsers)
         {
-            
+
             ListSearchUser dSearchUser = new JavaScriptSerializer().Deserialize<ListSearchUser>(listUsers);
 
             if (dSearchUser.success)
@@ -84,12 +84,12 @@ namespace Internal_Society
 
                 foreach (Control item in panel_Main.Controls)
                 {
-                    if(item is friendInfo)
+                    if (item is friendInfo)
                     {
                         friendInfo fI = item as friendInfo;
                         friend_last = fI;
                     }
-                    
+
                 }
 
                 int CountExist = 0;
@@ -113,7 +113,7 @@ namespace Internal_Society
                         {
                             ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
                             friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
-                            Convert.ToInt32(dSearchUser.data[i].user_id));
+                            Convert.ToInt32(dSearchUser.data[i].user_id), dSearchUser.data[i].isFriend);
                             friend.Left = (this.Width - friend.Width) / 2;
                             friend.Top = friend_last.Bottom + 20;
                             panel_Main.Controls.Add(friend);
@@ -123,11 +123,11 @@ namespace Internal_Society
                         }
                     }
                 }
-                else if (dSearchUser.data.Count() < ListUserID.Count )
+                else if (dSearchUser.data.Count() < ListUserID.Count)
                 {
                     //MessageBox.Show("3");
-                    
-                    for(int i=0; i<(ListUserID.Count - dSearchUser.data.Count()); i++)
+
+                    for (int i = 0; i < (ListUserID.Count - dSearchUser.data.Count()); i++)
                     {
                         panel_Main.Controls.RemoveAt(panel_Main.Controls.Count - 1);
                     }
@@ -137,10 +137,12 @@ namespace Internal_Society
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
                         if (dSearchUser.data[i].user_id != User_Info.k_ID)
-                        { friendInfo fI = panel_Main.Controls[i] as friendInfo;
+                        {
+                            friendInfo fI = panel_Main.Controls[i] as friendInfo;
                             fI.UpdateUserInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
-                                        Convert.ToInt32(dSearchUser.data[i].user_id));
-                            ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id)); }
+                                        Convert.ToInt32(dSearchUser.data[i].user_id), dSearchUser.data[i].isFriend);
+                            ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                        }
                     }
                 }
                 else
@@ -173,13 +175,13 @@ namespace Internal_Society
                                 friendInfo fI = item as friendInfo;
                                 if (!IsExistInList(kExistData, fI.FriendID))
                                 {
-                                    if(kNewData.Count > 0)
+                                    if (kNewData.Count > 0)
                                     {
                                         fI.UpdateUserInfo(dSearchUser.data[kNewData[0]].username, dSearchUser.data[kNewData[0]].fullname,
-                                    Convert.ToInt32(dSearchUser.data[kNewData[0]].user_id));
+                                    Convert.ToInt32(dSearchUser.data[kNewData[0]].user_id), dSearchUser.data[kNewData[0]].isFriend);
                                         kNewData.RemoveAt(0);
                                     }
-                                    
+
                                 }
                             }
                         }
@@ -243,13 +245,12 @@ namespace Internal_Society
 
         private void Panel_Main_Click(object sender, EventArgs e)
         {
-            string kData = "";
+            /*string kData = "";
             foreach (int item in ListUserID)
             {
                 kData += " - " + item.ToString();
             }
-            IncorrectAlert alert = new IncorrectAlert(kData);
-            alert.Show();
+            MessageBox.Show(kData);*/
         }
     }
 }

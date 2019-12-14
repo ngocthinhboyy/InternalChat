@@ -95,6 +95,9 @@ namespace Internal_Society
                 User_Info.k_Avatar = LoginStatus.urlAvatar.ToString();
                 User_Info.k_LastNoti = LoginStatus.lastNotification.ToString();
                 User_Info.k_LuckyWheel = LoginStatus.LuckyKey.ToString();
+                User_Info.k_DarkMode = (LoginStatus.DarkMode.ToString() == "1") ? true : false;
+                User_Info.k_SearchAvailable = (LoginStatus.SearchAvailable.ToString() == "1") ? true : false;
+                User_Info.k_SeeProfileAvailable = (LoginStatus.SeeProfileAvailable.ToString() == "1") ? true : false;
 
                 // cho nguoi dung tien vao Homepage
 

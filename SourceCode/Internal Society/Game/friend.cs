@@ -80,7 +80,7 @@ namespace Internal_Society
             if (Internal_Society.Panel_Controls.tabPrivacySettings.activeStatus == true)
             {
                 if (time - this.userLastLogin < 60) { sStatus = "Online"; onlineStatus(); }
-                else { sStatus = (time - this.userLastLogin) / 60 + " minutes ago"; offlineStatus(); }
+                else { sStatus = countDeltaTime(time, this.userLastLogin); offlineStatus(); }
             }
             else
             {
@@ -90,6 +90,13 @@ namespace Internal_Society
 
         }
 
-
+        private string countDeltaTime(int a, int b)
+        {
+            string result = "";
+            if (((a - b) / 60) < 60) result = ((a - b) / 60).ToString() + ((((a - b) / 60) < 2) ? " minute" : " minutes") + " ago";
+            else if (((a - b) / 60) < 1440) result = ((a - b) / 3600).ToString() + ((((a - b) / 3600) < 2) ? " hour " : " hours ") + ((a - b) % 60).ToString() + " minutes ago ";
+            else result = ((a - b) / 86400).ToString() + ((((a - b) / 86400) < 2) ? " day" : "days") + " ago ";
+            return result;
+        }
     }
 }

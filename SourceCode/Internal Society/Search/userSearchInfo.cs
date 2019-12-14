@@ -26,6 +26,9 @@ namespace Internal_Society
         [JsonProperty("fullname")]
         public string fullname { get; set; }
 
+        [JsonProperty("isFriend")]
+        public bool isFriend { get; set; }
+
 
     }
 }

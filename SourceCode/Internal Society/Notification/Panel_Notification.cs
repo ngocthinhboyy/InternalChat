@@ -73,7 +73,6 @@ namespace Internal_Society
                 if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "0") {
                     Notification_AddFriend ntAddFriend = new Notification_AddFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
                     ntAddFriend.Location = new Point(iLeft, 0);
-                    ntAddFriend.Anchor = AnchorStyles.Top;
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
@@ -83,7 +82,6 @@ namespace Internal_Society
                     Notification_AcceptFriend ntAddFriend = new Notification_AcceptFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
                     ntAddFriend.Location = new Point(iLeft, 0);
                     ntAddFriend.Top = iTop + 20;
-                    ntAddFriend.Anchor = AnchorStyles.Top;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
                 }
@@ -92,7 +90,6 @@ namespace Internal_Society
                     NotiCaro ntAddFriend = new NotiCaro(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].detail));
                     ntAddFriend.Location = new Point(iLeft, 0);
                     ntAddFriend.Top = iTop + 20;
-                    ntAddFriend.Anchor = AnchorStyles.Top;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
                 }
@@ -106,6 +103,14 @@ namespace Internal_Society
             TimeRequest.Stop();
             TimeRequest.Interval = 5000;
             GetDataAsync();
+        }
+
+        private void Panel_Notification_Resize(object sender, EventArgs e)
+        {
+            foreach (Control item in this.Controls)
+            {
+                    item.Left = (this.Width - item.Width) / 2;
+            }
         }
     }
 }
