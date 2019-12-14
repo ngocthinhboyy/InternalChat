@@ -87,6 +87,15 @@ namespace Internal_Society
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
                 }
+                else if (notiData.data[i].type == "CaroInvite")
+                {
+                    NotiCaro ntAddFriend = new NotiCaro(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].detail));
+                    ntAddFriend.Location = new Point(iLeft, 0);
+                    ntAddFriend.Top = iTop + 20;
+                    ntAddFriend.Anchor = AnchorStyles.Top;
+                    this.Controls.Add(ntAddFriend);
+                    iTop = ntAddFriend.Bottom;
+                }
             }
              
             App_Status.notification = Math.Abs(notiData.data.Count - dem);

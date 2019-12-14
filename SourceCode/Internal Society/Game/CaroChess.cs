@@ -32,6 +32,11 @@ namespace Internal_Society
             get { return Mang_O_Co; }
             set { Mang_O_Co = value; }
         }
+        public int ILuotDi
+        {
+            get { return iLuotDi; }
+            set { iLuotDi = value; }
+        }
         public List<O_Co> LCacNuocDaDi
         {
             get { return lCacNuocDaDi; }
@@ -140,9 +145,10 @@ namespace Internal_Society
         #endregion
         #region KiemTraChienThang
 
-        public void EndgameOnline(string username2)
+        public void EndgameOnline(string username2, int iTurn,int myID, int friendID)
         {
-            switch (iLuotDi)
+            /*
+            switch (iTurn)
             {
                 case 1:
                     string sName1 = username2 + " đã chiến thắng!!";
@@ -155,6 +161,20 @@ namespace Internal_Society
                     IncorrectAlert incorrect2 = new IncorrectAlert(sName2);
                     incorrect2.Show();
                     break;
+            }
+            */
+            if(iTurn == myID)
+            {
+
+                string sName1 = "Bạn đã thua!!";
+                IncorrectAlert incorrect1 = new IncorrectAlert(sName1);
+                incorrect1.Show();
+            }
+            else if(iTurn == friendID)
+            {
+                string sName2 = "Bạn đã chiến thắng!!";
+                IncorrectAlert incorrect2 = new IncorrectAlert(sName2);
+                incorrect2.Show();
             }
         }
         public void EndgameOffline()
@@ -304,7 +324,8 @@ namespace Internal_Society
         #region PlayOnline
         public async void GetDataFromDBWithGameID(Graphics g, int id)
         {
-            string urlRequest = "https://kunbr0.com/kunbr0/get_data.php?game_id=" + id;
+            string urlRequest = App_Status.urlAPI + "c_Caro/Get_Data/" + id;
+            //string urlRequest = "https://kunbr0.com/kunbr0/get_data.php?game_id=" + id;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             string result = await getStringTask;
             dynamic data = JsonConvert.DeserializeObject(result);

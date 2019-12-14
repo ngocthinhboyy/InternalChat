@@ -117,6 +117,12 @@
       <DependentUpon>frmLuckyWheel.cs</DependentUpon>
     </Compile>
     <Compile Include="Game\O_Co.cs" />
+    <Compile Include="Notification\NotiCaro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Notification\NotiCaro.Designer.cs">
+      <DependentUpon>NotiCaro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panel_Controls\loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Game\frmLuckyWheel.resx">
       <DependentUpon>frmLuckyWheel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotiCaro.resx">
+      <DependentUpon>NotiCaro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_Controls\loading.resx">
       <DependentUpon>loading.cs</DependentUpon>

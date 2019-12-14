@@ -29,34 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation10 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation9 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaro));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation6 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation5 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             this.pnl = new System.Windows.Forms.Panel();
             this.timer_Load = new System.Windows.Forms.Timer(this.components);
             this.pnlGameCaro = new System.Windows.Forms.Panel();
-            this.pnl_Friend = new System.Windows.Forms.Panel();
-            this.grbLuatChoi = new System.Windows.Forms.GroupBox();
-            this.lblLuatChoi = new System.Windows.Forms.Label();
-            this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.bunifuTransition2 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.label_NoActiveFriend = new System.Windows.Forms.Label();
             this.btnReset = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnChoiMoi1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnThoat1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPlayOffline1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnPlayOnline1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.grbLuatChoi = new System.Windows.Forms.GroupBox();
+            this.lblLuatChoi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_Friend = new System.Windows.Forms.Panel();
+            this.btnBack = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label_NoActiveFriend = new System.Windows.Forms.Label();
+            this.bunifuTransition1 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuTransition2 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.pnlGameCaro.SuspendLayout();
-            this.pnl_Friend.SuspendLayout();
             this.grbLuatChoi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_Friend.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,102 +97,6 @@
             this.pnlGameCaro.Size = new System.Drawing.Size(219, 606);
             this.pnlGameCaro.TabIndex = 40;
             // 
-            // pnl_Friend
-            // 
-            this.pnl_Friend.BackColor = System.Drawing.Color.White;
-            this.pnl_Friend.Controls.Add(this.label_NoActiveFriend);
-            this.bunifuTransition2.SetDecoration(this.pnl_Friend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.pnl_Friend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pnl_Friend.Location = new System.Drawing.Point(228, 0);
-            this.pnl_Friend.Name = "pnl_Friend";
-            this.pnl_Friend.Size = new System.Drawing.Size(219, 606);
-            this.pnl_Friend.TabIndex = 47;
-            this.pnl_Friend.Visible = false;
-            this.pnl_Friend.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Friend_Paint);
-            this.pnl_Friend.MouseEnter += new System.EventHandler(this.Pnl_Friend_MouseEnter);
-            // 
-            // grbLuatChoi
-            // 
-            this.grbLuatChoi.Controls.Add(this.lblLuatChoi);
-            this.bunifuTransition2.SetDecoration(this.grbLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.grbLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.grbLuatChoi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbLuatChoi.ForeColor = System.Drawing.Color.Black;
-            this.grbLuatChoi.Location = new System.Drawing.Point(10, 213);
-            this.grbLuatChoi.Name = "grbLuatChoi";
-            this.grbLuatChoi.Size = new System.Drawing.Size(177, 178);
-            this.grbLuatChoi.TabIndex = 41;
-            this.grbLuatChoi.TabStop = false;
-            this.grbLuatChoi.Text = "Luật chơi";
-            // 
-            // lblLuatChoi
-            // 
-            this.lblLuatChoi.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lblLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.lblLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lblLuatChoi.Location = new System.Drawing.Point(7, 21);
-            this.lblLuatChoi.Name = "lblLuatChoi";
-            this.lblLuatChoi.Size = new System.Drawing.Size(0, 13);
-            this.lblLuatChoi.TabIndex = 0;
-            // 
-            // bunifuTransition1
-            // 
-            this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
-            this.bunifuTransition1.Cursor = null;
-            animation10.AnimateOnlyDifferences = true;
-            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
-            animation10.LeafCoeff = 0F;
-            animation10.MaxTime = 1F;
-            animation10.MinTime = 0F;
-            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
-            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
-            animation10.MosaicSize = 0;
-            animation10.Padding = new System.Windows.Forms.Padding(0);
-            animation10.RotateCoeff = 0F;
-            animation10.RotateLimit = 0F;
-            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
-            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
-            animation10.TimeCoeff = 0F;
-            animation10.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation10;
-            // 
-            // bunifuTransition2
-            // 
-            this.bunifuTransition2.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.ScaleAndRotate;
-            this.bunifuTransition2.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(30);
-            animation9.RotateCoeff = 0.5F;
-            animation9.RotateLimit = 0.2F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation9;
-            // 
-            // label_NoActiveFriend
-            // 
-            this.label_NoActiveFriend.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.label_NoActiveFriend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.label_NoActiveFriend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.label_NoActiveFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NoActiveFriend.ForeColor = System.Drawing.Color.Black;
-            this.label_NoActiveFriend.Location = new System.Drawing.Point(30, 55);
-            this.label_NoActiveFriend.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_NoActiveFriend.Name = "label_NoActiveFriend";
-            this.label_NoActiveFriend.Size = new System.Drawing.Size(143, 33);
-            this.label_NoActiveFriend.TabIndex = 1;
-            this.label_NoActiveFriend.Text = "No Friend";
-            this.label_NoActiveFriend.Visible = false;
-            this.label_NoActiveFriend.Click += new System.EventHandler(this.Label_NoActiveFriend_Click);
-            // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.Transparent;
@@ -215,13 +121,13 @@
             this.btnReset.IdleIconRightImage = null;
             this.btnReset.Location = new System.Drawing.Point(20, 500);
             this.btnReset.Name = "btnReset";
-            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties21.BorderRadius = 30;
-            stateProperties21.BorderThickness = 2;
-            stateProperties21.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties21.IconLeftImage = null;
-            stateProperties21.IconRightImage = null;
-            this.btnReset.onHoverState = stateProperties21;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties11.BorderRadius = 30;
+            stateProperties11.BorderThickness = 2;
+            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties11.IconLeftImage = null;
+            stateProperties11.IconRightImage = null;
+            this.btnReset.onHoverState = stateProperties11;
             this.btnReset.Size = new System.Drawing.Size(150, 42);
             this.btnReset.TabIndex = 46;
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,13 +158,13 @@
             this.btnChoiMoi1.IdleIconRightImage = null;
             this.btnChoiMoi1.Location = new System.Drawing.Point(97, 548);
             this.btnChoiMoi1.Name = "btnChoiMoi1";
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties22.BorderRadius = 30;
-            stateProperties22.BorderThickness = 2;
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties22.IconLeftImage = null;
-            stateProperties22.IconRightImage = null;
-            this.btnChoiMoi1.onHoverState = stateProperties22;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties12.BorderRadius = 30;
+            stateProperties12.BorderThickness = 2;
+            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties12.IconLeftImage = null;
+            stateProperties12.IconRightImage = null;
+            this.btnChoiMoi1.onHoverState = stateProperties12;
             this.btnChoiMoi1.Size = new System.Drawing.Size(104, 45);
             this.btnChoiMoi1.TabIndex = 45;
             this.btnChoiMoi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -288,13 +194,13 @@
             this.btnThoat1.IdleIconRightImage = null;
             this.btnThoat1.Location = new System.Drawing.Point(6, 548);
             this.btnThoat1.Name = "btnThoat1";
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties23.BorderRadius = 30;
-            stateProperties23.BorderThickness = 2;
-            stateProperties23.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties23.IconLeftImage = null;
-            stateProperties23.IconRightImage = null;
-            this.btnThoat1.onHoverState = stateProperties23;
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties13.BorderRadius = 30;
+            stateProperties13.BorderThickness = 2;
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties13.IconLeftImage = null;
+            stateProperties13.IconRightImage = null;
+            this.btnThoat1.onHoverState = stateProperties13;
             this.btnThoat1.Size = new System.Drawing.Size(85, 45);
             this.btnThoat1.TabIndex = 44;
             this.btnThoat1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -324,13 +230,13 @@
             this.btnPlayOffline1.IdleIconRightImage = null;
             this.btnPlayOffline1.Location = new System.Drawing.Point(37, 452);
             this.btnPlayOffline1.Name = "btnPlayOffline1";
-            stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties24.BorderRadius = 30;
-            stateProperties24.BorderThickness = 2;
-            stateProperties24.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties24.IconLeftImage = null;
-            stateProperties24.IconRightImage = null;
-            this.btnPlayOffline1.onHoverState = stateProperties24;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties14.BorderRadius = 30;
+            stateProperties14.BorderThickness = 2;
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties14.IconLeftImage = null;
+            stateProperties14.IconRightImage = null;
+            this.btnPlayOffline1.onHoverState = stateProperties14;
             this.btnPlayOffline1.Size = new System.Drawing.Size(120, 42);
             this.btnPlayOffline1.TabIndex = 43;
             this.btnPlayOffline1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -360,17 +266,41 @@
             this.btnPlayOnline1.IdleIconRightImage = null;
             this.btnPlayOnline1.Location = new System.Drawing.Point(37, 407);
             this.btnPlayOnline1.Name = "btnPlayOnline1";
-            stateProperties25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties25.BorderRadius = 30;
-            stateProperties25.BorderThickness = 2;
-            stateProperties25.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
-            stateProperties25.IconLeftImage = null;
-            stateProperties25.IconRightImage = null;
-            this.btnPlayOnline1.onHoverState = stateProperties25;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties15.BorderRadius = 30;
+            stateProperties15.BorderThickness = 2;
+            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
+            stateProperties15.IconLeftImage = null;
+            stateProperties15.IconRightImage = null;
+            this.btnPlayOnline1.onHoverState = stateProperties15;
             this.btnPlayOnline1.Size = new System.Drawing.Size(120, 39);
             this.btnPlayOnline1.TabIndex = 42;
             this.btnPlayOnline1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPlayOnline1.Click += new System.EventHandler(this.BtnPlayOnline1_Click_1);
+            // 
+            // grbLuatChoi
+            // 
+            this.grbLuatChoi.Controls.Add(this.lblLuatChoi);
+            this.bunifuTransition2.SetDecoration(this.grbLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.grbLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.grbLuatChoi.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbLuatChoi.ForeColor = System.Drawing.Color.Black;
+            this.grbLuatChoi.Location = new System.Drawing.Point(10, 213);
+            this.grbLuatChoi.Name = "grbLuatChoi";
+            this.grbLuatChoi.Size = new System.Drawing.Size(177, 178);
+            this.grbLuatChoi.TabIndex = 41;
+            this.grbLuatChoi.TabStop = false;
+            this.grbLuatChoi.Text = "Luật chơi";
+            // 
+            // lblLuatChoi
+            // 
+            this.lblLuatChoi.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.lblLuatChoi, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.lblLuatChoi.Location = new System.Drawing.Point(7, 21);
+            this.lblLuatChoi.Name = "lblLuatChoi";
+            this.lblLuatChoi.Size = new System.Drawing.Size(0, 13);
+            this.lblLuatChoi.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -383,6 +313,76 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
+            // 
+            // pnl_Friend
+            // 
+            this.pnl_Friend.BackColor = System.Drawing.Color.White;
+            this.pnl_Friend.Controls.Add(this.btnBack);
+            this.pnl_Friend.Controls.Add(this.label_NoActiveFriend);
+            this.bunifuTransition2.SetDecoration(this.pnl_Friend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.pnl_Friend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.pnl_Friend.Location = new System.Drawing.Point(228, 0);
+            this.pnl_Friend.Name = "pnl_Friend";
+            this.pnl_Friend.Size = new System.Drawing.Size(219, 606);
+            this.pnl_Friend.TabIndex = 47;
+            this.pnl_Friend.Visible = false;
+            this.pnl_Friend.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_Friend_Paint);
+            this.pnl_Friend.MouseEnter += new System.EventHandler(this.Pnl_Friend_MouseEnter);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition2.SetDecoration(this.btnBack, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.btnBack, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.btnBack.Image = global::Internal_Society.Properties.Resources.back_to_96px;
+            this.btnBack.ImageActive = null;
+            this.btnBack.Location = new System.Drawing.Point(179, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(37, 40);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBack.TabIndex = 2;
+            this.btnBack.TabStop = false;
+            this.btnBack.Zoom = 10;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // label_NoActiveFriend
+            // 
+            this.label_NoActiveFriend.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.label_NoActiveFriend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.label_NoActiveFriend, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.label_NoActiveFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NoActiveFriend.ForeColor = System.Drawing.Color.Black;
+            this.label_NoActiveFriend.Location = new System.Drawing.Point(35, 159);
+            this.label_NoActiveFriend.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_NoActiveFriend.Name = "label_NoActiveFriend";
+            this.label_NoActiveFriend.Size = new System.Drawing.Size(143, 33);
+            this.label_NoActiveFriend.TabIndex = 1;
+            this.label_NoActiveFriend.Text = "No Friend";
+            this.label_NoActiveFriend.Visible = false;
+            this.label_NoActiveFriend.Click += new System.EventHandler(this.Label_NoActiveFriend_Click);
+            // 
+            // bunifuTransition1
+            // 
+            this.bunifuTransition1.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide;
+            this.bunifuTransition1.Cursor = null;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation6;
             // 
             // bunifuImageButton1
             // 
@@ -399,6 +399,27 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click_1);
+            // 
+            // bunifuTransition2
+            // 
+            this.bunifuTransition2.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.ScaleAndRotate;
+            this.bunifuTransition2.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(30);
+            animation5.RotateCoeff = 0.5F;
+            animation5.RotateLimit = 0.2F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation5;
             // 
             // frmCaro
             // 
@@ -419,11 +440,12 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmCaro_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmCaro_MouseUp);
             this.pnlGameCaro.ResumeLayout(false);
-            this.pnl_Friend.ResumeLayout(false);
-            this.pnl_Friend.PerformLayout();
             this.grbLuatChoi.ResumeLayout(false);
             this.grbLuatChoi.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_Friend.ResumeLayout(false);
+            this.pnl_Friend.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
@@ -446,5 +468,6 @@
         private Bunifu.UI.WinForms.BunifuTransition bunifuTransition2;
         private System.Windows.Forms.Label label_NoActiveFriend;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton btnBack;
     }
 }

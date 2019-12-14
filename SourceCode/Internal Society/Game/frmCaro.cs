@@ -34,6 +34,23 @@ namespace Internal_Society
             string sLuatChoi = "- Hai bên lần lượt đánh vào\n từng ô.\n- Bên nào đạt 5 con trên 1\n hàng ngang, hàng dọc, chéo\n xuôi, chéo ngược mà không\n bị chặn 2 đầu là người chiến\n thắng. \n- Nếu bàn cờ đầy thì hòa cờ .";
             lblLuatChoi.Text = sLuatChoi;
         }
+        public frmCaro(int gameID,string friendName)
+        {
+            InitializeComponent();
+            this.myGameID = gameID;
+            timer_Load.Start();
+            this.friendUserName = friendName;
+            g = pnl.CreateGraphics();
+            string sLuatChoi = "- Hai bên lần lượt đánh vào\n từng ô.\n- Bên nào đạt 5 con trên 1\n hàng ngang, hàng dọc, chéo\n xuôi, chéo ngược mà không\n bị chặn 2 đầu là người chiến\n thắng. \n- Nếu bàn cờ đầy thì hòa cờ .";
+            lblLuatChoi.Text = sLuatChoi;
+            btnPlayOnline1.ButtonText = "Chơi với " + this.friendUserName;
+            btnPlayOnline1.Enabled = false;
+            btnPlayOffline1.Visible = false;
+            btnChoiMoi1.Visible = false;
+            btnReset.Visible = false;
+            caro_chess.BIsPlaying = true;
+            caro_chess.IGameMode = 2;
+        }
 
         private void Pnl_MouseClick(object sender, MouseEventArgs e)
         {
@@ -68,7 +85,8 @@ namespace Internal_Society
         }
         public async void guiDataLenDB(int idGameCo, int index, string sQuanCo)
         {
-            string urlRequest = "https://kunbr0.com/kunbr0/add_data.php?game_id=" + idGameCo + "&user_id=" + myUserID + "&index=" + index + "&data=" + sQuanCo;
+            string urlRequest = App_Status.urlAPI + "c_Caro/Add_Data/" + idGameCo + "/" + myUserID + "/" + index + "/" + sQuanCo;
+            //string urlRequest = "https://kunbr0.com/kunbr0/add_data.php?game_id=" + idGameCo + "&user_id=" + myUserID + "&index=" + index + "&data=" + sQuanCo;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             string result = await getStringTask;
             dynamic data = JsonConvert.DeserializeObject(result);
@@ -136,7 +154,8 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
         public async void getDataChess(int id)
         {
             timer_Load.Stop();
-            string urlRequest = "https://kunbr0.com/kunbr0/get_data.php?game_id=" + id;
+            string urlRequest = App_Status.urlAPI + "c_Caro/Get_Data/" + id;
+            //string urlRequest = "https://kunbr0.com/kunbr0/get_data.php?game_id=" + id;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             string result = await getStringTask;
             dynamic data = JsonConvert.DeserializeObject(result);
@@ -187,7 +206,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             caro_chess.XacDinhVeOCoSauKhiCoThayDoiTuDB(iDong, iCot, g);
             if (caro_chess.KiemTraChienThang())
             {
-                caro_chess.EndgameOnline(friendUserName);
+                caro_chess.EndgameOnline(friendUserName,turnID,Convert.ToInt32(User_Info.k_ID),friendUserID);
                 if (turnID != myUserID)
                     caro_chess.BIsPlaying = false;
                 else
@@ -206,7 +225,8 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
         }
         private async void CreateNewGameOnline(int idUser1, int idUser2)
         {
-            string urlRequest = "https://kunbr0.com/kunbr0/create_game.php?user_1=" + idUser1 + "&user_2=" + idUser2 + "&whoseTurn=" + idUser1;
+            string urlRequest = App_Status.urlAPI + "c_Caro/CreateGame/" + idUser1 + "/" + idUser2 + "/" + idUser1;
+            //string urlRequest = "https://kunbr0.com/kunbr0/create_game.php?user_1=" + idUser1 + "&user_2=" + idUser2 + "&whoseTurn=" + idUser1;
             Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
             string result = await getStringTask;
             dynamic data = JsonConvert.DeserializeObject(result);
@@ -349,6 +369,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             if (!userArr.success)
             {
                 pnl_Friend.Controls.Clear();
+                pnl_Friend.Controls.Add(btnBack);
                 pnl_Friend.Controls.Add(label_NoActiveFriend);
                 label_NoActiveFriend.Visible = true;
                 return;
@@ -359,7 +380,7 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
             {
                 friend friend_last = new friend("", "", "", 0);
 
-                friend_last.Top = 0 - friend_last.Height + 10;
+                friend_last.Top = 0 - friend_last.Height + 25;
                 foreach (Control kk in this.Controls)
                 {
                     if (kk is friend)
@@ -408,8 +429,8 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
                         //friend.MouseEnter += Friend_Enter;
                         //friend.Click += Friend_Click;
                         //friend.MouseEnter += Friend_MouseEnter;
-                        friend.Click += Friend_Click;
                         friend.MouseEnter += Friend_MouseEnter1;
+                        friend.Click += Friend_Click;
 
                         pnl_Friend.Controls.Add(friend);
                         //this.VerticalScroll.Value = this.VerticalScroll.Maximum;
@@ -438,8 +459,10 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
         private void Friend_MouseEnter1(object sender, EventArgs e)
         {
             Internal_Society.friend atf = sender as Internal_Society.friend;
-            if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat))
+            atf.BackColor = Color.FromArgb(App_Status.backFormColor.R - 10, App_Status.backFormColor.G - 10, App_Status.backFormColor.B - 10);
+            /*if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat))
                 atf.BackColor = Color.FromArgb(App_Status.backFormColor.R - 10, App_Status.backFormColor.G - 10, App_Status.backFormColor.B - 10);
+                */
         }
 
         private void Friend_Click(object sender, EventArgs e)
@@ -573,11 +596,19 @@ caro_chess.GetDataFromDBWithGameID(g, 41);
 
         private void Pnl_Friend_MouseEnter(object sender, EventArgs e)
         {
-            foreach (var item in this.Controls)
+            foreach (var item in pnl_Friend.Controls)
             {
                 Internal_Society.friend atf = item as Internal_Society.friend;
                 if (atf != null && atf.BackColor != Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat)) atf.BackColor = Color.Transparent;
             }
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            bunifuTransition1.HideSync(pnl_Friend);
+            pnlGameCaro.Location = new Point(0, 0);
+            bunifuTransition2.ShowSync(pnlGameCaro);
+            pnlGameCaro.Dock = DockStyle.Left;
         }
     }
 }
