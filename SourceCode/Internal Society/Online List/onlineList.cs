@@ -76,7 +76,7 @@ namespace Internal_Society
             if (userArr.data.Count() > 0)
             {
                 activeFriend friend_last = new activeFriend("", "", "",
-                    0, 0, 0);
+                    0, 0, 0, 0);
 
                 friend_last.Top = 0 - friend_last.Height + 10;
                 foreach (Control kk in this.Controls)
@@ -116,7 +116,7 @@ namespace Internal_Society
 
                         ListIDOnline.Add(Convert.ToInt32(userArr.data[i].friend_Conversation_ID));
                         activeFriend friend = new activeFriend(userArr.data[i].friend_Avatar, userArr.data[i].friend_Username, userArr.data[i].friend_Fullname,
-                            userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID);
+                            userArr.data[i].friend_lastLogin, userArr.data[i].NumOfUnSeenMessage, userArr.data[i].friend_Conversation_ID, userArr.data[i].ColorID);
                         friend.Location = new Point(10, 0);
                         friend.Top = friend_last.Bottom + MarginBottomOfFriend;
 

@@ -144,7 +144,7 @@ namespace Internal_Society
 
             if (!isExist)
             {
-                Internal_Society.Panel_Chat panel_Chat = new Internal_Society.Panel_Chat(Convert.ToInt32(atf.Tag));
+                Internal_Society.Panel_Chat panel_Chat = new Internal_Society.Panel_Chat(Convert.ToInt32(atf.Tag),atf.ColorID);
 
 
                 panel_Chat.Dock = DockStyle.Fill;

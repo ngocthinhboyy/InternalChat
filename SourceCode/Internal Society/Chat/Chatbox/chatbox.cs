@@ -23,6 +23,8 @@ namespace Internal_Society
         string json;
         string pMessage = "";
         string pSticker = "";
+        public Color kLeftColor = Color.FromArgb(0, 132, 255);
+        public Color kRightColor = Color.FromArgb(0, 132, 255);
         int messIndex = 0;
         bool isReceiveFromMe = true;
         private static int sequenceSticker = -1;
@@ -34,20 +36,102 @@ namespace Internal_Society
         {
 
         }
-        public chatbox(int conversation_id)
+        public chatbox(int conversation_id, int ColorID)
         {
             id_conversation = conversation_id.ToString();
+            switch (ColorID)
+            {
+                case 0:
+                    break;
+                case 1:
+                    this.kLeftColor = ColorData.Color_Left_1;
+                    this.kRightColor = ColorData.Color_Right_1;
+                    break;
+                case 2:
+                    this.kLeftColor = ColorData.Color_Left_2;
+                    this.kRightColor = ColorData.Color_Right_2;
+                    break;
+                case 3:
+                    this.kLeftColor = ColorData.Color_Left_3;
+                    this.kRightColor = ColorData.Color_Right_3;
+                    break;
+                case 4:
+                    this.kLeftColor = ColorData.Color_Left_4;
+                    this.kRightColor = ColorData.Color_Right_4;
+                    break;
+                case 5:
+                    this.kLeftColor = ColorData.Color_Left_5;
+                    this.kRightColor = ColorData.Color_Right_5;
+                    break;
+                case 6:
+                    this.kLeftColor = ColorData.Color_Left_6;
+                    this.kRightColor = ColorData.Color_Right_6;
+                    break;
+                case 7:
+                    this.kLeftColor = ColorData.Color_Left_7;
+                    this.kRightColor = ColorData.Color_Right_7;
+                    break;
+                case 8:
+                    this.kLeftColor = ColorData.Color_Left_8;
+                    this.kRightColor = ColorData.Color_Right_8;
+                    break;
+                case 9:
+                    this.kLeftColor = ColorData.Color_Left_9;
+                    this.kRightColor = ColorData.Color_Right_9;
+                    break;
+                case 10:
+                    this.kLeftColor = ColorData.Color_Left_10;
+                    this.kRightColor = ColorData.Color_Right_10;
+                    break;
+                case 11:
+                    this.kLeftColor = ColorData.Color_Left_11;
+                    this.kRightColor = ColorData.Color_Right_11;
+                    break;
+                case 12:
+                    this.kLeftColor = ColorData.Color_Left_12;
+                    this.kRightColor = ColorData.Color_Right_12;
+                    break;
 
+
+            }
             if (!this.DesignMode)
             {
                 InitializeComponent();
-                Queue_Sticker.data = new Queue<string>();
             }
             bbl_old.Top = 0 - bbl_old.Height + 10;
             loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
 
         }
+
+        public void SetColor(Color a, Color b, int colorID)
+        {
+            this.kLeftColor = a;
+            this.kRightColor = b;
+            ChangeColorConversation(colorID);
+            notifyChangeColor();
+        }
+
+
+        public async void ChangeColorConversation(int colorID)
+        {
+            try
+            {
+                var urlGetData = App_Status.urlAPI + "c_Message/ChangeColor/" + this.id_conversation + "/"
+                    + User_Info.k_ID + "/" + colorID;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlGetData); });
+                // await
+                string result = await getStringTask;
+                
+            }
+            catch
+            {
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
+            }
+
+        }
+
         public void notifyChangeColor()
         {
             Label lbl = new Label();
@@ -65,7 +149,7 @@ namespace Internal_Society
             {
                 if (x is bubble)
                 {
-                    ((bubble)x).ChangeColorBubble();
+                    ((bubble)x).ChangeColorBubble(kLeftColor,kRightColor);
 
                 }
             }
@@ -75,7 +159,7 @@ namespace Internal_Society
             string message_Detail, string message_Time)
         {
             bubble bbl = new Internal_Society.bubble(user_ID, message_ID, message_Type,
-             message_Detail, message_Time, msgType.In);
+             message_Detail, message_Time, msgType.In, this.kLeftColor, this.kRightColor);
             //Xét xem scroll bar tồn tại hay chưa
             if (panel2.VerticalScroll.Visible == false)
                 bbl.Location = new Point(this.Width - bbl.Width - 40, 50);
@@ -94,7 +178,7 @@ namespace Internal_Society
         {
 
             bubble bbl = new Internal_Society.bubble(user_ID, message_ID, message_Type,
-             message_Detail, message_Time, msgType.Out);
+             message_Detail, message_Time, msgType.Out, this.kLeftColor, this.kRightColor);
             PictureBox pic = new PictureBox();
             pic.Size = new Size(40, 40);
             pic.SizeMode = PictureBoxSizeMode.Zoom;
@@ -273,7 +357,7 @@ namespace Internal_Society
 
         private void Button_More_Click(object sender, EventArgs e)
         {
-            Panel_Color_Bubble.NotifyChangeColor = new Notify(this.notifyChangeColor);
+            Panel_Color_Bubble.SetColor = new Notify(SetColor);
             pn_Color_Bubble.Show();
         }
 

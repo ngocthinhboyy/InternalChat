@@ -19,6 +19,7 @@ namespace Internal_Society
         private int userLastLogin;
         private int NumOfUnSeenMessage = 0;
         public int ConversationID = -1;
+        public int ColorID = 0;
         public activeFriend()
         {
             InitializeComponent();
@@ -44,9 +45,10 @@ namespace Internal_Society
             this.NumOfUnSeenMessage = NumOfUnSeenMessage;
             this.ConversationID = ConversationID;
         }
-        public activeFriend(string userAva, string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID)
+        public activeFriend(string userAva, string userName, string userStatus, int userLastLogin, int NumOfUnSeenMessage, int ConversationID, int ColorID = 0)
         {
             InitializeComponent();
+            this.ColorID = ColorID;
             UpdateLocalProperties(userAva, userName, userStatus, userLastLogin, NumOfUnSeenMessage, ConversationID);
             UpdateFriend();
 

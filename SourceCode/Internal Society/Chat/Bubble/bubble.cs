@@ -22,7 +22,8 @@ namespace Internal_Society
         private string message_Time;
         private string urlImage;
         private msgType InOrOut;
-
+        private Color kLeftColor = Color.FromArgb(0, 132, 255);
+        private Color kRightColor = Color.FromArgb(0, 132, 255);
 
         public bubble()
         {
@@ -32,7 +33,7 @@ namespace Internal_Society
         int isPicture = 0;
 
         public bubble(string user_ID, string message_ID, string message_Type,
-            string message_Detail, string message_Time, msgType InOrOut)
+            string message_Detail, string message_Time, msgType InOrOut, Color kLeft, Color kRight)
         {
 
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace Internal_Society
             this.message_Detail = message_Detail;
             this.message_Time = message_Time;
             this.InOrOut = InOrOut;
+            this.kLeftColor = kLeft;
+            this.kRightColor = kRight;
             #endregion
 
 
@@ -67,7 +70,6 @@ namespace Internal_Society
 
             lb_message.Top = 10;
             lb_message.Left = 10;
-            ChangeColorBubble();
             lb_time.Text = message_Time;
             SetHeight();
             ChangeColorBubble();
@@ -170,12 +172,19 @@ namespace Internal_Society
 
         }
 
+        public void ChangeColorBubble(Color a, Color b)
+        {
+            this.kLeftColor = a;
+            this.kRightColor = b;
+            this.ChangeColorBubble();
+        }
+
         public void ChangeColorBubble()
         {
             if (this.InOrOut.ToString() == "In")
             {
-                gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft = Panel_Color_Bubble.LeftColor;
-                gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = Panel_Color_Bubble.RightColor;
+                gradientPanel.GradientBottomLeft = gradientPanel.GradientTopLeft = kLeftColor;
+                gradientPanel.GradientBottomRight = gradientPanel.GradientTopRight = kRightColor;
                 lb_message.TextAlign = ContentAlignment.MiddleLeft;
             }
             else
