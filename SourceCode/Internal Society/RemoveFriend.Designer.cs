@@ -1,6 +1,6 @@
 ﻿namespace Internal_Society
 {
-    partial class LogOutConfirmation
+    partial class RemoveFriend
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogOutConfirmation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveFriend));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,17 +40,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(31, 19);
+            this.label1.Location = new System.Drawing.Point(103, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Are you sure you want to log out?";
+            this.label1.Size = new System.Drawing.Size(109, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Are you sure?";
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.ButtonText = "Cancel";
+            this.btnCancel.ButtonText = "No";
             this.btnCancel.ButtonTextMarginLeft = 0;
             this.btnCancel.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnCancel.DisabledFillColor = System.Drawing.Color.Gray;
@@ -66,7 +66,7 @@
             this.btnCancel.IdleFillColor = System.Drawing.Color.Cornsilk;
             this.btnCancel.IdleIconLeftImage = null;
             this.btnCancel.IdleIconRightImage = null;
-            this.btnCancel.Location = new System.Drawing.Point(172, 71);
+            this.btnCancel.Location = new System.Drawing.Point(171, 70);
             this.btnCancel.Name = "btnCancel";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(250)))), ((int)(((byte)(235)))));
             stateProperties1.BorderRadius = 30;
@@ -76,7 +76,7 @@
             stateProperties1.IconRightImage = null;
             this.btnCancel.onHoverState = stateProperties1;
             this.btnCancel.Size = new System.Drawing.Size(106, 45);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
@@ -84,7 +84,7 @@
             // 
             this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
             this.btnLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogOut.BackgroundImage")));
-            this.btnLogOut.ButtonText = "Log Out";
+            this.btnLogOut.ButtonText = "Yes";
             this.btnLogOut.ButtonTextMarginLeft = 0;
             this.btnLogOut.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnLogOut.DisabledFillColor = System.Drawing.Color.Gray;
@@ -100,7 +100,7 @@
             this.btnLogOut.IdleFillColor = System.Drawing.Color.DeepPink;
             this.btnLogOut.IdleIconLeftImage = null;
             this.btnLogOut.IdleIconRightImage = null;
-            this.btnLogOut.Location = new System.Drawing.Point(25, 71);
+            this.btnLogOut.Location = new System.Drawing.Point(34, 70);
             this.btnLogOut.Name = "btnLogOut";
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(58)))), ((int)(((byte)(108)))));
             stateProperties2.BorderRadius = 30;
@@ -110,22 +110,22 @@
             stateProperties2.IconRightImage = null;
             this.btnLogOut.onHoverState = stateProperties2;
             this.btnLogOut.Size = new System.Drawing.Size(106, 45);
-            this.btnLogOut.TabIndex = 1;
+            this.btnLogOut.TabIndex = 7;
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
             // 
-            // LogOutConfirmation
+            // RemoveFriend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(311, 142);
+            this.ClientSize = new System.Drawing.Size(311, 143);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LogOutConfirmation";
-            this.Text = "LogOutConfirmation";
+            this.Name = "RemoveFriend";
+            this.Text = "RemoveFriend";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,8 +133,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogOut;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancel;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogOut;
+        private System.Windows.Forms.Label label1;
     }
 }

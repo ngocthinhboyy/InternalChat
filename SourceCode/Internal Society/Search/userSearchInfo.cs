@@ -18,7 +18,7 @@ namespace Internal_Society
     public class userSearchInfo
     {
         [JsonProperty("user_id")]
-        public string user_id { get; set; }
+        public int user_id { get; set; }
 
         [JsonProperty("username")]
         public string username { get; set; }

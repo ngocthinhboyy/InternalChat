@@ -42,7 +42,7 @@ namespace Internal_Society
                 IncorrectAlert alert = new IncorrectAlert("Connection Error");
                 alert.Show();
             }
-            
+
             TimeRequest.Stop();
             TimeRequest.Start();
         }
@@ -59,7 +59,7 @@ namespace Internal_Society
             int iLeft = 30;
             App_Status.notification = 0;
             int dem = 1;
-            for (int i = notiData.data.Count - 1; i >=0 ; i--)
+            for (int i = notiData.data.Count - 1; i >= 0; i--)
             {
                 if (notiData.data[i].id.ToString() != User_Info.k_LastNoti)
                 {
@@ -70,8 +70,9 @@ namespace Internal_Society
             for (int i = notiData.data.Count - 1; i >= 0; i--)
             {
 
-                if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "0") {
-                    Notification_AddFriend ntAddFriend = new Notification_AddFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
+                if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "0")
+                {
+                    Notification_AddFriend ntAddFriend = new Notification_AddFriend(notiData.data[i].sender_fullname, Convert.ToInt32(notiData.data[i].sender));
                     ntAddFriend.Location = new Point((this.Width - ntAddFriend.Width) / 2, 0);
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
@@ -79,7 +80,7 @@ namespace Internal_Society
                 }
                 else if (notiData.data[i].type == "FriendRequest" && notiData.data[i].detail == "1")
                 {
-                    Notification_AcceptFriend ntAddFriend = new Notification_AcceptFriend(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].sender));
+                    Notification_AcceptFriend ntAddFriend = new Notification_AcceptFriend(notiData.data[i].sender_fullname, Convert.ToInt32(notiData.data[i].sender));
                     ntAddFriend.Location = new Point((this.Width - ntAddFriend.Width) / 2, 0);
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
@@ -87,14 +88,14 @@ namespace Internal_Society
                 }
                 else if (notiData.data[i].type == "CaroInvite")
                 {
-                    NotiCaro ntAddFriend = new NotiCaro(notiData.data[i].sender, Convert.ToInt32(notiData.data[i].detail));
+                    NotiCaro ntAddFriend = new NotiCaro(notiData.data[i].sender_fullname, Convert.ToInt32(notiData.data[i].detail));
                     ntAddFriend.Location = new Point((this.Width - ntAddFriend.Width) / 2, 0);
                     ntAddFriend.Top = iTop + 20;
                     this.Controls.Add(ntAddFriend);
                     iTop = ntAddFriend.Bottom;
                 }
             }
-             
+
             App_Status.notification = Math.Abs(notiData.data.Count - dem);
             delegateNoti();
         }
@@ -109,7 +110,7 @@ namespace Internal_Society
         {
             foreach (Control item in this.Controls)
             {
-                    item.Left = (this.Width - item.Width) / 2;
+                item.Left = (this.Width - item.Width) / 2;
             }
         }
     }

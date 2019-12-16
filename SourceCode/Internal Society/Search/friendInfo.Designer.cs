@@ -76,14 +76,14 @@
             this.btn_addFriend.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btn_addFriend.DisabledFillColor = System.Drawing.Color.Gray;
             this.btn_addFriend.DisabledForecolor = System.Drawing.Color.White;
-            this.btn_addFriend.ForeColor = System.Drawing.Color.White;
+            this.btn_addFriend.ForeColor = System.Drawing.Color.Black;
             this.btn_addFriend.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btn_addFriend.IconPadding = 10;
             this.btn_addFriend.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btn_addFriend.IdleBorderColor = System.Drawing.Color.DeepPink;
             this.btn_addFriend.IdleBorderRadius = 35;
             this.btn_addFriend.IdleBorderThickness = 2;
-            this.btn_addFriend.IdleFillColor = System.Drawing.Color.DeepPink;
+            this.btn_addFriend.IdleFillColor = System.Drawing.Color.White;
             this.btn_addFriend.IdleIconLeftImage = null;
             this.btn_addFriend.IdleIconRightImage = null;
             this.btn_addFriend.Location = new System.Drawing.Point(402, 26);
