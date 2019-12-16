@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
-using Newtonsoft.Json;
-using System.Threading;
 using System.Web.Script.Serialization;
 
 namespace Internal_Society
@@ -223,7 +217,8 @@ namespace Internal_Society
 
         private void Panel_Main_Click(object sender, EventArgs e)
         {
-            string kk = "";
+            // (TEST) Hiển thị List user_id hiện có trong panel sau khi search
+            /*string kk = "";
             foreach (Control item in panel_Main.Controls)
             {
                 if (item is friendInfo)
@@ -232,7 +227,7 @@ namespace Internal_Society
                     kk += (fI.FriendID.ToString() + " - ");
                 }
             }
-            MessageBox.Show(kk);
+            MessageBox.Show(kk);*/
         }
     }
 }

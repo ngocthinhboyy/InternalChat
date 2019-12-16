@@ -1,20 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Internal_Society
 {
     public partial class CreateAccount_PersonalInfo : Form
     {
-        string LoginStatus;
+        string data;
         public CreateAccount_PersonalInfo()
         {
             InitializeComponent();
@@ -29,26 +24,32 @@ namespace Internal_Society
         private void Process_Register()
         {
             if (Reg_Info.reg_Nickname == "") Reg_Info.reg_Nickname = Reg_Info.reg_Username;
-            var urlCreateUser = App_Status.urlAPI + "c_User/Reg/"  + Reg_Info.reg_Username + "/" + Reg_Info.reg_Password + "/" + Reg_Info.reg_Nickname + "/" + Reg_Info.reg_Question_1 + "/" + Reg_Info.reg_Answer_1 + "/" + Reg_Info.reg_Question_2 + "/" + Reg_Info.reg_Answer_2;
+            var urlCreateUser = App_Status.urlAPI + "c_User/Reg/" + Reg_Info.reg_Username + "/" + Reg_Info.reg_Password + "/" + Reg_Info.reg_Nickname + "/" + Reg_Info.reg_Question_1 + "/" + Reg_Info.reg_Answer_1 + "/" + Reg_Info.reg_Question_2 + "/" + Reg_Info.reg_Answer_2;
             string data1 = new WebClient().DownloadString(urlCreateUser);
             dynamic data2 = JsonConvert.DeserializeObject(data1);
             string userRegisterStatus = data2.Success;
             if (userRegisterStatus == "1")
             {
                 var urlLogin = App_Status.urlAPI + "c_User/Login/" + Reg_Info.reg_Username + "/" + Reg_Info.reg_Password;
-                LoginStatus = new WebClient().DownloadString(urlLogin);
-                dynamic data_user = JsonConvert.DeserializeObject(LoginStatus);
-                User_Info.k_ID = data_user.ID;
-                User_Info.k_Username = kUTF8(data_user.Username.ToString());
-                User_Info.k_Fullname = kUTF8(data_user.Fullname.ToString());
-                User_Info.k_Diamond = kUTF8(data_user.Diamond.ToString());
-                User_Info.k_Gold = kUTF8(data_user.Gold.ToString());
-                User_Info.k_Gender = kUTF8(data_user.Gender.ToString());
-                User_Info.k_Phone = kUTF8(data_user.Phone.ToString());
-                User_Info.k_Email = kUTF8(data_user.Email.ToString());
-                User_Info.k_Birthday = kUTF8(data_user.Birthday.ToString());
-                User_Info.k_Status = kUTF8(data_user.Status.ToString());
-                User_Info.k_Address = kUTF8(data_user.Address.ToString());
+                data = new WebClient().DownloadString(urlLogin);
+                dynamic LoginStatus = JsonConvert.DeserializeObject(data);
+                User_Info.k_ID = LoginStatus.ID;
+                User_Info.k_Username = LoginStatus.Username.ToString();
+                User_Info.k_Fullname = LoginStatus.Fullname.ToString();
+                User_Info.k_Diamond = LoginStatus.Diamond.ToString();
+                User_Info.k_Gold = LoginStatus.Gold.ToString();
+                User_Info.k_Gender = LoginStatus.Gender.ToString();
+                User_Info.k_Phone = LoginStatus.Phone.ToString();
+                User_Info.k_Email = LoginStatus.Email.ToString();
+                User_Info.k_Birthday = LoginStatus.Birthday.ToString();
+                User_Info.k_Status = LoginStatus.Status.ToString();
+                User_Info.k_Address = LoginStatus.Address.ToString();
+                User_Info.k_Avatar = LoginStatus.urlAvatar.ToString();
+                User_Info.k_LastNoti = LoginStatus.lastNotification.ToString();
+                User_Info.k_LuckyWheel = LoginStatus.LuckyKey.ToString();
+                User_Info.k_DarkMode = (LoginStatus.DarkMode.ToString() == "1") ? true : false;
+                User_Info.k_SearchAvailable = (LoginStatus.SearchAvailable.ToString() == "1") ? true : false;
+                User_Info.k_SeeProfileAvailable = (LoginStatus.SeeProfileAvailable.ToString() == "1") ? true : false;
             }
 
         }
@@ -74,12 +75,12 @@ namespace Internal_Society
                 txtNickname.BorderStyle = BorderStyle.None;
                 g.DrawRectangle(p, new Rectangle(txtNickname.Location.X - strong, txtNickname.Location.Y - strong, txtNickname.Width + strong, txtNickname.Height + strong));
             }
-            if ( txtAnswer1.Text == "")
+            if (txtAnswer1.Text == "")
             {
                 txtAnswer1.BorderStyle = BorderStyle.None;
                 g.DrawRectangle(p, new Rectangle(txtAnswer1.Location.X - strong, txtAnswer1.Location.Y - strong, txtAnswer1.Width + strong, txtAnswer1.Height + strong));
             }
-            if( txtAnswer2.Text == "")
+            if (txtAnswer2.Text == "")
             {
                 txtAnswer2.BorderStyle = BorderStyle.None;
                 g.DrawRectangle(p, new Rectangle(txtAnswer2.Location.X - strong, txtAnswer2.Location.Y - strong, txtAnswer2.Width + strong, txtAnswer2.Height + strong));
@@ -91,7 +92,7 @@ namespace Internal_Society
 
         private void BtnFinish_Click(object sender, EventArgs e)
         {
-            if(CheckNullPersonalInfor())
+            if (CheckNullPersonalInfor())
             {
                 Reg_Info.reg_Nickname = txtNickname.Text;
                 Reg_Info.reg_Question_1 = question1.selectedIndex;
@@ -101,7 +102,7 @@ namespace Internal_Society
                 Process_Register();
                 this.Close();
             }
-            
+
         }
 
         private void BtnSkip_Click(object sender, EventArgs e)
@@ -116,7 +117,7 @@ namespace Internal_Society
              *      +   Neu An nut Skip o IgnoringSecurityQuestionAlert Form thi close Form nay de vao Homepage ( checkSureIgnore = 1 )
              *      +   Neu An nut Give me back o IgnoringSecurityQuestionAlert Form thi HIEN THI lai Form nay ( checkSureIgnore = 0 )
              */
-            if (ignoreAlert.checkSureIgnore == 1 )
+            if (ignoreAlert.checkSureIgnore == 1)
             {
                 Process_Register();
                 this.Close();

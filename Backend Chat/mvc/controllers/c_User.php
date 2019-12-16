@@ -11,6 +11,7 @@ class c_User extends controller{
 
     function Login($pUsername = "", $pPassword = ""){
         $usModel = $this->model("UserModel");
+        $pPassword = md5($pPassword.$pUsername) . crypt($pPassword.$pUsername, '$6$');
         $us = $usModel->Login($pUsername,$pPassword);
         
         if(mysqli_num_rows($us) == 0){
@@ -46,7 +47,7 @@ class c_User extends controller{
 
         $usModel = $this->model("UserModel");
         $rands = generateRandomString(7);
-
+        $pPassword = md5($pPassword.$pUsername) . crypt($pPassword.$pUsername, '$6$');
         $us = $usModel->Reg($pUsername,$pPassword,$pFullname,$pQues_1,
         $pAns_1,$pQues_2,$pAns_2,$rands);
 

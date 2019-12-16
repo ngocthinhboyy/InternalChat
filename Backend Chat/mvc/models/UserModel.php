@@ -15,8 +15,8 @@ class UserModel extends DB{
 
         $existedAccount = $this->Login($pUsername,$pPassword);
         if ($existedAccount->num_rows > 0) return FALSE;
-        $qr = "INSERT INTO user_info (username, password,fullname,ques_1,ans_1,ques_2,ans_2,keyFB) 
-        VALUES ('$pUsername', '$pPassword', '$pFullname', '$pQues_1', '$pAns_1', '$pQues_2', '$pAns_2','$rands') ";
+        $qr = "INSERT INTO user_info (username, password,fullname,ques_1,ans_1,ques_2,ans_2,keyFB, diamond, gold, luckyKey) 
+        VALUES ('$pUsername', '$pPassword', '$pFullname', '$pQues_1', '$pAns_1', '$pQues_2', '$pAns_2','$rands', 25, 3000, 5) ";
         
         
         return mysqli_query($this->con, $qr);
