@@ -36,8 +36,14 @@ namespace Internal_Society
             if (isFriend)
             {
                 btn_addFriend.IdleFillColor = Color.FromArgb(227, 38, 54);
-                btn_addFriend.ButtonText = "Remove request";
-                isClicked = !isClicked;
+                btn_addFriend.ButtonText = "Remove Friend";
+                isClicked = true;
+            }
+            else
+            {
+                btn_addFriend.IdleFillColor = Color.White;
+                btn_addFriend.ButtonText = "Add friend";
+                isClicked = false;
             }
         }
 

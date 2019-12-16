@@ -22,6 +22,9 @@ namespace Internal_Society
         [JsonProperty("sender")]
         public string sender { get; set; }
 
+        [JsonProperty("sender_fullname")]
+        public string sender_fullname { get; set; }
+
         [JsonProperty("receiver")]
         public string receiver { get; set; }
 

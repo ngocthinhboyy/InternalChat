@@ -95,22 +95,39 @@ namespace Internal_Society
                 int CountExist = 0;
                 for (int i = 0; i < dSearchUser.data.Count(); i++)
                 {
-                    if (IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id))) CountExist++;
+                    if (IsExistInList(ListUserID, dSearchUser.data[i].user_id)) CountExist++;
                 }
 
                 if (CountExist == ListUserID.Count && dSearchUser.data.Count() == ListUserID.Count)
                 {
-                    return;
+                    foreach (Control item in panel_Main.Controls)
+                    {
+                        if (item is friendInfo)
+                        {
+                            friendInfo fI = item as friendInfo;
+                            int fIId = fI.FriendID;
+                            for (int i = 0; i < dSearchUser.data.Count(); i++)
+                            {
+                                if (dSearchUser.data[i].user_id == fIId)
+                                {
+                                    fI.UpdateUserInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
+                            dSearchUser.data[i].user_id, dSearchUser.data[i].isFriend);
+                                    break;
+                                }
+                            }
+                        }
+                        return;
+                    }
                 }
                 else if (dSearchUser.data.Count() > ListUserID.Count)
                 {
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
-                        if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)) && dSearchUser.data[i].user_id != User_Info.k_ID)
+                        if (!IsExistInList(ListUserID, dSearchUser.data[i].user_id) && dSearchUser.data[i].user_id != Convert.ToInt32(User_Info.k_ID))
                         {
-                            ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                            ListUserID.Add(dSearchUser.data[i].user_id);
                             friendInfo friend = new friendInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
-                            Convert.ToInt32(dSearchUser.data[i].user_id), dSearchUser.data[i].isFriend);
+                            dSearchUser.data[i].user_id, dSearchUser.data[i].isFriend);
                             friend.Left = (this.Width - friend.Width) / 2;
                             friend.Top = friend_last.Bottom + 20;
                             panel_Main.Controls.Add(friend);
@@ -122,7 +139,7 @@ namespace Internal_Society
                 }
                 else if (dSearchUser.data.Count() < ListUserID.Count)
                 {
-                    
+
 
                     for (int i = 0; i < (ListUserID.Count - dSearchUser.data.Count()); i++)
                     {
@@ -133,18 +150,18 @@ namespace Internal_Society
 
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
-                        if (dSearchUser.data[i].user_id != User_Info.k_ID)
+                        if (dSearchUser.data[i].user_id != Convert.ToInt32(User_Info.k_ID))
                         {
                             friendInfo fI = panel_Main.Controls[i] as friendInfo;
                             fI.UpdateUserInfo(dSearchUser.data[i].username, dSearchUser.data[i].fullname,
-                                        Convert.ToInt32(dSearchUser.data[i].user_id), dSearchUser.data[i].isFriend);
-                            ListUserID.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                                        dSearchUser.data[i].user_id, dSearchUser.data[i].isFriend);
+                            ListUserID.Add(dSearchUser.data[i].user_id);
                         }
                     }
                 }
                 else
                 {
-                    
+
                     // List >< lay moi lap vao cu
 
                     // index cua data moi
@@ -155,11 +172,11 @@ namespace Internal_Society
                     for (int i = 0; i < dSearchUser.data.Count(); i++)
                     {
                         // Danh sach nhung user moi
-                        if (dSearchUser.data[i].user_id != User_Info.k_ID)
+                        if (dSearchUser.data[i].user_id != Convert.ToInt32(User_Info.k_ID))
                         {
-                            if (!IsExistInList(ListUserID, Convert.ToInt32(dSearchUser.data[i].user_id)))
+                            if (!IsExistInList(ListUserID, dSearchUser.data[i].user_id))
                                 kNewData.Add(i);
-                            else kExistData.Add(Convert.ToInt32(dSearchUser.data[i].user_id));
+                            else kExistData.Add(dSearchUser.data[i].user_id);
                         }
                     }
 
@@ -175,7 +192,7 @@ namespace Internal_Society
                                     if (kNewData.Count > 0)
                                     {
                                         fI.UpdateUserInfo(dSearchUser.data[kNewData[0]].username, dSearchUser.data[kNewData[0]].fullname,
-                                    Convert.ToInt32(dSearchUser.data[kNewData[0]].user_id), dSearchUser.data[kNewData[0]].isFriend);
+                                    dSearchUser.data[kNewData[0]].user_id, dSearchUser.data[kNewData[0]].isFriend);
                                         kNewData.RemoveAt(0);
                                     }
 
@@ -206,6 +223,16 @@ namespace Internal_Society
 
         private void Panel_Main_Click(object sender, EventArgs e)
         {
+            string kk = "";
+            foreach (Control item in panel_Main.Controls)
+            {
+                if (item is friendInfo)
+                {
+                    friendInfo fI = item as friendInfo;
+                    kk += (fI.FriendID.ToString() + " - ");
+                }
+            }
+            MessageBox.Show(kk);
         }
     }
 }

@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\ConfirmClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ConfirmClose.Designer.cs">
+      <DependentUpon>ConfirmClose.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game\friend.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,6 +198,12 @@
     </Compile>
     <Compile Include="Panel_Controls\tabProfileInfo.Designer.cs">
       <DependentUpon>tabProfileInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveFriend.Designer.cs">
+      <DependentUpon>RemoveFriend.cs</DependentUpon>
     </Compile>
     <Compile Include="Search\friendInfo.cs">
       <SubType>UserControl</SubType>
@@ -313,6 +325,9 @@
     </Compile>
     <Compile Include="Search\userSearchInfo.cs" />
     <Compile Include="Classes\User_Info.cs" />
+    <EmbeddedResource Include="Form\ConfirmClose.resx">
+      <DependentUpon>ConfirmClose.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\BuyKey.resx">
       <DependentUpon>BuyKey.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_Controls\tabProfileInfo.resx">
       <DependentUpon>tabProfileInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveFriend.resx">
+      <DependentUpon>RemoveFriend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search\friendInfo.resx">
       <DependentUpon>friendInfo.cs</DependentUpon>

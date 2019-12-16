@@ -46,7 +46,7 @@ namespace Internal_Society
             bbl_old.Top = 0 - bbl_old.Height + 10;
             loading.Location = new Point(this.Width / 2 - 50, 100);
             panel2.Controls.Add(loading);
-            
+
         }
         public void notifyChangeColor()
         {
@@ -160,7 +160,11 @@ namespace Internal_Society
             TimeRequest.Start();
 
             Conversation_Message dMess = new JavaScriptSerializer().Deserialize<Conversation_Message>(dataMessage);
-            if (!dMess.success) return;
+            if (!dMess.success)
+            {
+                isReceiveFromMe = false;
+                return;
+            }
             for (int i = dMess.data.Count - 1; i >= 0; i--)
             {
                 if (dMess.data[i].message_Type != "image")
@@ -185,7 +189,7 @@ namespace Internal_Society
                 }
             }
             isReceiveFromMe = false;
-            
+
         }
 
 
@@ -218,7 +222,7 @@ namespace Internal_Society
 
         private void Button_Attach_Click(object sender, EventArgs e)
         {
-            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation ,"otherFile");
+            FileUpload fu = new FileUpload(App_Status.urlUpload, id_conversation, "otherFile");
             if (fu.UploadFile("otherFile"))
             {
                 addInMessage(User_Info.k_ID, "", "otherLocalFile", fu.FilePath, "");
@@ -229,7 +233,7 @@ namespace Internal_Society
         private void Button_Sticker_Click(object sender, EventArgs e)
         {
             Panel_Sticker.ExecuteDelegate = AddSticker;
-            
+
             if (!pn_Sticker.IsDisposed)
             {
                 if (sequenceSticker != ListSticker.Sequence)
@@ -249,7 +253,7 @@ namespace Internal_Society
         }
         private void Panel2_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
             pn_Sticker.Hide();
             pn_Color_Bubble.Hide();
         }
@@ -257,14 +261,14 @@ namespace Internal_Society
 
         public void AddSticker(string pSticker)
         {
-                string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
-                addInMessage(User_Info.k_ID, "-1", "sticker", pSticker, inputTime);
-                PushMessageAsync("sticker", pSticker);
+            string inputTime = DateTime.Now.ToString("dd-MM-yyyy h:mm:ss tt");
+            addInMessage(User_Info.k_ID, "-1", "sticker", pSticker, inputTime);
+            PushMessageAsync("sticker", pSticker);
         }
 
-        
 
-        
+
+
         Panel_Color_Bubble pn_Color_Bubble = new Panel_Color_Bubble();
 
         private void Button_More_Click(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace Internal_Society
         public static List<UserControl> ListPanel = new List<UserControl>();
         public static List<UserControl> ListChat = new List<UserControl>();
         public static string searchInfo = "";
-
+        public static bool isExit = false;
         Color activeTabChat = Color.FromArgb(App_Status.RedTabChat, App_Status.GreenTabChat, App_Status.BlueTabChat);
         Color inactiveTabChat = Color.Transparent;
         Internal_Society.Panel_Dashboard panel_Dashboard = new Internal_Society.Panel_Dashboard();
@@ -203,6 +203,7 @@ namespace Internal_Society
         private void Tab_DashBoard_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            isSearching = false;
             TurnOffPanel();
             bunifuTransition1.ShowSync(panel_Dashboard);
             App_Status.time_delay = 10000;
@@ -214,6 +215,7 @@ namespace Internal_Society
         private void Tab_Profile_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            isSearching = false;
             TurnOffPanel();
             bunifuTransition2.ShowSync(panel_Profile);
             App_Status.time_delay = 10000;
@@ -227,6 +229,7 @@ namespace Internal_Society
         private void Tab_Chat_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            isSearching = false;
             TurnOffPanel();
             Logo.Visible = false;
             lbl_Noti.Visible = false;
@@ -248,10 +251,11 @@ namespace Internal_Society
         private void Tab_Cart_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            isSearching = false;
             TurnOffPanel();
             bunifuTransition3.ShowSync(panel_Cart);
             App_Status.time_delay = 10000;
-            if(isClickedNotiTab == false)
+            if (isClickedNotiTab == false)
             {
                 Noti();
             }
@@ -261,6 +265,7 @@ namespace Internal_Society
         {
             MoveIndicator((Control)sender);
             TurnOffPanel();
+            isSearching = false;
             bunifuTransition4.ShowSync(panel_Calendar);
             App_Status.time_delay = 10000;
             isClickedNotiTab = true;
@@ -272,6 +277,7 @@ namespace Internal_Society
         private void Tab_Games_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)sender);
+            isSearching = false;
             TurnOffPanel();
             bunifuTransition5.ShowSync(panel_Games);
             App_Status.time_delay = 10000;
@@ -280,6 +286,8 @@ namespace Internal_Society
                 Noti();
             }
         }
+
+
         private void HomePage_Resize(object sender, EventArgs e)
         {
             Update_App_Status();
@@ -321,6 +329,7 @@ namespace Internal_Society
         private void BtnBack_Click(object sender, EventArgs e)
         {
             MoveIndicator((Control)Tab_DashBoard);
+            isSearching = false;
             TurnOffPanel();
             onlineList1.Visible = false;
             panel_Dashboard.Visible = true;
@@ -345,10 +354,17 @@ namespace Internal_Society
             textbox_Search.Text = "";
         }
 
+        bool isSearching = false;
         private void Txt_Search_KeyUp(object sender, KeyEventArgs e)
         {
-            TurnOffPanel();
-            panel_Search1.Visible = true;
+
+            if (!isSearching)
+            {
+
+                TurnOffPanel();
+                panel_Search1.Visible = true;
+
+            }
             searchInfo = textbox_Search.Text;
             // searchInfo = "" thì tất cả các userInfo hiện trên panel_Search sẽ bị clear hết
             if (searchInfo == "")
@@ -357,11 +373,17 @@ namespace Internal_Society
             {
                 panel_Search1.AddFriendInfo();
             }
-        }
+            isSearching = true;
 
+        }
+        
         private void BunifuImageButton4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ConfirmClose confirmClose = new ConfirmClose();
+            confirmClose.StartPosition = FormStartPosition.CenterScreen;
+            confirmClose.ShowDialog();
+            if (isExit ==  true)
+                this.Close();
         }
 
         private void BunifuImageButton3_Click(object sender, EventArgs e)

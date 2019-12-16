@@ -10,6 +10,7 @@ namespace Internal_Society
     {
         public static string EncryptDecrypt2(string szPlainText, int szEncryptionKey)
         {
+            int kBool = 1; int kIndex = 1;
             StringBuilder szInputStringBuild = new StringBuilder(szPlainText);
             StringBuilder szOutStringBuild = new StringBuilder(szPlainText.Length);
             char Textch;
@@ -17,6 +18,9 @@ namespace Internal_Society
             {
                 Textch = szInputStringBuild[iCount];
                 Textch = (char)(Textch ^ szEncryptionKey);
+                szEncryptionKey += kIndex * kBool;
+                kIndex++;
+                kBool *= -1;
                 szOutStringBuild.Append(Textch);
             }
             return szOutStringBuild.ToString();
