@@ -11,20 +11,24 @@ namespace Internal_Society
     {
         List <string> urlSticker = new List<string>();
         public static kVoidDelegate ExecuteDelegate;
+        private bool isChat = false;
         
 
         public int soCot = 3;
         public int marginRight = 30;
         public int marginBottom = 30;
         private int NumOfUsersSticker = 0;
-
         public Panel_Sticker()
+        {
+            InitializeComponent();
+        }
+        public Panel_Sticker(bool i)
         {
             InitializeComponent();
             
             panel2.Controls.Clear();
 
-
+            isChat = i;
             int kIndex = 0;
             int kDefault = -1;
             NumOfUsersSticker = 0;
@@ -110,6 +114,14 @@ namespace Internal_Society
                 string index;
                 if (i < 10) { index = "_00" + i.ToString(); } else { index = "_0" + i.ToString(); }
                 sticker st = new sticker(stickerName + index + "." + ext);
+                if(isChat)
+                {
+                    st.Enabled = true;
+                }
+                else
+                {
+                    st.Enabled = false;
+                }
                 st.Left = kLeft;
                 st.Top = kTop;
                 panel1.Controls.Add(st);

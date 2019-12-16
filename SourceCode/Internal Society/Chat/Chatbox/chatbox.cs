@@ -313,7 +313,7 @@ namespace Internal_Society
             }
         }
 
-        Panel_Sticker pn_Sticker = new Panel_Sticker();
+        Panel_Sticker pn_Sticker = new Panel_Sticker(true);
         private void Button_Sticker_Click(object sender, EventArgs e)
         {
             Panel_Sticker.ExecuteDelegate = AddSticker;
@@ -323,13 +323,13 @@ namespace Internal_Society
                 if (sequenceSticker != ListSticker.Sequence)
                 {
                     pn_Sticker.Close();
-                    pn_Sticker = new Panel_Sticker();
+                    pn_Sticker = new Panel_Sticker(true);
                 }
                 pn_Sticker.Show();
             }
             else
             {
-                pn_Sticker = new Panel_Sticker();
+                pn_Sticker = new Panel_Sticker(true);
                 pn_Sticker.Show();
             }
 
