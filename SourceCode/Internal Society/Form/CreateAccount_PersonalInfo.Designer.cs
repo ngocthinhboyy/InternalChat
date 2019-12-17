@@ -94,14 +94,15 @@
             this.question2.ForeColor = System.Drawing.Color.Black;
             this.question2.Items = new string[] {
         "Bạn thích nuôi con vật nào nhất?",
-        "DEFD",
-        "DDDDD"};
+        "Gia đình bạn có bao nhiêu người",
+        "Món ăn yêu thích của bạn",
+        "Tên người bạn thân nhất của bạn là gì?"};
             this.question2.Location = new System.Drawing.Point(251, 195);
             this.question2.Margin = new System.Windows.Forms.Padding(6);
             this.question2.Name = "question2";
             this.question2.NomalColor = System.Drawing.SystemColors.Window;
             this.question2.onHoverColor = System.Drawing.SystemColors.Window;
-            this.question2.selectedIndex = 0;
+            this.question2.selectedIndex = -1;
             this.question2.Size = new System.Drawing.Size(280, 32);
             this.question2.TabIndex = 12;
             // 
@@ -114,14 +115,15 @@
             this.question1.ForeColor = System.Drawing.Color.Black;
             this.question1.Items = new string[] {
         "Bạn thích ăn món gì nhất?",
-        "DEFD",
-        "DDDDD"};
+        "Quê bạn ở đâu?",
+        "Con vật bạn thích nhất là gì?",
+        "Gia đình bạn có bao nhiêu người?"};
             this.question1.Location = new System.Drawing.Point(251, 116);
             this.question1.Margin = new System.Windows.Forms.Padding(4);
             this.question1.Name = "question1";
             this.question1.NomalColor = System.Drawing.SystemColors.Window;
             this.question1.onHoverColor = System.Drawing.SystemColors.Window;
-            this.question1.selectedIndex = 0;
+            this.question1.selectedIndex = -1;
             this.question1.Size = new System.Drawing.Size(280, 32);
             this.question1.TabIndex = 11;
             // 

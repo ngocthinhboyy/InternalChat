@@ -45,11 +45,13 @@ namespace Internal_Society
             dynamic data = JsonConvert.DeserializeObject(result);
             if (data.Success == "1")
             {
-                MessageBox.Show("Update successfully !");
+                IncorrectAlert incorrectAlert = new IncorrectAlert("Update successfully !");
+                incorrectAlert.Show();
             }
             else
             {
-                MessageBox.Show("Something wrong !!");
+                IncorrectAlert incorrectAlert = new IncorrectAlert("Something wrong!");
+                incorrectAlert.Show();
             }
         }
 
