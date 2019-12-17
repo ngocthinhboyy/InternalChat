@@ -1265,5 +1265,17 @@
   <ItemGroup>
     <None Include="Resources\filled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80781616_2342663732711435_1320997065391603712_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79303078_428691934703873_3823633083811233792_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80630037_602297047205172_8155171377796612096_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79633963_3962241957134781_6012603989881782272_n.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

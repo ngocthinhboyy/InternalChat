@@ -30,27 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotalTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,17 +57,24 @@
             this.bunifuDataViz2 = new Bunifu.DataViz.WinForms.BunifuDataViz();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuDataViz3 = new Bunifu.DataViz.WinForms.BunifuDataViz();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,20 +82,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(124)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblTotalTime);
             this.panel1.Location = new System.Drawing.Point(15, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(139, 52);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Internal_Society.Properties.Resources.icons8_clock_100;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -115,11 +106,11 @@
             this.lblTotalTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(124)))), ((int)(((byte)(255)))));
             this.lblTotalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalTime.ForeColor = System.Drawing.Color.White;
-            this.lblTotalTime.Location = new System.Drawing.Point(98, 57);
+            this.lblTotalTime.Location = new System.Drawing.Point(62, 26);
             this.lblTotalTime.Name = "lblTotalTime";
-            this.lblTotalTime.Size = new System.Drawing.Size(48, 18);
+            this.lblTotalTime.Size = new System.Drawing.Size(77, 18);
             this.lblTotalTime.TabIndex = 1;
-            this.lblTotalTime.Text = "1000h";
+            this.lblTotalTime.Text = "3h27m15s";
             // 
             // panel2
             // 
@@ -132,16 +123,6 @@
             this.panel2.Size = new System.Drawing.Size(139, 52);
             this.panel2.TabIndex = 2;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Internal_Society.Properties.Resources.icons8_clock_100;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -150,9 +131,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(71, 26);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 2;
-            this.label5.Text = "1000h";
+            this.label5.Text = "1000+";
             // 
             // label2
             // 
@@ -161,9 +142,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(57, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 18);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Total Time";
+            this.label2.Text = "Messages";
             // 
             // panel3
             // 
@@ -176,16 +157,6 @@
             this.panel3.Size = new System.Drawing.Size(139, 52);
             this.panel3.TabIndex = 1;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Internal_Society.Properties.Resources.icons8_clock_100;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -194,9 +165,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(69, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 18);
+            this.label6.Size = new System.Drawing.Size(24, 18);
             this.label6.TabIndex = 2;
-            this.label6.Text = "1000h";
+            this.label6.Text = "15";
             // 
             // label3
             // 
@@ -205,9 +176,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(57, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 18);
+            this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Total Time";
+            this.label3.Text = "Friends";
             // 
             // panel4
             // 
@@ -220,16 +191,6 @@
             this.panel4.Size = new System.Drawing.Size(142, 52);
             this.panel4.TabIndex = 1;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Internal_Society.Properties.Resources.icons8_clock_100;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -238,9 +199,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(67, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 18);
+            this.label7.Size = new System.Drawing.Size(24, 18);
             this.label7.TabIndex = 2;
-            this.label7.Text = "1000h";
+            this.label7.Text = "38";
             // 
             // label4
             // 
@@ -249,9 +210,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(57, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 18);
+            this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Total Time";
+            this.label4.Text = "Images";
             // 
             // bunifuSeparator1
             // 
@@ -270,15 +231,6 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(215)))), ((int)(((byte)(157)))));
-            this.pictureBox5.Location = new System.Drawing.Point(8, 117);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(177, 73);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -290,24 +242,6 @@
             this.bunifuSeparator2.TabIndex = 5;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = true;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
-            this.pictureBox6.Location = new System.Drawing.Point(8, 197);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(177, 73);
-            this.pictureBox6.TabIndex = 6;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(141)))), ((int)(((byte)(249)))));
-            this.pictureBox7.Location = new System.Drawing.Point(8, 276);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(177, 73);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
             // 
             // imageList1
             // 
@@ -337,7 +271,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 17);
             this.label8.TabIndex = 9;
-            this.label8.Text = "9000+";
+            this.label8.Text = "2000+";
             // 
             // label9
             // 
@@ -347,9 +281,9 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(25, 157);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 17);
+            this.label9.Size = new System.Drawing.Size(83, 17);
             this.label9.TabIndex = 10;
-            this.label9.Text = "Facebook Likes +";
+            this.label9.Text = "Activities +";
             // 
             // label10
             // 
@@ -359,9 +293,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(25, 235);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 17);
+            this.label10.Size = new System.Drawing.Size(92, 17);
             this.label10.TabIndex = 12;
-            this.label10.Text = "Facebook Likes +";
+            this.label10.Text = "Earned Gold";
             // 
             // label11
             // 
@@ -371,9 +305,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(25, 212);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 17);
+            this.label11.Size = new System.Drawing.Size(48, 17);
             this.label11.TabIndex = 11;
-            this.label11.Text = "9000+";
+            this.label11.Text = "15937";
             // 
             // label12
             // 
@@ -383,9 +317,9 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(25, 315);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 17);
+            this.label12.Size = new System.Drawing.Size(120, 17);
             this.label12.TabIndex = 14;
-            this.label12.Text = "Facebook Likes +";
+            this.label12.Text = "Earned Diamond";
             // 
             // label13
             // 
@@ -395,9 +329,9 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(25, 292);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 17);
+            this.label13.Size = new System.Drawing.Size(32, 17);
             this.label13.TabIndex = 13;
-            this.label13.Text = "9000+";
+            this.label13.Text = "128";
             // 
             // bunifuDataViz1
             // 
@@ -422,7 +356,7 @@
             this.bunifuDataViz1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz1.Location = new System.Drawing.Point(210, 117);
             this.bunifuDataViz1.Name = "bunifuDataViz1";
-            this.bunifuDataViz1.Size = new System.Drawing.Size(537, 254);
+            this.bunifuDataViz1.Size = new System.Drawing.Size(551, 254);
             this.bunifuDataViz1.TabIndex = 15;
             this.bunifuDataViz1.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz1.Title = "";
@@ -457,7 +391,7 @@
             this.bunifuDataViz2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz2.Location = new System.Drawing.Point(8, 409);
             this.bunifuDataViz2.Name = "bunifuDataViz2";
-            this.bunifuDataViz2.Size = new System.Drawing.Size(739, 152);
+            this.bunifuDataViz2.Size = new System.Drawing.Size(753, 152);
             this.bunifuDataViz2.TabIndex = 16;
             this.bunifuDataViz2.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz2.Title = "";
@@ -497,10 +431,77 @@
             this.bunifuDataViz3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuDataViz3.Location = new System.Drawing.Point(101, 567);
             this.bunifuDataViz3.Name = "bunifuDataViz3";
-            this.bunifuDataViz3.Size = new System.Drawing.Size(405, 445);
+            this.bunifuDataViz3.Size = new System.Drawing.Size(419, 445);
             this.bunifuDataViz3.TabIndex = 18;
             this.bunifuDataViz3.Theme = Bunifu.DataViz.WinForms.BunifuDataViz._theme.theme1;
             this.bunifuDataViz3.Title = "";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(141)))), ((int)(((byte)(249)))));
+            this.pictureBox7.Location = new System.Drawing.Point(8, 276);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(177, 73);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(90)))), ((int)(((byte)(243)))));
+            this.pictureBox6.Location = new System.Drawing.Point(8, 197);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(177, 73);
+            this.pictureBox6.TabIndex = 6;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(215)))), ((int)(((byte)(157)))));
+            this.pictureBox5.Location = new System.Drawing.Point(8, 117);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(177, 73);
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Internal_Society.Properties.Resources._80630037_602297047205172_8155171377796612096_n;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Internal_Society.Properties.Resources._79303078_428691934703873_3823633083811233792_n;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Internal_Society.Properties.Resources._80781616_2342663732711435_1320997065391603712_n;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Internal_Society.Properties.Resources._79633963_3962241957134781_6012603989881782272_n;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Panel_Dashboard
             // 
@@ -527,25 +528,24 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblTotalTime);
             this.Controls.Add(this.panel1);
             this.Name = "Panel_Dashboard";
-            this.Size = new System.Drawing.Size(736, 633);
+            this.Size = new System.Drawing.Size(668, 565);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

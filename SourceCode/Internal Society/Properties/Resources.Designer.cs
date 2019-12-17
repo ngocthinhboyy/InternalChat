@@ -153,9 +153,49 @@ namespace Internal_Society.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _79303078_428691934703873_3823633083811233792_n {
+            get {
+                object obj = ResourceManager.GetObject("79303078_428691934703873_3823633083811233792_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _79633963_3962241957134781_6012603989881782272_n {
+            get {
+                object obj = ResourceManager.GetObject("79633963_3962241957134781_6012603989881782272_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _80017681_721804111677896_4503219617254080512_n {
             get {
                 object obj = ResourceManager.GetObject("_80017681_721804111677896_4503219617254080512_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _80630037_602297047205172_8155171377796612096_n {
+            get {
+                object obj = ResourceManager.GetObject("80630037_602297047205172_8155171377796612096_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _80781616_2342663732711435_1320997065391603712_n {
+            get {
+                object obj = ResourceManager.GetObject("80781616_2342663732711435_1320997065391603712_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
