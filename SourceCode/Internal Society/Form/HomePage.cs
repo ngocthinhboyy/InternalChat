@@ -263,8 +263,17 @@ namespace Internal_Society
             App_Status.time_delay = 10000;
             isClickedNotiTab = true;
             App_Status.notification = 0;
-            string urlRequest = App_Status.urlAPI + "c_User/Edit/" + User_Info.k_ID + "/lastNotification/" + Panel_Notification.lastNoti;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
+            try
+            {
+                string urlRequest = App_Status.urlAPI + "c_User/Edit/" + User_Info.k_ID + "/lastNotification/" + Panel_Notification.lastNoti;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlRequest); });
+            }
+            catch
+            {
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
+            }
+            
             Noti();
         }
         private void Tab_Games_Click(object sender, EventArgs e)

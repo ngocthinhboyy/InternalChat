@@ -36,20 +36,39 @@ namespace Internal_Society
         }
         public async void AcceptFriendAsync()
         {
-            string urlSearchUser = App_Status.urlAPI + "c_Friend/AcceptFriend/" + User_Info.k_ID + "/" + FriendID;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
-            // await
-            string result = await getStringTask;
-            ProcessRespond(result);
+            try
+            {
+                string urlSearchUser = App_Status.urlAPI + "c_Friend/AcceptFriend/" + User_Info.k_ID + "/" + FriendID;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
+                // await
+                string result = await getStringTask;
+                ProcessRespond(result);
+            }
+            catch
+            {
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
+            }
+            
         }
 
         public async void RemoveFriendAsync()
         {
-            string urlSearchUser = App_Status.urlAPI + "c_Friend/RemoveFriend/" + User_Info.k_ID + "/" + FriendID;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
-            // await
-            string result = await getStringTask;
-            ProcessRespond(result);
+            try
+            {
+                string urlSearchUser = App_Status.urlAPI + "c_Friend/RemoveFriend/" + User_Info.k_ID + "/" + FriendID;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
+                // await
+                string result = await getStringTask;
+                ProcessRespond(result);
+            }
+            catch
+            {
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
+            }
+
+            
         }
 
         void ProcessRespond(string result)

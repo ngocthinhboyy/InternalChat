@@ -43,6 +43,7 @@ namespace Internal_Society
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Noti = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.onlineList1 = new Internal_Society.onlineList();
             this.indicator = new System.Windows.Forms.PictureBox();
             this.Tab_Games = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Tab_Notification = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -67,7 +68,6 @@ namespace Internal_Society
             this.bunifuTransition4 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bunifuTransition5 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.bunifuTransition6 = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.onlineList1 = new Internal_Society.onlineList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -184,6 +184,22 @@ namespace Internal_Society
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Visible = false;
+            // 
+            // onlineList1
+            // 
+            this.onlineList1.AutoScroll = true;
+            this.bunifuTransition3.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition4.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition6.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuTransition5.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.onlineList1.Location = new System.Drawing.Point(3, 478);
+            this.onlineList1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.onlineList1.Name = "onlineList1";
+            this.onlineList1.Size = new System.Drawing.Size(314, 94);
+            this.onlineList1.TabIndex = 13;
+            this.onlineList1.Visible = false;
             // 
             // indicator
             // 
@@ -815,22 +831,6 @@ namespace Internal_Society
             animation1.TransparencyCoeff = 0F;
             this.bunifuTransition6.DefaultAnimation = animation1;
             // 
-            // onlineList1
-            // 
-            this.onlineList1.AutoScroll = true;
-            this.bunifuTransition3.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition4.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition6.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.bunifuTransition5.SetDecoration(this.onlineList1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.onlineList1.Location = new System.Drawing.Point(3, 478);
-            this.onlineList1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.onlineList1.Name = "onlineList1";
-            this.onlineList1.Size = new System.Drawing.Size(314, 94);
-            this.onlineList1.TabIndex = 13;
-            this.onlineList1.Visible = false;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -847,6 +847,7 @@ namespace Internal_Society
             this.bunifuTransition2.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1092, 575);
             this.Name = "HomePage";

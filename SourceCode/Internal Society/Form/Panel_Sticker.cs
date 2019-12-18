@@ -42,7 +42,7 @@ namespace Internal_Society
                     btnKun.Height = 45;
                     btnKun.Click += pakage_click;
                     btnKun.BackColor = Color.Transparent;
-                    btnKun.ImageLocation = "../../Resources/" + sticker.Name + "_000.png";
+                    btnKun.ImageLocation = App_Status.urlLocalResources + sticker.Name + "_000.png";
                     btnKun.Tag = kIndex.ToString();
                     loadPakageSticker(btnKun);
                     NumOfUsersSticker++;

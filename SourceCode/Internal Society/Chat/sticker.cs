@@ -20,7 +20,7 @@ namespace Internal_Society
         {
             InitializeComponent();
             this.urlSticker = urlSticker;
-            stickerBox.ImageLocation = "../../Resources/"+urlSticker;
+            stickerBox.ImageLocation = App_Status.urlLocalResources+urlSticker;
         }
 
         private void StickerBox_Click(object sender, EventArgs e)

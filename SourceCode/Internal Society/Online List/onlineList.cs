@@ -41,16 +41,26 @@ namespace Internal_Society
 
         public async void GetDataAsync()
         {
-            string urlSearchUser = App_Status.urlAPI + "c_Friend/Get_FriendList/" + User_Info.k_ID;
-            Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
-            // await
-            string result = await getStringTask;
-            if (result != listUsers)
-            {
-                listUsers = result;
-                ShowOnlineUser();
-            }
             TimeRequest.Stop();
+            try
+            {
+                string urlSearchUser = App_Status.urlAPI + "c_Friend/Get_FriendList/" + User_Info.k_ID;
+                Task<string> getStringTask = Task.Run(() => { return new WebClient().DownloadString(urlSearchUser); });
+                // await
+                string result = await getStringTask;
+                if (result != listUsers)
+                {
+                    listUsers = result;
+                    ShowOnlineUser();
+                }
+            }
+            catch
+            {
+                IncorrectAlert alert = new IncorrectAlert("Connection Error");
+                alert.Show();
+            }
+            
+            
             TimeRequest.Start();
         }
 

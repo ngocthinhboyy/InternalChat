@@ -60,7 +60,7 @@ namespace Internal_Society
             
             for (int i = 0; i < ListSticker.data.Count; i++)
             {
-                string url = "../../Resources/" + ListSticker.data[i].Name + "_000.png";
+                string url = App_Status.urlLocalResources + ListSticker.data[i].Name + "_000.png";
                 if (i % 2 == 0)
                 {
                     stick = new stickerCart(url, 30, 50 + 80 * i,Convert.ToInt32(ListSticker.data[i].Price));
