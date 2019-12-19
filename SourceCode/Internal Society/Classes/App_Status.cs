@@ -17,7 +17,7 @@ namespace Internal_Society
         public static bool isDarkMode  = false;
 
         public static string urlAPI = "https://kunbr0.com/it008b/";
-        public static string urlLocalResources = "../Resources/";
+        public static string urlLocalResources = "../../Resources/";
         public static string urlImage = "https://kunbr0.com/it008b/c_View/file/";
         public static string urlUpload = "https://kunbr0.com/it008b/c_Upload/upload_file/";
 

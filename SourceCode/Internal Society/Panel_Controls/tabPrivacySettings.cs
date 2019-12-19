@@ -61,13 +61,13 @@ namespace Internal_Society.Panel_Controls
                 App_Status.backFormColor = Color.FromArgb(42, 42, 49);
                 App_Status.backPanelColor = Color.FromArgb(42, 42, 49);
                 App_Status.textColor = Color.White;
-                App_Status.iconDashboard = "../../Resources/material-icons_3-0-1_dashboard_35_0_ffffff_none.png";
-                App_Status.iconCart = "../../Resources/font-awesome_4-7-0_shopping-cart_35_0_ffffff_none.png";
-                App_Status.iconChat = "../../Resources/ionicons_2-0-1_chatbox-working_35_0_ffffff_none.png";
-                App_Status.iconProfile = "../../Resources/icomoon-free_2014-12-23_profile_35_0_ffffff_none.png";
-                App_Status.iconGames = "../../Resources/font-awesome_4-7-0_gamepad_35_0_ffffff_none.png";
-                App_Status.iconNoti = "../../Resources/ionicons_2-0-1_android-notifications_35_0_ffffff_none.png";
-                App_Status.logo = "../../Resources/IC.html (2)-page-001.jpg";
+                App_Status.iconDashboard = App_Status.urlLocalResources + "material-icons_3-0-1_dashboard_35_0_ffffff_none.png";
+                App_Status.iconCart = App_Status.urlLocalResources + "font-awesome_4-7-0_shopping-cart_35_0_ffffff_none.png";
+                App_Status.iconChat = App_Status.urlLocalResources + "ionicons_2-0-1_chatbox-working_35_0_ffffff_none.png";
+                App_Status.iconProfile = App_Status.urlLocalResources + "icomoon-free_2014-12-23_profile_35_0_ffffff_none.png";
+                App_Status.iconGames = App_Status.urlLocalResources + "font-awesome_4-7-0_gamepad_35_0_ffffff_none.png";
+                App_Status.iconNoti = App_Status.urlLocalResources + "ionicons_2-0-1_android-notifications_35_0_ffffff_none.png";
+                App_Status.logo = App_Status.urlLocalResources + "IC.html (2)-page-001.jpg";
                 /*User_Info.k_DarkMode = true;
                 User_Info.UpdateUserInfo();*/
             }
@@ -76,13 +76,13 @@ namespace Internal_Society.Panel_Controls
                 App_Status.backFormColor = Color.White;
                 App_Status.backPanelColor = Color.White;
                 App_Status.textColor = Color.FromArgb(42, 42, 49);
-                App_Status.iconDashboard = "../../Resources/material-icons_3-0-1_dashboard_35_0_000000_none.png";
-                App_Status.iconCart = "../../Resources/font-awesome_4-7-0_shopping-cart_35_0_000000_none.png";
-                App_Status.iconChat = "../../Resources/ionicons_2-0-1_chatbox-working_35_0_000000_none.png";
-                App_Status.iconProfile = "../../Resources/icomoon-free_2014-12-23_profile_35_0_000000_none.png";
-                App_Status.iconGames = "../../Resources/font-awesome_4-7-0_gamepad_35_0_000000_none.png";
-                App_Status.iconNoti = "../../Resources/ionicons_2-0-1_android-notifications_35_0_000000_none.png";
-                App_Status.logo = "../../Resources/IC.html-page-001.jpg";
+                App_Status.iconDashboard = App_Status.urlLocalResources + "material-icons_3-0-1_dashboard_35_0_000000_none.png";
+                App_Status.iconCart = App_Status.urlLocalResources + "font-awesome_4-7-0_shopping-cart_35_0_000000_none.png";
+                App_Status.iconChat = App_Status.urlLocalResources + "ionicons_2-0-1_chatbox-working_35_0_000000_none.png";
+                App_Status.iconProfile = App_Status.urlLocalResources + "icomoon-free_2014-12-23_profile_35_0_000000_none.png";
+                App_Status.iconGames = App_Status.urlLocalResources + "font-awesome_4-7-0_gamepad_35_0_000000_none.png";
+                App_Status.iconNoti = App_Status.urlLocalResources + "ionicons_2-0-1_android-notifications_35_0_000000_none.png";
+                App_Status.logo = App_Status.urlLocalResources + "IC.html-page-001.jpg";
             }
             delegateChangeHomePage();
             delegateChangeProfile();

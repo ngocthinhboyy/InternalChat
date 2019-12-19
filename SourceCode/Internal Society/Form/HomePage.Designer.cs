@@ -106,7 +106,7 @@ namespace Internal_Society
             this.bunifuTransition2.SetDecoration(this.panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 661);
             this.panel1.TabIndex = 0;
@@ -211,7 +211,7 @@ namespace Internal_Society
             this.bunifuTransition2.SetDecoration(this.indicator, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuTransition6.SetDecoration(this.indicator, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.indicator.Location = new System.Drawing.Point(0, 134);
-            this.indicator.Margin = new System.Windows.Forms.Padding(2);
+            this.indicator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.indicator.Name = "indicator";
             this.indicator.Size = new System.Drawing.Size(7, 48);
             this.indicator.TabIndex = 11;
@@ -492,7 +492,7 @@ namespace Internal_Society
             this.bunifuTransition2.SetDecoration(this.panel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(314, 134);
             this.panel2.TabIndex = 0;
@@ -611,7 +611,7 @@ namespace Internal_Society
             this.bunifuTransition2.SetDecoration(this.pn_header, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pn_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_header.Location = new System.Drawing.Point(314, 0);
-            this.pn_header.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_header.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_header.Name = "pn_header";
             this.pn_header.Size = new System.Drawing.Size(778, 65);
             this.pn_header.TabIndex = 1;
@@ -640,7 +640,7 @@ namespace Internal_Society
             this.textbox_Search.LineMouseHoverColor = System.Drawing.Color.DeepPink;
             this.textbox_Search.LineThickness = 4;
             this.textbox_Search.Location = new System.Drawing.Point(23, 12);
-            this.textbox_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.textbox_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textbox_Search.Name = "textbox_Search";
             this.textbox_Search.Size = new System.Drawing.Size(280, 44);
             this.textbox_Search.TabIndex = 1;
@@ -681,7 +681,7 @@ namespace Internal_Society
             this.bunifuTransition6.SetDecoration(this.picture_user_image, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.picture_user_image.Image = ((System.Drawing.Image)(resources.GetObject("picture_user_image.Image")));
             this.picture_user_image.Location = new System.Drawing.Point(711, 9);
-            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2);
+            this.picture_user_image.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picture_user_image.Name = "picture_user_image";
             this.picture_user_image.Size = new System.Drawing.Size(66, 52);
             this.picture_user_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -700,7 +700,7 @@ namespace Internal_Society
             this.bunifuTransition2.SetDecoration(this.panel_Main, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Main.Location = new System.Drawing.Point(314, 65);
-            this.panel_Main.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Main.Name = "panel_Main";
             this.panel_Main.Size = new System.Drawing.Size(778, 596);
             this.panel_Main.TabIndex = 2;
@@ -848,7 +848,7 @@ namespace Internal_Society
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimumSize = new System.Drawing.Size(1092, 575);
             this.Name = "HomePage";
             this.Text = "INTERNAL CHAT";
